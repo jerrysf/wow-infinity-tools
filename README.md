@@ -131,6 +131,10 @@ pnpm validate:data
 
 每页独立 title/description、canonical、hreflang、`/sitemap.xml`（双语 URL + alternates）、`/robots.txt`、面包屑、自定义 404（locale 内 + global-not-found）。`/` 按 Accept-Language 302 跳转；其他未加前缀路径 308 到默认语言。无实质内容的组合筛选页不产生独立 URL。
 
+结构化数据（JSON-LD）：首页 `WebSite` + `WebApplication`、全站 `BreadcrumbList`（随面包屑组件输出）、方案详情页 `HowTo`（分级加点步骤）。
+
+社交分享图：`public/og/{zh-cn,en-us}.png`（1200×630），由 `pnpm gen:og` 用 Playwright 重新生成（依赖系统字体渲染中文）。
+
 ## 环境变量
 
 见 `.env.example`。生产环境必须设置 `NEXT_PUBLIC_SITE_URL`（用于 canonical、sitemap、OG）。`NEXT_PUBLIC_ADS_ENABLED` 默认关闭。

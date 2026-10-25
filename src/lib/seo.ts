@@ -41,6 +41,20 @@ export function pageMetadata({ locale, path, title, description, index = true }:
       locale: ogLocale[locale],
       alternateLocale: locales.filter((l) => l !== locale).map((l) => ogLocale[l]),
       type: "website",
+      images: [
+        {
+          url: absoluteUrl(`/og/${locale}.png`),
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [absoluteUrl(`/og/${locale}.png`)],
     },
   };
 }

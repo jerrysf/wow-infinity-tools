@@ -10,6 +10,7 @@
     "typecheck": "next typegen && tsc --noEmit",
     "test": "vitest run",
     "test:e2e": "playwright test",
+    "gen:og": "node scripts/gen-og.mjs",
     "validate:data": "tsx scripts/validate-data.ts",
     "verify": "pnpm validate:data && pnpm typecheck && pnpm lint && pnpm test && pnpm build"
   },

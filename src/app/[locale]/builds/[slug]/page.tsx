@@ -9,6 +9,7 @@ import { getBuildBySlug, getBuilds, getClassById, getClassTalents, getGuides } f
 import { findNode } from "@/lib/talents/engine";
 import { encodeBuild } from "@/lib/talents/serialize";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
+import { JsonLd } from "@/components/site/JsonLd";
 import { ProvenanceBlock } from "@/components/site/ProvenanceBlock";
 import { StatusBadge } from "@/components/site/StatusBadge";
 import { BuildDemoBanner } from "@/components/builds/BuildsCatalog";
@@ -55,8 +56,27 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
     return found ? pick(found.node.name, locale) : id;
   };
 
+  const howToLd =
+    build.levelingSteps.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "HowTo",
+          name: pick(build.name, locale),
+          description: pick(build.summary, locale),
+          step: build.levelingSteps.map((step, i) => ({
+            "@type": "HowToStep",
+            position: i + 1,
+            name: `${dict.common.level} ${step.levelRange}`,
+            text: Object.entries(step.spend)
+              .map(([id, pts]) => `${nodeName(id)} × ${pts}`)
+              .join(", "),
+          })),
+        }
+      : null;
+
   return (
     <div>
+      {howToLd && <JsonLd data={howToLd} />}
       <Breadcrumbs
         locale={locale}
         items={[

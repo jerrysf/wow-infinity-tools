@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Locale } from "@/i18n/config";
-import { localizedPath } from "@/lib/site";
+import { absoluteUrl, localizedPath } from "@/lib/site";
+import { JsonLd } from "@/components/site/JsonLd";
 
 export interface Crumb {
   href?: string;
@@ -8,8 +9,19 @@ export interface Crumb {
 }
 
 export function Breadcrumbs({ locale, items }: { locale: Locale; items: Crumb[] }) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.label,
+      ...(item.href ? { item: absoluteUrl(localizedPath(locale, item.href)) } : {}),
+    })),
+  };
   return (
     <nav aria-label="Breadcrumb" className="mb-4 text-sm text-zinc-500 dark:text-zinc-400">
+      <JsonLd data={jsonLd} />
       <ol className="flex flex-wrap items-center gap-1">
         {items.map((item, i) => (
           <li key={i} className="flex items-center gap-1">

@@ -1,9 +1,10 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { isLocale } from "@/i18n/config";
+import { isLocale, localeLangTags } from "@/i18n/config";
 import { getDictionary, pick } from "@/i18n/get-dictionary";
 import { pageMetadata } from "@/lib/seo";
-import { localizedPath } from "@/lib/site";
+import { absoluteUrl, localizedPath, site } from "@/lib/site";
+import { JsonLd } from "@/components/site/JsonLd";
 import { getBuilds, getClasses, getCurrentVersion, getGuides } from "@/lib/data";
 import { StatusBadge, DemoBadge } from "@/components/site/StatusBadge";
 
@@ -24,8 +25,30 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
   const version = getCurrentVersion();
   const classById = new Map(classes.map((c) => [c.id, c]));
 
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: site.name,
+      url: site.url,
+      inLanguage: ["zh-CN", "en-US"],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      name: site.name,
+      url: absoluteUrl(localizedPath(locale, "/")),
+      description: dict.home.description,
+      applicationCategory: "GameApplication",
+      operatingSystem: "Any",
+      inLanguage: localeLangTags[locale],
+      offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+    },
+  ];
+
   return (
     <div>
+      <JsonLd data={jsonLd} />
       <section className="py-8">
         <h1 className="max-w-2xl text-3xl font-bold tracking-tight sm:text-4xl">
           {dict.home.heroTitle}
