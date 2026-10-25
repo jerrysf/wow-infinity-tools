@@ -61,15 +61,15 @@ const en: Dictionary = {
     breadcrumbHome: "Home",
   },
   home: {
-    title: "Infinity Compendium - WoW: Infinity Talent & Guide Tools",
+    title: "Infinity Compendium - WoW: Forever Talent Calculator & Builds",
     description:
-      "Interactive talent calculator, class-picker quiz, level-by-level builds and bilingual guides for WoW: Infinity players.",
-    heroTitle: "Find the class and build that fit you",
+      "Plan your WoW: Forever build before launch: interactive talent calculator for all 9 classes, level-by-level builds, shareable links, and a class-picker quiz. Versioned data with sources.",
+    heroTitle: "Theorycraft your build before launch day",
     heroSubtitle:
-      "Interactive talent calculator, preference-based class recommendations and level-by-level guides - every entry labelled with its game version and verification status.",
-    ctaSelector: "Pick a class with the quiz",
+      "WoW: Forever goes live November 5. All 9 classes with complete talent trees - a game-accurate calculator, level-by-level builds and shareable links. Know your spec before day one.",
+    ctaSelector: "Find your class in 5 questions",
     ctaTalents: "Open the talent calculator",
-    ctaBuilds: "Browse builds",
+    ctaBuilds: "Browse ready builds",
     toolsTitle: "Player tools",
     featuredBuilds: "Featured builds",
     guidesTitle: "Starter guides",
@@ -81,8 +81,8 @@ const en: Dictionary = {
   selector: {
     title: "Class Selector",
     description:
-      "Answer a few questions about your playstyle preferences and get preference-based class and playstyle recommendations.",
-    heading: "Find a class that fits you",
+      "Not sure which WoW: Forever class to play? Answer 5 playstyle questions and find the class that fits you in about a minute.",
+    heading: "Find your class in 30 seconds",
     intro:
       "Answer the questions below and we will recommend classes based on your playstyle preferences. This is preference matching, not a power ranking.",
     questionOf: "Question {current} of {total}",
@@ -99,7 +99,7 @@ const en: Dictionary = {
   talents: {
     title: "Talent Calculator",
     description:
-      "Interactive talent calculator: allocate points, check prerequisites and generate shareable build links.",
+      "A game-accurate WoW: Forever talent calculator: real talent trees, prerequisite and exclusivity checks, and one-click shareable build links.",
     selectClass: "Select class",
     tree: "Talent tree",
     pointsRemaining: "Points remaining",
@@ -137,7 +137,7 @@ const en: Dictionary = {
   },
   builds: {
     title: "Builds",
-    description: "Filter talent builds by class, playstyle, version and verification status.",
+    description: "Browse WoW: Forever talent builds by class, playstyle and version - each with a level-by-level order you can load straight into the calculator.",
     empty: "No builds match the current filters.",
     levelRange: "Level range",
     scenario: "Best for",
@@ -154,7 +154,7 @@ const en: Dictionary = {
   },
   guides: {
     title: "Guides",
-    description: "Starter guides, level-by-level talent paths and playstyle advice.",
+    description: "Leveling talent orders, class picks and beta build walkthroughs - labelled with version and verification status.",
     empty: "No guides yet.",
     relatedBuilds: "Related builds",
     levelSteps: "Level-by-level",
@@ -168,7 +168,7 @@ const en: Dictionary = {
     about: {
       title: "About",
       body: [
-        "Infinity Compendium is an independent tool and guide project for WoW: Infinity players.",
+        "Infinity Compendium is an independent tool and guide project for WoW: Forever players.",
         "Our goal is to provide interactive, shareable, version-labelled talent tools and level-by-level guides rather than the biggest database.",
         "All game data is labelled with its verification status and source. Unverified content is clearly marked and never presented as a finished guide.",
       ],

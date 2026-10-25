@@ -59,17 +59,17 @@ const zh = {
     breadcrumbHome: "首页",
   },
   home: {
-    title: "Infinity Compendium - 魔兽世界：无限 天赋与攻略工具",
+    title: "Infinity Compendium - 魔兽世界：无限 天赋模拟器与加点攻略",
     description:
-      "为《魔兽世界：无限》玩家提供可交互的天赋模拟器、职业选择问答、分等级加点指南与双语攻略。",
-    heroTitle: "找到适合自己的职业与天赋方案",
+      "《魔兽世界：无限》开服前的天赋规划工具：9 大职业完整天赋树、游戏同款模拟器、逐级加点方案、一键分享链接，还有 5 题职业选择问答。数据标注版本与来源。",
+    heroTitle: "开服之前，先想好你的天赋",
     heroSubtitle:
-      "可交互的天赋模拟器、偏好匹配职业推荐、分等级加点指南——每条数据都标注版本与验证状态。",
-    ctaSelector: "用问答选择职业",
-    ctaTalents: "打开天赋模拟器",
-    ctaBuilds: "浏览方案目录",
+      "《魔兽世界：无限》11 月 5 日上线。这里有 9 大职业完整天赋树：游戏同款模拟器、逐级加点方案、一键分享链接——上线第一天，就知道每一点该怎么花。",
+    ctaSelector: "测测适合你的职业",
+    ctaTalents: "进入天赋模拟器",
+    ctaBuilds: "抄一套推荐方案",
     toolsTitle: "玩家工具",
-    featuredBuilds: "精选方案",
+    featuredBuilds: "热门方案",
     guidesTitle: "新手攻略",
     classesTitle: "按职业浏览",
     dataNotice: "版本与数据状态",
@@ -79,8 +79,8 @@ const zh = {
   selector: {
     title: "职业选择器",
     description:
-      "回答几个关于玩法偏好的问题，获得基于偏好的职业与玩法推荐。",
-    heading: "找到适合你的职业",
+      "不知道《魔兽世界：无限》该玩哪个职业？回答 5 个玩法偏好问题，1 分钟找到适合你的职业和玩法。",
+    heading: "30 秒找到适合你的职业",
     intro:
       "回答下面的问题，我们会根据你的玩法偏好给出推荐。这是偏好匹配，不是职业强度排名。",
     questionOf: "第 {current} / {total} 题",
@@ -97,7 +97,7 @@ const zh = {
   talents: {
     title: "天赋模拟器",
     description:
-      "交互式天赋模拟器：分配点数、检查前置条件、生成可分享的方案链接。",
+      "游戏同款界面的《魔兽世界：无限》天赋模拟器：真实天赋树、前置与互斥校验、一键生成可分享的方案链接。",
     selectClass: "选择职业",
     tree: "天赋树",
     pointsRemaining: "剩余点数",
@@ -134,7 +134,7 @@ const zh = {
   },
   builds: {
     title: "方案目录",
-    description: "按职业、玩法、版本与验证状态筛选天赋方案。",
+    description: "按职业、玩法和版本筛选天赋方案，每套都带逐级加点顺序，可一键载入模拟器。",
     empty: "暂无符合筛选条件的方案。",
     levelRange: "等级范围",
     scenario: "适用场景",
@@ -151,7 +151,7 @@ const zh = {
   },
   guides: {
     title: "攻略",
-    description: "新手入门、分等级加点路线与玩法指南。",
+    description: "练级怎么加点、新手选什么职业、Beta 方案怎么抄——按版本与验证状态标注的实用攻略。",
     empty: "暂无攻略。",
     relatedBuilds: "相关方案",
     levelSteps: "分等级加点",

@@ -9,7 +9,7 @@ test.describe("smoke", () => {
 
   test("zh-cn home renders and has SEO tags", async ({ page }) => {
     await page.goto("/zh-cn");
-    await expect(page.locator("h1")).toContainText("找到适合自己的职业与天赋方案");
+    await expect(page.locator("h1")).toContainText("开服之前，先想好你的天赋");
     await expect(page).toHaveTitle(/Infinity Compendium/);
     const canonical = page.locator('link[rel="canonical"]');
     await expect(canonical).toHaveAttribute("href", /\/zh-cn\/?$/);
@@ -21,7 +21,7 @@ test.describe("smoke", () => {
 
   test("en-us home renders English", async ({ page }) => {
     await page.goto("/en-us");
-    await expect(page.locator("h1")).toContainText("Find the class and build that fit you");
+    await expect(page.locator("h1")).toContainText("Theorycraft your build before launch day");
     await expect(page.locator("html")).toHaveAttribute("lang", "en-US");
   });
 
