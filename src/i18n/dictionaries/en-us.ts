@@ -15,6 +15,7 @@ const en: Dictionary = {
       privacy: "Privacy Policy",
       disclaimer: "Disclaimer",
       disclosure: "Disclosure",
+      faq: "FAQ",
       independent:
         "This site is an independent fan-made tool and guide project. It is not affiliated with, endorsed by, or sponsored by Blizzard Entertainment.",
     },
@@ -158,6 +159,45 @@ const en: Dictionary = {
     empty: "No guides yet.",
     relatedBuilds: "Related builds",
     levelSteps: "Level-by-level",
+  },
+  faq: {
+    title: "FAQ",
+    description:
+      "When talents unlock, how many points you get, dual spec level, which tree to level, and how to share builds - WoW: Forever talent questions answered.",
+    items: [
+      {
+        q: "When do talents unlock, and how many points are there?",
+        a: "You earn your first talent point at level 10 and one point per level after that, for 51 points at the level 60 cap. New talent rows unlock at key levels such as 11, 16, 21 and 31.",
+      },
+      {
+        q: "How many talent trees does each class have?",
+        a: "All 9 classes have 3 talent trees. The calculator shows them side by side with prerequisite arrows, matching the in-game rules.",
+      },
+      {
+        q: "Which tree should I level with?",
+        a: "It depends on the class. Every class has a beta leveling build with a level-by-level point order - filter for leveling in the builds catalog, or load one straight into the simulator and tweak it.",
+      },
+      {
+        q: "What level is dual spec?",
+        a: "Dual specialization unlocks at level 40 according to the official announcement, letting you swap between two talent setups. Exact rules and costs are subject to the launch version.",
+      },
+      {
+        q: "Can I undo a point I placed?",
+        a: "In the calculator you can refund a single point or reset everything at no cost. In-game respec rules and costs will follow the official release.",
+      },
+      {
+        q: "How do I share a build?",
+        a: "Copy the share link in the simulator or on any build page and send it to a friend. Anyone who opens it sees the exact same allocation - no account needed.",
+      },
+      {
+        q: "Can I trust the data here?",
+        a: "Current talent data was assembled from public beta client build 1.60.1.70425 sources and is labelled reviewed. Every page shows its source, version and verification status. Numbers may change at launch and will be re-verified then.",
+      },
+      {
+        q: "Is this site affiliated with Blizzard?",
+        a: "No. This is an independent fan-made project with no affiliation, endorsement or sponsorship from Blizzard Entertainment - see the disclaimer for details.",
+      },
+    ],
   },
   notFound: {
     title: "Page not found",

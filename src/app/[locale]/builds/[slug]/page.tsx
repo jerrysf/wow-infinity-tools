@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import { isLocale, locales } from "@/i18n/config";
 import { getDictionary, pick } from "@/i18n/get-dictionary";
 import { pageMetadata } from "@/lib/seo";
-import { localizedPath } from "@/lib/site";
+import { absoluteUrl, localizedPath } from "@/lib/site";
 import { getBuildBySlug, getBuilds, getClassById, getClassTalents, getGuides } from "@/lib/data";
 import { findNode } from "@/lib/talents/engine";
 import { encodeBuild } from "@/lib/talents/serialize";
@@ -25,12 +25,22 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/builds/[
   if (!isLocale(locale)) return {};
   const build = getBuildBySlug(slug);
   if (!build) return {};
-  return pageMetadata({
+  const title = pick(build.name, locale);
+  const ogImage = absoluteUrl(`/og/builds/${slug}.${locale}.png`);
+  const meta = pageMetadata({
     locale,
     path: `/builds/${slug}`,
-    title: pick(build.name, locale),
+    title,
     description: pick(build.summary, locale),
   });
+  return {
+    ...meta,
+    openGraph: {
+      ...meta.openGraph,
+      images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
+    },
+    twitter: { ...meta.twitter, images: [ogImage] },
+  };
 }
 
 export default async function BuildPage({ params }: PageProps<"/[locale]/builds/[slug]">) {

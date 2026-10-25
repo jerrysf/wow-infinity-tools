@@ -10,6 +10,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/talents",
     "/builds",
     "/guides",
+    "/faq",
     "/about",
     "/contact",
     "/privacy",

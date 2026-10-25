@@ -1,14 +1,16 @@
+import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { isLocale, locales } from "@/i18n/config";
 import { getDictionary, pick } from "@/i18n/get-dictionary";
 import { pageMetadata } from "@/lib/seo";
-import { getClassBySlug, getClassTalents, getClasses, getGameVersions } from "@/lib/data";
+import { localizedPath } from "@/lib/site";
+import { getBuilds, getClassBySlug, getClassTalents, getClasses, getGameVersions, getGuides } from "@/lib/data";
 import { TalentSimulator } from "@/components/talents/TalentSimulator";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { ProvenanceBlock } from "@/components/site/ProvenanceBlock";
 import { BuildDemoBanner } from "@/components/builds/BuildsCatalog";
-import { DemoBadge } from "@/components/site/StatusBadge";
+import { DemoBadge, StatusBadge } from "@/components/site/StatusBadge";
 
 export const dynamicParams = false;
 
@@ -41,6 +43,8 @@ export default async function ClassTalentsPage({ params }: PageProps<"/[locale]/
   const dict = getDictionary(locale);
   const talents = getClassTalents(gameClass.id);
   const versionLabel = getGameVersions().find((v) => v.id === (talents?.gameVersion ?? gameClass.provenance.gameVersion))?.label;
+  const classBuilds = getBuilds().filter((b) => b.classId === gameClass.id);
+  const classGuide = getGuides().find((g) => g.classId === gameClass.id);
 
   return (
     <div>
@@ -59,6 +63,22 @@ export default async function ClassTalentsPage({ params }: PageProps<"/[locale]/
         {gameClass.demo && <DemoBadge dict={dict} />}
       </div>
       {gameClass.demo && <BuildDemoBanner demo={gameClass.demo} dict={dict} />}
+      <div className="mb-4 max-w-2xl space-y-1 text-sm text-zinc-600 dark:text-zinc-400">
+        {gameClass.tagline && <p>{pick(gameClass.tagline, locale)}</p>}
+        {(gameClass.strengths || gameClass.drawbacks) && (
+          <p>
+            {gameClass.strengths && (
+              <span className="font-medium text-emerald-700 dark:text-emerald-400">
+                {pick(gameClass.strengths, locale)}
+              </span>
+            )}
+            {gameClass.strengths && gameClass.drawbacks && " · "}
+            {gameClass.drawbacks && (
+              <span className="text-zinc-500">{pick(gameClass.drawbacks, locale)}</span>
+            )}
+          </p>
+        )}
+      </div>
       {talents ? (
         <>
           <div className="mb-4">
@@ -70,6 +90,46 @@ export default async function ClassTalentsPage({ params }: PageProps<"/[locale]/
         <p className="rounded-lg border border-zinc-200 p-4 text-zinc-600 dark:border-zinc-800 dark:text-zinc-400">
           {dict.talents.dataPending}
         </p>
+      )}
+
+      {(classBuilds.length > 0 || classGuide) && (
+        <section className="mt-10">
+          <h2 className="mb-3 text-xl font-semibold">
+            {pick(gameClass.name, locale)} · {dict.builds.title}
+          </h2>
+          <ul className="grid gap-3 sm:grid-cols-2">
+            {classBuilds.map((b) => (
+              <li key={b.slug}>
+                <Link
+                  href={localizedPath(locale, `/builds/${b.slug}`)}
+                  className="block rounded-lg border border-zinc-200 p-4 hover:border-zinc-400 dark:border-zinc-800 dark:hover:border-zinc-600"
+                >
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="font-semibold">{pick(b.name, locale)}</span>
+                    <StatusBadge status={b.provenance.status} dict={dict} />
+                  </div>
+                  <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{pick(b.summary, locale)}</p>
+                  <p className="mt-2 text-xs text-zinc-500">
+                    {b.playstyle} · {dict.common.level} {b.levelRange.min}-{b.levelRange.max}
+                  </p>
+                </Link>
+              </li>
+            ))}
+            {classGuide && (
+              <li>
+                <Link
+                  href={localizedPath(locale, `/guides/${classGuide.slug}`)}
+                  className="block rounded-lg border border-zinc-200 p-4 hover:border-zinc-400 dark:border-zinc-800 dark:hover:border-zinc-600"
+                >
+                  <span className="font-semibold">{pick(classGuide.title, locale)}</span>
+                  <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
+                    {pick(classGuide.description, locale)}
+                  </p>
+                </Link>
+              </li>
+            )}
+          </ul>
+        </section>
       )}
     </div>
   );

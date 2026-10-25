@@ -5,6 +5,7 @@ import { localizedPath, site } from "@/lib/site";
 
 export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
   const links = [
+    { href: "/faq", label: dict.common.footer.faq },
     { href: "/about", label: dict.common.footer.about },
     { href: "/contact", label: dict.common.footer.contact },
     { href: "/privacy", label: dict.common.footer.privacy },
