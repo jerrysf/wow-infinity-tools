@@ -1,0 +1,20 @@
+{
+  "id": "mage",
+  "slug": "mage",
+  "name": { "zh": "法师", "en": "Mage" },
+  "tagline": { "zh": "远程法系爆发，控制能力强但身板脆。", "en": "Ranged burst caster with strong control but a fragile frame." },
+  "roles": ["ranged-dps"],
+  "preferenceTags": ["ranged", "burst", "complex", "pvp", "fragile"],
+  "strengths": { "zh": "远程爆发与控制能力出色。", "en": "Excellent ranged burst and control." },
+  "drawbacks": { "zh": "生存能力弱，对操作要求较高。", "en": "Fragile and mechanically demanding." },
+  "hasTalentData": true,
+  "demo": true,
+  "provenance": {
+    "status": "unverified",
+    "gameVersion": "demo-2026-10",
+    "source": "Demo fixture authored for tooling development",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Placeholder class pending real game data."
+  }
+}

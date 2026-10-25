@@ -1,0 +1,64 @@
+{
+  "slug": "warrior-arms-leveling",
+  "name": { "zh": "武器战升级路线（演示）", "en": "Arms Warrior Leveling (Demo)" },
+  "summary": {
+    "zh": "面向单人升级的武器战加点示例，优先保证生存与稳定输出。",
+    "en": "A demo Arms warrior leveling allocation that favours survivability and steady damage."
+  },
+  "classId": "warrior",
+  "playstyle": "leveling",
+  "difficulty": "beginner",
+  "gameVersion": "demo-2026-10",
+  "levelRange": { "min": 10, "max": 30 },
+  "scenario": { "zh": "单人任务升级", "en": "Solo questing" },
+  "pros": [
+    { "zh": "生存与输出均衡。", "en": "Balanced survivability and damage." },
+    { "zh": "加点顺序平滑。", "en": "Smooth point-by-point progression." }
+  ],
+  "cons": [
+    { "zh": "群体伤害有限。", "en": "Limited multi-target damage." }
+  ],
+  "requirements": [
+    { "zh": "无特殊装备要求。", "en": "No special gear required." }
+  ],
+  "allocation": {
+    "w-arms-1": 3,
+    "w-arms-2": 3,
+    "w-arms-3": 2,
+    "w-arms-4": 1,
+    "w-arms-6": 3,
+    "w-arms-5": 1,
+    "w-arms-7": 1
+  },
+  "levelingSteps": [
+    {
+      "levelRange": "10-14",
+      "spend": { "w-arms-1": 3, "w-arms-2": 2 },
+      "note": { "zh": "先点满强化打击，兼顾体魄提升容错。", "en": "Max Improved Strike first, with some Toughness for safety." }
+    },
+    {
+      "levelRange": "15-19",
+      "spend": { "w-arms-2": 1, "w-arms-3": 2 },
+      "note": { "zh": "补满坚韧体魄后开始投入精准。", "en": "Finish Toughened, then start Precision." }
+    },
+    {
+      "levelRange": "20-24",
+      "spend": { "w-arms-4": 1, "w-arms-5": 1, "w-arms-6": 2 },
+      "note": { "zh": "解锁横扫与致死打击。", "en": "Pick up Sweep and Mortal Strike." }
+    },
+    {
+      "levelRange": "25-30",
+      "spend": { "w-arms-6": 1, "w-arms-7": 1 },
+      "note": { "zh": "点满战意后向处决大师推进。", "en": "Finish Battle Fury and push into Executioner." }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "unverified",
+    "gameVersion": "demo-2026-10",
+    "source": "Demo fixture authored for tooling development",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Demo build; allocation is engine-valid but not real game data."
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "classId": "mage",
+  "gameVersion": "demo-2026-10",
+  "rules": { "firstTalentLevel": 10, "maxLevel": 60, "pointsPerLevel": 1, "maxPoints": 51 },
+  "demo": true,
+  "provenance": {
+    "status": "unverified",
+    "gameVersion": "demo-2026-10",
+    "source": "Demo fixture authored for tooling development",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Synthetic tree to exercise the engine. Not real game data."
+  },
+  "trees": [
+    {
+      "id": "frost",
+      "name": { "zh": "冰霜", "en": "Frost" },
+      "nodes": [
+        {
+          "id": "m-frost-1",
+          "name": { "zh": "寒冰专注", "en": "Frostbolt Focus" },
+          "description": { "zh": "提高寒冰法术伤害。", "en": "Increases frost spell damage." },
+          "maxPoints": 3,
+          "row": 0,
+          "col": 1
+        },
+        {
+          "id": "m-frost-2",
+          "name": { "zh": "冰霜护甲", "en": "Ice Armor" },
+          "description": { "zh": "提高护甲并减速攻击者。", "en": "Increases armor and slows attackers." },
+          "maxPoints": 2,
+          "row": 0,
+          "col": 2
+        },
+        {
+          "id": "m-frost-3",
+          "name": { "zh": "冰锥术", "en": "Cone of Cold" },
+          "description": { "zh": "扇形范围冰冻攻击。", "en": "A cone-shaped freezing blast." },
+          "maxPoints": 1,
+          "row": 1,
+          "col": 1,
+          "requires": [{ "nodeId": "m-frost-1", "points": 2 }]
+        },
+        {
+          "id": "m-frost-4",
+          "name": { "zh": "急速冷却", "en": "Cold Snap" },
+          "description": { "zh": "重置冰霜技能冷却。", "en": "Resets the cooldown of frost abilities." },
+          "maxPoints": 2,
+          "row": 1,
+          "col": 2
+        },
+        {
+          "id": "m-frost-5",
+          "name": { "zh": "深度冻结", "en": "Deep Freeze" },
+          "description": { "zh": "冻结目标并造成大量伤害。", "en": "Freezes the target and deals heavy damage." },
+          "maxPoints": 1,
+          "row": 2,
+          "col": 1,
+          "requiresPointsInTree": 5,
+          "minLevel": 20
+        },
+        {
+          "id": "m-frost-6",
+          "name": { "zh": "碎冰", "en": "Shatter" },
+          "description": { "zh": "对被冻结目标的暴击提高。", "en": "Critical strikes against frozen targets are stronger." },
+          "maxPoints": 3,
+          "row": 2,
+          "col": 2,
+          "requires": [{ "nodeId": "m-frost-4", "points": 1 }]
+        },
+        {
+          "id": "m-frost-7",
+          "name": { "zh": "冰川之怒", "en": "Glacial Wrath" },
+          "description": { "zh": "大幅提高冰霜爆发。", "en": "Greatly increases frost burst damage." },
+          "maxPoints": 1,
+          "row": 3,
+          "col": 1,
+          "requires": [{ "nodeId": "m-frost-5" }],
+          "requiresPointsInTree": 8,
+          "exclusiveWith": ["m-frost-8"]
+        },
+        {
+          "id": "m-frost-8",
+          "name": { "zh": "寒冬护体", "en": "Winter's Grasp" },
+          "description": { "zh": "提高冰霜生存与控制。", "en": "Improves frost survivability and control." },
+          "maxPoints": 1,
+          "row": 3,
+          "col": 2,
+          "requiresPointsInTree": 8,
+          "exclusiveWith": ["m-frost-7"]
+        }
+      ]
+    },
+    {
+      "id": "arcane",
+      "name": { "zh": "奥术", "en": "Arcane" },
+      "nodes": [
+        {
+          "id": "m-arc-1",
+          "name": { "zh": "奥术冲击", "en": "Arcane Blast Focus" },
+          "description": { "zh": "提高奥术冲击伤害。", "en": "Increases Arcane Blast damage." },
+          "maxPoints": 3,
+          "row": 0,
+          "col": 1
+        },
+        {
+          "id": "m-arc-2",
+          "name": { "zh": "法力亲和", "en": "Mana Affinity" },
+          "description": { "zh": "提高法力回复。", "en": "Increases mana regeneration." },
+          "maxPoints": 2,
+          "row": 0,
+          "col": 2
+        },
+        {
+          "id": "m-arc-3",
+          "name": { "zh": "奥术飞弹", "en": "Arcane Missiles" },
+          "description": { "zh": "发射一连串奥术飞弹。", "en": "Launches a volley of arcane missiles." },
+          "maxPoints": 2,
+          "row": 1,
+          "col": 0,
+          "requires": [{ "nodeId": "m-arc-1", "points": 2 }]
+        },
+        {
+          "id": "m-arc-4",
+          "name": { "zh": "咒术吸收", "en": "Spell Absorption" },
+          "description": { "zh": "吸收部分法术伤害。", "en": "Absorbs a portion of spell damage." },
+          "maxPoints": 1,
+          "row": 1,
+          "col": 2
+        },
+        {
+          "id": "m-arc-5",
+          "name": { "zh": "奥术强化", "en": "Arcane Power" },
+          "description": { "zh": "短时间提高法术强度。", "en": "Briefly increases spell power." },
+          "maxPoints": 1,
+          "row": 2,
+          "col": 1,
+          "requiresPointsInTree": 5,
+          "minLevel": 20
+        },
+        {
+          "id": "m-arc-6",
+          "name": { "zh": "时光扭曲", "en": "Time Warp" },
+          "description": { "zh": "加快施法速度。", "en": "Hastens spell casting." },
+          "maxPoints": 2,
+          "row": 2,
+          "col": 2,
+          "requires": [{ "nodeId": "m-arc-4" }]
+        },
+        {
+          "id": "m-arc-7",
+          "name": { "zh": "奥术大师", "en": "Arcane Mastery" },
+          "description": { "zh": "掌控奥术能量的终极天赋。", "en": "A capstone command over arcane energy." },
+          "maxPoints": 1,
+          "row": 3,
+          "col": 1,
+          "requires": [{ "nodeId": "m-arc-5" }],
+          "requiresPointsInTree": 8
+        }
+      ]
+    }
+  ]
+}

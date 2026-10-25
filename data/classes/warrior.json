@@ -1,0 +1,20 @@
+{
+  "id": "warrior",
+  "slug": "warrior",
+  "name": { "zh": "战士", "en": "Warrior" },
+  "tagline": { "zh": "近战前排，可输出也可承担坦克职责。", "en": "Front-line melee, can deal damage or tank." },
+  "roles": ["melee-dps", "tank"],
+  "preferenceTags": ["melee", "solo", "durable", "simple", "tank-curious"],
+  "strengths": { "zh": "生存能力强，操作直接，能切坦克职责进组容易。", "en": "Durable, straightforward to play, and tank-capable for easy group invites." },
+  "drawbacks": { "zh": "依赖装备，机动性一般。", "en": "Gear-dependent with limited mobility." },
+  "hasTalentData": true,
+  "demo": true,
+  "provenance": {
+    "status": "unverified",
+    "gameVersion": "demo-2026-10",
+    "source": "Demo fixture authored for tooling development",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Placeholder class pending real game data."
+  }
+}

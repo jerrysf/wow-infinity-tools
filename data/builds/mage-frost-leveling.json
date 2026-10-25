@@ -1,0 +1,57 @@
+{
+  "slug": "mage-frost-leveling",
+  "name": { "zh": "冰法升级路线（演示）", "en": "Frost Mage Leveling (Demo)" },
+  "summary": {
+    "zh": "以控制与生存为核心的冰法加点示例。",
+    "en": "A demo Frost mage allocation built around control and survivability."
+  },
+  "classId": "mage",
+  "playstyle": "leveling",
+  "difficulty": "beginner",
+  "gameVersion": "demo-2026-10",
+  "levelRange": { "min": 10, "max": 30 },
+  "scenario": { "zh": "单人任务升级与风筝", "en": "Solo questing and kiting" },
+  "pros": [
+    { "zh": "减速与冻结提供很高的容错。", "en": "Slows and freezes give a large safety margin." }
+  ],
+  "cons": [
+    { "zh": "爆发伤害低于奥术路线。", "en": "Lower burst than an Arcane path." }
+  ],
+  "requirements": [
+    { "zh": "无特殊装备要求。", "en": "No special gear required." }
+  ],
+  "allocation": {
+    "m-frost-1": 3,
+    "m-frost-2": 2,
+    "m-frost-3": 1,
+    "m-frost-4": 2,
+    "m-frost-6": 3,
+    "m-frost-5": 1
+  },
+  "levelingSteps": [
+    {
+      "levelRange": "10-14",
+      "spend": { "m-frost-1": 3, "m-frost-2": 2 },
+      "note": { "zh": "先建立伤害与护甲基础。", "en": "Establish damage and armor first." }
+    },
+    {
+      "levelRange": "15-19",
+      "spend": { "m-frost-3": 1, "m-frost-4": 2 },
+      "note": { "zh": "获得冰锥控制与急速冷却。", "en": "Gain Cone of Cold control and Cold Snap." }
+    },
+    {
+      "levelRange": "20-24",
+      "spend": { "m-frost-6": 3, "m-frost-5": 1 },
+      "note": { "zh": "碎冰成型后补深度冻结。", "en": "Finish Shatter, then take Deep Freeze." }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "unverified",
+    "gameVersion": "demo-2026-10",
+    "source": "Demo fixture authored for tooling development",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Demo build; allocation is engine-valid but not real game data."
+  }
+}

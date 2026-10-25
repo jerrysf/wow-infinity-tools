@@ -1,0 +1,44 @@
+{
+  "slug": "how-to-choose-class",
+  "title": { "zh": "如何选择适合自己的职业", "en": "How to choose a class that fits you" },
+  "description": {
+    "zh": "从玩法偏好出发的选职业思路：职责、距离、操作量与单人体验。",
+    "en": "A preference-first approach to picking a class: role, range, complexity and solo experience."
+  },
+  "kind": "starter",
+  "relatedBuilds": [],
+  "sections": [
+    {
+      "heading": { "zh": "先想清楚你喜欢什么玩法", "en": "Start with how you like to play" },
+      "body": {
+        "zh": "与其问“哪个职业最强”，不如先回答：你喜欢近战还是远程？愿意承担坦克或治疗职责吗？更常单人游戏还是打地下城？这些偏好对长期体验的影响远大于短期的强度波动。",
+        "en": "Instead of asking which class is strongest, ask yourself: melee or ranged? Willing to tank or heal? Mostly solo or in dungeons? These preferences shape your long-term experience far more than short-term balance swings."
+      }
+    },
+    {
+      "heading": { "zh": "用职业选择器做偏好匹配", "en": "Use the class selector for preference matching" },
+      "body": {
+        "zh": "本站的职业选择器根据你的答案进行偏好匹配并说明推荐理由。它是偏好匹配工具，不是强度排名——任何“最强职业”的说法都需要当前版本的实测数据支撑。",
+        "en": "Our class selector matches your answers to classes and explains the reasoning. It is a preference-matching tool, not a power ranking - any claim about the strongest class requires tested data from the current version."
+      }
+    },
+    {
+      "heading": { "zh": "新手常见误区", "en": "Common beginner mistakes" },
+      "body": {
+        "zh": "不要只看等级列表顶部的职业；留意每个推荐结果的“可能的缺点”。如果你完全不确定，选择职责灵活的职业可以在不换号的情况下尝试更多玩法。",
+        "en": "Don't just pick whatever tops a tier list - read the possible drawbacks of each recommendation. If you are unsure, a flexible class lets you try more playstyles without rerolling."
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "demo-2026-10",
+    "source": "Original editorial content",
+    "importedAt": "2026-10-25",
+    "reviewedBy": "editorial",
+    "lastVerifiedAt": "2026-10-25",
+    "needsRevalidation": false,
+    "notes": "General advice; contains no game-version-specific claims."
+  }
+}

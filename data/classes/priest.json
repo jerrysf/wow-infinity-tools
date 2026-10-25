@@ -1,0 +1,20 @@
+{
+  "id": "priest",
+  "slug": "priest",
+  "name": { "zh": "牧师", "en": "Priest" },
+  "tagline": { "zh": "治疗为主，也能以远程暗影形态输出。", "en": "Healing-focused, with a ranged shadow option for damage." },
+  "roles": ["healer", "ranged-dps"],
+  "preferenceTags": ["ranged", "healing", "support", "group"],
+  "strengths": { "zh": "团队价值高，治疗职责好进组。", "en": "High team value; healers get invited easily." },
+  "drawbacks": { "zh": "单人升级速度偏慢。", "en": "Slower when leveling solo." },
+  "hasTalentData": false,
+  "demo": true,
+  "provenance": {
+    "status": "unverified",
+    "gameVersion": "demo-2026-10",
+    "source": "Demo fixture authored for tooling development",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Placeholder class pending real game data."
+  }
+}

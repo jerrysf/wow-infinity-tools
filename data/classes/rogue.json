@@ -1,0 +1,20 @@
+{
+  "id": "rogue",
+  "slug": "rogue",
+  "name": { "zh": "潜行者", "en": "Rogue" },
+  "tagline": { "zh": "近战爆发与潜行控制，PVP 中表现突出。", "en": "Stealthy melee burst and control, strong in PvP." },
+  "roles": ["melee-dps"],
+  "preferenceTags": ["melee", "pvp", "complex", "burst", "solo"],
+  "strengths": { "zh": "爆发高，控制手段多，PVP 主动性强。", "en": "High burst, rich control, proactive in PvP." },
+  "drawbacks": { "zh": "容错率低，对走位和时机要求高。", "en": "Low margin for error; demands positioning and timing." },
+  "hasTalentData": false,
+  "demo": true,
+  "provenance": {
+    "status": "unverified",
+    "gameVersion": "demo-2026-10",
+    "source": "Demo fixture authored for tooling development",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Placeholder class pending real game data."
+  }
+}

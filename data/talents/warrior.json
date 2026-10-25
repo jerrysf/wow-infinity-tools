@@ -1,0 +1,162 @@
+{
+  "classId": "warrior",
+  "gameVersion": "demo-2026-10",
+  "rules": { "firstTalentLevel": 10, "maxLevel": 60, "pointsPerLevel": 1, "maxPoints": 51 },
+  "demo": true,
+  "provenance": {
+    "status": "unverified",
+    "gameVersion": "demo-2026-10",
+    "source": "Demo fixture authored for tooling development",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Synthetic tree to exercise the engine. Not real game data."
+  },
+  "trees": [
+    {
+      "id": "arms",
+      "name": { "zh": "武器", "en": "Arms" },
+      "nodes": [
+        {
+          "id": "w-arms-1",
+          "name": { "zh": "强化打击", "en": "Improved Strike" },
+          "description": { "zh": "提高主要打击技能的伤害。", "en": "Increases the damage of your main strike." },
+          "maxPoints": 3,
+          "row": 0,
+          "col": 1
+        },
+        {
+          "id": "w-arms-2",
+          "name": { "zh": "坚韧体魄", "en": "Toughened" },
+          "description": { "zh": "提高生命值上限。", "en": "Increases maximum health." },
+          "maxPoints": 3,
+          "row": 0,
+          "col": 2
+        },
+        {
+          "id": "w-arms-3",
+          "name": { "zh": "精准", "en": "Precision" },
+          "description": { "zh": "提高命中率。", "en": "Increases hit chance." },
+          "maxPoints": 2,
+          "row": 1,
+          "col": 0
+        },
+        {
+          "id": "w-arms-4",
+          "name": { "zh": "横扫", "en": "Sweep" },
+          "description": { "zh": "攻击可波及附近敌人。", "en": "Your strikes hit nearby enemies." },
+          "maxPoints": 1,
+          "row": 1,
+          "col": 1,
+          "requires": [{ "nodeId": "w-arms-1", "points": 3 }]
+        },
+        {
+          "id": "w-arms-5",
+          "name": { "zh": "致死打击", "en": "Mortal Strike" },
+          "description": { "zh": "强力的单体攻击并削弱治疗。", "en": "A powerful strike that reduces healing on the target." },
+          "maxPoints": 1,
+          "row": 2,
+          "col": 1,
+          "requiresPointsInTree": 5,
+          "minLevel": 20
+        },
+        {
+          "id": "w-arms-6",
+          "name": { "zh": "战意", "en": "Battle Fury" },
+          "description": { "zh": "暴击后获得怒气。", "en": "Critical strikes generate rage." },
+          "maxPoints": 3,
+          "row": 2,
+          "col": 2,
+          "requires": [{ "nodeId": "w-arms-3", "points": 2 }]
+        },
+        {
+          "id": "w-arms-7",
+          "name": { "zh": "处决大师", "en": "Executioner" },
+          "description": { "zh": "强化斩杀阶段伤害。", "en": "Greatly increases execute-phase damage." },
+          "maxPoints": 1,
+          "row": 3,
+          "col": 1,
+          "requires": [{ "nodeId": "w-arms-5" }],
+          "requiresPointsInTree": 8,
+          "exclusiveWith": ["w-arms-8"]
+        },
+        {
+          "id": "w-arms-8",
+          "name": { "zh": "利刃专精", "en": "Sharpened Blades" },
+          "description": { "zh": "提高持续伤害效果。", "en": "Improves damage-over-time effects." },
+          "maxPoints": 1,
+          "row": 3,
+          "col": 2,
+          "requiresPointsInTree": 8,
+          "exclusiveWith": ["w-arms-7"]
+        }
+      ]
+    },
+    {
+      "id": "protection",
+      "name": { "zh": "防护", "en": "Protection" },
+      "nodes": [
+        {
+          "id": "w-prot-1",
+          "name": { "zh": "盾牌专精", "en": "Shield Mastery" },
+          "description": { "zh": "提高格挡效果。", "en": "Improves blocking." },
+          "maxPoints": 3,
+          "row": 0,
+          "col": 1
+        },
+        {
+          "id": "w-prot-2",
+          "name": { "zh": "坚韧皮肤", "en": "Thick Hide" },
+          "description": { "zh": "降低受到的伤害。", "en": "Reduces damage taken." },
+          "maxPoints": 3,
+          "row": 0,
+          "col": 2
+        },
+        {
+          "id": "w-prot-3",
+          "name": { "zh": "嘲讽掌握", "en": "Taunt Mastery" },
+          "description": { "zh": "嘲讽更容易命中。", "en": "Taunt is more likely to land." },
+          "maxPoints": 1,
+          "row": 1,
+          "col": 0,
+          "requires": [{ "nodeId": "w-prot-1", "points": 2 }]
+        },
+        {
+          "id": "w-prot-4",
+          "name": { "zh": "格挡训练", "en": "Block Training" },
+          "description": { "zh": "提高格挡几率。", "en": "Increases block chance." },
+          "maxPoints": 2,
+          "row": 1,
+          "col": 2
+        },
+        {
+          "id": "w-prot-5",
+          "name": { "zh": "盾墙", "en": "Shield Wall" },
+          "description": { "zh": "短时间内大幅降低伤害。", "en": "Greatly reduces damage taken for a short time." },
+          "maxPoints": 1,
+          "row": 2,
+          "col": 1,
+          "requiresPointsInTree": 5
+        },
+        {
+          "id": "w-prot-6",
+          "name": { "zh": "复仇", "en": "Vengeance" },
+          "description": { "zh": "格挡后反击。", "en": "Counterattack after blocking." },
+          "maxPoints": 2,
+          "row": 2,
+          "col": 2,
+          "requires": [{ "nodeId": "w-prot-4", "points": 2 }]
+        },
+        {
+          "id": "w-prot-7",
+          "name": { "zh": "守护者", "en": "Guardian" },
+          "description": { "zh": "成为队伍最可靠的防线。", "en": "Become the party's most reliable line of defense." },
+          "maxPoints": 1,
+          "row": 3,
+          "col": 1,
+          "requires": [{ "nodeId": "w-prot-5" }],
+          "requiresPointsInTree": 8
+        }
+      ]
+    }
+  ]
+}
