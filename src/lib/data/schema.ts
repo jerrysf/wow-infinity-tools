@@ -80,6 +80,8 @@ export const talentNodeSchema = z.object({
     .regex(/^[a-z0-9-]+$/, "node id must be lowercase kebab-case"),
   name: localizedTextSchema,
   description: localizedTextSchema,
+  /** Optional icon file name served from /icons/. */
+  icon: z.string().regex(/^[a-z0-9_.-]+$/i).optional(),
   maxPoints: z.number().int().min(1).max(10).default(1),
   /** Grid coordinates used by the UI layout. Row 0 is the top of the tree. */
   row: z.number().int().min(0),

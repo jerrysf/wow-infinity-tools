@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import type { ClassTalents, TalentNode } from "@/lib/data/schema";
+import type { ClassTalents, TalentNode, TalentTree } from "@/lib/data/schema";
 import {
   allocate,
   emptyBuild,
@@ -11,6 +11,7 @@ import {
   pointsSpent,
   refund,
   resetBuild,
+  treePointsSpent,
   validateBuild,
   type AllocError,
   type BuildState,
@@ -44,7 +45,7 @@ function requirementText(
   }
   const tree = data.trees.find((tr) => tr.nodes.some((n) => n.id === node.id));
   if (tree && node.requiresPointsInTree > 0) {
-    const spent = tree.nodes.reduce((s, n) => s + (state.points[n.id] ?? 0), 0);
+    const spent = treePointsSpent(state, data, tree.id);
     if (spent < node.requiresPointsInTree) {
       lines.push(t(dict.talents.requiresPoints, { points: `${spent}/${node.requiresPointsInTree}` }));
     }
@@ -61,18 +62,203 @@ function requirementText(
   return lines;
 }
 
-const nodeStyles: Record<NodeAvailability, string> = {
-  available:
-    "border-blue-400 bg-blue-50 hover:bg-blue-100 dark:border-blue-700 dark:bg-blue-950/60 dark:hover:bg-blue-950",
-  allocated:
-    "border-green-500 bg-green-50 dark:border-green-700 dark:bg-green-950/60",
-  maxed: "border-green-600 bg-green-100 dark:border-green-600 dark:bg-green-900/60",
-  "locked-requires": "border-zinc-300 bg-zinc-100 opacity-70 dark:border-zinc-700 dark:bg-zinc-900",
-  "locked-tree-points": "border-zinc-300 bg-zinc-100 opacity-70 dark:border-zinc-700 dark:bg-zinc-900",
-  "locked-exclusivity": "border-zinc-300 bg-zinc-100 opacity-70 dark:border-zinc-700 dark:bg-zinc-900",
-  "locked-level": "border-zinc-300 bg-zinc-100 opacity-70 dark:border-zinc-700 dark:bg-zinc-900",
-  "locked-points": "border-zinc-300 bg-zinc-100 opacity-70 dark:border-zinc-700 dark:bg-zinc-900",
-};
+/** WoW-style tile visuals: grayscale + dim border when locked, green when
+ *  learnable/allocated, gold when maxed. */
+function tileClasses(status: NodeAvailability): string {
+  switch (status) {
+    case "maxed":
+      return "border-[#ffd100] shadow-[0_0_6px_rgba(255,209,0,0.45)]";
+    case "allocated":
+      return "border-[#1eff00] shadow-[0_0_5px_rgba(30,255,0,0.3)]";
+    case "available":
+      return "border-[#1eff00]/70 hover:shadow-[0_0_6px_rgba(30,255,0,0.5)]";
+    default:
+      return "border-[#3a3f45]";
+  }
+}
+
+function iconClasses(status: NodeAvailability): string {
+  return status.startsWith("locked") ? "grayscale opacity-50" : "";
+}
+
+function rankClasses(status: NodeAvailability): string {
+  if (status === "maxed") return "text-[#ffd100]";
+  if (status === "allocated") return "text-[#1eff00]";
+  if (status === "available") return "text-[#9ae89f]";
+  return "text-[#6b7280]";
+}
+
+/** Elbow connector from a prerequisite tile to its dependent, classic style:
+ *  down from the parent's bottom edge, across, into the child's top edge. */
+function PrereqArrows({
+  tree,
+  rows,
+  build,
+}: {
+  tree: TalentTree;
+  rows: number;
+  build: BuildState;
+}) {
+  const paths: { id: string; d: string; active: boolean }[] = [];
+  for (const node of tree.nodes) {
+    for (const req of node.requires) {
+      const parent = tree.nodes.find((n) => n.id === req.nodeId);
+      if (!parent) continue;
+      const px = ((parent.col + 0.5) / GRID_COLS) * 100;
+      const py = ((parent.row + 1) / rows) * 100;
+      const cx = ((node.col + 0.5) / GRID_COLS) * 100;
+      const cy = (node.row / rows) * 100;
+      const d =
+        px === cx
+          ? `M ${px} ${py} L ${cx} ${cy}`
+          : `M ${px} ${py} L ${px} ${cy} L ${cx} ${cy}`;
+      const needed = req.points ?? parent.maxPoints;
+      paths.push({ id: `${req.nodeId}->${node.id}`, d, active: (build.points[req.nodeId] ?? 0) >= needed });
+    }
+  }
+  return (
+    <svg
+      viewBox="0 0 100 100"
+      preserveAspectRatio="none"
+      className="pointer-events-none absolute inset-0 h-full w-full"
+      aria-hidden="true"
+    >
+      {paths.map((p) => (
+        <path
+          key={p.id}
+          d={p.d}
+          fill="none"
+          vectorEffect="non-scaling-stroke"
+          strokeWidth={2.5}
+          stroke={p.active ? "#ffd100" : "#4b5563"}
+          strokeLinecap="square"
+        />
+      ))}
+    </svg>
+  );
+}
+
+function TalentTile({
+  node,
+  status,
+  allocated,
+  selected,
+  locale,
+  dict,
+  onAllocate,
+  onRefund,
+}: {
+  node: TalentNode;
+  status: NodeAvailability;
+  allocated: number;
+  selected: boolean;
+  locale: Locale;
+  dict: Dictionary;
+  onAllocate: () => void;
+  onRefund: () => void;
+}) {
+  const name = pick(node.name, locale);
+  return (
+    <button
+      type="button"
+      onClick={onAllocate}
+      onContextMenu={(e) => {
+        e.preventDefault();
+        onRefund();
+      }}
+      aria-label={`${name} ${t(dict.talents.rank, { current: allocated, max: node.maxPoints })}`}
+      className={`relative aspect-square w-full max-w-11 rounded border-2 bg-[#0b0d10] transition-shadow focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#ffd100] ${tileClasses(status)} ${selected ? "ring-2 ring-[#ffd100] ring-offset-1 ring-offset-[#0b0d10]" : ""}`}
+    >
+      {node.icon ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={`/icons/${node.icon}`}
+          alt=""
+          width={56}
+          height={56}
+          loading="lazy"
+          draggable={false}
+          className={`h-full w-full rounded-sm object-cover ${iconClasses(status)}`}
+        />
+      ) : (
+        <span className={`flex h-full w-full items-center justify-center text-sm font-bold text-[#9ca3af] ${iconClasses(status)}`}>
+          {name.slice(0, 1)}
+        </span>
+      )}
+      <span
+        className={`pointer-events-none absolute inset-x-0 -bottom-5 text-center text-[11px] font-semibold leading-none ${rankClasses(status)}`}
+      >
+        {status === "maxed" ? t(dict.talents.rank, { current: node.maxPoints, max: node.maxPoints }) : t(dict.talents.rank, { current: allocated, max: node.maxPoints })}
+      </span>
+    </button>
+  );
+}
+
+function TalentTreePanel({
+  tree,
+  data,
+  build,
+  selectedId,
+  onSelect,
+  onAllocate,
+  onRefund,
+  locale,
+  dict,
+}: {
+  tree: TalentTree;
+  data: ClassTalents;
+  build: BuildState;
+  selectedId: string | null;
+  onSelect: (id: string) => void;
+  onAllocate: (id: string) => void;
+  onRefund: (id: string) => void;
+  locale: Locale;
+  dict: Dictionary;
+}) {
+  const rows = useMemo(() => Math.max(...tree.nodes.map((n) => n.row)) + 1, [tree]);
+  const spent = treePointsSpent(build, data, tree.id);
+  return (
+    <section
+      aria-label={`${pick(tree.name, locale)} ${spent}`}
+      className="rounded-md border border-[#2a2f3a] bg-gradient-to-b from-[#151a21] to-[#0d1015] p-2.5"
+    >
+      <header className="mb-3 flex items-baseline justify-between border-b border-[#2a2f3a] pb-1.5">
+        <h3 className="text-sm font-semibold tracking-wide text-[#e8d9a8]">{pick(tree.name, locale)}</h3>
+        <span className={`text-xs font-semibold ${spent > 0 ? "text-[#ffd100]" : "text-[#6b7280]"}`}>{spent}</span>
+      </header>
+      <div className="relative">
+        <PrereqArrows tree={tree} rows={rows} build={build} />
+        <div className="relative grid" style={{ gridTemplateColumns: `repeat(${GRID_COLS}, 1fr)`, gap: "0.4rem" }}>
+          {Array.from({ length: rows }, (_, row) => row).flatMap((row) =>
+            Array.from({ length: GRID_COLS }, (_, col) => {
+              const node = tree.nodes.find((n) => n.row === row && n.col === col);
+              if (!node) return <div key={`${row}-${col}`} className="aspect-square" />;
+              const status = nodeAvailability(build, data, node.id);
+              const allocated = build.points[node.id] ?? 0;
+              return (
+                <div key={node.id} className="mb-5" style={{ gridRow: row + 1, gridColumn: col + 1 }}>
+                  <TalentTile
+                    node={node}
+                    status={status}
+                    allocated={allocated}
+                    selected={selectedId === node.id}
+                    locale={locale}
+                    dict={dict}
+                    onAllocate={() => {
+                      onSelect(node.id);
+                      onAllocate(node.id);
+                    }}
+                    onRefund={() => onRefund(node.id)}
+                  />
+                </div>
+              );
+            }),
+          )}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 export function TalentSimulator({
   data,
@@ -87,6 +273,7 @@ export function TalentSimulator({
     emptyBuild(data.classId, data.rules.maxLevel),
   );
   const [activeTree, setActiveTree] = useState(data.trees[0].id);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [hydrated, setHydrated] = useState(false);
@@ -132,20 +319,17 @@ export function TalentSimulator({
   const spent = pointsSpent(build);
   const available = pointsAvailable(data, build.level);
   const overSpent = spent > available;
-  const tree = data.trees.find((tr) => tr.id === activeTree) ?? data.trees[0];
-  const maxRow = useMemo(() => Math.max(...tree.nodes.map((n) => n.row)), [tree]);
-
-  function flash(kind: "error" | "notice", message: string | null) {
-    if (kind === "error") setError(message);
-    else setNotice(message);
-  }
+  const selected = selectedId ? findNode(data, selectedId) : null;
+  const selectedReqs = selected
+    ? requirementText(selected.node, data, build, locale, dict)
+    : [];
 
   function onAllocate(nodeId: string) {
     setError(null);
     setNotice(null);
     const result = allocate(build, data, nodeId);
     if ("error" in result) {
-      flash("error", dict.talents.errors[result.error as AllocError]);
+      setError(dict.talents.errors[result.error as AllocError]);
     } else {
       setBuild(result.state);
     }
@@ -156,7 +340,7 @@ export function TalentSimulator({
     setNotice(null);
     const result = refund(build, data, nodeId);
     if ("error" in result) {
-      flash("error", dict.talents.errors[result.error as RefundError]);
+      setError(dict.talents.errors[result.error as RefundError]);
     } else {
       setBuild(result.state);
     }
@@ -174,10 +358,10 @@ export function TalentSimulator({
   async function copyText(text: string, message: string) {
     try {
       await navigator.clipboard.writeText(text);
-      flash("notice", message);
+      setNotice(message);
       setError(null);
     } catch {
-      flash("error", text);
+      setError(text);
     }
   }
 
@@ -197,12 +381,14 @@ export function TalentSimulator({
     );
   }
 
+  const mobileTree = data.trees.find((tr) => tr.id === activeTree) ?? data.trees[0];
+
   return (
-    <div>
+    <div className="rounded-lg border border-[#2a2f3a] bg-[#0b0d12] p-3 text-[#d1d5db] sm:p-4">
       {/* Status bar */}
-      <div className="mb-4 flex flex-wrap items-center gap-x-6 gap-y-2 rounded-lg border border-zinc-200 p-3 dark:border-zinc-800">
+      <div className="mb-4 flex flex-wrap items-center gap-x-6 gap-y-2 rounded-md border border-[#2a2f3a] bg-[#12161d] p-3">
         <div className="text-sm">
-          <label htmlFor="sim-level" className="mr-2 font-medium">
+          <label htmlFor="sim-level" className="mr-2 font-medium text-[#e8d9a8]">
             {dict.talents.level}: {build.level}
           </label>
           <input
@@ -212,14 +398,14 @@ export function TalentSimulator({
             max={data.rules.maxLevel}
             value={build.level}
             onChange={(e) => onLevelChange(Number(e.target.value))}
-            className="w-40 align-middle"
+            className="w-40 align-middle accent-[#ffd100]"
           />
         </div>
         <div className="text-sm">
-          <span className={overSpent ? "font-semibold text-red-600 dark:text-red-400" : "font-medium"}>
+          <span className={overSpent ? "font-semibold text-red-400" : "font-medium text-[#9ae89f]"}>
             {dict.talents.pointsRemaining}: {Math.max(0, available - spent)}
           </span>
-          <span className="ml-3 text-zinc-500">
+          <span className="ml-3 text-[#8b93a1]">
             {dict.talents.pointsSpent}: {spent}/{available}
           </span>
         </div>
@@ -227,21 +413,21 @@ export function TalentSimulator({
           <button
             type="button"
             onClick={() => { setBuild(resetBuild(build)); setError(null); }}
-            className="rounded border border-zinc-300 px-3 py-1.5 text-sm hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
+            className="rounded border border-[#3a4150] px-3 py-1.5 text-sm text-[#d1d5db] hover:bg-[#1c222c]"
           >
             {dict.talents.reset}
           </button>
           <button
             type="button"
             onClick={copyLink}
-            className="rounded bg-zinc-900 px-3 py-1.5 text-sm font-medium text-white hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-900"
+            className="rounded border border-[#8a6d1f] bg-[#2a2210] px-3 py-1.5 text-sm font-medium text-[#ffd100] hover:bg-[#3a2f14]"
           >
             {dict.talents.share}
           </button>
           <button
             type="button"
             onClick={copySummary}
-            className="rounded border border-zinc-300 px-3 py-1.5 text-sm hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
+            className="rounded border border-[#3a4150] px-3 py-1.5 text-sm text-[#d1d5db] hover:bg-[#1c222c]"
           >
             {dict.common.actions.copySummary}
           </button>
@@ -249,25 +435,25 @@ export function TalentSimulator({
       </div>
 
       {overSpent && (
-        <p role="alert" className="mb-3 rounded-lg border border-red-300 bg-red-50 p-3 text-sm text-red-800 dark:border-red-900 dark:bg-red-950 dark:text-red-200">
+        <p role="alert" className="mb-3 rounded-md border border-red-800 bg-red-950/60 p-3 text-sm text-red-300">
           {dict.talents.errors["no-points"]}
         </p>
       )}
       {error && (
-        <p role="alert" className="mb-3 rounded-lg border border-red-300 bg-red-50 p-3 text-sm text-red-800 dark:border-red-900 dark:bg-red-950 dark:text-red-200">
+        <p role="alert" className="mb-3 rounded-md border border-red-800 bg-red-950/60 p-3 text-sm text-red-300">
           {error}
         </p>
       )}
       {notice && !error && (
-        <p role="status" className="mb-3 rounded-lg border border-blue-300 bg-blue-50 p-3 text-sm text-blue-800 dark:border-blue-900 dark:bg-blue-950 dark:text-blue-200">
+        <p role="status" className="mb-3 rounded-md border border-blue-800 bg-blue-950/60 p-3 text-sm text-blue-300">
           {notice}
         </p>
       )}
 
-      {/* Tree tabs */}
-      <div className="mb-3 flex gap-1 overflow-x-auto" role="tablist" aria-label={dict.talents.tree}>
+      {/* Tree tabs on small screens; all three columns on lg+ */}
+      <div className="mb-3 flex gap-1 overflow-x-auto lg:hidden" role="tablist" aria-label={dict.talents.tree}>
         {data.trees.map((tr) => {
-          const treeSpent = tr.nodes.reduce((s, n) => s + (build.points[n.id] ?? 0), 0);
+          const treeSpent = treePointsSpent(build, data, tr.id);
           const active = tr.id === activeTree;
           return (
             <button
@@ -275,10 +461,10 @@ export function TalentSimulator({
               role="tab"
               aria-selected={active}
               onClick={() => setActiveTree(tr.id)}
-              className={`whitespace-nowrap rounded-t-lg border-b-2 px-4 py-2 text-sm font-medium ${
+              className={`whitespace-nowrap rounded-t-md border-b-2 px-4 py-2 text-sm font-medium ${
                 active
-                  ? "border-blue-600 text-blue-700 dark:border-blue-400 dark:text-blue-300"
-                  : "border-transparent text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+                  ? "border-[#ffd100] text-[#ffd100]"
+                  : "border-transparent text-[#8b93a1] hover:text-[#d1d5db]"
               }`}
             >
               {pick(tr.name, locale)} ({treeSpent})
@@ -287,66 +473,89 @@ export function TalentSimulator({
         })}
       </div>
 
-      {/* Node grid: fixed column layout per data coordinates, scrollable on small screens */}
-      <div className="overflow-x-auto pb-2">
-        <div
-          className="grid min-w-[560px] gap-2"
-          style={{ gridTemplateColumns: `repeat(${GRID_COLS}, minmax(0, 1fr))` }}
-        >
-          {Array.from({ length: maxRow + 1 }, (_, row) => row).flatMap((row) =>
-            Array.from({ length: GRID_COLS }, (_, col) => {
-              const node = tree.nodes.find((n) => n.row === row && n.col === col);
-              if (!node) return <div key={`${row}-${col}`} />;
-              const status = nodeAvailability(build, data, node.id);
-              const allocated = build.points[node.id] ?? 0;
-              const reqs = requirementText(node, data, build, locale, dict);
-              const locked = status.startsWith("locked");
-              return (
-                <div
-                  key={node.id}
-                  className={`relative rounded-lg border-2 p-2 text-left ${nodeStyles[status]}`}
-                  style={{ gridRow: row + 1, gridColumn: col + 1 }}
-                >
-                  <button
-                    type="button"
-                    onClick={() => onAllocate(node.id)}
-                    disabled={status === "maxed"}
-                    aria-label={`${pick(node.name, locale)} ${t(dict.talents.rank, { current: allocated, max: node.maxPoints })}`}
-                    className="block w-full text-left focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-                  >
-                    <span className="block text-sm font-semibold leading-tight">
-                      {pick(node.name, locale)}
-                    </span>
-                    <span className="mt-0.5 block text-xs text-zinc-500 dark:text-zinc-400">
-                      {status === "maxed"
-                        ? dict.talents.maxRank
-                        : t(dict.talents.rank, { current: allocated, max: node.maxPoints })}
-                    </span>
-                    <span className="mt-1 block text-xs leading-snug text-zinc-600 dark:text-zinc-400">
-                      {pick(node.description, locale)}
-                    </span>
-                    {locked && reqs.length > 0 && (
-                      <span className="mt-1 block text-xs font-medium text-amber-700 dark:text-amber-400">
-                        {dict.talents.lockedNode}: {reqs.join("; ")}
-                      </span>
-                    )}
-                  </button>
-                  {allocated > 0 && (
-                    <button
-                      type="button"
-                      onClick={() => onRefund(node.id)}
-                      aria-label={`Refund ${pick(node.name, locale)}`}
-                      className="absolute right-1 top-1 flex h-6 w-6 items-center justify-center rounded-full bg-zinc-200 text-sm font-bold text-zinc-700 hover:bg-zinc-300 dark:bg-zinc-700 dark:text-zinc-200 dark:hover:bg-zinc-600"
-                    >
-                      −
-                    </button>
-                  )}
-                </div>
-              );
-            }),
+      <div className="grid gap-3 lg:grid-cols-3">
+        {/* Mobile: single tree. Desktop: all three side by side. */}
+        <div className="lg:hidden">
+          <TalentTreePanel
+            tree={mobileTree}
+            data={data}
+            build={build}
+            selectedId={selectedId}
+            onSelect={setSelectedId}
+            onAllocate={onAllocate}
+            onRefund={onRefund}
+            locale={locale}
+            dict={dict}
+          />
+        </div>
+        {data.trees.map((tr) => (
+          <div key={tr.id} className="hidden lg:block">
+            <TalentTreePanel
+              tree={tr}
+              data={data}
+              build={build}
+              selectedId={selectedId}
+              onSelect={setSelectedId}
+              onAllocate={onAllocate}
+              onRefund={onRefund}
+              locale={locale}
+              dict={dict}
+            />
+          </div>
+        ))}
+      </div>
+
+      {/* Selected node detail panel (tooltip equivalent, mobile friendly) */}
+      {selected && (
+        <div className="mt-4 rounded-md border border-[#8a6d1f]/50 bg-[#15181f] p-3">
+          <div className="flex flex-wrap items-center gap-3">
+            {selected.node.icon && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={`/icons/${selected.node.icon}`} alt="" width={40} height={40} className="h-10 w-10 rounded border border-[#3a4150]" />
+            )}
+            <div className="min-w-0 flex-1">
+              <p className="font-semibold text-[#e8d9a8]">
+                {pick(selected.node.name, locale)}{" "}
+                <span className="text-sm font-normal text-[#8b93a1]">
+                  {t(dict.talents.rank, { current: build.points[selected.node.id] ?? 0, max: selected.node.maxPoints })}
+                </span>
+              </p>
+              <p className="mt-0.5 text-sm text-[#b6bcc8]">{pick(selected.node.description, locale)}</p>
+            </div>
+            <div className="flex gap-2">
+              <button
+                type="button"
+                onClick={() => onAllocate(selected.node.id)}
+                className="rounded border border-[#1eff00]/50 bg-[#0f2410] px-3 py-1.5 text-sm font-medium text-[#9ae89f] hover:bg-[#16331a]"
+              >
+                +1
+              </button>
+              <button
+                type="button"
+                onClick={() => onRefund(selected.node.id)}
+                aria-label={`Refund ${pick(selected.node.name, locale)}`}
+                disabled={(build.points[selected.node.id] ?? 0) === 0}
+                className="rounded border border-[#3a4150] px-3 py-1.5 text-sm text-[#d1d5db] hover:bg-[#1c222c] disabled:opacity-40"
+              >
+                −1
+              </button>
+            </div>
+          </div>
+          {selectedReqs.length > 0 && (
+            <p className="mt-2 text-sm text-amber-300">
+              {dict.talents.lockedNode}: {selectedReqs.join("; ")}
+            </p>
+          )}
+          {selected.node.exclusiveWith.length > 0 && (
+            <p className="mt-1 text-xs text-[#8b93a1]">
+              {dict.talents.exclusive}: {selected.node.exclusiveWith.map((id) => {
+                const found = findNode(data, id);
+                return found ? pick(found.node.name, locale) : id;
+              }).join(", ")}
+            </p>
           )}
         </div>
-      </div>
+      )}
     </div>
   );
 }

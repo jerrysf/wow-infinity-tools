@@ -79,10 +79,12 @@ def convert(class_id: str, src_dir: Path, out_dir: Path):
             if "req" in z:
                 req_idx = z["req"]
                 requires.append({"nodeId": node_ids[req_idx], "points": zts[req_idx]["max"]})
+            icon = z.get("icon") or e.get("icon") or ""
             node = {
                 "id": node_ids[i],
                 "name": {"zh": z["name"], "en": e["name"]},
                 "description": {"zh": z["ranks"][-1]["text"], "en": e["ranks"][-1]["text"]},
+                "icon": icon.rsplit("/", 1)[-1],
                 "maxPoints": z["max"],
                 "row": z["row"] - 1,
                 "col": z["col"] - 1,

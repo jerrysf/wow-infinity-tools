@@ -31,18 +31,19 @@ test.describe("talent simulator", () => {
 
   test("locked nodes show prerequisites and reject allocation", async ({ page }) => {
     await page.goto(WARRIOR);
-    // 愤怒掌控 requires 强化战术掌握 maxed
-    await expect(page.getByText(/需要先点满 强化战术掌握/)).toBeVisible();
+    // 愤怒掌控 requires 强化战术掌握 maxed; selecting it shows the lock reason
     await page.getByRole("button", { name: /^愤怒掌控/ }).click();
     await expect(page.getByRole("alert").filter({ hasText: "前置天赋尚未满足" })).toBeVisible();
+    await expect(page.getByText(/需要先点满 强化战术掌握/)).toBeVisible();
   });
 
   test("tree points gate deeper rows", async ({ page }) => {
     await page.goto(WARRIOR);
     // row 1 needs 5 points in tree before unlocking
-    await expect(page.getByText("需要在此天赋树中投入 0/5 点").first()).toBeVisible();
-    await spendFive(page);
     const mastery = page.getByRole("button", { name: /^强化战术掌握/ });
+    await mastery.click();
+    await expect(page.getByText("需要在此天赋树中投入 0/5 点")).toBeVisible();
+    await spendFive(page);
     await mastery.click();
     await expect(page.getByText("已分配: 6/")).toBeVisible();
   });
@@ -78,7 +79,7 @@ test.describe("talent simulator", () => {
     const mastery = page.getByRole("button", { name: /^强化战术掌握/ });
     for (let i = 0; i < 5; i++) await mastery.click();
     await page.getByRole("button", { name: /^愤怒掌控/ }).click();
-    await page.getByRole("button", { name: "Refund 强化战术掌握" }).click();
+    await mastery.click({ button: "right" });
     await expect(page.getByRole("alert").filter({ hasText: "依赖此天赋" })).toBeVisible();
   });
 

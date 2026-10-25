@@ -35,6 +35,7 @@
             "zh": "使你的魔杖造成的伤害提高25%。",
             "en": "Increases your damage with Wands by 25%."
           },
+          "icon": "inv_wand_01.jpg",
           "maxPoints": 2,
           "row": 0,
           "col": 0,
@@ -52,6 +53,7 @@
             "zh": "使你的奥术法术命中几率提高5%。",
             "en": "Improves your chance to hit with Arcane spells by 5%."
           },
+          "icon": "spell_holy_devotion.jpg",
           "maxPoints": 5,
           "row": 0,
           "col": 1,
@@ -69,6 +71,7 @@
             "zh": "使你在引导奥术飞弹时有100%的几率不会因受到伤害而被打断，在施放奥术冲击时有70%的几率不会因受到伤害而被打断。",
             "en": "Gives you a 100% chance to avoid interruption caused by damage while channeling Arcane Missiles and a 70% chance while casting Arcane Blast or Arcane Wrath."
           },
+          "icon": "spell_nature_starfall.jpg",
           "maxPoints": 5,
           "row": 0,
           "col": 2,
@@ -86,6 +89,7 @@
             "zh": "使你的奥术冲击有40%的几率、火球术、寒冰箭和霜火之箭有20%的几率，使你的下一个奥术飞弹的引导时间缩短50%，法力值消耗降低100%，且每0.5秒发射一枚飞弹。",
             "en": "Gives your Arcane Blast spell a 40% chance, your Arcane Missile hits a 10% chance, and your Arcane Wrath, Fireball, Frostbolt, and Frostfire Bolt spells a 20% chance to reduce the channeled duration of your next Arcane Missiles spell by 50%, reduce the Mana cost by 100%, and missiles fire every 0.5 sec."
           },
+          "icon": "ability_mage_missilebarrage.jpg",
           "maxPoints": 2,
           "row": 0,
           "col": 3,
@@ -103,6 +107,7 @@
             "zh": "使你的目标对你的所有法术的抗性降低15点，并使你的奥术系法术所造成的威胁值降低30%。",
             "en": "Reduces your target's resistance to all your spells by 15 and reduces the threat caused by your Arcane spells by 30%."
           },
+          "icon": "spell_holy_dispelmagic.jpg",
           "maxPoints": 2,
           "row": 1,
           "col": 0,
@@ -120,6 +125,7 @@
             "zh": "使你的所有抗性提高10点，并使你完全抵抗的法术恢复最大法力值的2%。每秒最多触发一次。",
             "en": "Increases all your resistances by 10 and causes all spells you fully resist to restore 2% of your total mana. Cannot trigger more often than 1 time per sec."
           },
+          "icon": "spell_nature_astralrecalgroup.jpg",
           "maxPoints": 2,
           "row": 1,
           "col": 1,
@@ -137,6 +143,7 @@
             "zh": "使你有10%的几率在任何伤害法术命中目标之后进入节能施法状态。节能施法状态可以使你的下一个伤害性法术所消耗的法力值减少100%。",
             "en": "Gives you a 10% chance of entering a Clearcasting state after any damage spell hits a target. The Clearcasting state reduces the mana cost of your next damage spell by 100%."
           },
+          "icon": "spell_shadow_manaburn.jpg",
           "maxPoints": 5,
           "row": 1,
           "col": 2,
@@ -154,6 +161,7 @@
             "zh": "使你的护甲提高相当于智力50%的数值。",
             "en": "Increases your Armor by an amount equal to 50% of your Intellect."
           },
+          "icon": "spell_arcane_arcaneresilience.jpg",
           "maxPoints": 2,
           "row": 1,
           "col": 3,
@@ -171,6 +179,7 @@
             "zh": "使你的奥术法术的射程延长6码。",
             "en": "Increases the range of your Arcane spells by 6 yards."
           },
+          "icon": "inv_ability_mage_radiantspark.jpg",
           "maxPoints": 2,
           "row": 2,
           "col": 0,
@@ -188,6 +197,7 @@
             "zh": "使你的奥术法术爆击几率提高6%。",
             "en": "Increases the critical strike chance of your Arcane spells by 6%."
           },
+          "icon": "spell_nature_wispsplode.jpg",
           "maxPoints": 3,
           "row": 2,
           "col": 1,
@@ -205,6 +215,7 @@
             "zh": "用能量冲击目标，造成33点奥术伤害。每次施放奥术冲击，所有其他法术的伤害提高15%，奥术冲击的法力消耗提高175%。该效果最多叠加4次，持续15秒，或直到施放任何其他伤害法术。",
             "en": "Blasts the target with energy, dealing 33 Arcane damage. Each time you cast Arcane Blast, you gain 15% of your Intellect as Spell Damage and the mana cost of Arcane Blast is increased by 175%. Effect stacks up to 4 times and lasts 15 sec from time of initial application."
           },
+          "icon": "spell_arcane_blast.jpg",
           "maxPoints": 1,
           "row": 2,
           "col": 3,
@@ -222,6 +233,7 @@
             "zh": "使你的法力护盾每吸收一点伤害所消耗的法力值减少33%，并使你的魔甲术提供的抗性提高50%。",
             "en": "Decreases the Mana lost per point of damage taken when your Mana Shield spell is active by 33% and increases the resistances granted by your Mage Armor spell by 50%."
           },
+          "icon": "spell_shadow_detectlesserinvisibility.jpg",
           "maxPoints": 2,
           "row": 3,
           "col": 0,
@@ -239,6 +251,7 @@
             "zh": "你的法术反制还会使目标沉默4秒。",
             "en": "Your Counterspell also Silences the target for 4 sec."
           },
+          "icon": "spell_frost_iceshock.jpg",
           "maxPoints": 2,
           "row": 3,
           "col": 1,
@@ -256,6 +269,7 @@
             "zh": "使你在施法时仍保持50%的法力回复速度。",
             "en": "Allows 50% of your Mana regeneration to continue while casting."
           },
+          "icon": "spell_shadow_siphonmana.jpg",
           "maxPoints": 3,
           "row": 3,
           "col": 2,
@@ -278,6 +292,7 @@
             "zh": "Launches a projectile of pure Arcane energy at the enemy target, causing 120 Arcane damage. This spell gains additional Spell Damage equal to 5% of your maximum Mana.",
             "en": "Launches a projectile of pure Arcane energy at the enemy target, causing 120 Arcane damage. This spell gains additional Spell Damage equal to 5% of your maximum Mana."
           },
+          "icon": "ability_mage_netherwindpresence.jpg",
           "maxPoints": 1,
           "row": 3,
           "col": 3,
@@ -300,6 +315,7 @@
             "zh": "激活之后，你的下一个施法时间低于10秒的法师法术会成为瞬发法术。",
             "en": "When activated, your next Mage spell with a casting time less than 10 sec becomes an instant cast spell."
           },
+          "icon": "spell_nature_enchantarmor.jpg",
           "maxPoints": 1,
           "row": 4,
           "col": 1,
@@ -317,6 +333,7 @@
             "zh": "使你的智力提高10%，奥术法术的爆击伤害加成提高100%。",
             "en": "Increases your Intellect by 10% and increases the critical strike damage bonus of your Arcane spells by 100%."
           },
+          "icon": "spell_shadow_charm.jpg",
           "maxPoints": 5,
           "row": 4,
           "col": 2,
@@ -334,6 +351,7 @@
             "zh": "使你的法术造成的伤害提高3%，致命一击几率提高3%。",
             "en": "Increases the damage done by your spells by 3% and your critical strike chance by 3%."
           },
+          "icon": "spell_shadow_teleport.jpg",
           "maxPoints": 3,
           "row": 5,
           "col": 2,
@@ -351,6 +369,7 @@
             "zh": "在接下来的15秒内，你的法术造成的伤害提高30%，但消耗的法力值也提高30%。",
             "en": "For the next 15 sec, your spells deal 30% more damage while costing 30% more mana to cast."
           },
+          "icon": "spell_nature_lightning.jpg",
           "maxPoints": 1,
           "row": 6,
           "col": 1,
@@ -382,6 +401,7 @@
             "zh": "使你的火焰冲击冷却时间缩短2秒。击杀一个能为你提供经验值或荣誉值的目标后，你在30秒内施放的下一次火焰冲击的爆击几率提高15%。",
             "en": "Reduces the cooldown of your Fire Blast spell by 2 sec and increases its range by 15 yards."
           },
+          "icon": "spell_fire_lavaspawn.jpg",
           "maxPoints": 2,
           "row": 0,
           "col": 0,
@@ -399,6 +419,7 @@
             "zh": "使你的火焰冲击、冰枪术、奥术冲击和灼烧的爆击几率提高6%。",
             "en": "Increases the critical strike chance of your Fire Blast, Ice Lance, Arcane Blast, and Scorch spells by 6%."
           },
+          "icon": "spell_fire_flameshock.jpg",
           "maxPoints": 3,
           "row": 0,
           "col": 1,
@@ -416,6 +437,7 @@
             "zh": "使你的火球术和霜火之箭的施法时间缩短0.5秒。",
             "en": "Reduces the casting time of your Fireball and Frostfire Bolt spells by 0.5 sec."
           },
+          "icon": "spell_fire_flamebolt.jpg",
           "maxPoints": 5,
           "row": 0,
           "col": 2,
@@ -433,6 +455,7 @@
             "zh": "你的火焰伤害法术造成爆击后会使目标燃烧，在4秒内额外造成相当于该法术伤害40%的伤害。",
             "en": "Your critical strikes from Fire damage spells cause the target to burn for an additional 40% of your spell's damage over 4 sec."
           },
+          "icon": "spell_fire_incinerate.jpg",
           "maxPoints": 5,
           "row": 1,
           "col": 0,
@@ -450,6 +473,7 @@
             "zh": "使你的火焰法术的射程增加6码。",
             "en": "Increases the range of your Fire spells by 6 yards."
           },
+          "icon": "spell_fire_flare.jpg",
           "maxPoints": 2,
           "row": 1,
           "col": 1,
@@ -467,6 +491,7 @@
             "zh": "使你的火焰法术有10%的几率令目标昏迷2秒。",
             "en": "Gives your Fire spells a 10% chance to stun the target for 2 sec."
           },
+          "icon": "spell_fire_meteorstorm.jpg",
           "maxPoints": 3,
           "row": 1,
           "col": 2,
@@ -484,6 +509,7 @@
             "zh": "使你的火焰系法术有70%的几率不会因为你受到伤害而被干扰，火焰系法术所造成的威胁值降低30%。",
             "en": "Gives your Fire spells a 70% chance to not lose casting time when you take damage and reduces the threat caused by your Fire spells by 30%."
           },
+          "icon": "spell_fire_fire.jpg",
           "maxPoints": 3,
           "row": 2,
           "col": 0,
@@ -501,6 +527,7 @@
             "zh": "使你的烈焰风暴造成爆击的几率提高15%。",
             "en": "Increases the critical strike chance of your Flamestrike spell by 15%."
           },
+          "icon": "spell_fire_selfdestruct.jpg",
           "maxPoints": 3,
           "row": 2,
           "col": 1,
@@ -518,6 +545,7 @@
             "zh": "发射一枚巨大的火球，对目标造成100点火焰伤害，并在12秒内造成总计44点额外伤害。",
             "en": "Hurls an immense fiery boulder that causes 100 Fire damage and an additional 44 Fire damage over 12 sec."
           },
+          "icon": "spell_fire_fireball02.jpg",
           "maxPoints": 1,
           "row": 2,
           "col": 2,
@@ -535,6 +563,7 @@
             "zh": "你的灼烧法术有100%的几率使目标更易受到火焰伤害。该易伤效果会使你对该目标造成的所有火焰伤害提高3%，持续30秒，最多叠加5次。",
             "en": "Your Scorch spell has a 100% chance to cause your target to be vulnerable to Fire damage. This vulnerability increases all Fire damage you deal to your target by 3% and lasts 30 sec, stacking up to 5 times."
           },
+          "icon": "spell_fire_windsofwoe.jpg",
           "maxPoints": 3,
           "row": 3,
           "col": 0,
@@ -552,6 +581,7 @@
             "zh": "你的防护火焰结界有20%的几率将火焰法术反射给施法者。",
             "en": "Causes your Fire Ward to have a 20% chance to reflect Fire spells while active."
           },
+          "icon": "spell_fire_firearmor.jpg",
           "maxPoints": 2,
           "row": 3,
           "col": 1,
@@ -569,6 +599,7 @@
             "zh": "你的火球术、霜火之箭、火焰冲击和灼烧的非周期性爆击会使你获得炽热连击，持续20秒。炽热连击使炎爆术的施法时间缩短25%，最多叠加3次。",
             "en": "Non-periodic critical strikes with Fireball, Frostfire Bolt, Fire Blast, and Scorch reduce the cast time of your next Pyroblast cast within 20 sec by 25%, stacking up to 3 times. Fire Blast grants an additional stack every time it deals damage."
           },
+          "icon": "spell_fire_firebolt.jpg",
           "maxPoints": 1,
           "row": 3,
           "col": 2,
@@ -591,6 +622,7 @@
             "zh": "你的火焰和冰霜法术造成爆击时，会返还其基础法力消耗的30%。",
             "en": "Your Fire and Frost critical strikes will refund 30% of their base mana cost."
           },
+          "icon": "spell_fire_masterofelements.jpg",
           "maxPoints": 3,
           "row": 3,
           "col": 3,
@@ -608,6 +640,7 @@
             "zh": "使你的火焰法术造成爆击的几率提高10%。",
             "en": "Increases the critical strike chance of your Fire spells by 10%."
           },
+          "icon": "spell_nature_wispheal.jpg",
           "maxPoints": 5,
           "row": 4,
           "col": 1,
@@ -625,6 +658,7 @@
             "zh": "施法者向外释放一道火焰冲击波，对冲击范围内的所有敌人造成153点火焰伤害，并使其眩晕，移动速度降低50%，持续6秒。",
             "en": "A wave of flame radiates outward from the caster, damaging all enemies caught within the blast for 153 Fire damage, and Dazing them for 50% reduced movement speed for 6 sec."
           },
+          "icon": "spell_holy_excorcism_02.jpg",
           "maxPoints": 1,
           "row": 4,
           "col": 2,
@@ -642,6 +676,7 @@
             "zh": "使你的火焰法术造成的伤害提高3%。",
             "en": "Increases the damage done by your Fire spells by 3% per your Fire effects on the target, up to a maximum increase of 12%. Effects which mix multiple schools of magic do not qualify."
           },
+          "icon": "spell_fire_immolation.jpg",
           "maxPoints": 3,
           "row": 5,
           "col": 2,
@@ -659,6 +694,7 @@
             "zh": "激活后，你的火焰伤害法术每次命中都会使你的火焰伤害法术爆击几率提高10%。该效果会持续到你用火焰法术造成3次非周期性爆击为止。",
             "en": "When activated, this spell causes each of your Fire damage spell hits to increase your critical strike chance with Fire damage spells by 10%. This effect lasts until you have caused 3 non-periodic critical strikes with Fire spells."
           },
+          "icon": "spell_fire_sealoffire.jpg",
           "maxPoints": 1,
           "row": 6,
           "col": 1,
@@ -690,6 +726,7 @@
             "zh": "使你的霜甲术和冰甲术提供的护甲和抗性提高30%。此外，你的防护冰霜结界激活时有20%的几率反射冰霜法术和效果。",
             "en": "Increases the Armor and resistance given by your Frost Armor and Ice Armor spells by 30%. In addition, gives your Frost Ward a 20% chance to reflect Frost spells and effects while active."
           },
+          "icon": "spell_frost_frostward.jpg",
           "maxPoints": 2,
           "row": 0,
           "col": 0,
@@ -707,6 +744,7 @@
             "zh": "使你的寒冰箭的施法时间缩短0.5秒。",
             "en": "Reduces the casting time of your Frostbolt and Frost Blast spells by 0.5 sec."
           },
+          "icon": "spell_frost_frostbolt02.jpg",
           "maxPoints": 5,
           "row": 0,
           "col": 1,
@@ -724,6 +762,7 @@
             "zh": "使你的冰霜和火焰法术命中几率提高5%。",
             "en": "Improves your chance to hit with Frost and Fire spells by 5%."
           },
+          "icon": "spell_ice_magicdamage.jpg",
           "maxPoints": 5,
           "row": 0,
           "col": 2,
@@ -741,6 +780,7 @@
             "zh": "使你的冰霜法术爆击所造成的伤害提高100%。",
             "en": "Increases the critical strike damage bonus of your Frost spells by 100%."
           },
+          "icon": "spell_frost_iceshard.jpg",
           "maxPoints": 5,
           "row": 1,
           "col": 0,
@@ -758,6 +798,7 @@
             "zh": "使你的冰冷效果持续时间延长33%，并使目标的速度额外降低10%。",
             "en": "Increases the duration of your Chill effects by 33% and reduces the target's speed by an additional 10%."
           },
+          "icon": "spell_frost_wisp.jpg",
           "maxPoints": 3,
           "row": 1,
           "col": 1,
@@ -775,6 +816,7 @@
             "zh": "使你的冰霜新星的冷却时间减少4秒。",
             "en": "Reduces the cooldown of your Frost Nova spell by 4 sec."
           },
+          "icon": "spell_frost_freezingbreath.jpg",
           "maxPoints": 2,
           "row": 1,
           "col": 2,
@@ -792,6 +834,7 @@
             "zh": "你的冰冷效果有15%的几率将目标冰冻5秒。",
             "en": "Gives your Chill effects a 15% chance to Freeze the target for 5 sec."
           },
+          "icon": "spell_frost_frostarmor.jpg",
           "maxPoints": 3,
           "row": 1,
           "col": 3,
@@ -809,6 +852,7 @@
             "zh": "使你的冰霜法术所造成的伤害提高6%。",
             "en": "Increases the damage done by your Frost spells by 6%."
           },
+          "icon": "spell_frost_frostbolt.jpg",
           "maxPoints": 3,
           "row": 2,
           "col": 0,
@@ -826,6 +870,7 @@
             "zh": "使你的所有冰霜法术所消耗的法力值减少15%，冰霜系法术所造成的威胁值降低30%。",
             "en": "Reduces the mana cost of your Frost spells by 15% and reduces the threat caused by your Frost spells by 30%."
           },
+          "icon": "spell_frost_stun.jpg",
           "maxPoints": 3,
           "row": 2,
           "col": 1,
@@ -843,6 +888,7 @@
             "zh": "对一个敌方目标造成27点冰霜伤害。对被冰冻的目标造成的伤害提高200%。",
             "en": "Deals 27 Frost damage to an enemy target. Deals 200% increased damage to Frozen targets."
           },
+          "icon": "spell_frost_frostblast.jpg",
           "maxPoints": 1,
           "row": 2,
           "col": 2,
@@ -860,6 +906,7 @@
             "zh": "为你的暴风雪法术附加冰冷效果，使目标的移动速度降低40%，持续1.5秒。",
             "en": "Adds a Chill effect to your Blizzard spell. This effect lowers the target's movement speed by 40% for 1.5 sec."
           },
+          "icon": "spell_frost_icestorm.jpg",
           "maxPoints": 3,
           "row": 2,
           "col": 3,
@@ -877,6 +924,7 @@
             "zh": "使你的冰霜新星和冰锥术的有效半径以及寒冰箭和暴风雪的射程提高20%。",
             "en": "Increases the range of your Frostbolt, Frost Blast, and Blizzard spells and the radius of your Frost Nova and Cone of Cold spells by 20%."
           },
+          "icon": "spell_shadow_darkritual.jpg",
           "maxPoints": 2,
           "row": 3,
           "col": 0,
@@ -894,6 +942,7 @@
             "zh": "你被封在一块寒冰中，在10秒内免受所有物理攻击和法术影响，但在此期间无法攻击、移动或施法。",
             "en": "You become encased in a block of ice, protecting you from all physical attacks and spells for 10 sec, but during that time you cannot attack, move, or cast spells."
           },
+          "icon": "spell_frost_frost.jpg",
           "maxPoints": 1,
           "row": 3,
           "col": 1,
@@ -911,6 +960,7 @@
             "zh": "使你的所有法术对被冻结目标的爆击几率提高50%。",
             "en": "Increases the critical strike chance of all your spells against Frozen targets by 50%."
           },
+          "icon": "spell_frost_frostshock.jpg",
           "maxPoints": 3,
           "row": 3,
           "col": 3,
@@ -928,6 +978,7 @@
             "zh": "使你的冰锥术所造成的伤害提高35%。",
             "en": "Increases the damage dealt by your Cone of Cold spell by 35%."
           },
+          "icon": "spell_frost_glacier.jpg",
           "maxPoints": 3,
           "row": 4,
           "col": 0,
@@ -945,6 +996,7 @@
             "zh": "结束你所有其他冰霜法术的剩余冷却时间。",
             "en": "Finishes the remaining cooldown on all your other Frost spells."
           },
+          "icon": "spell_frost_wizardmark.jpg",
           "maxPoints": 1,
           "row": 4,
           "col": 1,
@@ -962,6 +1014,7 @@
             "zh": "你的冰冷效果有15%的几率使你获得寒冰指效果，使你的下2次法术将目标视为已被冻结。持续15秒。",
             "en": "Gives your Chill effects a 15% chance to grant you the Fingers of Frost effect, which treats your next 2 spells cast as if the target were Frozen. Lasts 15 sec."
           },
+          "icon": "ability_mage_wintersgrasp.jpg",
           "maxPoints": 2,
           "row": 4,
           "col": 2,
@@ -984,6 +1037,7 @@
             "zh": "你的冰霜伤害法术有100%的几率施加深冬之寒效果，使你的冰枪术和寒冰箭对该目标的爆击几率提高40%，持续15秒。最多叠加5次。",
             "en": "Gives your Frost damage spells a 100% chance to apply the Winter's Chill effect, which increases the damage done by your Cone of Cold spell to the target by 40%, stacking up to 5 times."
           },
+          "icon": "spell_frost_chillingblast.jpg",
           "maxPoints": 5,
           "row": 5,
           "col": 2,
@@ -1001,6 +1055,7 @@
             "zh": "立即为自己加上护盾，吸收447点伤害，持续1分钟。护盾存在期间，你的施法不会因受到伤害而被打断或延迟。",
             "en": "Instantly shields you, absorbing 447 damage. Lasts 1 min. While the shield holds, your spellcasts will not be interrupted or delayed from taking damage."
           },
+          "icon": "spell_ice_lament.jpg",
           "maxPoints": 1,
           "row": 6,
           "col": 1,

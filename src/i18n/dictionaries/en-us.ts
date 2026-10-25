@@ -193,6 +193,7 @@ const en: Dictionary = {
       title: "Disclaimer",
       body: [
         "This site is an independent fan-made tool and guide project. It is not affiliated with, endorsed by, or sponsored by Blizzard Entertainment. World of Warcraft and related trademarks are the property of their respective owners.",
+        "Talent icons shown on this site are Blizzard Entertainment game assets displayed for non-commercial fan content purposes; all rights belong to their respective owners.",
         "Guides and recommendations are provided for reference only and do not guarantee in-game performance. Game updates may render content obsolete - always check the version and verification status shown on each page.",
       ],
     },
