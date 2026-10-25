@@ -1,9 +1,13 @@
 import type { Locale } from "@/i18n/config";
 
 /** Brand name is centralised so it can be renamed before launch. */
+const baseUrl = (
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://infinity-compendium.example.com"
+).replace(/\/+$/, "");
+
 export const site = {
   name: "Infinity Compendium",
-  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://infinity-compendium.example.com",
+  url: baseUrl,
   defaultOgImage: "/og-default.png",
 };
 
