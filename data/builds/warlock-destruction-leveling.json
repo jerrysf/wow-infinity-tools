@@ -1,0 +1,89 @@
+{
+  "slug": "warlock-destruction-leveling",
+  "name": {
+    "zh": "毁灭 Beta 开荒",
+    "en": "Destruction Beta Start"
+  },
+  "summary": {
+    "zh": "暗影箭与献祭各少半秒、射程提高 20%、法力消耗降低 10%，20 级再拿暗影灼烧。",
+    "en": "Half a second off Shadow Bolt and Immolate, 20% more range, 10% cheaper spells, and Shadowburn at 20."
+  },
+  "classId": "warlock",
+  "playstyle": "leveling",
+  "difficulty": "beginner",
+  "gameVersion": "1.60.1.70425",
+  "levelRange": {
+    "min": 10,
+    "max": 20
+  },
+  "scenario": {
+    "zh": "10–20 级，在最大射程外施放暗影箭与献祭",
+    "en": "Levels 10–20, Shadow Bolt and Immolate from maximum range"
+  },
+  "pros": [
+    {
+      "zh": "灾祸让暗影箭与献祭的施法时间缩短 0.5 秒，灵魂之火缩短 2 秒。",
+      "en": "Bane cuts 0.5 seconds from Shadow Bolt and Immolate and 2 seconds from Soul Fire."
+    },
+    {
+      "zh": "毁灭延伸让伤害法术射程提高 20%，通常意味着怪走到你面前之前能多打一发暗影箭。",
+      "en": "Destructive Reach adds 20% range to your damaging spells, which is usually one extra Shadow Bolt before anything reaches you."
+    },
+    {
+      "zh": "灾变让毁灭系法术的法力消耗降低 10%。",
+      "en": "Cataclysm reduces the Mana cost of your Destruction spells by 10%."
+    },
+    {
+      "zh": "暗影灼烧是瞬发终结技，目标在命中后 8 秒内死亡时返还一个灵魂碎片。",
+      "en": "Shadowburn is an instant finisher that returns a Soul Shard when the target dies within 8 seconds of being hit."
+    },
+    {
+      "zh": "组队时射程不那么关键，通常会把毁灭延伸换成强化暗影箭。",
+      "en": "Improved Shadow Bolt is the usual swap for Destructive Reach in groups, where the extra range matters less."
+    }
+  ],
+  "cons": [],
+  "requirements": [],
+  "allocation": {
+    "destruction-02": 5,
+    "destruction-00": 2,
+    "destruction-04": 3,
+    "destruction-07": 1
+  },
+  "levelingSteps": [
+    {
+      "levelRange": "10–14 ",
+      "spend": {
+        "destruction-02": 5
+      }
+    },
+    {
+      "levelRange": "15–16 ",
+      "spend": {
+        "destruction-00": 2
+      }
+    },
+    {
+      "levelRange": "17–19 ",
+      "spend": {
+        "destruction-04": 3
+      }
+    },
+    {
+      "levelRange": "20 ",
+      "spend": {
+        "destruction-07": 1
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

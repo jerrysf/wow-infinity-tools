@@ -1,0 +1,89 @@
+{
+  "slug": "rogue-combat-leveling",
+  "name": {
+    "zh": "战斗 Beta 开荒",
+    "en": "Combat Beta Start"
+  },
+  "summary": {
+    "zh": "更省能量的邪恶攻击、更重的刺骨，再加 3% 命中，招招不落空。完全不点防御天赋。",
+    "en": "A cheaper Sinister Strike, a harder Eviscerate, and 3% hit so nothing whiffs. No defensive talents at all."
+  },
+  "classId": "rogue",
+  "playstyle": "leveling",
+  "difficulty": "beginner",
+  "gameVersion": "1.60.1.70425",
+  "levelRange": {
+    "min": 10,
+    "max": 20
+  },
+  "scenario": {
+    "zh": "10–20 级，野外与地下城的纯输出",
+    "en": "Levels 10–20, straight damage in the world and in dungeons"
+  },
+  "pros": [
+    {
+      "zh": "强化邪恶攻击让主力技能少消耗 5 点能量，一场战斗下来接近多打一次。",
+      "en": "Improved Sinister Strike takes 5 Energy off your main builder, which is close to one extra strike per fight."
+    },
+    {
+      "zh": "强化刺骨让终结技伤害提高 20%。",
+      "en": "Improved Eviscerate adds 20% damage to your finisher."
+    },
+    {
+      "zh": "穿刺之伤让背刺暴击几率提高 30%，并有 45% 几率额外产生 1 个连击点。",
+      "en": "Puncturing Wounds adds 30% critical strike chance to Backstab and gives it a 45% chance to add a combo point."
+    },
+    {
+      "zh": "精确提供 3% 命中，避免浪费本就紧张的能量。",
+      "en": "Precision adds 3% hit, removing the misses that waste Energy you cannot spare."
+    },
+    {
+      "zh": "躲闪与招架类天赋是刻意跳过的：20 级的 PvE 内容还打不出需要它们的伤害。",
+      "en": "Dodge and parry talents are skipped deliberately: at level 20 nothing in PvE hits hard enough to need them."
+    }
+  ],
+  "cons": [],
+  "requirements": [],
+  "allocation": {
+    "combat-01": 2,
+    "combat-00": 3,
+    "combat-03": 3,
+    "combat-05": 3
+  },
+  "levelingSteps": [
+    {
+      "levelRange": "10–11 ",
+      "spend": {
+        "combat-01": 2
+      }
+    },
+    {
+      "levelRange": "12–14 ",
+      "spend": {
+        "combat-00": 3
+      }
+    },
+    {
+      "levelRange": "15–17 ",
+      "spend": {
+        "combat-03": 3
+      }
+    },
+    {
+      "levelRange": "18–20 ",
+      "spend": {
+        "combat-05": 3
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "paladin",
+  "slug": "paladin",
+  "name": {
+    "zh": "圣骑士",
+    "en": "Paladin"
+  },
+  "tagline": {
+    "zh": "神圣治疗、防护坦克或惩戒输出，buff 团队价值高。",
+    "en": "Holy healing, Protection tanking or Retribution damage with high-utility blessings."
+  },
+  "roles": [
+    "healer",
+    "tank",
+    "melee-dps"
+  ],
+  "preferenceTags": [
+    "melee",
+    "support",
+    "healing",
+    "tank-curious",
+    "durable",
+    "group"
+  ],
+  "strengths": {
+    "zh": "职责覆盖全，增益能力团队价值高，生存力强。",
+    "en": "Covers all roles, powerful group blessings, very survivable."
+  },
+  "drawbacks": {
+    "zh": "输出节奏偏慢，依赖法力资源。",
+    "en": "Slower kill pace and mana-dependent."
+  },
+  "hasTalentData": true,
+  "demo": false,
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Class list and roles per Blizzard class deep-dive posts; tree data extracted from beta client."
+  }
+}

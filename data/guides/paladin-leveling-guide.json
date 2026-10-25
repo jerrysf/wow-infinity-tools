@@ -1,0 +1,50 @@
+{
+  "slug": "paladin-leveling-guide",
+  "title": {
+    "zh": "圣骑士练级加点指南",
+    "en": "Paladin leveling builds"
+  },
+  "description": {
+    "zh": "圣骑士在 Beta 中的练级加点路线与逐点顺序。",
+    "en": "Level-by-level Paladin talent orders in the Forever beta."
+  },
+  "kind": "leveling",
+  "classId": "paladin",
+  "relatedBuilds": [
+    "paladin-retribution-leveling",
+    "paladin-protection-leveling",
+    "paladin-holy-leveling"
+  ],
+  "sections": [
+    {
+      "heading": {
+        "zh": "练级加点思路",
+        "en": "Leveling talent plan"
+      },
+      "body": {
+        "zh": "【惩戒 Beta 开荒】11 点全部投入惩戒系：招架、更短的审判冷却和额外暴击，20 级拿到命令圣印。 【防护 Beta 开荒】先要格挡与命中：盾牌壁垒提供格挡爆发，精确保证仇恨技能不落空，盾牌专精第 1 点把格挡转化为法力。",
+        "en": "[Retribution Beta Start] All eleven points in Retribution: parry, a shorter Judgement cooldown, and extra critical strike, then Seal of Command at 20. [Protection Beta Start] Block and hit first: Redoubt for block spikes, Precision so your threat abilities land, and the first point of Shield Specialization to turn blocks into Mana."
+      }
+    },
+    {
+      "heading": {
+        "zh": "适用范围",
+        "en": "Where it applies"
+      },
+      "body": {
+        "zh": "以上方案来自 Beta 版本 1.60.1.70425 的公开数据整理，正式版本上线后可能需要重新验证。",
+        "en": "These builds come from published data for beta build 1.60.1.70425 and may need re-verification at launch."
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

@@ -1,20 +1,45 @@
 {
   "id": "druid",
   "slug": "druid",
-  "name": { "zh": "德鲁伊", "en": "Druid" },
-  "tagline": { "zh": "全能变形职业，可覆盖坦克、治疗与输出。", "en": "Versatile shapeshifter covering tank, healer and damage roles." },
-  "roles": ["tank", "healer", "melee-dps", "ranged-dps"],
-  "preferenceTags": ["versatile", "support", "group", "complex", "tank-curious", "healing"],
-  "strengths": { "zh": "职责最灵活，想换玩法不必重练。", "en": "Most flexible class - swap roles without rerolling." },
-  "drawbacks": { "zh": "样样通但上手复杂，装备需求分散。", "en": "Jack of all trades; complex to learn and gear-hungry." },
-  "hasTalentData": false,
-  "demo": true,
+  "name": {
+    "zh": "德鲁伊",
+    "en": "Druid"
+  },
+  "tagline": {
+    "zh": "全能变形职业，可覆盖坦克、治疗与输出。",
+    "en": "Versatile shapeshifter covering tank, healer and damage roles."
+  },
+  "roles": [
+    "tank",
+    "healer",
+    "melee-dps",
+    "ranged-dps"
+  ],
+  "preferenceTags": [
+    "versatile",
+    "support",
+    "group",
+    "complex",
+    "tank-curious",
+    "healing"
+  ],
+  "strengths": {
+    "zh": "职责最灵活，想换玩法不必重练。",
+    "en": "Most flexible class; swap roles without rerolling."
+  },
+  "drawbacks": {
+    "zh": "样样通但上手复杂，装备需求分散。",
+    "en": "Jack of all trades; complex and gear-hungry."
+  },
+  "hasTalentData": true,
+  "demo": false,
   "provenance": {
-    "status": "unverified",
-    "gameVersion": "demo-2026-10",
-    "source": "Demo fixture authored for tooling development",
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
     "importedAt": "2026-10-25",
     "needsRevalidation": true,
-    "notes": "Placeholder class pending real game data."
+    "notes": "Class list and roles per Blizzard class deep-dive posts; tree data extracted from beta client."
   }
 }

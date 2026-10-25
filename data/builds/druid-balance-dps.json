@@ -1,0 +1,179 @@
+{
+  "slug": "druid-balance-dps",
+  "name": {
+    "zh": "平衡",
+    "en": "Balance"
+  },
+  "summary": {
+    "zh": "平衡系点到枭兽形态，再从恢复系拿自然集中和自然主义，施法更不容易被打断，伤害再高 5%。",
+    "en": "Full Balance through Moonkin Form, then Nature&#39;s Focus and Naturalist from Restoration for fewer interruptions and 5% more damage."
+  },
+  "classId": "druid",
+  "playstyle": "raid",
+  "difficulty": "beginner",
+  "gameVersion": "1.60.1.70425",
+  "levelRange": {
+    "min": 10,
+    "max": 60
+  },
+  "scenario": {
+    "zh": "60 级以枭兽形态打法术输出",
+    "en": "Level 60 spell damage in Moonkin Form"
+  },
+  "pros": [
+    {
+      "zh": "强化愤怒、强化星火术与日月之蚀加快两个主力法术：愤怒为后续星火术积累加速。",
+      "en": "Improved Wrath, Improved Starfire, and Eclipse speed up your two main nukes: Wrath charges faster Starfires."
+    },
+    {
+      "zh": "复仇让法术暴击伤害加成翻倍，自然之赐在暴击后加快接下来的施法。",
+      "en": "Vengeance doubles your spell critical strike bonus, and Nature&#39;s Grace speeds up the next casts after a crit."
+    },
+    {
+      "zh": "月怒提高 10% 奥术与自然伤害；枭兽形态提供护甲，并为队伍提高 3% 暴击几率。",
+      "en": "Moonfury adds 10% Arcane and Nature damage; Moonkin Form adds armor and 3% critical strike chance for your party."
+    },
+    {
+      "zh": "自然延伸增加射程和 4% 命中，月光让伤害法术的法力消耗降低 25%。",
+      "en": "Nature&#39;s Reach adds range and 4% hit chance, and Moonglow cuts the mana cost of your damage spells by 25%."
+    },
+    {
+      "zh": "经常被近战贴身？强化纠缠根须让纠缠根须不容易被伤害打断。",
+      "en": "Facing a lot of melee? Improved Entangling Roots keeps roots from breaking on damage."
+    }
+  ],
+  "cons": [],
+  "requirements": [],
+  "allocation": {
+    "balance-00": 5,
+    "balance-04": 2,
+    "balance-05": 2,
+    "balance-03": 2,
+    "balance-07": 1,
+    "balance-02": 3,
+    "balance-08": 1,
+    "balance-09": 5,
+    "balance-12": 1,
+    "balance-10": 5,
+    "balance-14": 5,
+    "balance-13": 3,
+    "balance-15": 1,
+    "balance-01": 5,
+    "restoration-00": 5,
+    "restoration-02": 5
+  },
+  "levelingSteps": [
+    {
+      "levelRange": "10–14 ",
+      "spend": {
+        "balance-00": 5
+      }
+    },
+    {
+      "levelRange": "15–16 ",
+      "spend": {
+        "balance-04": 2
+      }
+    },
+    {
+      "levelRange": "17–18 ",
+      "spend": {
+        "balance-05": 2
+      }
+    },
+    {
+      "levelRange": "19 ",
+      "spend": {
+        "balance-03": 1
+      }
+    },
+    {
+      "levelRange": "20 ",
+      "spend": {
+        "balance-07": 1
+      }
+    },
+    {
+      "levelRange": "21–23 ",
+      "spend": {
+        "balance-02": 3
+      }
+    },
+    {
+      "levelRange": "24 ",
+      "spend": {
+        "balance-03": 1
+      }
+    },
+    {
+      "levelRange": "25 ",
+      "spend": {
+        "balance-08": 1
+      }
+    },
+    {
+      "levelRange": "26–30 ",
+      "spend": {
+        "balance-09": 5
+      }
+    },
+    {
+      "levelRange": "31 ",
+      "spend": {
+        "balance-12": 1
+      }
+    },
+    {
+      "levelRange": "32–36 ",
+      "spend": {
+        "balance-10": 5
+      }
+    },
+    {
+      "levelRange": "37–41 ",
+      "spend": {
+        "balance-14": 5
+      }
+    },
+    {
+      "levelRange": "42–44 ",
+      "spend": {
+        "balance-13": 3
+      }
+    },
+    {
+      "levelRange": "45 ",
+      "spend": {
+        "balance-15": 1
+      }
+    },
+    {
+      "levelRange": "46–50 ",
+      "spend": {
+        "balance-01": 5
+      }
+    },
+    {
+      "levelRange": "51–55 ",
+      "spend": {
+        "restoration-00": 5
+      }
+    },
+    {
+      "levelRange": "56–60 ",
+      "spend": {
+        "restoration-02": 5
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

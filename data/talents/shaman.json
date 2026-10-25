@@ -1,0 +1,934 @@
+{
+  "classId": "shaman",
+  "gameVersion": "1.60.1.70425",
+  "rules": {
+    "firstTalentLevel": 10,
+    "maxLevel": 60,
+    "pointsPerLevel": 1,
+    "maxPoints": 51
+  },
+  "demo": false,
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com talent data extracted from WoW: Forever beta client",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425; talent data may still change before the Nov 5 launch. Cross-checked against Blizzard class deep-dive posts."
+  },
+  "trees": [
+    {
+      "id": "elemental-combat",
+      "name": {
+        "zh": "元素战斗",
+        "en": "Elemental Combat"
+      },
+      "nodes": [
+        {
+          "id": "elemental-combat-00",
+          "name": {
+            "zh": "传导",
+            "en": "Convection"
+          },
+          "description": {
+            "zh": "使你的震击、闪电箭、熔岩爆裂和闪电链的法力消耗降低10%。",
+            "en": "Reduces the mana cost of your Shock, Lightning Bolt, Lava Burst, and Chain Lightning spells by 10%."
+          },
+          "maxPoints": 5,
+          "row": 0,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "elemental-combat-01",
+          "name": {
+            "zh": "震荡",
+            "en": "Concussion"
+          },
+          "description": {
+            "zh": "使你的闪电箭、闪电链和大地震击造成的伤害提高5%。",
+            "en": "Increases the damage done by your Lightning Bolt, Chain Lightning, and Earth Shock spells by 5%."
+          },
+          "maxPoints": 5,
+          "row": 0,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "elemental-combat-02",
+          "name": {
+            "zh": "元素浩劫",
+            "en": "Elemental Devastation"
+          },
+          "description": {
+            "zh": "你的进攻性法术造成爆击时，会使你的近战攻击爆击几率提高9%，持续10秒。",
+            "en": "Your Critical Strikes with direct damage spells increase your chance to get a Critical Strike with melee attacks by 9% for 10 sec."
+          },
+          "maxPoints": 3,
+          "row": 1,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "elemental-combat-03",
+          "name": {
+            "zh": "回响",
+            "en": "Reverberation"
+          },
+          "description": {
+            "zh": "使你的震击法术的冷却时间减少1.0秒。",
+            "en": "Reduces the cooldown of your Shock spells by 1.0 sec."
+          },
+          "maxPoints": 5,
+          "row": 1,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "elemental-combat-04",
+          "name": {
+            "zh": "元素迅捷",
+            "en": "Elemental Alacrity"
+          },
+          "description": {
+            "zh": "使你的闪电箭、闪电链和熔岩爆裂的施法时间缩短0.50秒。",
+            "en": "Reduces the cast time of your Lightning Bolt, Chain Lightning, and Lava Burst spells by 0.50 sec."
+          },
+          "maxPoints": 3,
+          "row": 1,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "elemental-combat-05",
+          "name": {
+            "zh": "烈焰召唤",
+            "en": "Call of Flame"
+          },
+          "description": {
+            "zh": "使你的火焰图腾以及烈焰震击、火焰新星和熔岩爆裂造成的伤害提高15%。",
+            "en": "Increases the damage done by your Fire Totems and by your Flame Shock, Fire Nova, and Lava Burst spells by 15%, as well as increases the duration of your Flame Shock spell by 9 sec."
+          },
+          "maxPoints": 3,
+          "row": 1,
+          "col": 3,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "elemental-combat-06",
+          "name": {
+            "zh": "元素集中",
+            "en": "Elemental Focus"
+          },
+          "description": {
+            "zh": "使你有10%的几率在施放任何火焰、冰霜或自然系的伤害性法术之后进入节能施法状态。这个状态可以使你的下一个伤害性法术所消耗的法力值减少100%。",
+            "en": "Gives you a 10% chance to enter a Clearcasting state after casting any Fire, Frost, or Nature damage spell. The Clearcasting state reduces the mana cost of your next damage spell by 100%."
+          },
+          "maxPoints": 1,
+          "row": 2,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "elemental-combat-07",
+          "name": {
+            "zh": "元素防护",
+            "en": "Elemental Warding"
+          },
+          "description": {
+            "zh": "受到的火焰、冰霜和自然效果伤害降低10%。",
+            "en": "Reduces damage taken from Fire, Frost, and Nature effects by 10%."
+          },
+          "maxPoints": 3,
+          "row": 2,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "elemental-combat-08",
+          "name": {
+            "zh": "强化火焰新星",
+            "en": "Trial by Fire"
+          },
+          "description": {
+            "zh": "使你的火焰新星造成的伤害提高20%，冷却时间缩短4秒。",
+            "en": "Increases the damage done by your Fire Nova spell by 20% and reduces its cooldown by 4 sec, and increases the duration of your Magma Totem by 20 sec."
+          },
+          "maxPoints": 2,
+          "row": 3,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "elemental-combat-09",
+          "name": {
+            "zh": "风暴之眼",
+            "en": "Eye of the Storm"
+          },
+          "description": {
+            "zh": "使你在施放闪电箭、闪电链和熔岩爆裂时因受到伤害而遭受的施法推延降低70%。",
+            "en": "Reduces the pushback suffered from damaging attacks while casting Lightning Bolt, Chain Lightning, and Lava Burst by 70%."
+          },
+          "maxPoints": 3,
+          "row": 3,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "elemental-combat-10",
+          "name": {
+            "zh": "地缚",
+            "en": "Earthbound"
+          },
+          "description": {
+            "zh": "施放地缚图腾时，使附近目标无法移动5秒。",
+            "en": "Your Earthbind Totem Immobilizes nearby targets for 5 sec when cast."
+          },
+          "maxPoints": 1,
+          "row": 3,
+          "col": 3,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "elemental-combat-11",
+          "name": {
+            "zh": "元素射程",
+            "en": "Elemental Reach"
+          },
+          "description": {
+            "zh": "使你的闪电箭、闪电链、火焰新星和熔岩爆裂的射程提高6码，烈焰震击的射程提高15码。",
+            "en": "Increases the range of your Lightning Bolt, Chain Lightning, Fire Nova, and Lava Burst spells by 6 yards and reduces the cooldown of Totemic Projection by 20 sec."
+          },
+          "maxPoints": 2,
+          "row": 4,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "elemental-combat-12",
+          "name": {
+            "zh": "熔岩爆裂",
+            "en": "Lava Burst"
+          },
+          "description": {
+            "zh": "向目标掷出熔岩，造成113点火焰伤害。如果目标受到你的烈焰震击影响，熔岩爆裂造成的伤害提高20%。",
+            "en": "You hurl molten lava at the target, dealing 113 Fire damage. If your Flame Shock is on the target, Lava Burst deals 20% increased damage."
+          },
+          "maxPoints": 1,
+          "row": 4,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "elemental-combat-13",
+          "name": {
+            "zh": "闪电超载",
+            "en": "Lightning Overload"
+          },
+          "description": {
+            "zh": "你的闪电箭和闪电链有10%的几率对同一目标施放第二个类似法术，不消耗额外法力，只造成一半伤害且不产生威胁。",
+            "en": "Gives your Lightning Bolt and Chain Lightning spells a 10% chance to cast a second, similar spell on the same target at no additional cost that causes half damage and no threat."
+          },
+          "maxPoints": 3,
+          "row": 4,
+          "col": 2,
+          "requires": [
+            {
+              "nodeId": "elemental-combat-04",
+              "points": 3
+            }
+          ],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "elemental-combat-14",
+          "name": {
+            "zh": "元素之怒",
+            "en": "Elemental Fury"
+          },
+          "description": {
+            "zh": "使你的灼热图腾、熔岩图腾以及你的火焰、冰霜和自然系法术的爆击伤害加成提高100%。",
+            "en": "Increases the critical strike damage bonus of your Searing and Magma Totems and your Fire, Frost, and Nature spells by 100%."
+          },
+          "maxPoints": 5,
+          "row": 5,
+          "col": 2,
+          "requires": [
+            {
+              "nodeId": "elemental-combat-13",
+              "points": 3
+            }
+          ],
+          "requiresPointsInTree": 25,
+          "exclusiveWith": []
+        },
+        {
+          "id": "elemental-combat-15",
+          "name": {
+            "zh": "Elemental Mastery",
+            "en": "Elemental Mastery"
+          },
+          "description": {
+            "zh": "Gain mastery over Fire and Lightning, reducing the cast time of Lightning Bolt and Lava Burst by 0.5 sec, and removing the cooldown from Chain Lightning. Lasts 15 sec.",
+            "en": "Gain mastery over Fire and Lightning, reducing the cast time of Lightning Bolt and Lava Burst by 0.5 sec, and removing the cooldown from Chain Lightning. Lasts 15 sec."
+          },
+          "maxPoints": 1,
+          "row": 6,
+          "col": 1,
+          "requires": [
+            {
+              "nodeId": "elemental-combat-12",
+              "points": 1
+            }
+          ],
+          "requiresPointsInTree": 30,
+          "exclusiveWith": []
+        }
+      ]
+    },
+    {
+      "id": "enhancement",
+      "name": {
+        "zh": "增强",
+        "en": "Enhancement"
+      },
+      "nodes": [
+        {
+          "id": "enhancement-00",
+          "name": {
+            "zh": "大地之握",
+            "en": "Earth's Grasp"
+          },
+          "description": {
+            "zh": "使你的石爪图腾的生命值提高50%，地缚图腾的影响范围增加20%。",
+            "en": "Increases the health of your Stoneclaw Totem by 50% and the radius of your Earthbind Totem by 20%."
+          },
+          "maxPoints": 2,
+          "row": 0,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "enhancement-01",
+          "name": {
+            "zh": "雷鸣猛击",
+            "en": "Thundering Strikes"
+          },
+          "description": {
+            "zh": "使你的所有法术和攻击的爆击几率提高5%。",
+            "en": "Improves your chance to get a critical strike with all spells and attacks by 5%."
+          },
+          "maxPoints": 5,
+          "row": 0,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "enhancement-02",
+          "name": {
+            "zh": "先祖知识",
+            "en": "Ancestral Knowledge"
+          },
+          "description": {
+            "zh": "使你的智力值提高10%。",
+            "en": "Increases your Intellect by 10%."
+          },
+          "maxPoints": 5,
+          "row": 0,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "enhancement-03",
+          "name": {
+            "zh": "守护图腾",
+            "en": "Guardian Totems"
+          },
+          "description": {
+            "zh": "使你的石肤图腾和风墙图腾所能吸收的伤害提高20%，根基图腾的冷却时间减少2秒。",
+            "en": "Increases the amount of damage reduced by your Stoneskin Totem and Windwall Totem by 20% and reduces the cooldown of your Grounding Totem by 2 sec."
+          },
+          "maxPoints": 2,
+          "row": 1,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "enhancement-04",
+          "name": {
+            "zh": "聪慧",
+            "en": "Mental Dexterity"
+          },
+          "description": {
+            "zh": "使你的攻击强度提高，数值相当于你智力的100%。",
+            "en": "Increases your Attack Power by an amount equal to 100% of your Intellect."
+          },
+          "maxPoints": 3,
+          "row": 1,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "enhancement-05",
+          "name": {
+            "zh": "强化幽魂之狼",
+            "en": "Improved Ghost Wolf"
+          },
+          "description": {
+            "zh": "使你的幽魂之狼法术的施法时间缩短3.0秒，且可在室内使用。",
+            "en": "Reduces the cast time of your Ghost Wolf spell by 3.0 sec, and Ghost Wolf may be used indoors."
+          },
+          "maxPoints": 2,
+          "row": 1,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "enhancement-06",
+          "name": {
+            "zh": "强化闪电之盾",
+            "en": "Improved Lightning Shield"
+          },
+          "description": {
+            "zh": "使你的闪电之盾法术所造成的伤害提高15%。",
+            "en": "Increases the damage done by your Lightning Shield orbs by 15%."
+          },
+          "maxPoints": 3,
+          "row": 1,
+          "col": 3,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "enhancement-07",
+          "name": {
+            "zh": "元素武器",
+            "en": "Elemental Weapons"
+          },
+          "description": {
+            "zh": "使你的石化武器所提供的近战攻击强度加成提高20%，风怒武器所提供的近战攻击强度加成提高40%，火舌武器和冰封武器所造成的伤害提高15%。",
+            "en": "Increases the melee attack power bonus of your Rockbiter Weapon by 20%, your Windfury Weapon effect by 40% and increases the damage caused by your Flametongue Weapon and Frostbrand Weapon by 15%."
+          },
+          "maxPoints": 3,
+          "row": 2,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "enhancement-08",
+          "name": {
+            "zh": "萨满专注",
+            "en": "Shamanistic Focus"
+          },
+          "description": {
+            "zh": "使你的震击和闪电之盾消耗的法力值降低45%。",
+            "en": "Reduces the mana cost of your Shock and Lightning Shield spells by 45%."
+          },
+          "maxPoints": 1,
+          "row": 2,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "enhancement-09",
+          "name": {
+            "zh": "预知",
+            "en": "Anticipation"
+          },
+          "description": {
+            "zh": "使你的躲闪几率提高6%。",
+            "en": "Increases your chance to dodge by an additional 6%."
+          },
+          "maxPoints": 3,
+          "row": 2,
+          "col": 3,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "enhancement-10",
+          "name": {
+            "zh": "坚韧",
+            "en": "Toughness"
+          },
+          "description": {
+            "zh": "使你的耐力提高10%。",
+            "en": "Increases your Stamina by 10%."
+          },
+          "maxPoints": 5,
+          "row": 3,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "enhancement-11",
+          "name": {
+            "zh": "乱舞",
+            "en": "Flurry"
+          },
+          "description": {
+            "zh": "近战攻击造成爆击后，使你接下来的3次攻击的攻击速度提高25%。",
+            "en": "Increases your attack speed by 25% for your next 3 swings after dealing a melee critical strike."
+          },
+          "maxPoints": 5,
+          "row": 3,
+          "col": 1,
+          "requires": [
+            {
+              "nodeId": "enhancement-04",
+              "points": 3
+            }
+          ],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "enhancement-12",
+          "name": {
+            "zh": "风暴打击",
+            "en": "Stormstrike"
+          },
+          "description": {
+            "zh": "立即造成普通武器伤害，并使你对该目标施放的下一个闪电箭、闪电链或地震术造成的伤害提高20%，持续12秒。",
+            "en": "Instantly strike for normal weapon damage and increase the damage you deal to the target with your next Lightning Bolt, Chain Lightning, or Earth Shock spell by 20% for 12 sec."
+          },
+          "maxPoints": 1,
+          "row": 3,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "enhancement-13",
+          "name": {
+            "zh": "灵魂武器",
+            "en": "Spirit Weapons"
+          },
+          "description": {
+            "zh": "有几率招架敌人的近战攻击。未激活石化武器时，你的攻击产生的威胁值降低30%；激活石化武器时，产生的所有威胁值提高30%。",
+            "en": "Gives a chance to parry enemy melee attacks, reduces all threat generated by your attacks by 30% while Rockbiter Weapon is not active, and increases all threat generated by 30% while Rockbiter Weapon is active."
+          },
+          "maxPoints": 1,
+          "row": 4,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "enhancement-14",
+          "name": {
+            "zh": "精神敏锐",
+            "en": "Mental Quickness"
+          },
+          "description": {
+            "zh": "使你的法术伤害和治疗效果最多提高相当于你智力30%的数值。",
+            "en": "Increases your spell damage and healing by up to 30% of your Intellect."
+          },
+          "maxPoints": 2,
+          "row": 4,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "enhancement-15",
+          "name": {
+            "zh": "强化风暴打击",
+            "en": "Improved Stormstrike"
+          },
+          "description": {
+            "zh": "使用风暴打击时，你有100%的几率获得50%的施法时法力回复，持续15秒；每当你躲闪或招架时，风暴打击的冷却时间有100%的几率重置。",
+            "en": "When you Stormstrike, you have a 100% chance to gain 50% mana regeneration while casting spells for 15 sec, and Stormstrike's cooldown has a 100% chance to reset each time you Dodge or Parry."
+          },
+          "maxPoints": 2,
+          "row": 4,
+          "col": 2,
+          "requires": [
+            {
+              "nodeId": "enhancement-12",
+              "points": 1
+            }
+          ],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "enhancement-16",
+          "name": {
+            "zh": "漩涡武器",
+            "en": "Maelstrom Weapon"
+          },
+          "description": {
+            "zh": "近战攻击造成伤害时，你有几率使下一个闪电箭的施法时间和法力消耗降低20%。最多叠加5次。持续30秒。",
+            "en": "When you deal damage with a melee attack, you have a chance to reduce the cast time and Mana cost of your next Lightning Bolt spell by 20%. Stacks up to 5 times. Lasts 30 sec."
+          },
+          "maxPoints": 5,
+          "row": 5,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 25,
+          "exclusiveWith": []
+        },
+        {
+          "id": "enhancement-17",
+          "name": {
+            "zh": "先知之怒",
+            "en": "Rage of the Farseer"
+          },
+          "description": {
+            "zh": "使你的攻击速度提高30%，持续25秒。",
+            "en": "Increases your attack speed by 30% for 25 sec."
+          },
+          "maxPoints": 1,
+          "row": 6,
+          "col": 1,
+          "requires": [
+            {
+              "nodeId": "enhancement-14",
+              "points": 2
+            }
+          ],
+          "requiresPointsInTree": 30,
+          "exclusiveWith": []
+        }
+      ]
+    },
+    {
+      "id": "restoration",
+      "name": {
+        "zh": "恢复",
+        "en": "Restoration"
+      },
+      "nodes": [
+        {
+          "id": "restoration-00",
+          "name": {
+            "zh": "强化治疗波",
+            "en": "Improved Healing Wave"
+          },
+          "description": {
+            "zh": "使你的治疗波的施法时间减少0.5秒。",
+            "en": "Reduces the casting time of your Healing Wave spell by 0.5 sec."
+          },
+          "maxPoints": 5,
+          "row": 0,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "restoration-01",
+          "name": {
+            "zh": "潮汐集中",
+            "en": "Tidal Focus"
+          },
+          "description": {
+            "zh": "使你的治疗法术法力消耗降低5%，并使你的命中几率提高5%。",
+            "en": "Reduces the Mana cost of your healing spells by 5% and improves your chance to hit by 5%."
+          },
+          "maxPoints": 5,
+          "row": 0,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "restoration-02",
+          "name": {
+            "zh": "全神贯注",
+            "en": "Mindfulness"
+          },
+          "description": {
+            "zh": "使你在施法时仍保持50%的法力值恢复速度。",
+            "en": "Allows 50% of your Mana regeneration to continue while casting."
+          },
+          "maxPoints": 3,
+          "row": 1,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "restoration-03",
+          "name": {
+            "zh": "自然优雅",
+            "en": "Natural Grace"
+          },
+          "description": {
+            "zh": "使你的法术造成的威胁值降低15%。",
+            "en": "Reduces the threat generated by your spells by 15%."
+          },
+          "maxPoints": 3,
+          "row": 1,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "restoration-04",
+          "name": {
+            "zh": "图腾集中",
+            "en": "Totemic Focus"
+          },
+          "description": {
+            "zh": "使你的图腾以及任何召唤或移动图腾的法术所消耗的法力值降低25%。",
+            "en": "Reduces the Mana cost of your totems and any spells that summon or move them by 25%."
+          },
+          "maxPoints": 5,
+          "row": 1,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "restoration-05",
+          "name": {
+            "zh": "强化复生",
+            "en": "Improved Reincarnation"
+          },
+          "description": {
+            "zh": "使你的复生法术冷却时间缩短20分钟，最大生命值提高4%，并使你复生时获得的生命值和法力值额外提高20%。",
+            "en": "Reduces the cooldown of your Reincarnation spell by 20 min, increases your maximum health by 4%, and increases the amount of health and Mana you reincarnate with by an additional 20%."
+          },
+          "maxPoints": 2,
+          "row": 1,
+          "col": 3,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "restoration-06",
+          "name": {
+            "zh": "先祖治疗",
+            "en": "Ancestral Healing"
+          },
+          "description": {
+            "zh": "在你的任何一个治疗法术对目标造成极效治疗效果后，使目标因装备而获得的护甲值提高25%，持续15秒。",
+            "en": "Increases your target's armor value by 25% for 15 sec after getting a critical effect from one of your healing spells."
+          },
+          "maxPoints": 3,
+          "row": 2,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "restoration-07",
+          "name": {
+            "zh": "治疗专注",
+            "en": "Healing Focus"
+          },
+          "description": {
+            "zh": "使你在施放任意治疗法术的时候有70%的几率避免因受到伤害而被打断。",
+            "en": "Gives you a 70% chance to avoid interruption caused by damage while casting any healing spell."
+          },
+          "maxPoints": 3,
+          "row": 2,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "restoration-08",
+          "name": {
+            "zh": "水之护盾",
+            "en": "Water Shield"
+          },
+          "description": {
+            "zh": "施法者被3个水球环绕。当法术、近战或远程攻击命中施法者，或施法者的治疗法术造成爆击时，恢复最大法力值的2%，并消耗一个水球。每隔数秒只会有一个水球被激活。持续10分钟。\n\n萨满祭司在同一时间只能激活一种元素之盾。",
+            "en": "The caster is surrounded by 3 globes of water. When a spell, melee, or ranged attack hits the caster or when one of the caster's spells gets a critical result, 2% of maximum mana is restored to the caster, expending one water globe. Only one globe will activate every few seconds. Lasts 10 min.\n\nOnly one Elemental Shield can be active on the Shaman at any one time."
+          },
+          "maxPoints": 1,
+          "row": 2,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "restoration-09",
+          "name": {
+            "zh": "潮汐掌握",
+            "en": "Tidal Mastery"
+          },
+          "description": {
+            "zh": "使你的治疗法术产生极效治疗的几率提高5%。",
+            "en": "Increases the critical effect chance of your healing spells by 5%."
+          },
+          "maxPoints": 5,
+          "row": 3,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "restoration-10",
+          "name": {
+            "zh": "恢复图腾",
+            "en": "Restorative Totems"
+          },
+          "description": {
+            "zh": "使你的法力之泉图腾的效果提高25%，治疗之泉图腾的效果提高50%。",
+            "en": "Increases the effect of your Mana Spring Totem by 25% and increases the effect of your Healing Stream Totem by 50%."
+          },
+          "maxPoints": 5,
+          "row": 3,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "restoration-11",
+          "name": {
+            "zh": "法力之潮图腾",
+            "en": "Mana Tide Totem"
+          },
+          "description": {
+            "zh": "在施法者身边召唤一个生命值为5点的法力之潮图腾，持续12秒。它可以为半径30码范围内的小队成员每3秒回复88点法力值。",
+            "en": "Summons a Mana Tide Totem with 5 health at the feet of the caster for 12 sec that restores 88 mana every 3 seconds to group members within 30 yards."
+          },
+          "maxPoints": 1,
+          "row": 3,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "restoration-12",
+          "name": {
+            "zh": "治疗之道",
+            "en": "Healing Way"
+          },
+          "description": {
+            "zh": "治疗波的效果提高25%。",
+            "en": "Increases the amount healed by your Healing Wave spell by 25%."
+          },
+          "maxPoints": 3,
+          "row": 4,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "restoration-13",
+          "name": {
+            "zh": "自然迅捷",
+            "en": "Nature's Swiftness"
+          },
+          "description": {
+            "zh": "激活之后，你的下一个施法时间低于10秒的自然法术会成为瞬发法术。",
+            "en": "When activated, your next Nature spell with a casting time less than 10 sec. becomes an instant cast spell."
+          },
+          "maxPoints": 1,
+          "row": 4,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "restoration-14",
+          "name": {
+            "zh": "净化",
+            "en": "Purification"
+          },
+          "description": {
+            "zh": "使你的治疗法术的效果提高10%。",
+            "en": "Increases the effectiveness of your healing spells by 10%."
+          },
+          "maxPoints": 5,
+          "row": 5,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 25,
+          "exclusiveWith": []
+        },
+        {
+          "id": "restoration-15",
+          "name": {
+            "zh": "激流",
+            "en": "Riptide"
+          },
+          "description": {
+            "zh": "治疗一个友方目标，为其恢复484点生命值，并在15秒内额外恢复445点，同时使你对该目标直接施放的治疗链效果提高25%。",
+            "en": "Heals a friendly target for 484, an additional 445 over 15 sec, and increases the effectiveness of your Chain Heal casts directly on that target by 25%."
+          },
+          "maxPoints": 1,
+          "row": 6,
+          "col": 1,
+          "requires": [
+            {
+              "nodeId": "restoration-12",
+              "points": 3
+            }
+          ],
+          "requiresPointsInTree": 30,
+          "exclusiveWith": []
+        }
+      ]
+    }
+  ]
+}

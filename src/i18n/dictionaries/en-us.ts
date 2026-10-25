@@ -76,7 +76,7 @@ const en: Dictionary = {
     classesTitle: "Browse by class",
     dataNotice: "Version & data status",
     dataNoticeBody:
-      "The class and talent data currently shown is demo data used to validate the tools. It will be replaced with verified game data before launch.",
+      "Talent data is compiled from public material for beta build 1.60.1.70425; source and review status are shown at the top of each page. Content may need re-verification after the game launches.",
   },
   selector: {
     title: "Class Selector",

@@ -1,0 +1,85 @@
+{
+  "slug": "druid-balance-leveling",
+  "name": {
+    "zh": "平衡 Beta 开荒",
+    "en": "Balance Beta Start"
+  },
+  "summary": {
+    "zh": "愤怒更快且法力减半，所有伤害法术再省 25%，另加 4% 命中与更远射程。",
+    "en": "A faster, half-price Wrath, 25% off every damage spell, and 4% hit with more range on top."
+  },
+  "classId": "druid",
+  "playstyle": "leveling",
+  "difficulty": "beginner",
+  "gameVersion": "1.60.1.70425",
+  "levelRange": {
+    "min": 10,
+    "max": 20
+  },
+  "scenario": {
+    "zh": "10–20 级，主用愤怒与月火术",
+    "en": "Levels 10–20, casting Wrath and Moonfire"
+  },
+  "pros": [
+    {
+      "zh": "强化愤怒让愤怒的施法时间缩短 0.5 秒、法力消耗降低 50%，而愤怒正是你施放最多的法术。",
+      "en": "Improved Wrath removes 0.5 seconds and half the Mana cost from Wrath, which is the spell you cast most."
+    },
+    {
+      "zh": "月光让伤害法术的法力消耗降低 25%，这决定了你一管蓝是拉两次还是四次怪。",
+      "en": "Moonglow cuts 25% of the Mana cost of your damage spells, and that is the difference between two pulls and four."
+    },
+    {
+      "zh": "自然延伸让平衡系法术射程提高 20%、命中提高 4%，目标走到面前之前能多打几发。",
+      "en": "Nature&#39;s Reach adds 20% range and 4% hit to your Balance spells, so more casts land before the target reaches you."
+    },
+    {
+      "zh": "如果被打断的次数多于法力见底，可以把强化愤怒换成自然集中。",
+      "en": "Improved Wrath can be Nature&#39;s Focus instead if you are being interrupted more often than you are running out of Mana."
+    }
+  ],
+  "cons": [],
+  "requirements": [],
+  "allocation": {
+    "balance-00": 5,
+    "balance-02": 3,
+    "balance-05": 2,
+    "balance-03": 1
+  },
+  "levelingSteps": [
+    {
+      "levelRange": "10–14 ",
+      "spend": {
+        "balance-00": 5
+      }
+    },
+    {
+      "levelRange": "15–17 ",
+      "spend": {
+        "balance-02": 3
+      }
+    },
+    {
+      "levelRange": "18–19 ",
+      "spend": {
+        "balance-05": 2
+      }
+    },
+    {
+      "levelRange": "20 ",
+      "spend": {
+        "balance-03": 1
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

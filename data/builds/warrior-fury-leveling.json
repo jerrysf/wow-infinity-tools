@@ -1,0 +1,82 @@
+{
+  "slug": "warrior-fury-leveling",
+  "name": {
+    "zh": "武器与狂怒 Beta 开荒",
+    "en": "Arms and Fury Beta Start"
+  },
+  "summary": {
+    "zh": "11 点全投狂怒系：5% 近战暴击、持续不断的额外怒气，以及 20 级的刺耳怒吼，逃跑的怪一个也跑不掉。",
+    "en": "Eleven points into Fury: 5% melee critical strike, a steady stream of extra Rage, and Piercing Howl at 20 to stop anything that runs."
+  },
+  "classId": "warrior",
+  "playstyle": "leveling",
+  "difficulty": "beginner",
+  "gameVersion": "1.60.1.70425",
+  "levelRange": {
+    "min": 10,
+    "max": 20
+  },
+  "scenario": {
+    "zh": "10–20 级，武器与狂怒在 Beta 等级上限下共用的起手",
+    "en": "Levels 10–20, the opening Arms and Fury share at the beta level cap"
+  },
+  "pros": [
+    {
+      "zh": "残忍提供 5% 近战暴击几率，是武器系深层天赋开放之前最直接的伤害提升。",
+      "en": "Cruelty adds 5% melee critical strike chance, the simplest damage increase available before the deeper Arms talents open."
+    },
+    {
+      "zh": "怒不可遏让近战伤害有 60% 几率额外产生 1 点怒气，怒气消耗技能因此能连续使用。",
+      "en": "Unbridled Wrath gives melee damage a 60% chance of 1 extra Rage, which is what keeps your Rage spenders coming."
+    },
+    {
+      "zh": "20 级的刺耳怒吼让周围敌人昏乱 6 秒，移动速度降低 50%：拉怪失手时可以脱身，也能留住逃跑的怪。",
+      "en": "Piercing Howl at level 20 dazes every nearby enemy for 6 seconds: an escape when a pull goes wrong, and a way to finish runners."
+    },
+    {
+      "zh": "这个等级段武器与狂怒需要的 11 点完全相同，因此本方案同时适用；20 级之后两系才会分开。",
+      "en": "Arms and Fury want the same eleven points at this level, so this build covers both; the trees separate after level 20."
+    },
+    {
+      "zh": "想进地下城坦克？防护方案把这些点数全部换成格挡回怒。",
+      "en": "Tanking dungeons instead? The Protection build trades all of this for Rage on every block."
+    }
+  ],
+  "cons": [],
+  "requirements": [],
+  "allocation": {
+    "fury-01": 5,
+    "fury-03": 5,
+    "fury-05": 1
+  },
+  "levelingSteps": [
+    {
+      "levelRange": "10–14 ",
+      "spend": {
+        "fury-01": 5
+      }
+    },
+    {
+      "levelRange": "15–19 ",
+      "spend": {
+        "fury-03": 5
+      }
+    },
+    {
+      "levelRange": "20 ",
+      "spend": {
+        "fury-05": 1
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

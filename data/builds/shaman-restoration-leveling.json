@@ -1,0 +1,85 @@
+{
+  "slug": "shaman-restoration-leveling",
+  "name": {
+    "zh": "恢复 Beta 开荒",
+    "en": "Restoration Beta Start"
+  },
+  "summary": {
+    "zh": "更快的治疗波、施法时保留一半的法力回复，再加 20 级的水之护盾。",
+    "en": "A faster Healing Wave, half your Mana regeneration kept while casting, and Water Shield at 20."
+  },
+  "classId": "shaman",
+  "playstyle": "leveling",
+  "difficulty": "beginner",
+  "gameVersion": "1.60.1.70425",
+  "levelRange": {
+    "min": 10,
+    "max": 20
+  },
+  "scenario": {
+    "zh": "10–20 级，在 Beta 地下城中治疗",
+    "en": "Levels 10–20, healing beta dungeons"
+  },
+  "pros": [
+    {
+      "zh": "强化治疗波让主力治疗的施法时间缩短 0.5 秒。",
+      "en": "Improved Healing Wave cuts 0.5 seconds from your main heal."
+    },
+    {
+      "zh": "全神贯注让 50% 的法力回复在施法时继续生效，这个等级下它比任何治疗量天赋都更有用。",
+      "en": "Mindfulness keeps 50% of your Mana regeneration running while you cast, which at this level beats any throughput talent."
+    },
+    {
+      "zh": "水之护盾在你被击中或治疗法术暴击时回复 2% 最大法力，单刷和坦克挨打都能为你回蓝。",
+      "en": "Water Shield restores 2% of maximum Mana when you are hit or when one of your heals crits, so solo play and tank damage both feed your Mana pool."
+    },
+    {
+      "zh": "自然优雅是可调整的 2 点：坦克稳当时，图腾集中或先祖治疗比 10% 仇恨降低更有价值。",
+      "en": "Natural Grace is the flexible pair of points: with a steady tank, Totemic Focus or Ancestral Healing do more than 10% less threat."
+    }
+  ],
+  "cons": [],
+  "requirements": [],
+  "allocation": {
+    "restoration-00": 5,
+    "restoration-02": 3,
+    "restoration-03": 2,
+    "restoration-08": 1
+  },
+  "levelingSteps": [
+    {
+      "levelRange": "10–14 ",
+      "spend": {
+        "restoration-00": 5
+      }
+    },
+    {
+      "levelRange": "15–17 ",
+      "spend": {
+        "restoration-02": 3
+      }
+    },
+    {
+      "levelRange": "18–19 ",
+      "spend": {
+        "restoration-03": 2
+      }
+    },
+    {
+      "levelRange": "20 ",
+      "spend": {
+        "restoration-08": 1
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

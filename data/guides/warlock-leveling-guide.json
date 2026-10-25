@@ -1,0 +1,50 @@
+{
+  "slug": "warlock-leveling-guide",
+  "title": {
+    "zh": "术士练级加点指南",
+    "en": "Warlock leveling builds"
+  },
+  "description": {
+    "zh": "术士在 Beta 中的练级加点路线与逐点顺序。",
+    "en": "Level-by-level Warlock talent orders in the Forever beta."
+  },
+  "kind": "leveling",
+  "classId": "warlock",
+  "relatedBuilds": [
+    "warlock-affliction-leveling",
+    "warlock-demonology-leveling",
+    "warlock-destruction-leveling"
+  ],
+  "sections": [
+    {
+      "heading": {
+        "zh": "练级加点思路",
+        "en": "Leveling talent plan"
+      },
+      "body": {
+        "zh": "【痛苦 Beta 开荒】5 点让腐蚀术瞬发，再补命中与法力续航，连续拉怪也不用坐下喝水。 【恶魔学识 Beta 开荒】所有点数都投给恶魔：宠物伤害提高 10%、生命与法力提高 15%，你的法术伤害还会治疗它。",
+        "en": "[Affliction Beta Start] Instant Corruption at five points, then hit and Mana sustain so you can chain pulls without drinking. [Demonology Beta Start] Every point goes into the demon: 10% more pet damage, 15% more pet health and Mana, and your spell damage healing it."
+      }
+    },
+    {
+      "heading": {
+        "zh": "适用范围",
+        "en": "Where it applies"
+      },
+      "body": {
+        "zh": "以上方案来自 Beta 版本 1.60.1.70425 的公开数据整理，正式版本上线后可能需要重新验证。",
+        "en": "These builds come from published data for beta build 1.60.1.70425 and may need re-verification at launch."
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

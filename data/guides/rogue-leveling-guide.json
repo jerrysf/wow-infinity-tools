@@ -1,0 +1,50 @@
+{
+  "slug": "rogue-leveling-guide",
+  "title": {
+    "zh": "潜行者练级加点指南",
+    "en": "Rogue leveling builds"
+  },
+  "description": {
+    "zh": "潜行者在 Beta 中的练级加点路线与逐点顺序。",
+    "en": "Level-by-level Rogue talent orders in the Forever beta."
+  },
+  "kind": "leveling",
+  "classId": "rogue",
+  "relatedBuilds": [
+    "rogue-assassination-leveling",
+    "rogue-combat-leveling",
+    "rogue-subtlety-leveling"
+  ],
+  "sections": [
+    {
+      "heading": {
+        "zh": "练级加点思路",
+        "en": "Leveling talent plan"
+      },
+      "body": {
+        "zh": "【刺杀 Beta 开荒】先堆暴击，再堆连击点：恶意、击杀后几乎必暴的第一击，以及把连击点还回来的无情。 【战斗 Beta 开荒】更省能量的邪恶攻击、更重的刺骨，再加 3% 命中，招招不落空。完全不点防御天赋。",
+        "en": "[Assassination Beta Start] Critical strike first, then combo points: Malice, a near-guaranteed crit after every kill, and Ruthlessness feeding the next finisher. [Combat Beta Start] A cheaper Sinister Strike, a harder Eviscerate, and 3% hit so nothing whiffs. No defensive talents at all."
+      }
+    },
+    {
+      "heading": {
+        "zh": "适用范围",
+        "en": "Where it applies"
+      },
+      "body": {
+        "zh": "以上方案来自 Beta 版本 1.60.1.70425 的公开数据整理，正式版本上线后可能需要重新验证。",
+        "en": "These builds come from published data for beta build 1.60.1.70425 and may need re-verification at launch."
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

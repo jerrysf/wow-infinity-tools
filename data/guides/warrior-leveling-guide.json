@@ -1,0 +1,49 @@
+{
+  "slug": "warrior-leveling-guide",
+  "title": {
+    "zh": "战士练级加点指南",
+    "en": "Warrior leveling builds"
+  },
+  "description": {
+    "zh": "战士在 Beta 中的练级加点路线与逐点顺序。",
+    "en": "Level-by-level Warrior talent orders in the Forever beta."
+  },
+  "kind": "leveling",
+  "classId": "warrior",
+  "relatedBuilds": [
+    "warrior-fury-leveling",
+    "warrior-protection-leveling"
+  ],
+  "sections": [
+    {
+      "heading": {
+        "zh": "练级加点思路",
+        "en": "Leveling talent plan"
+      },
+      "body": {
+        "zh": "【武器与狂怒 Beta 开荒】11 点全投狂怒系：5% 近战暴击、持续不断的额外怒气，以及 20 级的刺耳怒吼，逃跑的怪一个也跑不掉。 【防护 Beta 开荒】防护系的前 11 点全部围绕怒气：每次格挡回 5 点怒气，血性狂暴多给一半，雷霆一击更便宜，群拉更稳。",
+        "en": "[Arms and Fury Beta Start] Eleven points into Fury: 5% melee critical strike, a steady stream of extra Rage, and Piercing Howl at 20 to stop anything that runs. [Protection Beta Start] Protection&#39;s first eleven points are all Rage: 5 Rage on every block, half again as much from Bloodrage, and a cheaper Thunder Clap for holding groups."
+      }
+    },
+    {
+      "heading": {
+        "zh": "适用范围",
+        "en": "Where it applies"
+      },
+      "body": {
+        "zh": "以上方案来自 Beta 版本 1.60.1.70425 的公开数据整理，正式版本上线后可能需要重新验证。",
+        "en": "These builds come from published data for beta build 1.60.1.70425 and may need re-verification at launch."
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

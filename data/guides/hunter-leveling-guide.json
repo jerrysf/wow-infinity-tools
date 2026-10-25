@@ -1,0 +1,50 @@
+{
+  "slug": "hunter-leveling-guide",
+  "title": {
+    "zh": "猎人练级加点指南",
+    "en": "Hunter leveling builds"
+  },
+  "description": {
+    "zh": "猎人在 Beta 中的练级加点路线与逐点顺序。",
+    "en": "Level-by-level Hunter talent orders in the Forever beta."
+  },
+  "kind": "leveling",
+  "classId": "hunter",
+  "relatedBuilds": [
+    "hunter-beast-mastery-leveling",
+    "hunter-marksmanship-leveling",
+    "hunter-survival-leveling"
+  ],
+  "sections": [
+    {
+      "heading": {
+        "zh": "练级加点思路",
+        "en": "Leveling talent plan"
+      },
+      "body": {
+        "zh": "【野兽控制 Beta 开荒】先拿致命守护触发 30% 远程攻速，再补移动速度，以及复活更快、跟得上你的宠物。 【射击 Beta 开荒】11 点全部投入射击系直取独来独往：不召唤宠物时伤害提高 20%，另有暴击与智力转攻强加成。",
+        "en": "[Beast Mastery Beta Start] Deadly Aspects for a 30% ranged attack speed proc, then movement speed and a pet that revives fast and keeps up with you. [Marksmanship Beta Start] Eleven points straight down Marksmanship for Lone Wolf: 20% more damage while no pet is active, on top of crit and Attack Power from Intellect."
+      }
+    },
+    {
+      "heading": {
+        "zh": "适用范围",
+        "en": "Where it applies"
+      },
+      "body": {
+        "zh": "以上方案来自 Beta 版本 1.60.1.70425 的公开数据整理，正式版本上线后可能需要重新验证。",
+        "en": "These builds come from published data for beta build 1.60.1.70425 and may need re-verification at launch."
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

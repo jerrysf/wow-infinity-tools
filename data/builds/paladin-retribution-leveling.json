@@ -1,0 +1,93 @@
+{
+  "slug": "paladin-retribution-leveling",
+  "name": {
+    "zh": "惩戒 Beta 开荒",
+    "en": "Retribution Beta Start"
+  },
+  "summary": {
+    "zh": "11 点全部投入惩戒系：招架、更短的审判冷却和额外暴击，20 级拿到命令圣印。",
+    "en": "All eleven points in Retribution: parry, a shorter Judgement cooldown, and extra critical strike, then Seal of Command at 20."
+  },
+  "classId": "paladin",
+  "playstyle": "leveling",
+  "difficulty": "beginner",
+  "gameVersion": "1.60.1.70425",
+  "levelRange": {
+    "min": 10,
+    "max": 20
+  },
+  "scenario": {
+    "zh": "10–20 级，用神圣打击与审判单刷任务",
+    "en": "Levels 10–20, solo questing with Holy Strike and Judgement"
+  },
+  "pros": [
+    {
+      "zh": "偏斜提供 5% 招架：单刷时少挨伤害，招架还会加快你的下一次挥击。",
+      "en": "Deflection adds 5% parry: less damage taken solo, and a parry speeds up your next swing."
+    },
+    {
+      "zh": "强化审判让审判冷却缩短 2 秒，圣印伤害的触发频率明显提高。",
+      "en": "Improved Judgement takes 2 seconds off Judgement, so your seal damage lands noticeably more often."
+    },
+    {
+      "zh": "定罪投入 3 点，提供 3% 近战暴击，并开启第三层。",
+      "en": "Three points in Conviction add 3% melee critical strike and open the third row."
+    },
+    {
+      "zh": "20 级的命令圣印让你的攻击有几率造成相当于 70% 武器伤害的额外神圣伤害。",
+      "en": "Seal of Command at 20 gives your swings a chance to deal extra Holy damage equal to 70% of weapon damage."
+    },
+    {
+      "zh": "20 级主要组队？把偏斜的点数移到祈福，瞬发法术与圣印的法力消耗降低 10%。",
+      "en": "Grouping at 20? Move the Deflection points into Benediction for 10% cheaper instant spells and seals."
+    },
+    {
+      "zh": "主要面对亡灵或恶魔？把定罪的 2 点移到神圣导能，可以更频繁地使用 20 级解锁的奉献与驱邪术。",
+      "en": "Facing Undead or Demons? Two points from Conviction into Holy Conduit pay for more frequent Consecration and Exorcism, both of which unlock at 20."
+    }
+  ],
+  "cons": [],
+  "requirements": [],
+  "allocation": {
+    "retribution-00": 5,
+    "retribution-02": 2,
+    "retribution-04": 3,
+    "retribution-07": 1
+  },
+  "levelingSteps": [
+    {
+      "levelRange": "10–14 ",
+      "spend": {
+        "retribution-00": 5
+      }
+    },
+    {
+      "levelRange": "15–16 ",
+      "spend": {
+        "retribution-02": 2
+      }
+    },
+    {
+      "levelRange": "17–19 ",
+      "spend": {
+        "retribution-04": 3
+      }
+    },
+    {
+      "levelRange": "20 ",
+      "spend": {
+        "retribution-07": 1
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

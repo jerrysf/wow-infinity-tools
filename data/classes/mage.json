@@ -1,20 +1,41 @@
 {
   "id": "mage",
   "slug": "mage",
-  "name": { "zh": "法师", "en": "Mage" },
-  "tagline": { "zh": "远程法系爆发，控制能力强但身板脆。", "en": "Ranged burst caster with strong control but a fragile frame." },
-  "roles": ["ranged-dps"],
-  "preferenceTags": ["ranged", "burst", "complex", "pvp", "fragile"],
-  "strengths": { "zh": "远程爆发与控制能力出色。", "en": "Excellent ranged burst and control." },
-  "drawbacks": { "zh": "生存能力弱，对操作要求较高。", "en": "Fragile and mechanically demanding." },
+  "name": {
+    "zh": "法师",
+    "en": "Mage"
+  },
+  "tagline": {
+    "zh": "奥术、火焰或冰霜远程爆发，控制与机动出色。",
+    "en": "Arcane, Fire or Frost burst with strong control and mobility."
+  },
+  "roles": [
+    "ranged-dps"
+  ],
+  "preferenceTags": [
+    "ranged",
+    "burst",
+    "complex",
+    "pvp",
+    "fragile"
+  ],
+  "strengths": {
+    "zh": "爆发高、控制多、自带吃喝与传送。",
+    "en": "High burst, rich control, conjured food and teleports."
+  },
+  "drawbacks": {
+    "zh": "身板脆，法力管理要求高。",
+    "en": "Fragile and mana-hungry."
+  },
   "hasTalentData": true,
-  "demo": true,
+  "demo": false,
   "provenance": {
-    "status": "unverified",
-    "gameVersion": "demo-2026-10",
-    "source": "Demo fixture authored for tooling development",
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
     "importedAt": "2026-10-25",
     "needsRevalidation": true,
-    "notes": "Placeholder class pending real game data."
+    "notes": "Class list and roles per Blizzard class deep-dive posts; tree data extracted from beta client."
   }
 }

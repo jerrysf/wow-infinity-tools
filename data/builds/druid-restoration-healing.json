@@ -1,0 +1,180 @@
+{
+  "slug": "druid-restoration-healing",
+  "name": {
+    "zh": "恢复",
+    "en": "Restoration"
+  },
+  "summary": {
+    "zh": "深入恢复拿到野性成长、迅捷治愈与更强的持续治疗，再从平衡系拿起源和自然的壮美延长它们。",
+    "en": "Deep Restoration for Wild Growth, Swiftmend, and stronger heal-over-time spells, with Genesis and Nature&#39;s Splendor from Balance to extend them."
+  },
+  "classId": "druid",
+  "playstyle": "raid",
+  "difficulty": "beginner",
+  "gameVersion": "1.60.1.70425",
+  "levelRange": {
+    "min": 10,
+    "max": 60
+  },
+  "scenario": {
+    "zh": "60 级在地下城与团本中治疗",
+    "en": "Level 60 healing in dungeons and raids"
+  },
+  "pros": [
+    {
+      "zh": "自然赐福让全部治疗效果提高 10%，强化回春术让回春术提高 15%，起源再让所有持续治疗提高 5%。",
+      "en": "Gift of Nature raises all your healing by 10%, Improved Rejuvenation adds 15% to Rejuvenation, and Genesis adds 5% to every heal over time."
+    },
+    {
+      "zh": "自然的壮美让回春术持续时间延长 3 秒、愈合延长 6 秒，每次施放覆盖更长的战斗。",
+      "en": "Nature&#39;s Splendor adds 3 seconds to Rejuvenation and 6 seconds to Regrowth, so each cast covers more of the fight."
+    },
+    {
+      "zh": "反射让施法时保留一半法力恢复；生命之魂提高 15% 精神。",
+      "en": "Reflection keeps half your mana regeneration running while casting; Living Spirit adds 15% Spirit."
+    },
+    {
+      "zh": "迅捷治愈、自然迅捷与野性成长提供瞬发的急救手段和全队持续治疗。",
+      "en": "Swiftmend, Nature&#39;s Swiftness, and Wild Growth give you an instant emergency heal and a party-wide heal over time."
+    },
+    {
+      "zh": "月光只对伤害法术有效，这 3 点是为了解锁自然的壮美。不需要自然的壮美时，可把这 4 点改投强化宁静、微妙与激怒。",
+      "en": "Moonglow only helps damage spells; its three points are there to reach Nature&#39;s Splendor. If you skip Splendor, spend those four points on Improved Tranquility, Subtlety, and Furor."
+    }
+  ],
+  "cons": [],
+  "requirements": [],
+  "allocation": {
+    "restoration-00": 5,
+    "restoration-02": 5,
+    "restoration-05": 3,
+    "restoration-06": 5,
+    "restoration-07": 1,
+    "restoration-08": 5,
+    "restoration-09": 3,
+    "restoration-10": 1,
+    "restoration-11": 1,
+    "restoration-12": 3,
+    "restoration-14": 5,
+    "restoration-15": 1,
+    "restoration-03": 2,
+    "balance-01": 5,
+    "balance-04": 2,
+    "balance-02": 3,
+    "balance-07": 1
+  },
+  "levelingSteps": [
+    {
+      "levelRange": "10–14 ",
+      "spend": {
+        "restoration-00": 5
+      }
+    },
+    {
+      "levelRange": "15–19 ",
+      "spend": {
+        "restoration-02": 5
+      }
+    },
+    {
+      "levelRange": "20–22 ",
+      "spend": {
+        "restoration-05": 3
+      }
+    },
+    {
+      "levelRange": "23–27 ",
+      "spend": {
+        "restoration-06": 5
+      }
+    },
+    {
+      "levelRange": "28 ",
+      "spend": {
+        "restoration-07": 1
+      }
+    },
+    {
+      "levelRange": "29–33 ",
+      "spend": {
+        "restoration-08": 5
+      }
+    },
+    {
+      "levelRange": "34–36 ",
+      "spend": {
+        "restoration-09": 3
+      }
+    },
+    {
+      "levelRange": "37 ",
+      "spend": {
+        "restoration-10": 1
+      }
+    },
+    {
+      "levelRange": "38 ",
+      "spend": {
+        "restoration-11": 1
+      }
+    },
+    {
+      "levelRange": "39–41 ",
+      "spend": {
+        "restoration-12": 3
+      }
+    },
+    {
+      "levelRange": "42–46 ",
+      "spend": {
+        "restoration-14": 5
+      }
+    },
+    {
+      "levelRange": "47 ",
+      "spend": {
+        "restoration-15": 1
+      }
+    },
+    {
+      "levelRange": "48–49 ",
+      "spend": {
+        "restoration-03": 2
+      }
+    },
+    {
+      "levelRange": "50–54 ",
+      "spend": {
+        "balance-01": 5
+      }
+    },
+    {
+      "levelRange": "55–56 ",
+      "spend": {
+        "balance-04": 2
+      }
+    },
+    {
+      "levelRange": "57–59 ",
+      "spend": {
+        "balance-02": 3
+      }
+    },
+    {
+      "levelRange": "60 ",
+      "spend": {
+        "balance-07": 1
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

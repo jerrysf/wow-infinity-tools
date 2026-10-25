@@ -1,0 +1,92 @@
+{
+  "slug": "hunter-beast-mastery-leveling",
+  "name": {
+    "zh": "野兽控制 Beta 开荒",
+    "en": "Beast Mastery Beta Start"
+  },
+  "summary": {
+    "zh": "先拿致命守护触发 30% 远程攻速，再补移动速度，以及复活更快、跟得上你的宠物。",
+    "en": "Deadly Aspects for a 30% ranged attack speed proc, then movement speed and a pet that revives fast and keeps up with you."
+  },
+  "classId": "hunter",
+  "playstyle": "leveling",
+  "difficulty": "beginner",
+  "gameVersion": "1.60.1.70425",
+  "levelRange": {
+    "min": 10,
+    "max": 20
+  },
+  "scenario": {
+    "zh": "10–20 级，猎人最通用的起手方案",
+    "en": "Levels 10–20, the strongest general-purpose Hunter opening"
+  },
+  "pros": [
+    {
+      "zh": "致命守护让雄鹰守护生效时，自动射击有 10% 几率使远程攻击速度提高 30%，持续 12 秒，是这个等级猎人能拿到的最强天赋。",
+      "en": "Deadly Aspects gives Auto Shot a 10% chance to raise ranged attack speed by 30% for 12 seconds while Aspect of the Hawk is active: the single best talent any Hunter can take at this level."
+    },
+    {
+      "zh": "寻路让猎豹守护与豹群守护的速度加成再提高 6%，在没有坐骑的阶段，每一次赶路都能感受到。",
+      "en": "Pathfinding adds 6% to Aspect of the Cheetah and Aspect of the Pack, which you feel on every trip between quests before mounts."
+    },
+    {
+      "zh": "强化复活宠物让复活宠物少用 6 秒施法时间和 40% 法力，野兽迅捷让宠物移动速度提高 30%，抢先咬住目标。",
+      "en": "Improved Revive Pet cuts 6 seconds and 40% of the Mana from Revive Pet, and Bestial Swiftness keeps the pet 30% faster so it reaches the target first."
+    },
+    {
+      "zh": "只追求地下城 AoE？射击方案会彻底放弃宠物，换取独来独往与更强的多重射击。",
+      "en": "Only chasing dungeon AoE? The Marksmanship build gives up the pet entirely for Lone Wolf and a much stronger Multi-Shot."
+    }
+  ],
+  "cons": [],
+  "requirements": [],
+  "allocation": {
+    "beast-mastery-00": 5,
+    "beast-mastery-04": 2,
+    "beast-mastery-05": 2,
+    "beast-mastery-01": 1,
+    "beast-mastery-06": 1
+  },
+  "levelingSteps": [
+    {
+      "levelRange": "10–14 ",
+      "spend": {
+        "beast-mastery-00": 5
+      }
+    },
+    {
+      "levelRange": "15–16 ",
+      "spend": {
+        "beast-mastery-04": 2
+      }
+    },
+    {
+      "levelRange": "17–18 ",
+      "spend": {
+        "beast-mastery-05": 2
+      }
+    },
+    {
+      "levelRange": "19 ",
+      "spend": {
+        "beast-mastery-01": 1
+      }
+    },
+    {
+      "levelRange": "20 ",
+      "spend": {
+        "beast-mastery-06": 1
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

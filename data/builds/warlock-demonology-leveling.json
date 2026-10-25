@@ -1,0 +1,85 @@
+{
+  "slug": "warlock-demonology-leveling",
+  "name": {
+    "zh": "恶魔学识 Beta 开荒",
+    "en": "Demonology Beta Start"
+  },
+  "summary": {
+    "zh": "所有点数都投给恶魔：宠物伤害提高 10%、生命与法力提高 15%，你的法术伤害还会治疗它。",
+    "en": "Every point goes into the demon: 10% more pet damage, 15% more pet health and Mana, and your spell damage healing it."
+  },
+  "classId": "warlock",
+  "playstyle": "leveling",
+  "difficulty": "beginner",
+  "gameVersion": "1.60.1.70425",
+  "levelRange": {
+    "min": 10,
+    "max": 20
+  },
+  "scenario": {
+    "zh": "10–20 级，靠虚空行者或小鬼在前面顶着练级",
+    "en": "Levels 10–20, levelling behind a Voidwalker or Imp"
+  },
+  "pros": [
+    {
+      "zh": "邪恶强化让小鬼、虚空行者、魅魔与地狱猎犬的伤害统一提高 10%，换宠物时点数依然有效。",
+      "en": "Unholy Power adds 10% damage to your Imp, Voidwalker, Succubus and Felhunter alike, so the points stay useful as you change demons."
+    },
+    {
+      "zh": "邪能活力让宠物的最大生命与法力提高 15%，同时提高你自己的最大法力。",
+      "en": "Fel Vitality adds 15% to your pet&#39;s maximum health and Mana and raises your own maximum Mana."
+    },
+    {
+      "zh": "恶魔能量让你造成的法术伤害有 15% 治疗宠物，并把生命分流获得的法力同步给它，虚空行者因此能一直扛住。",
+      "en": "Demonic Energies heals your pet for 15% of all the spell damage you deal and shares your Life Tap Mana with it, which is what keeps a Voidwalker tanking indefinitely."
+    },
+    {
+      "zh": "召唤大师是可调整的 1 点；再加 1 点可以进一步缩短召唤时间与法力消耗。",
+      "en": "Master Summoner holds the flexible point; a second point there takes more time and Mana off every summon."
+    }
+  ],
+  "cons": [],
+  "requirements": [],
+  "allocation": {
+    "demonology-03": 5,
+    "demonology-06": 3,
+    "demonology-07": 2,
+    "demonology-10": 1
+  },
+  "levelingSteps": [
+    {
+      "levelRange": "10–14 ",
+      "spend": {
+        "demonology-03": 5
+      }
+    },
+    {
+      "levelRange": "15–17 ",
+      "spend": {
+        "demonology-06": 3
+      }
+    },
+    {
+      "levelRange": "18–19 ",
+      "spend": {
+        "demonology-07": 2
+      }
+    },
+    {
+      "levelRange": "20 ",
+      "spend": {
+        "demonology-10": 1
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "slug": "druid-feral-cat",
+  "name": {
+    "zh": "野性猫",
+    "en": "Feral Cat"
+  },
+  "summary": {
+    "zh": "野性战斗点满猎豹输出，再用激怒在变回猎豹时找回能量，自然主义再提高 5% 伤害。",
+    "en": "Full Cat Form damage in Feral Combat, then Furor to recover energy when you shift back into Cat Form and Naturalist for 5% more damage."
+  },
+  "classId": "druid",
+  "playstyle": "raid",
+  "difficulty": "beginner",
+  "gameVersion": "1.60.1.70425",
+  "levelRange": {
+    "min": 10,
+    "max": 60
+  },
+  "scenario": {
+    "zh": "60 级以猎豹形态打近战输出",
+    "en": "Level 60 melee damage in Cat Form"
+  },
+  "pros": [
+    {
+      "zh": "锋利兽爪、自然本能与血之狂暴把暴击转化为额外连击点和更高的暴击伤害。",
+      "en": "Sharpened Claws, Natural Instinct, and Blood Frenzy build critical strikes into extra combo points and bigger crits."
+    },
+    {
+      "zh": "Shifting Power 随时把法力转成 40 点能量，Improved Shifting Power 让它的冷却减半；撕碎攻击让撕碎的能量消耗降低 18 点。",
+      "en": "Shifting Power turns Mana into 40 Energy on demand and Improved Shifting Power halves its cooldown; Shredding Attacks cuts the cost of Shred by 18."
+    },
+    {
+      "zh": "狂乱撕扯对流血目标提高 10% 伤害，保持扫击和撕扯的效果。",
+      "en": "Rend and Tear adds 10% damage against bleeding targets, so keep Rake and Rip up."
+    },
+    {
+      "zh": "激怒让你变回猎豹形态时找回能量，自然主义让所有伤害提高 5%。",
+      "en": "Furor returns your Cat Form energy when you shift back, and Naturalist adds 5% to all damage."
+    },
+    {
+      "zh": "单刷或 PvP？把自然主义的点数换成厚皮与野蛮冲撞，换取护甲和更长的重击昏迷。",
+      "en": "Solo play or PvP? Move Naturalist points into Thick Hide and Brutal Impact for more armor and a longer Bash."
+    }
+  ],
+  "cons": [],
+  "requirements": [],
+  "allocation": {
+    "feral-combat-00": 5,
+    "feral-combat-02": 2,
+    "feral-combat-03": 3,
+    "feral-combat-09": 2,
+    "feral-combat-07": 2,
+    "feral-combat-08": 1,
+    "feral-combat-11": 1,
+    "feral-combat-12": 3,
+    "feral-combat-13": 2,
+    "feral-combat-15": 1,
+    "feral-combat-01": 5,
+    "feral-combat-06": 3,
+    "feral-combat-10": 1,
+    "feral-combat-14": 2,
+    "feral-combat-16": 2,
+    "feral-combat-18": 5,
+    "feral-combat-19": 1,
+    "restoration-01": 5,
+    "restoration-02": 5
+  },
+  "levelingSteps": [
+    {
+      "levelRange": "10–14 ",
+      "spend": {
+        "feral-combat-00": 5
+      }
+    },
+    {
+      "levelRange": "15–16 ",
+      "spend": {
+        "feral-combat-02": 2
+      }
+    },
+    {
+      "levelRange": "17–19 ",
+      "spend": {
+        "feral-combat-03": 3
+      }
+    },
+    {
+      "levelRange": "20–21 ",
+      "spend": {
+        "feral-combat-09": 2
+      }
+    },
+    {
+      "levelRange": "22–23 ",
+      "spend": {
+        "feral-combat-07": 2
+      }
+    },
+    {
+      "levelRange": "24 ",
+      "spend": {
+        "feral-combat-08": 1
+      }
+    },
+    {
+      "levelRange": "25 ",
+      "spend": {
+        "feral-combat-11": 1
+      }
+    },
+    {
+      "levelRange": "26–28 ",
+      "spend": {
+        "feral-combat-12": 3
+      }
+    },
+    {
+      "levelRange": "29–30 ",
+      "spend": {
+        "feral-combat-13": 2
+      }
+    },
+    {
+      "levelRange": "31 ",
+      "spend": {
+        "feral-combat-15": 1
+      }
+    },
+    {
+      "levelRange": "32–36 ",
+      "spend": {
+        "feral-combat-01": 5
+      }
+    },
+    {
+      "levelRange": "37–39 ",
+      "spend": {
+        "feral-combat-06": 3
+      }
+    },
+    {
+      "levelRange": "40 ",
+      "spend": {
+        "feral-combat-10": 1
+      }
+    },
+    {
+      "levelRange": "41–42 ",
+      "spend": {
+        "feral-combat-14": 2
+      }
+    },
+    {
+      "levelRange": "43–44 ",
+      "spend": {
+        "feral-combat-16": 2
+      }
+    },
+    {
+      "levelRange": "45–49 ",
+      "spend": {
+        "feral-combat-18": 5
+      }
+    },
+    {
+      "levelRange": "50 ",
+      "spend": {
+        "feral-combat-19": 1
+      }
+    },
+    {
+      "levelRange": "51–55 ",
+      "spend": {
+        "restoration-01": 5
+      }
+    },
+    {
+      "levelRange": "56–60 ",
+      "spend": {
+        "restoration-02": 5
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

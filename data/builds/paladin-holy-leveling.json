@@ -1,0 +1,89 @@
+{
+  "slug": "paladin-holy-leveling",
+  "name": {
+    "zh": "神圣 Beta 开荒",
+    "en": "Holy Beta Start"
+  },
+  "summary": {
+    "zh": "偏输出的神圣起手：10% 额外智力、更强的圣印与审判、先点治疗之光，以及施法时仍然生效的法力回复。",
+    "en": "A damage-leaning Holy opening: 10% more Intellect, stronger Seals and Judgements, a first step into Healing Light, and Mana regeneration that keeps running while you cast."
+  },
+  "classId": "paladin",
+  "playstyle": "leveling",
+  "difficulty": "beginner",
+  "gameVersion": "1.60.1.70425",
+  "levelRange": {
+    "min": 10,
+    "max": 20
+  },
+  "scenario": {
+    "zh": "10–20 级，既能进本治疗，也要单刷任务",
+    "en": "Levels 10–20, healing dungeons while still questing solo"
+  },
+  "pros": [
+    {
+      "zh": "神圣智慧提供 10% 智力，既扩大法力池，也通过装备上的法术强度提高治疗量。",
+      "en": "Divine Intellect adds 10% Intellect, which is both a larger Mana pool and more healing from the spell power on early gear."
+    },
+    {
+      "zh": "强化圣印让圣印与审判伤害提高 15%，在点出真正的治疗天赋之前，单刷速度不会掉下来。",
+      "en": "Improved Seals raises Seal and Judgement damage by 15%, so solo kills stay quick while you level toward the real healing talents."
+    },
+    {
+      "zh": "治疗之光投入 2 点，让圣光术与圣光闪现的治疗量提高 8%，进本治疗时最常用的就是这两个法术。",
+      "en": "Two points in Healing Light add 8% to Holy Light and Flash of Light, the heals you lean on in dungeons."
+    },
+    {
+      "zh": "敬畏让 10% 的法力回复在施法时继续生效。",
+      "en": "Reverence lets 10% of your Mana regeneration continue while casting."
+    },
+    {
+      "zh": "几乎只组队？把强化圣印的点数移到治疗之光和精神集中，治疗更强，施法也不易被打断推迟。",
+      "en": "Playing almost entirely in groups? Move the Improved Seals points into Healing Light and Spiritual Focus for stronger heals that are not pushed back."
+    }
+  ],
+  "cons": [],
+  "requirements": [],
+  "allocation": {
+    "holy-01": 5,
+    "holy-04": 3,
+    "holy-02": 2,
+    "holy-07": 1
+  },
+  "levelingSteps": [
+    {
+      "levelRange": "10–14 ",
+      "spend": {
+        "holy-01": 5
+      }
+    },
+    {
+      "levelRange": "15–17 ",
+      "spend": {
+        "holy-04": 3
+      }
+    },
+    {
+      "levelRange": "18–19 ",
+      "spend": {
+        "holy-02": 2
+      }
+    },
+    {
+      "levelRange": "20 ",
+      "spend": {
+        "holy-07": 1
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

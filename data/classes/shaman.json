@@ -1,0 +1,42 @@
+{
+  "id": "shaman",
+  "slug": "shaman",
+  "name": {
+    "zh": "萨满祭司",
+    "en": "Shaman"
+  },
+  "tagline": {
+    "zh": "元素、增强或恢复，图腾带来独特团队增益。",
+    "en": "Elemental, Enhancement or Restoration; totems bring unique group utility."
+  },
+  "roles": [
+    "healer",
+    "melee-dps",
+    "ranged-dps"
+  ],
+  "preferenceTags": [
+    "versatile",
+    "support",
+    "healing",
+    "group"
+  ],
+  "strengths": {
+    "zh": "图腾团队增益独特，职责覆盖广。",
+    "en": "Unique totem utility; covers many roles."
+  },
+  "drawbacks": {
+    "zh": "机制分散，需要兼顾图腾管理。",
+    "en": "Spread-thin mechanics and totem management."
+  },
+  "hasTalentData": true,
+  "demo": false,
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Class list and roles per Blizzard class deep-dive posts; tree data extracted from beta client."
+  }
+}

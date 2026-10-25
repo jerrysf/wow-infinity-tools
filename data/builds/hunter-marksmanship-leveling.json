@@ -1,0 +1,78 @@
+{
+  "slug": "hunter-marksmanship-leveling",
+  "name": {
+    "zh": "射击 Beta 开荒",
+    "en": "Marksmanship Beta Start"
+  },
+  "summary": {
+    "zh": "11 点全部投入射击系直取独来独往：不召唤宠物时伤害提高 20%，另有暴击与智力转攻强加成。",
+    "en": "Eleven points straight down Marksmanship for Lone Wolf: 20% more damage while no pet is active, on top of crit and Attack Power from Intellect."
+  },
+  "classId": "hunter",
+  "playstyle": "leveling",
+  "difficulty": "beginner",
+  "gameVersion": "1.60.1.70425",
+  "levelRange": {
+    "min": 10,
+    "max": 20
+  },
+  "scenario": {
+    "zh": "10–20 级，不带宠物时的地下城与 AoE 最高输出",
+    "en": "Levels 10–20, maximum dungeon and AoE damage with no pet out"
+  },
+  "pros": [
+    {
+      "zh": "致命攻击提供 5% 全攻击暴击几率。",
+      "en": "Lethal Attacks adds 5% critical strike chance with all attacks."
+    },
+    {
+      "zh": "精确瞄准把 100% 智力转化为攻击强度，而早期的皮甲与锁甲上智力并不稀缺。",
+      "en": "Careful Aim converts 100% of your Intellect into Attack Power, and Intellect is plentiful on the leather and mail you find early."
+    },
+    {
+      "zh": "独来独往让没有宠物时的伤害提高 20%，这也是在这个等级段一路点到底的唯一理由。",
+      "en": "Lone Wolf adds 20% damage while you have no active pet, which is the whole point of going this deep this early."
+    },
+    {
+      "zh": "这是地下城方案，不是练级方案。在野外，野兽控制能同时保留宠物、急速触发和移动速度。",
+      "en": "This is a dungeon build, not a questing one. Out in the world, Beast Mastery keeps the pet, the haste proc and the run speed."
+    }
+  ],
+  "cons": [],
+  "requirements": [],
+  "allocation": {
+    "marksmanship-02": 5,
+    "marksmanship-05": 5,
+    "marksmanship-08": 1
+  },
+  "levelingSteps": [
+    {
+      "levelRange": "10–14 ",
+      "spend": {
+        "marksmanship-02": 5
+      }
+    },
+    {
+      "levelRange": "15–19 ",
+      "spend": {
+        "marksmanship-05": 5
+      }
+    },
+    {
+      "levelRange": "20 ",
+      "spend": {
+        "marksmanship-08": 1
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

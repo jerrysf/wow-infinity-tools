@@ -1,20 +1,40 @@
 {
   "id": "hunter",
   "slug": "hunter",
-  "name": { "zh": "猎人", "en": "Hunter" },
-  "tagline": { "zh": "远程物理输出，宠物协助下单人体验顺滑。", "en": "Ranged physical damage; pets make solo play smooth." },
-  "roles": ["ranged-dps"],
-  "preferenceTags": ["ranged", "solo", "simple", "durable", "leveling"],
-  "strengths": { "zh": "单人升级轻松，宠物可承担前排。", "en": "Easy solo leveling with a pet tanking up front." },
-  "drawbacks": { "zh": "需要同时管理宠物，近战范围较弱。", "en": "Pet management overhead and weak in melee range." },
-  "hasTalentData": false,
-  "demo": true,
+  "name": {
+    "zh": "猎人",
+    "en": "Hunter"
+  },
+  "tagline": {
+    "zh": "远程输出与宠物伙伴，单人体验顺滑。",
+    "en": "Ranged damage with a pet companion; smooth solo play."
+  },
+  "roles": [
+    "ranged-dps"
+  ],
+  "preferenceTags": [
+    "ranged",
+    "solo",
+    "simple",
+    "leveling"
+  ],
+  "strengths": {
+    "zh": "单人练级轻松，宠物可承担前排。",
+    "en": "Easy solo leveling with a pet up front."
+  },
+  "drawbacks": {
+    "zh": "需要管理宠物，近战距离弱势。",
+    "en": "Pet management overhead; weak in melee range."
+  },
+  "hasTalentData": true,
+  "demo": false,
   "provenance": {
-    "status": "unverified",
-    "gameVersion": "demo-2026-10",
-    "source": "Demo fixture authored for tooling development",
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
     "importedAt": "2026-10-25",
     "needsRevalidation": true,
-    "notes": "Placeholder class pending real game data."
+    "notes": "Class list and roles per Blizzard class deep-dive posts; tree data extracted from beta client."
   }
 }

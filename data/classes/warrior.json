@@ -1,20 +1,41 @@
 {
   "id": "warrior",
   "slug": "warrior",
-  "name": { "zh": "战士", "en": "Warrior" },
-  "tagline": { "zh": "近战前排，可输出也可承担坦克职责。", "en": "Front-line melee, can deal damage or tank." },
-  "roles": ["melee-dps", "tank"],
-  "preferenceTags": ["melee", "solo", "durable", "simple", "tank-curious"],
-  "strengths": { "zh": "生存能力强，操作直接，能切坦克职责进组容易。", "en": "Durable, straightforward to play, and tank-capable for easy group invites." },
-  "drawbacks": { "zh": "依赖装备，机动性一般。", "en": "Gear-dependent with limited mobility." },
+  "name": {
+    "zh": "战士",
+    "en": "Warrior"
+  },
+  "tagline": {
+    "zh": "近战前排：武器与狂怒输出，或防护系承担坦克。",
+    "en": "Front-line melee: Arms and Fury damage, or Protection tanking."
+  },
+  "roles": [
+    "melee-dps",
+    "tank"
+  ],
+  "preferenceTags": [
+    "melee",
+    "durable",
+    "tank-curious",
+    "group"
+  ],
+  "strengths": {
+    "zh": "生存力强，能切坦克职责，组队需求高。",
+    "en": "Durable, can tank, always in demand for groups."
+  },
+  "drawbacks": {
+    "zh": "依赖装备与怒气循环，练级偏慢。",
+    "en": "Gear- and rage-dependent; slower to level."
+  },
   "hasTalentData": true,
-  "demo": true,
+  "demo": false,
   "provenance": {
-    "status": "unverified",
-    "gameVersion": "demo-2026-10",
-    "source": "Demo fixture authored for tooling development",
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
     "importedAt": "2026-10-25",
     "needsRevalidation": true,
-    "notes": "Placeholder class pending real game data."
+    "notes": "Class list and roles per Blizzard class deep-dive posts; tree data extracted from beta client."
   }
 }

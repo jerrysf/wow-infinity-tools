@@ -1,0 +1,89 @@
+{
+  "slug": "druid-feral-combat-leveling",
+  "name": {
+    "zh": "野性 Beta 开荒",
+    "en": "Feral Beta Start"
+  },
+  "summary": {
+    "zh": "与 60 级野性方案完全相同的前 11 点：更省资源的技能、猎豹形态移动速度，20 级拿到野性冲锋。",
+    "en": "The same first eleven points as the level 60 Feral build: cheaper attacks, Cat Form speed, and Feral Charge at 20."
+  },
+  "classId": "druid",
+  "playstyle": "leveling",
+  "difficulty": "beginner",
+  "gameVersion": "1.60.1.70425",
+  "levelRange": {
+    "min": 10,
+    "max": 20
+  },
+  "scenario": {
+    "zh": "10–20 级，猎豹形态刷任务，难打的怪切熊形态",
+    "en": "Levels 10–20, Cat Form questing with Bear Form for tough pulls"
+  },
+  "pros": [
+    {
+      "zh": "凶暴从第一点起就让槌击、Primal Bite、挥击、爪击和扫击少消耗 5 点怒气或能量。",
+      "en": "Ferocity cuts 5 Rage or Energy from Maul, Primal Bite, Swipe, Claw and Rake from the very first point."
+    },
+    {
+      "zh": "豹之迅捷提供 30% 猎豹形态移动速度和 4% 躲闪，在 30 级之前顶替坐骑。",
+      "en": "Feral Swiftness adds 30% Cat Form movement speed and 4% dodge, which stands in for a mount before level 30."
+    },
+    {
+      "zh": "野性之心 3 点提供 6% 智力和 12% 熊形态耐力，20 级的野性冲锋则用来贴脸和打断。",
+      "en": "Heart of the Wild adds 6% Intellect and 12% Bear Form Stamina at three points, and Feral Charge at 20 closes gaps and interrupts casts."
+    },
+    {
+      "zh": "想变形时就带着资源？可以把野性冲锋与野性之心换成 4 点激怒。",
+      "en": "Feral Charge and Heart of the Wild can become four points of Furor if you would rather shift into a form with resources already banked."
+    },
+    {
+      "zh": "在地下城里同时拉住多个目标？把野性之心的点数移到野性本能，挥击伤害提高 30%。",
+      "en": "Holding several targets in dungeons? Move the Heart of the Wild points into Feral Instinct for 30% more Swipe damage."
+    }
+  ],
+  "cons": [],
+  "requirements": [],
+  "allocation": {
+    "feral-combat-00": 5,
+    "feral-combat-02": 2,
+    "feral-combat-01": 3,
+    "feral-combat-08": 1
+  },
+  "levelingSteps": [
+    {
+      "levelRange": "10–14 ",
+      "spend": {
+        "feral-combat-00": 5
+      }
+    },
+    {
+      "levelRange": "15–16 ",
+      "spend": {
+        "feral-combat-02": 2
+      }
+    },
+    {
+      "levelRange": "17–19 ",
+      "spend": {
+        "feral-combat-01": 3
+      }
+    },
+    {
+      "levelRange": "20 ",
+      "spend": {
+        "feral-combat-08": 1
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

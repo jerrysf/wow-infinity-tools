@@ -1,0 +1,187 @@
+{
+  "slug": "druid-feral-tank",
+  "name": {
+    "zh": "野性坦克",
+    "en": "Feral Tank"
+  },
+  "summary": {
+    "zh": "从野性战斗拿护甲、躲闪与耐力，靠血之狂暴和自然反射回怒，再点满激怒，每次变熊都带着怒气开场。",
+    "en": "Armor, dodge, and Stamina from Feral Combat, rage from Blood Frenzy and Natural Reaction, and Furor so every shift into Bear Form starts with rage."
+  },
+  "classId": "druid",
+  "playstyle": "dungeon",
+  "difficulty": "beginner",
+  "gameVersion": "1.60.1.70425",
+  "levelRange": {
+    "min": 10,
+    "max": 60
+  },
+  "scenario": {
+    "zh": "60 级在地下城与团本中以熊形态坦克",
+    "en": "Level 60 bear tanking in dungeons and raids"
+  },
+  "pros": [
+    {
+      "zh": "厚皮、野性之心与自然反射叠加护甲、20% 熊形态耐力和 5% 躲闪。",
+      "en": "Thick Hide, Heart of the Wild, and Natural Reaction stack armor, 20% Bear Form Stamina, and 5% dodge."
+    },
+    {
+      "zh": "血之狂暴与自然反射在暴击和躲闪时回复怒气，撕碎攻击降低割伤的怒气消耗。",
+      "en": "Blood Frenzy and Natural Reaction feed rage on critical strikes and dodges, and Shredding Attacks makes Lacerate cheaper."
+    },
+    {
+      "zh": "野性本能让挥击伤害提高 30%，方便同时拉住多个目标；狂暴让 Primal Bite 可击中 3 个目标且没有冷却。",
+      "en": "Feral Instinct raises Swipe damage by 30% for holding several targets; Berserk lets Primal Bite hit three targets with no cooldown."
+    },
+    {
+      "zh": "5 点激怒让你每次进入熊形态都获得 10 点怒气。",
+      "en": "Five points of Furor give 10 rage every time you shift into Bear Form."
+    },
+    {
+      "zh": "队伍需要更多打断时，可以把野性本能的点数换成野蛮冲撞，延长重击的昏迷时间。",
+      "en": "Brutal Impact adds a longer Bash stun if your group wants more interrupts; take it from Feral Instinct."
+    }
+  ],
+  "cons": [],
+  "requirements": [],
+  "allocation": {
+    "feral-combat-00": 5,
+    "feral-combat-05": 3,
+    "feral-combat-02": 2,
+    "feral-combat-09": 2,
+    "feral-combat-07": 2,
+    "feral-combat-08": 1,
+    "feral-combat-11": 1,
+    "feral-combat-12": 3,
+    "feral-combat-13": 2,
+    "feral-combat-15": 1,
+    "feral-combat-01": 5,
+    "feral-combat-06": 3,
+    "feral-combat-16": 2,
+    "feral-combat-17": 5,
+    "feral-combat-18": 5,
+    "feral-combat-19": 1,
+    "feral-combat-03": 3,
+    "restoration-01": 5
+  },
+  "levelingSteps": [
+    {
+      "levelRange": "10–14 ",
+      "spend": {
+        "feral-combat-00": 5
+      }
+    },
+    {
+      "levelRange": "15–17 ",
+      "spend": {
+        "feral-combat-05": 3
+      }
+    },
+    {
+      "levelRange": "18–19 ",
+      "spend": {
+        "feral-combat-02": 2
+      }
+    },
+    {
+      "levelRange": "20–21 ",
+      "spend": {
+        "feral-combat-09": 2
+      }
+    },
+    {
+      "levelRange": "22–23 ",
+      "spend": {
+        "feral-combat-07": 2
+      }
+    },
+    {
+      "levelRange": "24 ",
+      "spend": {
+        "feral-combat-08": 1
+      }
+    },
+    {
+      "levelRange": "25 ",
+      "spend": {
+        "feral-combat-11": 1
+      }
+    },
+    {
+      "levelRange": "26–28 ",
+      "spend": {
+        "feral-combat-12": 3
+      }
+    },
+    {
+      "levelRange": "29–30 ",
+      "spend": {
+        "feral-combat-13": 2
+      }
+    },
+    {
+      "levelRange": "31 ",
+      "spend": {
+        "feral-combat-15": 1
+      }
+    },
+    {
+      "levelRange": "32–36 ",
+      "spend": {
+        "feral-combat-01": 5
+      }
+    },
+    {
+      "levelRange": "37–39 ",
+      "spend": {
+        "feral-combat-06": 3
+      }
+    },
+    {
+      "levelRange": "40–41 ",
+      "spend": {
+        "feral-combat-16": 2
+      }
+    },
+    {
+      "levelRange": "42–46 ",
+      "spend": {
+        "feral-combat-17": 5
+      }
+    },
+    {
+      "levelRange": "47–51 ",
+      "spend": {
+        "feral-combat-18": 5
+      }
+    },
+    {
+      "levelRange": "52 ",
+      "spend": {
+        "feral-combat-19": 1
+      }
+    },
+    {
+      "levelRange": "53–55 ",
+      "spend": {
+        "feral-combat-03": 3
+      }
+    },
+    {
+      "levelRange": "56–60 ",
+      "spend": {
+        "restoration-01": 5
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

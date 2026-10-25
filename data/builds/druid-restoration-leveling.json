@@ -1,0 +1,78 @@
+{
+  "slug": "druid-restoration-leveling",
+  "name": {
+    "zh": "恢复 Beta 开荒",
+    "en": "Restoration Beta Start"
+  },
+  "summary": {
+    "zh": "抗打断、更快且提升伤害的治疗之触，再加 20 级的大地母亲的恩赐。",
+    "en": "Pushback protection, a faster Healing Touch that also raises your damage, and Gift of the Earthmother at 20."
+  },
+  "classId": "druid",
+  "playstyle": "leveling",
+  "difficulty": "beginner",
+  "gameVersion": "1.60.1.70425",
+  "levelRange": {
+    "min": 10,
+    "max": 20
+  },
+  "scenario": {
+    "zh": "10–20 级，在 Beta 地下城中治疗",
+    "en": "Levels 10–20, healing beta dungeons"
+  },
+  "pros": [
+    {
+      "zh": "自然集中让奥术与自然法术有 70% 几率不被伤害打断，这正是 20 级治疗真正丢施法的原因。",
+      "en": "Nature&#39;s Focus gives a 70% chance to avoid pushback on your Arcane and Nature casts, which is what a level-20 healer actually loses casts to."
+    },
+    {
+      "zh": "自然主义让治疗之触施法时间缩短 0.5 秒，并让你造成的所有伤害提高 5%，这套方案照样能刷任务。",
+      "en": "Naturalist cuts 0.5 seconds from Healing Touch and adds 5% to all the damage you deal, so the build still quests."
+    },
+    {
+      "zh": "大地母亲的恩赐让回春术与迅捷治愈的公共冷却缩短 0.5 秒，瞬发治疗的跟手程度明显提升。",
+      "en": "Gift of the Earthmother takes 0.5 seconds off the global cooldown of Rejuvenation and Swiftmend, which makes your instant heals noticeably more responsive."
+    },
+    {
+      "zh": "主要单刷？5 点起源加 1 点自然延伸、再加 5 点自然集中的分配杀得更快，代价是放弃大地母亲的恩赐。",
+      "en": "Mostly soloing? Five points in Genesis, one in Nature&#39;s Reach and five in Nature&#39;s Focus kills faster, at the cost of Gift of the Earthmother."
+    }
+  ],
+  "cons": [],
+  "requirements": [],
+  "allocation": {
+    "restoration-00": 5,
+    "restoration-02": 5,
+    "restoration-07": 1
+  },
+  "levelingSteps": [
+    {
+      "levelRange": "10–14 ",
+      "spend": {
+        "restoration-00": 5
+      }
+    },
+    {
+      "levelRange": "15–19 ",
+      "spend": {
+        "restoration-02": 5
+      }
+    },
+    {
+      "levelRange": "20 ",
+      "spend": {
+        "restoration-07": 1
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "slug": "paladin-protection-leveling",
+  "name": {
+    "zh": "防护 Beta 开荒",
+    "en": "Protection Beta Start"
+  },
+  "summary": {
+    "zh": "先要格挡与命中：盾牌壁垒提供格挡爆发，精确保证仇恨技能不落空，盾牌专精第 1 点把格挡转化为法力。",
+    "en": "Block and hit first: Redoubt for block spikes, Precision so your threat abilities land, and the first point of Shield Specialization to turn blocks into Mana."
+  },
+  "classId": "paladin",
+  "playstyle": "leveling",
+  "difficulty": "beginner",
+  "gameVersion": "1.60.1.70425",
+  "levelRange": {
+    "min": 10,
+    "max": 20
+  },
+  "scenario": {
+    "zh": "10–20 级，在 Beta 地下城中坦克",
+    "en": "Levels 10–20, tanking beta dungeons"
+  },
+  "pros": [
+    {
+      "zh": "盾牌壁垒让针对你的近战攻击有 10% 几率使格挡几率提高 20%，持续 10 秒或 5 次格挡。",
+      "en": "Redoubt gives melee attacks against you a 10% chance to raise your block chance by 20% for 10 seconds or 5 blocks."
+    },
+    {
+      "zh": "精确提供 3% 命中，对建立仇恨的技能尤其重要。",
+      "en": "Precision adds 3% hit, which matters most on the abilities you build threat with."
+    },
+    {
+      "zh": "预知提供 8 点防御技能，降低敌人对你暴击和碾压的几率。",
+      "en": "Anticipation adds 8 Defense Skill, cutting the chance that enemies crit or crush you."
+    },
+    {
+      "zh": "盾牌专精让约三分之一的格挡回复 6% 最大法力，这正是 20 级解锁奉献后维持输出的关键。",
+      "en": "Shield Specialization restores 6% of maximum Mana on a third of your blocks, which is what keeps Consecration running once it unlocks at 20."
+    },
+    {
+      "zh": "单刷任务？惩戒方案的击杀速度快得多；防护的价值体现在地下城队伍里。",
+      "en": "Questing solo? Retribution kills far faster; Protection earns its points in a dungeon group."
+    }
+  ],
+  "cons": [],
+  "requirements": [],
+  "allocation": {
+    "protection-01": 5,
+    "protection-02": 3,
+    "protection-04": 2,
+    "protection-07": 1
+  },
+  "levelingSteps": [
+    {
+      "levelRange": "10–14 ",
+      "spend": {
+        "protection-01": 5
+      }
+    },
+    {
+      "levelRange": "15–17 ",
+      "spend": {
+        "protection-02": 3
+      }
+    },
+    {
+      "levelRange": "18–19 ",
+      "spend": {
+        "protection-04": 2
+      }
+    },
+    {
+      "levelRange": "20 ",
+      "spend": {
+        "protection-07": 1
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

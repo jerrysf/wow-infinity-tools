@@ -1,0 +1,93 @@
+{
+  "slug": "rogue-assassination-leveling",
+  "name": {
+    "zh": "刺杀 Beta 开荒",
+    "en": "Assassination Beta Start"
+  },
+  "summary": {
+    "zh": "先堆暴击，再堆连击点：恶意、击杀后几乎必暴的第一击，以及把连击点还回来的无情。",
+    "en": "Critical strike first, then combo points: Malice, a near-guaranteed crit after every kill, and Ruthlessness feeding the next finisher."
+  },
+  "classId": "rogue",
+  "playstyle": "leveling",
+  "difficulty": "beginner",
+  "gameVersion": "1.60.1.70425",
+  "levelRange": {
+    "min": 10,
+    "max": 20
+  },
+  "scenario": {
+    "zh": "10–20 级，用邪恶攻击与刺骨快速单刷",
+    "en": "Levels 10–20, fast solo kills with Sinister Strike and Eviscerate"
+  },
+  "pros": [
+    {
+      "zh": "恶意让所有攻击与毒药的暴击几率提高 5%。",
+      "en": "Malice adds 5% critical strike chance with all attacks and poisons."
+    },
+    {
+      "zh": "冷酷攻击让击杀后的第一次攻击获得 40% 额外暴击几率，任务怪可以一只接一只地连下去。",
+      "en": "Remorseless Attacks gives a 40% critical strike chance on your first strike after a kill, which chains quest mobs together."
+    },
+    {
+      "zh": "无情让终结技有 60% 几率直接返还 1 个连击点。",
+      "en": "Ruthlessness gives finishing moves a 60% chance to hand a combo point straight back."
+    },
+    {
+      "zh": "无情打击让终结技有 20% 几率按消耗的每个连击点回复 25 点能量。",
+      "en": "Relentless Strikes returns 25 Energy per combo point spent, 20% of the time."
+    },
+    {
+      "zh": "来源指南的第 11 点没有分配；我们放进无情打击，因为 20 级潜行者的瓶颈是能量而不是伤害。",
+      "en": "The source guide leaves the eleventh point unspent; we put it in Relentless Strikes because Energy, not damage, is what limits a level-20 Rogue."
+    },
+    {
+      "zh": "强化切割被刻意跳过：这个等级的怪活不到让持续时间产生价值。",
+      "en": "Improved Slice and Dice is skipped on purpose: nothing at this level lives long enough to pay for the duration."
+    }
+  ],
+  "cons": [],
+  "requirements": [],
+  "allocation": {
+    "assassination-02": 5,
+    "assassination-01": 2,
+    "assassination-03": 3,
+    "assassination-06": 1
+  },
+  "levelingSteps": [
+    {
+      "levelRange": "10–14 ",
+      "spend": {
+        "assassination-02": 5
+      }
+    },
+    {
+      "levelRange": "15–16 ",
+      "spend": {
+        "assassination-01": 2
+      }
+    },
+    {
+      "levelRange": "17–19 ",
+      "spend": {
+        "assassination-03": 3
+      }
+    },
+    {
+      "levelRange": "20 ",
+      "spend": {
+        "assassination-06": 1
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

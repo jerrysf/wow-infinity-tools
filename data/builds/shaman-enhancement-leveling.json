@@ -1,0 +1,89 @@
+{
+  "slug": "shaman-enhancement-leveling",
+  "name": {
+    "zh": "增强 Beta 开荒",
+    "en": "Enhancement Beta Start"
+  },
+  "summary": {
+    "zh": "全面 5% 暴击、把智力转成攻击强度，再用萨满专注止住震击的法力消耗。",
+    "en": "5% critical strike with everything, Intellect turned into Attack Power, and Shamanistic Focus so shocks stop draining your Mana."
+  },
+  "classId": "shaman",
+  "playstyle": "leveling",
+  "difficulty": "beginner",
+  "gameVersion": "1.60.1.70425",
+  "levelRange": {
+    "min": 10,
+    "max": 20
+  },
+  "scenario": {
+    "zh": "10–20 级，用武器附魔与震击打近战",
+    "en": "Levels 10–20, melee with a weapon buff and shocks"
+  },
+  "pros": [
+    {
+      "zh": "雷鸣猛击让所有法术与攻击的暴击几率提高 5%。",
+      "en": "Thundering Strikes adds 5% critical strike chance with all spells and attacks."
+    },
+    {
+      "zh": "聪慧把 100% 智力转化为攻击强度，早期捡到的施法锁甲也因此值得穿。",
+      "en": "Mental Dexterity converts 100% of your Intellect into Attack Power, which makes the caster mail you find early worth wearing."
+    },
+    {
+      "zh": "萨满专注让震击系法术与闪电之盾的法力消耗降低 45%。",
+      "en": "Shamanistic Focus cuts 45% of the Mana cost of your Shock spells and Lightning Shield."
+    },
+    {
+      "zh": "强化幽魂之狼让幽魂之狼施法时间缩短 3 秒，并且可以在室内使用。",
+      "en": "Improved Ghost Wolf reduces the Ghost Wolf cast time by 3 seconds and lets it be used indoors."
+    },
+    {
+      "zh": "强化闪电之盾是这 3 点的另一个选择，但它在天赋树后续没有通向关键天赋。",
+      "en": "Improved Lightning Shield is the other candidate for those three points, but it does not lead anywhere useful deeper in the tree."
+    }
+  ],
+  "cons": [],
+  "requirements": [],
+  "allocation": {
+    "enhancement-01": 5,
+    "enhancement-04": 3,
+    "enhancement-05": 2,
+    "enhancement-08": 1
+  },
+  "levelingSteps": [
+    {
+      "levelRange": "10–14 ",
+      "spend": {
+        "enhancement-01": 5
+      }
+    },
+    {
+      "levelRange": "15–17 ",
+      "spend": {
+        "enhancement-04": 3
+      }
+    },
+    {
+      "levelRange": "18–19 ",
+      "spend": {
+        "enhancement-05": 2
+      }
+    },
+    {
+      "levelRange": "20 ",
+      "spend": {
+        "enhancement-08": 1
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

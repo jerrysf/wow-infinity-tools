@@ -1,0 +1,85 @@
+{
+  "slug": "hunter-survival-leveling",
+  "name": {
+    "zh": "生存 Beta 开荒",
+    "en": "Survival Beta Start"
+  },
+  "summary": {
+    "zh": "偏斜与威慑叠出 20 级无人能及的招架，诱捕则让每个陷阱都附带定身。",
+    "en": "Deflection and Deterrence stack parry beyond anything else available at 20, with Entrapment turning every trap into a root."
+  },
+  "classId": "hunter",
+  "playstyle": "leveling",
+  "difficulty": "beginner",
+  "gameVersion": "1.60.1.70425",
+  "levelRange": {
+    "min": 10,
+    "max": 20
+  },
+  "scenario": {
+    "zh": "10–20 级，以扛住近战和单挑为目标，而非追求伤害",
+    "en": "Levels 10–20, surviving melee and duels rather than maximising damage"
+  },
+  "pros": [
+    {
+      "zh": "偏斜点满提供 5% 招架，是这个阶段单项收益最大的防御天赋。",
+      "en": "Deflection adds 5% parry at five points, the largest single defensive gain this early."
+    },
+    {
+      "zh": "威慑可主动开启，10 秒内躲闪与招架各提高 25%。",
+      "en": "Deterrence adds 25% dodge and parry for 10 seconds on demand."
+    },
+    {
+      "zh": "诱捕让陷阱命中的目标定身 3 秒，野蛮打击再为近战技能提供 4% 暴击。",
+      "en": "Entrapment roots everything your traps catch for 3 seconds, and Savage Strikes adds 4% critical strike to your melee abilities."
+    },
+    {
+      "zh": "练级速度与纯输出请看野兽控制或射击；20 级的生存是一套生存能力向的选择，来源指南本身也是这么说的。",
+      "en": "Levelling speed and raw damage come from Beast Mastery or Marksmanship; Survival at 20 is a durability pick, and the guide that publishes it says so."
+    }
+  ],
+  "cons": [],
+  "requirements": [],
+  "allocation": {
+    "survival-01": 5,
+    "survival-03": 2,
+    "survival-02": 3,
+    "survival-08": 1
+  },
+  "levelingSteps": [
+    {
+      "levelRange": "10–14 ",
+      "spend": {
+        "survival-01": 5
+      }
+    },
+    {
+      "levelRange": "15–16 ",
+      "spend": {
+        "survival-03": 2
+      }
+    },
+    {
+      "levelRange": "17–19 ",
+      "spend": {
+        "survival-02": 3
+      }
+    },
+    {
+      "levelRange": "20 ",
+      "spend": {
+        "survival-08": 1
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

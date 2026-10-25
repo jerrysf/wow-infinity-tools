@@ -52,7 +52,8 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
           </Link>
         </div>
         <p className="mt-4 text-xs text-zinc-500">
-          {dict.common.version}: {version.label} · {dict.common.dataStatus}: {dict.common.status.unverified}
+          {dict.common.version}: {version.label} · {dict.common.dataStatus}:{" "}
+          {dict.common.status[classes[0]?.provenance.status ?? "unverified"]}
         </p>
       </section>
 

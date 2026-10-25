@@ -1,0 +1,92 @@
+{
+  "slug": "rogue-subtlety-leveling",
+  "name": {
+    "zh": "敏锐 Beta 开荒",
+    "en": "Subtlety Beta Start"
+  },
+  "summary": {
+    "zh": "潜行更快、冷却更短，再加上让伏击暴击几率提高 45% 的强化伏击，多数目标一击掉半管血。",
+    "en": "Stealth that moves faster and returns sooner, plus a 45% critical strike chance on Ambush that takes half the health bar off most targets."
+  },
+  "classId": "rogue",
+  "playstyle": "leveling",
+  "difficulty": "beginner",
+  "gameVersion": "1.60.1.70425",
+  "levelRange": {
+    "min": 10,
+    "max": 20
+  },
+  "scenario": {
+    "zh": "10–20 级，从潜行开怪，并绕开不必打的战斗",
+    "en": "Levels 10–20, opening from stealth and slipping past what you do not need to fight"
+  },
+  "pros": [
+    {
+      "zh": "伪装让潜行的速度惩罚降低 9%、冷却缩短 4 秒，战斗间隙保持潜行变得现实。",
+      "en": "Camouflage reduces the Stealth speed penalty by 9% and its cooldown by 4 seconds, so staying stealthed between pulls is practical."
+    },
+    {
+      "zh": "强化伏击让伏击暴击几率提高 45%，伺机而动再让伏击、背刺、锁喉与毁伤伤害提高 10%。",
+      "en": "Improved Ambush adds 45% critical strike chance to Ambush, and Opportunity adds 10% damage to Ambush, Backstab, Garrote and Mutilate."
+    },
+    {
+      "zh": "鬼魅攻击在主手匕首时造成 180% 武器伤害，并在 7 秒内提高 15% 躲闪，且没有站位要求。",
+      "en": "Ghostly Strike deals 180% weapon damage with a dagger equipped, adds 15% dodge for 7 seconds, and has no positional requirement."
+    },
+    {
+      "zh": "调整偏向 PvP；打 PvE 时可以把这 2 点补满伪装，拿到完整的潜行移动速度。",
+      "en": "Setup leans towards PvP; in PvE those two points can finish Camouflage for the full stealth speed instead."
+    }
+  ],
+  "cons": [],
+  "requirements": [],
+  "allocation": {
+    "subtlety-00": 3,
+    "subtlety-02": 2,
+    "subtlety-03": 2,
+    "subtlety-06": 3,
+    "subtlety-08": 1
+  },
+  "levelingSteps": [
+    {
+      "levelRange": "10–12 ",
+      "spend": {
+        "subtlety-00": 3
+      }
+    },
+    {
+      "levelRange": "13–14 ",
+      "spend": {
+        "subtlety-02": 2
+      }
+    },
+    {
+      "levelRange": "15–16 ",
+      "spend": {
+        "subtlety-03": 2
+      }
+    },
+    {
+      "levelRange": "17–19 ",
+      "spend": {
+        "subtlety-06": 3
+      }
+    },
+    {
+      "levelRange": "20 ",
+      "spend": {
+        "subtlety-08": 1
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

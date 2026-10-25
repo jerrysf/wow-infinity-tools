@@ -1,0 +1,211 @@
+{
+  "slug": "druid-feral-leveling",
+  "name": {
+    "zh": "野性练级",
+    "en": "Feral Leveling"
+  },
+  "summary": {
+    "zh": "先降技能消耗，再补移动速度、暴击，并在 25 级拿到 Primal Bite。全部点数投入野性战斗，60 级时就是一套完整的野性天赋。",
+    "en": "Cheaper attacks first, then speed, crit, and Primal Bite at 25. Every point goes into Feral Combat, so the build is already a full Feral setup at 60."
+  },
+  "classId": "druid",
+  "playstyle": "leveling",
+  "difficulty": "beginner",
+  "gameVersion": "1.60.1.70425",
+  "levelRange": {
+    "min": 10,
+    "max": 60
+  },
+  "scenario": {
+    "zh": "10–60 级，猎豹形态单刷任务，难打的怪切熊形态",
+    "en": "Levels 10–60, solo questing in Cat Form with Bear Form for tough pulls"
+  },
+  "pros": [
+    {
+      "zh": "凶暴从第一点起就让爪击、扫击和槌击更省资源，两种形态开怪都更从容。",
+      "en": "Ferocity makes Claw, Rake, and Maul cheaper from your first point, so you open fights with more resources in both forms."
+    },
+    {
+      "zh": "豹之迅捷提供 30% 猎豹形态移动速度和 4% 躲闪，在 30 级拿到旅行形态之前跑图更快。",
+      "en": "Feral Swiftness adds 30% Cat Form run speed and 4% dodge: faster travel between quests before Travel Form at 30."
+    },
+    {
+      "zh": "16 点里程碑天赋 Primal Bite 在 25 级到手；随后血之狂暴让暴击额外获得连击点和怒气。",
+      "en": "Primal Bite, the 16-point milestone, lands at level 25; Blood Frenzy then turns critical strikes into extra combo points and rage."
+    },
+    {
+      "zh": "野性之心、Shifting Power 与狂乱撕扯在 30–40 级持续提升伤害，50 级拿到狂暴。",
+      "en": "Heart of the Wild, Shifting Power, and Rend and Tear raise damage through the 30s and 40s, and Berserk arrives at 50."
+    },
+    {
+      "zh": "经常在地下城当坦克？把自然反射提前到狂乱撕扯之后，不必留到最后。",
+      "en": "Grouping for dungeons as the tank? Take Natural Reaction right after Rend and Tear instead of at the end."
+    },
+    {
+      "zh": "24 级的野性冲锋在练级时可以缓一缓，先点野蛮冲撞或野性本能也可以。",
+      "en": "Feral Charge at 24 is optional while leveling; Brutal Impact or an early Feral Instinct point works too."
+    }
+  ],
+  "cons": [],
+  "requirements": [],
+  "allocation": {
+    "feral-combat-00": 5,
+    "feral-combat-02": 2,
+    "feral-combat-05": 3,
+    "feral-combat-09": 2,
+    "feral-combat-07": 2,
+    "feral-combat-08": 1,
+    "feral-combat-11": 1,
+    "feral-combat-12": 3,
+    "feral-combat-13": 2,
+    "feral-combat-15": 1,
+    "feral-combat-01": 5,
+    "feral-combat-06": 3,
+    "feral-combat-10": 1,
+    "feral-combat-14": 2,
+    "feral-combat-16": 2,
+    "feral-combat-18": 5,
+    "feral-combat-19": 1,
+    "feral-combat-17": 5,
+    "feral-combat-03": 3,
+    "feral-combat-04": 2
+  },
+  "levelingSteps": [
+    {
+      "levelRange": "10–14 ",
+      "spend": {
+        "feral-combat-00": 5
+      }
+    },
+    {
+      "levelRange": "15–16 ",
+      "spend": {
+        "feral-combat-02": 2
+      }
+    },
+    {
+      "levelRange": "17–19 ",
+      "spend": {
+        "feral-combat-05": 3
+      }
+    },
+    {
+      "levelRange": "20 ",
+      "spend": {
+        "feral-combat-09": 1
+      }
+    },
+    {
+      "levelRange": "21 ",
+      "spend": {
+        "feral-combat-09": 1
+      }
+    },
+    {
+      "levelRange": "22–23 ",
+      "spend": {
+        "feral-combat-07": 2
+      }
+    },
+    {
+      "levelRange": "24 ",
+      "spend": {
+        "feral-combat-08": 1
+      }
+    },
+    {
+      "levelRange": "25 ",
+      "spend": {
+        "feral-combat-11": 1
+      }
+    },
+    {
+      "levelRange": "26–28 ",
+      "spend": {
+        "feral-combat-12": 3
+      }
+    },
+    {
+      "levelRange": "29–30 ",
+      "spend": {
+        "feral-combat-13": 2
+      }
+    },
+    {
+      "levelRange": "31 ",
+      "spend": {
+        "feral-combat-15": 1
+      }
+    },
+    {
+      "levelRange": "32–36 ",
+      "spend": {
+        "feral-combat-01": 5
+      }
+    },
+    {
+      "levelRange": "37–39 ",
+      "spend": {
+        "feral-combat-06": 3
+      }
+    },
+    {
+      "levelRange": "40 ",
+      "spend": {
+        "feral-combat-10": 1
+      }
+    },
+    {
+      "levelRange": "41–42 ",
+      "spend": {
+        "feral-combat-14": 2
+      }
+    },
+    {
+      "levelRange": "43–44 ",
+      "spend": {
+        "feral-combat-16": 2
+      }
+    },
+    {
+      "levelRange": "45–49 ",
+      "spend": {
+        "feral-combat-18": 5
+      }
+    },
+    {
+      "levelRange": "50 ",
+      "spend": {
+        "feral-combat-19": 1
+      }
+    },
+    {
+      "levelRange": "51–55 ",
+      "spend": {
+        "feral-combat-17": 5
+      }
+    },
+    {
+      "levelRange": "56–58 ",
+      "spend": {
+        "feral-combat-03": 3
+      }
+    },
+    {
+      "levelRange": "59–60 ",
+      "spend": {
+        "feral-combat-04": 2
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

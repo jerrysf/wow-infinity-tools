@@ -8,17 +8,17 @@
         {
           "id": "melee",
           "text": { "zh": "近战", "en": "Melee" },
-          "weights": { "warrior": 3, "rogue": 3, "druid": 1 }
+          "weights": { "warrior": 3, "rogue": 3, "paladin": 2, "shaman": 1, "druid": 1 }
         },
         {
           "id": "ranged",
           "text": { "zh": "远程", "en": "Ranged" },
-          "weights": { "mage": 3, "hunter": 3, "priest": 2, "druid": 1 }
+          "weights": { "mage": 3, "hunter": 3, "warlock": 3, "priest": 2, "shaman": 1, "druid": 1 }
         },
         {
           "id": "either",
           "text": { "zh": "都可以", "en": "Either is fine" },
-          "weights": { "druid": 2, "warrior": 1, "hunter": 1 }
+          "weights": { "druid": 2, "shaman": 2, "paladin": 1, "warrior": 1, "hunter": 1 }
         }
       ]
     },
@@ -29,22 +29,22 @@
         {
           "id": "solo",
           "text": { "zh": "单人升级", "en": "Solo leveling" },
-          "weights": { "hunter": 3, "warrior": 2, "rogue": 1, "druid": 1 }
+          "weights": { "hunter": 3, "warlock": 3, "warrior": 2, "rogue": 1, "druid": 1 }
         },
         {
           "id": "dungeon",
           "text": { "zh": "地下城", "en": "Dungeons" },
-          "weights": { "priest": 2, "warrior": 2, "druid": 2, "mage": 1 }
+          "weights": { "priest": 2, "warrior": 2, "paladin": 2, "shaman": 2, "druid": 2, "mage": 1 }
         },
         {
           "id": "raid",
           "text": { "zh": "团队副本", "en": "Raids" },
-          "weights": { "priest": 2, "druid": 2, "mage": 1, "warrior": 1 }
+          "weights": { "priest": 2, "druid": 2, "paladin": 2, "shaman": 2, "mage": 1, "warrior": 1 }
         },
         {
           "id": "pvp",
           "text": { "zh": "PVP", "en": "PvP" },
-          "weights": { "rogue": 3, "mage": 2, "priest": 1, "druid": 1 }
+          "weights": { "rogue": 3, "mage": 2, "warlock": 2, "priest": 1, "druid": 1 }
         }
       ]
     },
@@ -55,22 +55,22 @@
         {
           "id": "tank",
           "text": { "zh": "愿意当坦克", "en": "Happy to tank" },
-          "weights": { "warrior": 3, "druid": 2 }
+          "weights": { "warrior": 3, "paladin": 3, "druid": 2 }
         },
         {
           "id": "healer",
           "text": { "zh": "愿意当治疗", "en": "Happy to heal" },
-          "weights": { "priest": 3, "druid": 2 }
+          "weights": { "priest": 3, "paladin": 3, "shaman": 3, "druid": 2 }
         },
         {
           "id": "both",
           "text": { "zh": "都可以尝试", "en": "Open to both" },
-          "weights": { "druid": 3, "priest": 1, "warrior": 1 }
+          "weights": { "druid": 3, "paladin": 3, "shaman": 2, "priest": 1, "warrior": 1 }
         },
         {
           "id": "dps-only",
           "text": { "zh": "只想输出", "en": "Damage only" },
-          "weights": { "mage": 2, "hunter": 2, "rogue": 2 }
+          "weights": { "mage": 2, "hunter": 2, "rogue": 2, "warlock": 2 }
         }
       ]
     },
@@ -81,12 +81,12 @@
         {
           "id": "simple",
           "text": { "zh": "简单直接", "en": "Simple and direct" },
-          "weights": { "hunter": 3, "warrior": 2 }
+          "weights": { "hunter": 3, "warrior": 2, "paladin": 1 }
         },
         {
           "id": "complex",
           "text": { "zh": "复杂多变", "en": "Complex and varied" },
-          "weights": { "mage": 2, "rogue": 3, "druid": 2, "priest": 1 }
+          "weights": { "mage": 2, "rogue": 3, "druid": 3, "warlock": 2, "shaman": 2, "priest": 1 }
         }
       ]
     },
@@ -97,22 +97,22 @@
         {
           "id": "survival",
           "text": { "zh": "生存能力", "en": "Survivability" },
-          "weights": { "warrior": 3, "hunter": 2, "druid": 1 }
+          "weights": { "warrior": 3, "paladin": 3, "hunter": 2, "warlock": 2, "druid": 1 }
         },
         {
           "id": "damage",
           "text": { "zh": "输出伤害", "en": "Damage" },
-          "weights": { "mage": 3, "rogue": 3, "hunter": 1 }
+          "weights": { "mage": 3, "rogue": 3, "warlock": 2, "hunter": 1 }
         },
         {
           "id": "support",
           "text": { "zh": "辅助能力", "en": "Support tools" },
-          "weights": { "priest": 3, "druid": 3 }
+          "weights": { "priest": 3, "druid": 3, "shaman": 3, "paladin": 3 }
         },
         {
           "id": "team",
           "text": { "zh": "团队价值", "en": "Team value" },
-          "weights": { "priest": 2, "druid": 2, "warrior": 1 }
+          "weights": { "priest": 2, "druid": 2, "paladin": 2, "shaman": 2, "warrior": 1 }
         }
       ]
     }

@@ -1,0 +1,85 @@
+{
+  "slug": "priest-shadow-magic-leveling",
+  "name": {
+    "zh": "暗影 Beta 开荒",
+    "en": "Shadow Beta Start"
+  },
+  "summary": {
+    "zh": "同样以魔杖和精神分流为核心，再加上更长的暗言术：痛与抗打断。",
+    "en": "The same wand and Spirit Tap core, with a longer Shadow Word: Pain and pushback protection on top."
+  },
+  "classId": "priest",
+  "playstyle": "leveling",
+  "difficulty": "beginner",
+  "gameVersion": "1.60.1.70425",
+  "levelRange": {
+    "min": 10,
+    "max": 20
+  },
+  "scenario": {
+    "zh": "10–20 级，用暗言术：痛配合魔杖单刷",
+    "en": "Levels 10–20, solo damage with Shadow Word: Pain and a wand"
+  },
+  "pros": [
+    {
+      "zh": "强化暗言术：痛让持续时间延长 6 秒，一次施放覆盖整场战斗，单位伤害的法力消耗大幅下降。",
+      "en": "Improved Shadow Word: Pain adds 6 seconds of duration, so one cast covers a whole fight and costs far less Mana per point of damage."
+    },
+    {
+      "zh": "魔杖专精提供 25% 魔杖伤害；持续伤害跳动期间就用魔杖输出。",
+      "en": "Wand Specialization adds 25% wand damage; you wand while the damage over time ticks."
+    },
+    {
+      "zh": "每次击杀后的精神分流，让你可以直接拉下一只怪而不是坐下喝水。",
+      "en": "Spirit Tap after every kill is what lets you pull the next target instead of drinking."
+    },
+    {
+      "zh": "打 PvP 时，把最后 2 点从暮光专注换成昏阙；如果问题出在射程，则选暗影延伸。",
+      "en": "In PvP, spend the last two points on Blackout instead of Twilight Focus; Shadow Reach is the pick if range is what keeps failing you."
+    }
+  ],
+  "cons": [],
+  "requirements": [],
+  "allocation": {
+    "discipline-01": 2,
+    "shadow-magic-02": 5,
+    "shadow-magic-04": 2,
+    "holy-00": 2
+  },
+  "levelingSteps": [
+    {
+      "levelRange": "10–11 ",
+      "spend": {
+        "discipline-01": 2
+      }
+    },
+    {
+      "levelRange": "12–16 ",
+      "spend": {
+        "shadow-magic-02": 5
+      }
+    },
+    {
+      "levelRange": "17–18 ",
+      "spend": {
+        "shadow-magic-04": 2
+      }
+    },
+    {
+      "levelRange": "19–20 ",
+      "spend": {
+        "holy-00": 2
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

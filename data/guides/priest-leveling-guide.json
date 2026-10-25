@@ -1,0 +1,49 @@
+{
+  "slug": "priest-leveling-guide",
+  "title": {
+    "zh": "牧师练级加点指南",
+    "en": "Priest leveling builds"
+  },
+  "description": {
+    "zh": "牧师在 Beta 中的练级加点路线与逐点顺序。",
+    "en": "Level-by-level Priest talent orders in the Forever beta."
+  },
+  "kind": "leveling",
+  "classId": "priest",
+  "relatedBuilds": [
+    "priest-discipline-leveling",
+    "priest-shadow-magic-leveling"
+  ],
+  "sections": [
+    {
+      "heading": {
+        "zh": "练级加点思路",
+        "en": "Leveling talent plan"
+      },
+      "body": {
+        "zh": "【治疗 Beta 开荒】魔杖单刷，双生戒律覆盖护盾与恢复，再经精神强化点到强化真言术：盾。 【暗影 Beta 开荒】同样以魔杖和精神分流为核心，再加上更长的暗言术：痛与抗打断。",
+        "en": "[Healing Beta Start] Wand damage for solo kills, Twin Disciplines on your shields and Renew, then Mental Strength into Improved Power Word: Shield. [Shadow Beta Start] The same wand and Spirit Tap core, with a longer Shadow Word: Pain and pushback protection on top."
+      }
+    },
+    {
+      "heading": {
+        "zh": "适用范围",
+        "en": "Where it applies"
+      },
+      "body": {
+        "zh": "以上方案来自 Beta 版本 1.60.1.70425 的公开数据整理，正式版本上线后可能需要重新验证。",
+        "en": "These builds come from published data for beta build 1.60.1.70425 and may need re-verification at launch."
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

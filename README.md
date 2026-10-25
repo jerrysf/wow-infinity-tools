@@ -63,7 +63,7 @@ pnpm verify          # validate:data + typecheck + lint + test + build
 ```json
 "provenance": {
   "status": "unverified | reviewed | tested | outdated",
-  "gameVersion": "demo-2026-10",
+  "gameVersion": "1.60.1.70425",
   "source": "数据来源说明",
   "importedAt": "2026-10-25",
   "reviewedBy": "可选",
@@ -75,6 +75,28 @@ pnpm verify          # validate:data + typecheck + lint + test + build
 - `reviewed` = 资料已审核；`tested` = 已在对应版本游戏内实测。两者不可混用。
 - 未验证数据不要标 reviewed/tested。演示数据加 `"demo": true`，页面会显示“演示数据”横幅。
 - 本地化文本统一为 `{ "zh": "...", "en": "..." }`。
+
+### 从公开数据源导入
+
+当前真实数据来自 wowhandbook.com 发布的 Beta 客户端数据页（中英双语 HTML 内嵌 JSON）。导入脚本：
+
+```bash
+# 1) 抓取九个职业的中英页面
+for c in warrior paladin hunter rogue priest shaman mage warlock druid; do
+  curl -sL "https://wowhandbook.com/zh/classes/$c/" -o /tmp/wowhandbook/zh/$c.html
+  curl -sL "https://wowhandbook.com/classes/$c/"   -o /tmp/wowhandbook/en/$c.html
+done
+
+# 2) 转换天赋树 -> data/talents/*.json
+python3 scripts/import-wowhandbook.py /tmp/wowhandbook
+
+# 3) 转换推荐方案/职业/练级攻略 -> data/builds,classes,guides
+python3 scripts/import-builds.py
+
+pnpm validate:data
+```
+
+注意：该来源的再发布许可未明确，数据页面已标注来源与 `needsRevalidation`；正式上线前应复核数据使用条款并优先改用游戏内实测数据。
 
 运行 `pnpm validate:data` 会检查：schema、重复 id/slug、天赋节点引用（requires/exclusiveWith）、方案 allocation 用真实引擎回放是否合法、levelingSteps 节点存在性、攻略 relatedBuilds 引用、选择器权重引用的职业是否存在、版本表是否有 isCurrent。
 
@@ -123,7 +145,7 @@ pnpm verify          # validate:data + typecheck + lint + test + build
 
 ## 已知限制
 
-- 当前全部游戏数据为演示数据（`demo: true` / `unverified`），仅用于验证工具流程；上线前必须用真实验证过的数据替换，否则不要宣称任何职业强度结论。
+- 当前天赋与方案数据整理自 wowhandbook.com 发布的 Beta 客户端 1.60.1.70425 数据（status: `reviewed`，`needsRevalidation: true`）；正式版本上线后必须重新验证，不得标为 `tested` 直到在游戏内实测。
 - 模拟器暂不支持逐步撤销（有重置与单点返还）；天赋布局为固定列网格（数据内 `row/col` 控制），连线箭头未实现。
 - 攻略为结构化 JSON（无 MDX）；联系页邮箱尚未公布。
 - 无数据库：分享完全依赖 URL 编码（上限 2000 字符，结构经 Zod 校验）。

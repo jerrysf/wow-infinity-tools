@@ -1,0 +1,89 @@
+{
+  "slug": "warrior-protection-leveling",
+  "name": {
+    "zh": "防护 Beta 开荒",
+    "en": "Protection Beta Start"
+  },
+  "summary": {
+    "zh": "防护系的前 11 点全部围绕怒气：每次格挡回 5 点怒气，血性狂暴多给一半，雷霆一击更便宜，群拉更稳。",
+    "en": "Protection&#39;s first eleven points are all Rage: 5 Rage on every block, half again as much from Bloodrage, and a cheaper Thunder Clap for holding groups."
+  },
+  "classId": "warrior",
+  "playstyle": "leveling",
+  "difficulty": "beginner",
+  "gameVersion": "1.60.1.70425",
+  "levelRange": {
+    "min": 10,
+    "max": 20
+  },
+  "scenario": {
+    "zh": "10–20 级，在 Beta 地下城中坦克",
+    "en": "Levels 10–20, tanking beta dungeons"
+  },
+  "pros": [
+    {
+      "zh": "盾牌专精提供 5% 格挡几率，并让每次格挡必定产生 5 点怒气，这就是 20 级坦克的全部怒气来源。",
+      "en": "Shield Specialization adds 5% block chance and a guaranteed 5 Rage whenever you block, which is the entire Rage engine for a level-20 tank."
+    },
+    {
+      "zh": "强化血性狂暴让血性狂暴产生的怒气提高 50%，开怪瞬间就有足够怒气动手。",
+      "en": "Improved Bloodrage raises the Rage from Bloodrage by 50%, so you open a pull with enough to act immediately."
+    },
+    {
+      "zh": "强化雷霆一击让雷霆一击少消耗 6 点怒气，第一波群拉就能建立多目标仇恨。",
+      "en": "Improved Thunder Clap cuts 6 Rage from Thunder Clap, making multi-target threat affordable on the first pull."
+    },
+    {
+      "zh": "防御大师让你装备盾牌时躲闪或招架有 50% 几率产生 5 点怒气。",
+      "en": "Master of Defense adds a 50% chance of 5 Rage when you dodge or parry with a shield equipped."
+    },
+    {
+      "zh": "副本之间单刷任务时，武器与狂怒方案效率高得多，去训练师那里洗点即可来回切换。",
+      "en": "Questing solo between dungeon runs is much faster with the Arms and Fury build; the two swap cleanly at a trainer."
+    }
+  ],
+  "cons": [],
+  "requirements": [],
+  "allocation": {
+    "protection-01": 5,
+    "protection-00": 2,
+    "protection-05": 3,
+    "protection-07": 1
+  },
+  "levelingSteps": [
+    {
+      "levelRange": "10–14 ",
+      "spend": {
+        "protection-01": 5
+      }
+    },
+    {
+      "levelRange": "15–16 ",
+      "spend": {
+        "protection-00": 2
+      }
+    },
+    {
+      "levelRange": "17–19 ",
+      "spend": {
+        "protection-05": 3
+      }
+    },
+    {
+      "levelRange": "20 ",
+      "spend": {
+        "protection-07": 1
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

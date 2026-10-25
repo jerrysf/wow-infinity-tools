@@ -1,0 +1,85 @@
+{
+  "slug": "mage-fire-leveling",
+  "name": {
+    "zh": "火焰 Beta 开荒",
+    "en": "Fire Beta Start"
+  },
+  "summary": {
+    "zh": "每个火球术少半秒，强化火焰冲击缩短冷却并加射程，再点点燃，20 级拿炎爆术。",
+    "en": "Half a second off every Fireball, Improved Fire Blast for range and cooldown, then Ignite into Pyroblast at 20."
+  },
+  "classId": "mage",
+  "playstyle": "leveling",
+  "difficulty": "beginner",
+  "gameVersion": "1.60.1.70425",
+  "levelRange": {
+    "min": 10,
+    "max": 20
+  },
+  "scenario": {
+    "zh": "10–20 级，主用火球术与火焰冲击",
+    "en": "Levels 10–20, Fireball and Fire Blast"
+  },
+  "pros": [
+    {
+      "zh": "强化火球术让火球术与霜火箭的施法时间缩短 0.5 秒。",
+      "en": "Improved Fireball removes 0.5 seconds from Fireball and Frostfire Bolt."
+    },
+    {
+      "zh": "强化火焰冲击缩短火焰冲击冷却并延长射程，这正是点燃在此时值得投入的前提。",
+      "en": "Improved Fire Blast shortens the Fire Blast cooldown and extends its range, which is what makes Ignite worth taking this early."
+    },
+    {
+      "zh": "点燃让火焰暴击额外造成相当于该次伤害 24% 的燃烧，持续 4 秒。",
+      "en": "Ignite burns the target for an extra 24% of a Fire critical strike over 4 seconds."
+    },
+    {
+      "zh": "先点点燃再点强化火焰冲击是常见误区：没有更短冷却与更远射程，这个等级的火焰冲击暴击太少，点燃几乎不起作用。",
+      "en": "Taking Ignite before Improved Fire Blast is the common mistake: without the shorter cooldown and range, Fire Blast crits are too rare at this level for Ignite to do much."
+    }
+  ],
+  "cons": [],
+  "requirements": [],
+  "allocation": {
+    "fire-02": 5,
+    "fire-00": 2,
+    "fire-03": 3,
+    "fire-08": 1
+  },
+  "levelingSteps": [
+    {
+      "levelRange": "10–14 ",
+      "spend": {
+        "fire-02": 5
+      }
+    },
+    {
+      "levelRange": "15–16 ",
+      "spend": {
+        "fire-00": 2
+      }
+    },
+    {
+      "levelRange": "17–19 ",
+      "spend": {
+        "fire-03": 3
+      }
+    },
+    {
+      "levelRange": "20 ",
+      "spend": {
+        "fire-08": 1
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

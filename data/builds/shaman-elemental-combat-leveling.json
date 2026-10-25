@@ -1,0 +1,85 @@
+{
+  "slug": "shaman-elemental-combat-leveling",
+  "name": {
+    "zh": "元素 Beta 开荒",
+    "en": "Elemental Beta Start"
+  },
+  "summary": {
+    "zh": "三个主力法术伤害提高 5%，火焰图腾与熔岩震击提高 15%，元素集中再提供免费施法。",
+    "en": "5% more damage on your three main spells, 15% on fire totems and Flame Shock, and Elemental Focus for free casts."
+  },
+  "classId": "shaman",
+  "playstyle": "leveling",
+  "difficulty": "beginner",
+  "gameVersion": "1.60.1.70425",
+  "levelRange": {
+    "min": 10,
+    "max": 20
+  },
+  "scenario": {
+    "zh": "10–20 级，远程施放闪电箭与震击",
+    "en": "Levels 10–20, casting Lightning Bolt and shocks from range"
+  },
+  "pros": [
+    {
+      "zh": "震荡让闪电箭、闪电链与地震术的伤害提高 5%。",
+      "en": "Concussion raises Lightning Bolt, Chain Lightning and Earth Shock damage by 5%."
+    },
+    {
+      "zh": "烈焰召唤让火焰图腾、熔岩震击与火焰新星的伤害提高 15%，放下火焰图腾时这就是你的主要伤害。",
+      "en": "Call of Flame adds 15% to your Fire Totems, Flame Shock and Fire Nova, which is most of your damage whenever a fire totem is down."
+    },
+    {
+      "zh": "元素集中让任何火焰、冰霜或自然法术之后有 10% 几率进入激活状态，而这个等级真正的瓶颈就是法力。",
+      "en": "Elemental Focus gives a 10% chance of a Clearcasting state after any Fire, Frost or Nature spell, and at this level Mana is the real constraint."
+    },
+    {
+      "zh": "元素灵敏缩短闪电箭与熔岩爆裂的施法时间；如果先见底的是法力而不是施法时间，就把这 2 点移到传导。",
+      "en": "Elemental Alacrity shortens Lightning Bolt and Lava Burst cast times; swap those two points into Convection if Mana runs out before cast time does."
+    }
+  ],
+  "cons": [],
+  "requirements": [],
+  "allocation": {
+    "elemental-combat-01": 5,
+    "elemental-combat-05": 3,
+    "elemental-combat-04": 2,
+    "elemental-combat-06": 1
+  },
+  "levelingSteps": [
+    {
+      "levelRange": "10–14 ",
+      "spend": {
+        "elemental-combat-01": 5
+      }
+    },
+    {
+      "levelRange": "15–17 ",
+      "spend": {
+        "elemental-combat-05": 3
+      }
+    },
+    {
+      "levelRange": "18–19 ",
+      "spend": {
+        "elemental-combat-04": 2
+      }
+    },
+    {
+      "levelRange": "20 ",
+      "spend": {
+        "elemental-combat-06": 1
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

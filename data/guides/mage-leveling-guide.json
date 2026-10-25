@@ -1,0 +1,50 @@
+{
+  "slug": "mage-leveling-guide",
+  "title": {
+    "zh": "法师练级加点指南",
+    "en": "Mage leveling builds"
+  },
+  "description": {
+    "zh": "法师在 Beta 中的练级加点路线与逐点顺序。",
+    "en": "Level-by-level Mage talent orders in the Forever beta."
+  },
+  "kind": "leveling",
+  "classId": "mage",
+  "relatedBuilds": [
+    "mage-arcane-leveling",
+    "mage-fire-leveling",
+    "mage-frost-leveling"
+  ],
+  "sections": [
+    {
+      "heading": {
+        "zh": "练级加点思路",
+        "en": "Leveling talent plan"
+      },
+      "body": {
+        "zh": "【奥术 Beta 开荒】魔杖伤害、3% 奥术命中和提供免费施法的奥术专注，最后在 20 级拿到奥术冲击。 【火焰 Beta 开荒】每个火球术少半秒，强化火焰冲击缩短冷却并加射程，再点点燃，20 级拿炎爆术。",
+        "en": "[Arcane Beta Start] Wand damage, 3% Arcane hit and Arcane Concentration for free casts, finishing with Arcane Blast at level 20. [Fire Beta Start] Half a second off every Fireball, Improved Fire Blast for range and cooldown, then Ignite into Pyroblast at 20."
+      }
+    },
+    {
+      "heading": {
+        "zh": "适用范围",
+        "en": "Where it applies"
+      },
+      "body": {
+        "zh": "以上方案来自 Beta 版本 1.60.1.70425 的公开数据整理，正式版本上线后可能需要重新验证。",
+        "en": "These builds come from published data for beta build 1.60.1.70425 and may need re-verification at launch."
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

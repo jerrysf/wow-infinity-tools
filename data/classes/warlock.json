@@ -1,0 +1,41 @@
+{
+  "id": "warlock",
+  "slug": "warlock",
+  "name": {
+    "zh": "术士",
+    "en": "Warlock"
+  },
+  "tagline": {
+    "zh": "痛苦持续伤害、恶魔学识宠物或毁灭爆发。",
+    "en": "Affliction damage-over-time, Demonology pets, or Destruction burst."
+  },
+  "roles": [
+    "ranged-dps"
+  ],
+  "preferenceTags": [
+    "ranged",
+    "solo",
+    "durable",
+    "complex",
+    "leveling"
+  ],
+  "strengths": {
+    "zh": "宠物协助单人，持续伤害稳定，生存手段多。",
+    "en": "Pet-assisted soloing, steady DoT damage, many survival tools."
+  },
+  "drawbacks": {
+    "zh": "爆发偏慢，技能循环较繁琐。",
+    "en": "Slower burst and a busier rotation."
+  },
+  "hasTalentData": true,
+  "demo": false,
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Class list and roles per Blizzard class deep-dive posts; tree data extracted from beta client."
+  }
+}

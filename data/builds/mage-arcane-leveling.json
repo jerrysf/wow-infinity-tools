@@ -1,0 +1,85 @@
+{
+  "slug": "mage-arcane-leveling",
+  "name": {
+    "zh": "奥术 Beta 开荒",
+    "en": "Arcane Beta Start"
+  },
+  "summary": {
+    "zh": "魔杖伤害、3% 奥术命中和提供免费施法的奥术专注，最后在 20 级拿到奥术冲击。",
+    "en": "Wand damage, 3% Arcane hit and Arcane Concentration for free casts, finishing with Arcane Blast at level 20."
+  },
+  "classId": "mage",
+  "playstyle": "leveling",
+  "difficulty": "beginner",
+  "gameVersion": "1.60.1.70425",
+  "levelRange": {
+    "min": 10,
+    "max": 20
+  },
+  "scenario": {
+    "zh": "10–20 级，在奥术冲击到手前靠寒冰箭与魔杖输出",
+    "en": "Levels 10–20, Frostbolt and wand damage until Arcane Blast arrives"
+  },
+  "pros": [
+    {
+      "zh": "魔杖专精提供 25% 魔杖伤害，20 级之前魔杖在你的实际输出中占比很大。",
+      "en": "Wand Specialization adds 25% wand damage, and before 20 a wand is a large share of what you actually deal."
+    },
+    {
+      "zh": "奥术专注让任何伤害法术命中后有 10% 几率进入激活状态，下一个法术不耗法力。",
+      "en": "Arcane Concentration gives a 10% chance of Clearcasting after any damage spell lands, which removes the Mana cost of the next one."
+    },
+    {
+      "zh": "奥术集中提供 3% 奥术命中，20 级奥术冲击进入循环后价值立刻体现。",
+      "en": "Arcane Focus adds 3% hit with Arcane spells, and that matters the moment Arcane Blast joins the rotation at 20."
+    },
+    {
+      "zh": "被打断的次数多于被抵抗？把奥术集中的点数移到强化引导。",
+      "en": "Interrupted more often than you are resisted? Move the Arcane Focus points into Improved Channeling instead."
+    }
+  ],
+  "cons": [],
+  "requirements": [],
+  "allocation": {
+    "arcane-00": 2,
+    "arcane-01": 3,
+    "arcane-06": 5,
+    "arcane-10": 1
+  },
+  "levelingSteps": [
+    {
+      "levelRange": "10–11 ",
+      "spend": {
+        "arcane-00": 2
+      }
+    },
+    {
+      "levelRange": "12–14 ",
+      "spend": {
+        "arcane-01": 3
+      }
+    },
+    {
+      "levelRange": "15–19 ",
+      "spend": {
+        "arcane-06": 5
+      }
+    },
+    {
+      "levelRange": "20 ",
+      "spend": {
+        "arcane-10": 1
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

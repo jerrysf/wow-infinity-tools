@@ -1,0 +1,55 @@
+{
+  "slug": "druid-leveling-guide",
+  "title": {
+    "zh": "德鲁伊练级加点指南",
+    "en": "Druid leveling builds"
+  },
+  "description": {
+    "zh": "德鲁伊在 Beta 中的练级加点路线与逐点顺序。",
+    "en": "Level-by-level Druid talent orders in the Forever beta."
+  },
+  "kind": "leveling",
+  "classId": "druid",
+  "relatedBuilds": [
+    "druid-feral-leveling",
+    "druid-feral-tank",
+    "druid-feral-cat",
+    "druid-restoration-healing",
+    "druid-balance-dps",
+    "druid-feral-combat-leveling",
+    "druid-balance-leveling",
+    "druid-restoration-leveling"
+  ],
+  "sections": [
+    {
+      "heading": {
+        "zh": "练级加点思路",
+        "en": "Leveling talent plan"
+      },
+      "body": {
+        "zh": "【野性练级】先降技能消耗，再补移动速度、暴击，并在 25 级拿到 Primal Bite。全部点数投入野性战斗，60 级时就是一套完整的野性天赋。 【野性坦克】从野性战斗拿护甲、躲闪与耐力，靠血之狂暴和自然反射回怒，再点满激怒，每次变熊都带着怒气开场。",
+        "en": "[Feral Leveling] Cheaper attacks first, then speed, crit, and Primal Bite at 25. Every point goes into Feral Combat, so the build is already a full Feral setup at 60. [Feral Tank] Armor, dodge, and Stamina from Feral Combat, rage from Blood Frenzy and Natural Reaction, and Furor so every shift into Bear Form starts with rage."
+      }
+    },
+    {
+      "heading": {
+        "zh": "适用范围",
+        "en": "Where it applies"
+      },
+      "body": {
+        "zh": "以上方案来自 Beta 版本 1.60.1.70425 的公开数据整理，正式版本上线后可能需要重新验证。",
+        "en": "These builds come from published data for beta build 1.60.1.70425 and may need re-verification at launch."
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

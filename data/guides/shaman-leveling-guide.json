@@ -1,0 +1,50 @@
+{
+  "slug": "shaman-leveling-guide",
+  "title": {
+    "zh": "萨满祭司练级加点指南",
+    "en": "Shaman leveling builds"
+  },
+  "description": {
+    "zh": "萨满祭司在 Beta 中的练级加点路线与逐点顺序。",
+    "en": "Level-by-level Shaman talent orders in the Forever beta."
+  },
+  "kind": "leveling",
+  "classId": "shaman",
+  "relatedBuilds": [
+    "shaman-elemental-combat-leveling",
+    "shaman-enhancement-leveling",
+    "shaman-restoration-leveling"
+  ],
+  "sections": [
+    {
+      "heading": {
+        "zh": "练级加点思路",
+        "en": "Leveling talent plan"
+      },
+      "body": {
+        "zh": "【元素 Beta 开荒】三个主力法术伤害提高 5%，火焰图腾与熔岩震击提高 15%，元素集中再提供免费施法。 【增强 Beta 开荒】全面 5% 暴击、把智力转成攻击强度，再用萨满专注止住震击的法力消耗。",
+        "en": "[Elemental Beta Start] 5% more damage on your three main spells, 15% on fire totems and Flame Shock, and Elemental Focus for free casts. [Enhancement Beta Start] 5% critical strike with everything, Intellect turned into Attack Power, and Shamanistic Focus so shocks stop draining your Mana."
+      }
+    },
+    {
+      "heading": {
+        "zh": "适用范围",
+        "en": "Where it applies"
+      },
+      "body": {
+        "zh": "以上方案来自 Beta 版本 1.60.1.70425 的公开数据整理，正式版本上线后可能需要重新验证。",
+        "en": "These builds come from published data for beta build 1.60.1.70425 and may need re-verification at launch."
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

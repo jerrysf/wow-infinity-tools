@@ -1,0 +1,89 @@
+{
+  "slug": "priest-discipline-leveling",
+  "name": {
+    "zh": "治疗 Beta 开荒",
+    "en": "Healing Beta Start"
+  },
+  "summary": {
+    "zh": "魔杖单刷，双生戒律覆盖护盾与恢复，再经精神强化点到强化真言术：盾。",
+    "en": "Wand damage for solo kills, Twin Disciplines on your shields and Renew, then Mental Strength into Improved Power Word: Shield."
+  },
+  "classId": "priest",
+  "playstyle": "leveling",
+  "difficulty": "beginner",
+  "gameVersion": "1.60.1.70425",
+  "levelRange": {
+    "min": 10,
+    "max": 20
+  },
+  "scenario": {
+    "zh": "10–20 级，既进本治疗，也要单刷任务",
+    "en": "Levels 10–20, healing dungeons while still questing solo"
+  },
+  "pros": [
+    {
+      "zh": "魔杖专精提供 25% 魔杖伤害，而 20 级之前魔杖正是你的主要伤害来源。",
+      "en": "Wand Specialization adds 25% wand damage, and wanding is most of your damage before level 20."
+    },
+    {
+      "zh": "双生戒律让瞬发法术的伤害和治疗提高 3%，同时覆盖恢复、真言术：盾与暗言术：痛。",
+      "en": "Twin Disciplines adds 3% to the damage and healing of your instant casts, which covers Renew, Power Word: Shield and Shadow Word: Pain at once."
+    },
+    {
+      "zh": "精神强化把智力提高 10%，并打开第 3 行，让强化真言术：盾的第一点就能多吸收 7% 伤害。",
+      "en": "Mental Strength raises Intellect by 10% and opens row 3 for Improved Power Word: Shield, which absorbs 7% more damage on your first shield talent point."
+    },
+    {
+      "zh": "想走神圣？在共用魔杖起手之后，把戒律护盾路线换成强化恢复与神圣系天赋。",
+      "en": "Playing Holy instead? Spend the Discipline shield path on Improved Renew and Holy specialization talents once you leave the shared wand opener."
+    },
+    {
+      "zh": "如果法力从来不是问题，最后 1 点可以点冥想而不是护盾。",
+      "en": "If Mana is never the problem, put the last point into Meditation instead of the shield."
+    }
+  ],
+  "cons": [],
+  "requirements": [],
+  "allocation": {
+    "discipline-01": 2,
+    "discipline-02": 3,
+    "discipline-05": 5,
+    "discipline-09": 1
+  },
+  "levelingSteps": [
+    {
+      "levelRange": "10–11 ",
+      "spend": {
+        "discipline-01": 2
+      }
+    },
+    {
+      "levelRange": "12–14 ",
+      "spend": {
+        "discipline-02": 3
+      }
+    },
+    {
+      "levelRange": "15–19 ",
+      "spend": {
+        "discipline-05": 5
+      }
+    },
+    {
+      "levelRange": "20 ",
+      "spend": {
+        "discipline-09": 1
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}

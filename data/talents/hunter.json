@@ -1,0 +1,939 @@
+{
+  "classId": "hunter",
+  "gameVersion": "1.60.1.70425",
+  "rules": {
+    "firstTalentLevel": 10,
+    "maxLevel": 60,
+    "pointsPerLevel": 1,
+    "maxPoints": 51
+  },
+  "demo": false,
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com talent data extracted from WoW: Forever beta client",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425; talent data may still change before the Nov 5 launch. Cross-checked against Blizzard class deep-dive posts."
+  },
+  "trees": [
+    {
+      "id": "beast-mastery",
+      "name": {
+        "zh": "野兽控制",
+        "en": "Beast Mastery"
+      },
+      "nodes": [
+        {
+          "id": "beast-mastery-00",
+          "name": {
+            "zh": "致命守护",
+            "en": "Deadly Aspects"
+          },
+          "description": {
+            "zh": "雄鹰守护激活时，自动射击有10%的几率使远程攻击速度提高30%，持续12秒。野兽守护激活时，近战自动攻击有10%的几率使近战攻击速度提高30%，持续12秒。",
+            "en": "While Aspect of the Hawk is active, Auto Shot has a 10% chance of increasing ranged attack speed by 30% for 12 sec. While Aspect of the Beast is active, all melee auto attacks have a 10% chance of increasing melee attack speed by 30% for 12 sec."
+          },
+          "maxPoints": 5,
+          "row": 0,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "beast-mastery-01",
+          "name": {
+            "zh": "耐久训练",
+            "en": "Endurance Training"
+          },
+          "description": {
+            "zh": "使你的宠物生命值和护甲提高15%。",
+            "en": "Increases the Health and Armor of your pets by 15%."
+          },
+          "maxPoints": 5,
+          "row": 0,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "beast-mastery-02",
+          "name": {
+            "zh": "集中火力",
+            "en": "Focused Fire"
+          },
+          "description": {
+            "zh": "宠物激活时，使你和宠物造成的所有伤害提高2%。",
+            "en": "Increases all damage you and your pet deal by 2% while your pet is active."
+          },
+          "maxPoints": 2,
+          "row": 1,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "beast-mastery-03",
+          "name": {
+            "zh": "强化灵猴守护",
+            "en": "Improved Aspect of the Monkey"
+          },
+          "description": {
+            "zh": "使你的灵猴守护提供的躲闪加成提高6%。此外，你的宠物获得灵猴守护效果的50%。",
+            "en": "Increases the Dodge bonus of your Aspect of the Monkey by 6%. Additionally, your pet gains 50% of the effect of your Aspect of the Monkey ability."
+          },
+          "maxPoints": 3,
+          "row": 1,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "beast-mastery-04",
+          "name": {
+            "zh": "寻路",
+            "en": "Pathfinding"
+          },
+          "description": {
+            "zh": "使你的猎豹守护和豹群守护的速度加成效果提高6%。",
+            "en": "Increases the speed bonus of your Aspect of the Cheetah and Aspect of the Pack by 6%."
+          },
+          "maxPoints": 2,
+          "row": 1,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "beast-mastery-05",
+          "name": {
+            "zh": "强化复活宠物",
+            "en": "Improved Revive Pet"
+          },
+          "description": {
+            "zh": "使你的复活宠物法术的施法时间减少6秒，法力值消耗降低40%，宠物复活后的生命值提高30%。",
+            "en": "Revive Pet's casting time is reduced by 6 sec, mana cost is reduced by 40%, and increases the health your pet returns with by an additional 30%."
+          },
+          "maxPoints": 2,
+          "row": 1,
+          "col": 3,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "beast-mastery-06",
+          "name": {
+            "zh": "野兽迅捷",
+            "en": "Bestial Swiftness"
+          },
+          "description": {
+            "zh": "使你的宠物移动速度提高30%。",
+            "en": "Increases the movement speed of your pets by 30%."
+          },
+          "maxPoints": 1,
+          "row": 2,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "beast-mastery-07",
+          "name": {
+            "zh": "狂怒释放",
+            "en": "Unleashed Fury"
+          },
+          "description": {
+            "zh": "使你的宠物和雄鹰造成的伤害提高15%。",
+            "en": "Increases the damage done by your pets and hawks by 15%."
+          },
+          "maxPoints": 5,
+          "row": 2,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "beast-mastery-08",
+          "name": {
+            "zh": "强化治疗宠物",
+            "en": "Improved Mend Pet"
+          },
+          "description": {
+            "zh": "使你的治疗宠物每次治疗时有50%的几率净化宠物身上的1个诅咒、疾病、魔法或中毒效果，并使法力消耗降低20%。",
+            "en": "Gives your Mend Pet spell a 50% chance of cleansing 1 Curse, Disease, Magic, or Poison effect from your pet each time it heals and reduces the Mana cost by 20%."
+          },
+          "maxPoints": 2,
+          "row": 3,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "beast-mastery-09",
+          "name": {
+            "zh": "凶暴",
+            "en": "Ferocity"
+          },
+          "description": {
+            "zh": "使你的宠物和雄鹰的爆击几率提高10%。",
+            "en": "Increases the critical strike chance of your pets and hawks by 10%."
+          },
+          "maxPoints": 5,
+          "row": 3,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "beast-mastery-10",
+          "name": {
+            "zh": "召唤雄鹰",
+            "en": "Summon Hawk"
+          },
+          "description": {
+            "zh": "命令一只雄鹰俯冲轰炸目标敌人，造成（32 + 远程攻击强度的5%）点物理伤害并继续攻击18秒。同时最多只能激活2只雄鹰。召唤雄鹰与奥术射击共享冷却时间。",
+            "en": "Command a hawk to dive-bomb your targeted enemy, dealing (32 + 5% of your ranged attack power) Physical damage and continuing its assault for 18 sec. Only 2 hawks can be active at once. Summon Hawk shares its cooldown with Arcane Shot."
+          },
+          "maxPoints": 1,
+          "row": 3,
+          "col": 3,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "beast-mastery-11",
+          "name": {
+            "zh": "灵魂联结",
+            "en": "Spirit Bond"
+          },
+          "description": {
+            "zh": "当你的宠物被激活后，你和你的宠物都会每5秒回复1%的生命值。",
+            "en": "While your pet is active, you and your pet will regenerate 1% of total health every 5 sec."
+          },
+          "maxPoints": 2,
+          "row": 4,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "beast-mastery-12",
+          "name": {
+            "zh": "胁迫",
+            "en": "Intimidation"
+          },
+          "description": {
+            "zh": "命令你的宠物在下次成功攻击时使目标昏迷3秒，且该次攻击的爆击几率提高100%。产生大量威胁值。",
+            "en": "Command your pet to Stun the target for 3 sec on its next successful attack, which also gains 100% increased critical strike chance. Generates high threat."
+          },
+          "maxPoints": 1,
+          "row": 4,
+          "col": 1,
+          "requires": [
+            {
+              "nodeId": "beast-mastery-06",
+              "points": 1
+            }
+          ],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "beast-mastery-13",
+          "name": {
+            "zh": "野兽戒律",
+            "en": "Bestial Discipline"
+          },
+          "description": {
+            "zh": "使你的宠物的集中值回复速度提高20%，并使你在施法时仍可保持50%的法力回复。",
+            "en": "Increases the Focus regeneration of your pets by 20% and allows 50% of your Mana regeneration to continue while casting."
+          },
+          "maxPoints": 2,
+          "row": 4,
+          "col": 3,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "beast-mastery-14",
+          "name": {
+            "zh": "狂乱",
+            "en": "Frenzy"
+          },
+          "description": {
+            "zh": "使你的宠物有100%的几率在对敌人造成爆击后获得攻击速度提高30%的效果，持续8秒。",
+            "en": "Gives your pet a 100% chance to gain a 30% attack speed increase for 8 sec after dealing a critical strike."
+          },
+          "maxPoints": 5,
+          "row": 5,
+          "col": 2,
+          "requires": [
+            {
+              "nodeId": "beast-mastery-09",
+              "points": 5
+            }
+          ],
+          "requiresPointsInTree": 25,
+          "exclusiveWith": []
+        },
+        {
+          "id": "beast-mastery-15",
+          "name": {
+            "zh": "狂野怒火",
+            "en": "Bestial Wrath"
+          },
+          "description": {
+            "zh": "使宠物进入疯狂状态，对目标造成的伤害提高50%，持续18秒。在这种状态下，宠物不会有任何恐惧或怜悯，也无法停止下来，除非被杀死。",
+            "en": "Send your pet into a rage causing 50% additional damage for 18 sec. While enraged, the beast does not feel pity or remorse or fear and it cannot be stopped unless killed."
+          },
+          "maxPoints": 1,
+          "row": 6,
+          "col": 1,
+          "requires": [
+            {
+              "nodeId": "beast-mastery-12",
+              "points": 1
+            }
+          ],
+          "requiresPointsInTree": 30,
+          "exclusiveWith": []
+        }
+      ]
+    },
+    {
+      "id": "marksmanship",
+      "name": {
+        "zh": "射击",
+        "en": "Marksmanship"
+      },
+      "nodes": [
+        {
+          "id": "marksmanship-00",
+          "name": {
+            "zh": "鹰眼",
+            "en": "Hawk Eye"
+          },
+          "description": {
+            "zh": "使你的远程武器的射程延长6码。",
+            "en": "Increases the range of your ranged weapons by 6 yards."
+          },
+          "maxPoints": 3,
+          "row": 0,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "marksmanship-01",
+          "name": {
+            "zh": "强化震荡射击",
+            "en": "Improved Concussive Shot"
+          },
+          "description": {
+            "zh": "使你的震荡射击有20%的几率令目标昏迷3秒。",
+            "en": "Gives your Concussive Shot a 20% chance to stun the target for 3 sec."
+          },
+          "maxPoints": 5,
+          "row": 0,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "marksmanship-02",
+          "name": {
+            "zh": "致命攻击",
+            "en": "Lethal Attacks"
+          },
+          "description": {
+            "zh": "使你的所有攻击造成爆击的几率提高5%。",
+            "en": "Increases your critical strike chance with all attacks by 5%."
+          },
+          "maxPoints": 5,
+          "row": 0,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "marksmanship-03",
+          "name": {
+            "zh": "强化钉刺",
+            "en": "Improved Stings"
+          },
+          "description": {
+            "zh": "使你的毒蛇钉刺伤害提高20%，蝰蛇钉刺冷却时间缩短6秒，毒蝎钉刺持续时间延长45秒。",
+            "en": "Increases the damage of your Serpent Sting ability by 20%, reduces the cooldown of your Viper Sting ability by 6 sec, and increases the duration of your Scorpid Sting ability by 45 sec."
+          },
+          "maxPoints": 3,
+          "row": 1,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "marksmanship-04",
+          "name": {
+            "zh": "效率",
+            "en": "Efficiency"
+          },
+          "description": {
+            "zh": "使你的射击、钉刺和近战技能所消耗的法力值降低15%。",
+            "en": "Reduces the Mana cost of your Shots, Stings, and melee abilities by 15%."
+          },
+          "maxPoints": 5,
+          "row": 1,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "marksmanship-05",
+          "name": {
+            "zh": "精确瞄准",
+            "en": "Careful Aim"
+          },
+          "description": {
+            "zh": "使你的攻击强度提高，数值相当于你的智力值的100%。",
+            "en": "Increases your Attack Power by 100% of your Intellect."
+          },
+          "maxPoints": 5,
+          "row": 1,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "marksmanship-06",
+          "name": {
+            "zh": "疾速杀戮",
+            "en": "Rapid Killing"
+          },
+          "description": {
+            "zh": "使你的急速射击冷却时间缩短2分钟。此外，当你消灭一个能为你提供经验值或荣誉值的敌人，或其在受到你的毒蛇钉刺影响时死亡，你获得疾速杀戮，使你在20秒内的下一个射击技能造成的伤害提高20%。",
+            "en": "Reduces the cooldown on your Rapid Fire ability by 2 min. In addition, when you kill a non-trivial enemy or it dies while afflicted by your Serpent Sting, you gain Rapid Killing, increasing the damage of your next Shot ability within 20 sec by 20%."
+          },
+          "maxPoints": 2,
+          "row": 2,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "marksmanship-07",
+          "name": {
+            "zh": "强化奥术射击",
+            "en": "Improved Arcane Shot"
+          },
+          "description": {
+            "zh": "使你的奥术射击的冷却时间缩短1.5秒。不影响与奥术射击共享冷却时间的技能。",
+            "en": "Reduces the cooldown of your Arcane Shot by 1.5 sec. Does not affect the cooldown of abilities which share a cooldown with Arcane Shot."
+          },
+          "maxPoints": 5,
+          "row": 2,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "marksmanship-08",
+          "name": {
+            "zh": "独来独往",
+            "en": "Lone Wolf"
+          },
+          "description": {
+            "zh": "没有激活的宠物时，你的所有攻击造成的伤害提高20%。",
+            "en": "You deal 20% increased damage with all attacks while you do not have an active pet."
+          },
+          "maxPoints": 1,
+          "row": 2,
+          "col": 3,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "marksmanship-09",
+          "name": {
+            "zh": "强击光环",
+            "en": "Trueshot Aura"
+          },
+          "description": {
+            "zh": "使45码范围内队伍成员的远程攻击强度提高30点。",
+            "en": "Increases the Ranged Attack Power of party or raid members within 45 yds by 30."
+          },
+          "maxPoints": 1,
+          "row": 3,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "marksmanship-10",
+          "name": {
+            "zh": "致死射击",
+            "en": "Mortal Shots"
+          },
+          "description": {
+            "zh": "使你所有远程技能的爆击伤害加成提高30%。",
+            "en": "Increases the critical strike damage bonus on all ranged abilities by 30%."
+          },
+          "maxPoints": 5,
+          "row": 3,
+          "col": 2,
+          "requires": [
+            {
+              "nodeId": "marksmanship-05",
+              "points": 5
+            }
+          ],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "marksmanship-11",
+          "name": {
+            "zh": "急速恢复",
+            "en": "Rapid Recuperation"
+          },
+          "description": {
+            "zh": "用毒蛇钉刺命中目标时使你获得50%、消耗疾速杀戮时使你获得100%的施法时法力回复，持续15秒。",
+            "en": "Afflicting a target with Serpent Sting allows 50% of your Mana Regeneration to continue while casting for 15 sec, increased to 100% when Rapid Killing is consumed."
+          },
+          "maxPoints": 2,
+          "row": 4,
+          "col": 0,
+          "requires": [
+            {
+              "nodeId": "marksmanship-06",
+              "points": 2
+            }
+          ],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "marksmanship-12",
+          "name": {
+            "zh": "弹幕",
+            "en": "Barrage"
+          },
+          "description": {
+            "zh": "使你的多重射击、瞄准射击和乱射技能造成的伤害提高10%。",
+            "en": "Increases the damage done by your Multi-Shot, Aimed Shot, and Volley abilities by 10%."
+          },
+          "maxPoints": 3,
+          "row": 4,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "marksmanship-13",
+          "name": {
+            "zh": "驱散射击",
+            "en": "Scatter Shot"
+          },
+          "description": {
+            "zh": "短程射击，对目标造成50%的武器伤害，并使其困惑4秒。任何伤害都会打断该效果。使用之后结束你的攻击。",
+            "en": "A short-range shot that deals 50% weapon damage and disorients the target for 4 sec. Any damage caused will remove the effect. Turns off your attack when used."
+          },
+          "maxPoints": 1,
+          "row": 4,
+          "col": 3,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "marksmanship-14",
+          "name": {
+            "zh": "远程武器专精",
+            "en": "Ranged Weapon Specialization"
+          },
+          "description": {
+            "zh": "使你的远程武器造成的伤害提高5%。",
+            "en": "Increases the damage you deal with ranged weapons by 5%."
+          },
+          "maxPoints": 5,
+          "row": 5,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 25,
+          "exclusiveWith": []
+        },
+        {
+          "id": "marksmanship-15",
+          "name": {
+            "zh": "狙击",
+            "en": "Sniper Shot"
+          },
+          "description": {
+            "zh": "一次远程射击，造成远程伤害并额外造成160点伤害，同时使你接下来3次射击的射程提高10码，持续10秒。",
+            "en": "A long-range shot that deals ranged damage plus 160 and increases the range of your next 3 Shots by 10 yards for 10 sec."
+          },
+          "maxPoints": 1,
+          "row": 6,
+          "col": 1,
+          "requires": [
+            {
+              "nodeId": "marksmanship-09",
+              "points": 1
+            }
+          ],
+          "requiresPointsInTree": 30,
+          "exclusiveWith": []
+        }
+      ]
+    },
+    {
+      "id": "survival",
+      "name": {
+        "zh": "生存",
+        "en": "Survival"
+      },
+      "nodes": [
+        {
+          "id": "survival-00",
+          "name": {
+            "zh": "强化追踪",
+            "en": "Improved Tracking"
+          },
+          "description": {
+            "zh": "在追踪野兽、恶魔、龙类、元素生物、巨人、人型生物或亡灵时，你对该被追踪生物类型造成的所有伤害提高5%。",
+            "en": "While tracking Beasts, Demons, Dragonkin, Elementals, Giants, Humanoids, or Undead, all damage you deal to the tracked creature type is increased by 5%."
+          },
+          "maxPoints": 5,
+          "row": 0,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "survival-01",
+          "name": {
+            "zh": "偏斜",
+            "en": "Deflection"
+          },
+          "description": {
+            "zh": "使你的招架几率提高5%。",
+            "en": "Increases your Parry chance by 5%."
+          },
+          "maxPoints": 5,
+          "row": 0,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "survival-02",
+          "name": {
+            "zh": "诱捕",
+            "en": "Entrapment"
+          },
+          "description": {
+            "zh": "当你的陷阱被触发时，所有受影响的目标被诱捕，无法移动，持续5秒。",
+            "en": "When your traps are triggered, all affected targets are Entrapped, preventing them from moving for 5 sec."
+          },
+          "maxPoints": 5,
+          "row": 1,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "survival-03",
+          "name": {
+            "zh": "野蛮打击",
+            "en": "Savage Strikes"
+          },
+          "description": {
+            "zh": "使你所有近战技能的爆击几率提高4%。",
+            "en": "Increases the critical strike chance of all your melee abilities by 4%."
+          },
+          "maxPoints": 2,
+          "row": 1,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "survival-04",
+          "name": {
+            "zh": "生存专家",
+            "en": "Survivalist"
+          },
+          "description": {
+            "zh": "使你的总生命值提高10%。",
+            "en": "Increases your total Health by 10%."
+          },
+          "maxPoints": 5,
+          "row": 1,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "survival-05",
+          "name": {
+            "zh": "强化摔绊",
+            "en": "Improved Wing Clip"
+          },
+          "description": {
+            "zh": "使你的摔绊技能有20%的几率令目标在5秒内无法移动。",
+            "en": "Gives your Wing Clip ability a 20% chance to immobilize the target for 5 sec."
+          },
+          "maxPoints": 3,
+          "row": 1,
+          "col": 3,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "survival-06",
+          "name": {
+            "zh": "灵巧陷阱",
+            "en": "Clever Traps"
+          },
+          "description": {
+            "zh": "使你的冰冻陷阱和冰霜陷阱的效果持续时间提高30%，献祭陷阱和爆炸陷阱所造成的伤害提高30%。",
+            "en": "Increases the duration of Freezing and Frost trap effects by 30% and the damage of Immolation and Explosive trap effects by 30%."
+          },
+          "maxPoints": 2,
+          "row": 2,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "survival-07",
+          "name": {
+            "zh": "稳固",
+            "en": "Surefooted"
+          },
+          "description": {
+            "zh": "使你的命中几率提高3%，并使你受到的移动限制效果的持续时间缩短30%。",
+            "en": "Increases your hit chance by 3% and reduces the duration of movement impairing effects on you by 30%."
+          },
+          "maxPoints": 3,
+          "row": 2,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "survival-08",
+          "name": {
+            "zh": "威慑",
+            "en": "Deterrence"
+          },
+          "description": {
+            "zh": "激活之后，使你的躲闪和招架几率提高25%，持续10秒。",
+            "en": "When activated, increases your Dodge and Parry chance by 25% for 10 sec."
+          },
+          "maxPoints": 1,
+          "row": 2,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "survival-09",
+          "name": {
+            "zh": "生存战术",
+            "en": "Survival Tactics"
+          },
+          "description": {
+            "zh": "使你的陷阱和假死的命中几率提高10%。",
+            "en": "Increases your chance to hit with your Trap and Feign Death abilities by 10%."
+          },
+          "maxPoints": 2,
+          "row": 3,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "survival-10",
+          "name": {
+            "zh": "掠食者之锋",
+            "en": "Predator's Edge"
+          },
+          "description": {
+            "zh": "使你的近战爆击伤害提高30%，副手武器伤害提高50%。",
+            "en": "Increases your melee ability critical strike damage by 30% and your Off Hand weapon damage by 50%."
+          },
+          "maxPoints": 5,
+          "row": 3,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "survival-11",
+          "name": {
+            "zh": "反击",
+            "en": "Counterattack"
+          },
+          "description": {
+            "zh": "招架对手的攻击后可使用。该攻击造成50%武器伤害外加26点伤害，并使目标无法移动5秒。反击无法被格挡、躲闪或招架。",
+            "en": "A strike that becomes active after parrying an opponent's attack. This attack deals 50% weapon damage plus 26 and immobilizes the target for 5 sec. Counterattack cannot be blocked, dodged, or parried."
+          },
+          "maxPoints": 1,
+          "row": 3,
+          "col": 2,
+          "requires": [
+            {
+              "nodeId": "survival-08",
+              "points": 1
+            }
+          ],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "survival-12",
+          "name": {
+            "zh": "游刃有余",
+            "en": "Resourcefulness"
+          },
+          "description": {
+            "zh": "使你的陷阱技能和近战技能消耗的法力值降低60%。此外，你的爆击有0%的几率使你在施法时仍可保持50%的法力回复速度，持续30秒。",
+            "en": "Reduces the Mana cost of your Trap and melee abilities by 60%, and grants your melee and ranged ability Critical Strikes a 100% chance to allow 50% of your Mana Regeneration to continue while casting for 30 sec."
+          },
+          "maxPoints": 2,
+          "row": 4,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "survival-13",
+          "name": {
+            "zh": "暴露猎物",
+            "en": "Expose Prey"
+          },
+          "description": {
+            "zh": "你对带有猎人印记的目标的攻击有10%的几率激活猫鼬撕咬，持续10秒。",
+            "en": "Grants your melee and ranged attacks against enemies afflicted by Hunter's Mark a 10% chance to allow an activation of Mongoose Bite. Lasts 10 sec."
+          },
+          "maxPoints": 2,
+          "row": 4,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "survival-14",
+          "name": {
+            "zh": "生存专家的戒律",
+            "en": "Survivalist's Discipline"
+          },
+          "description": {
+            "zh": "使你的陷阱和威慑的冷却时间缩短40%。",
+            "en": "Reduces the cooldown of your Trap and Deterrence abilities by 40%."
+          },
+          "maxPoints": 2,
+          "row": 4,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "survival-15",
+          "name": {
+            "zh": "陆行鸟踢击",
+            "en": "Strider Kick"
+          },
+          "description": {
+            "zh": "强力踢击，造成100%的近战武器伤害。",
+            "en": "A powerful kick that deals 100% melee weapon damage and increases movement speed by 30% for 3 sec."
+          },
+          "maxPoints": 1,
+          "row": 4,
+          "col": 3,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "survival-16",
+          "name": {
+            "zh": "闪电反射",
+            "en": "Lightning Reflexes"
+          },
+          "description": {
+            "zh": "使你的敏捷提高10%。",
+            "en": "Increases your Agility by 10%."
+          },
+          "maxPoints": 5,
+          "row": 5,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 25,
+          "exclusiveWith": []
+        },
+        {
+          "id": "survival-17",
+          "name": {
+            "zh": "裂伤打击",
+            "en": "Lacerating Strikes"
+          },
+          "description": {
+            "zh": "你的猫鼬撕咬还会使目标流血，在21秒内造成相当于猫鼬撕咬伤害40%的伤害。",
+            "en": "Your Mongoose Bite also causes the target to Bleed for damage equal to 40% of the damage done by Mongoose Bite over 21 sec"
+          },
+          "maxPoints": 1,
+          "row": 6,
+          "col": 1,
+          "requires": [
+            {
+              "nodeId": "survival-13",
+              "points": 2
+            }
+          ],
+          "requiresPointsInTree": 30,
+          "exclusiveWith": []
+        }
+      ]
+    }
+  ]
+}

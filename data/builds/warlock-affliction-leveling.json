@@ -1,0 +1,89 @@
+{
+  "slug": "warlock-affliction-leveling",
+  "name": {
+    "zh": "痛苦 Beta 开荒",
+    "en": "Affliction Beta Start"
+  },
+  "summary": {
+    "zh": "5 点让腐蚀术瞬发，再补命中与法力续航，连续拉怪也不用坐下喝水。",
+    "en": "Instant Corruption at five points, then hit and Mana sustain so you can chain pulls without drinking."
+  },
+  "classId": "warlock",
+  "playstyle": "leveling",
+  "difficulty": "beginner",
+  "gameVersion": "1.60.1.70425",
+  "levelRange": {
+    "min": 10,
+    "max": 20
+  },
+  "scenario": {
+    "zh": "10–20 级，用腐蚀术与生命分流刷任务",
+    "en": "Levels 10–20, questing with Corruption and Life Tap"
+  },
+  "pros": [
+    {
+      "zh": "强化腐蚀术去掉全部 2 秒施法时间并提高 10% 伤害，换目标的路上就能挂上腐蚀术。",
+      "en": "Improved Corruption removes the full 2-second cast and adds 10% damage, so Corruption goes up while you move between targets."
+    },
+    {
+      "zh": "强化生命分流让生命转化的法力多出 20%，术士因此可以完全跳过喝水。",
+      "en": "Improved Life Tap turns 20% more health into Mana, which is how a Warlock skips drink breaks entirely."
+    },
+    {
+      "zh": "镇压提供 3% 命中，并降低 12% 仇恨。",
+      "en": "Suppression adds 3% hit and cuts 12% of the threat you generate."
+    },
+    {
+      "zh": "灵魂收割点 1 点：带有吸取灵魂的目标死亡后，10 秒内法力回复提高 50%，施法时也保留一半回复。",
+      "en": "One point of Soul Harvest raises Mana regeneration by 50% for 10 seconds, and keeps half of it while casting, when something dies with Drain Soul on it."
+    },
+    {
+      "zh": "来源指南的正文与它自己的天赋图在镇压第 3 点上不一致；我们按正文处理，把 11 点全部用掉。不要这一点的话，可以改投 Improved Drains。",
+      "en": "The source guide&#39;s text and its own tree disagree on the third Suppression point; we follow the text, which spends all eleven. Skip it and the point is free for Improved Drains."
+    }
+  ],
+  "cons": [],
+  "requirements": [],
+  "allocation": {
+    "affliction-02": 5,
+    "affliction-00": 2,
+    "affliction-01": 3,
+    "affliction-04": 1
+  },
+  "levelingSteps": [
+    {
+      "levelRange": "10–14 ",
+      "spend": {
+        "affliction-02": 5
+      }
+    },
+    {
+      "levelRange": "15–16 ",
+      "spend": {
+        "affliction-00": 2
+      }
+    },
+    {
+      "levelRange": "17–19 ",
+      "spend": {
+        "affliction-01": 3
+      }
+    },
+    {
+      "levelRange": "20 ",
+      "spend": {
+        "affliction-04": 1
+      }
+    }
+  ],
+  "updatedAt": "2026-10-25",
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com recommended builds, beta client data",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425 recommendations; may change before launch."
+  }
+}
