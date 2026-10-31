@@ -8,6 +8,7 @@ import { JsonLd } from "@/components/site/JsonLd";
 import { getBuilds, getClasses, getCurrentVersion, getGuides } from "@/lib/data";
 import { StatusBadge, DemoBadge } from "@/components/site/StatusBadge";
 import { classColor } from "@/lib/class-colors";
+import { AdSlot } from "@/components/site/AdSlot";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]">): Promise<Metadata> {
   const { locale } = await params;
@@ -150,6 +151,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
           ))}
         </ul>
       </section>
+      <AdSlot id="home-bottom" />
     </div>
   );
 }

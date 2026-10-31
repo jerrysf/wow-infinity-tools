@@ -9,6 +9,7 @@ import { getBuilds, getGuideBySlug, getGuides } from "@/lib/data";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { ProvenanceBlock } from "@/components/site/ProvenanceBlock";
 import { BuildDemoBanner } from "@/components/builds/BuildsCatalog";
+import { AdSlot } from "@/components/site/AdSlot";
 
 export const dynamicParams = false;
 
@@ -77,6 +78,7 @@ export default async function GuidePage({ params }: PageProps<"/[locale]/guides/
         </section>
       )}
       <ProvenanceBlock provenance={guide.provenance} dict={dict} />
+      <AdSlot id="guide-bottom" />
     </article>
   );
 }

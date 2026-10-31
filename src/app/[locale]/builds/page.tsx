@@ -5,6 +5,7 @@ import { pageMetadata } from "@/lib/seo";
 import { getBuilds, getClasses } from "@/lib/data";
 import { BuildsCatalog } from "@/components/builds/BuildsCatalog";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
+import { AdSlot } from "@/components/site/AdSlot";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/builds">): Promise<Metadata> {
   const { locale } = await params;
@@ -30,6 +31,7 @@ export default async function BuildsPage({ params }: PageProps<"/[locale]/builds
       <h1 className="mb-2 text-2xl font-bold">{dict.builds.title}</h1>
       <p className="mb-6 max-w-2xl text-[#b0a284]">{dict.builds.description}</p>
       <BuildsCatalog builds={getBuilds()} classes={getClasses()} locale={locale} dict={dict} />
+      <AdSlot id="builds-bottom" />
     </div>
   );
 }

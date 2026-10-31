@@ -137,7 +137,9 @@ pnpm validate:data
 
 ## 环境变量
 
-见 `.env.example`。生产环境必须设置 `NEXT_PUBLIC_SITE_URL`（用于 canonical、sitemap、OG）。`NEXT_PUBLIC_ADS_ENABLED` 默认关闭。
+见 `.env.example`。生产环境必须设置 `NEXT_PUBLIC_SITE_URL`（用于 canonical、sitemap、OG）。
+
+变现：`NEXT_PUBLIC_ADS_ENABLED` + `NEXT_PUBLIC_ADSENSE_CLIENT` 同时设置后，页面底部的 `AdSlot` 位才会渲染 AdSense 自适应广告并加载 adsbygoogle 脚本；`public/ads.txt` 需替换为真实发布商 ID。分析数据由 `@vercel/analytics` 采集，Vercel 后台开启即可。
 
 ## Vercel 部署
 

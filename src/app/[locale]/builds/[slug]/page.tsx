@@ -12,6 +12,7 @@ import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { JsonLd } from "@/components/site/JsonLd";
 import { ProvenanceBlock } from "@/components/site/ProvenanceBlock";
 import { StatusBadge } from "@/components/site/StatusBadge";
+import { AdSlot } from "@/components/site/AdSlot";
 import { BuildDemoBanner } from "@/components/builds/BuildsCatalog";
 
 export const dynamicParams = false;
@@ -224,6 +225,7 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
       <div className="mt-6">
         <ProvenanceBlock provenance={build.provenance} dict={dict} />
       </div>
+      <AdSlot id="build-bottom" />
     </div>
   );
 }
