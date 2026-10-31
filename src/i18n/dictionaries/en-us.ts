@@ -19,6 +19,7 @@ const en: Dictionary = {
       disclosure: "Disclosure",
       faq: "FAQ",
       changelog: "Changelog",
+      support: "Buy me a coffee",
       independent:
         "This site is an independent fan-made tool and guide project. It is not affiliated with, endorsed by, or sponsored by Blizzard Entertainment.",
     },
@@ -294,6 +295,7 @@ const en: Dictionary = {
       title: "Disclosure",
       body: [
         "This site does not currently run ads or affiliate marketing.",
+        "The site accepts voluntary reader tips via Buy Me a Coffee; tips never influence content.",
         "If ad slots or affiliate links are introduced in the future, they will be clearly labelled and the commercial relationships disclosed on this page.",
       ],
     },

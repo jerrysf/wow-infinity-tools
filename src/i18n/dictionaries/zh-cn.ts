@@ -17,6 +17,7 @@ const zh = {
       disclosure: "商业披露",
       faq: "常见问题",
       changelog: "更新日志",
+      support: "请我喝咖啡",
       independent:
         "本站为独立玩家工具与攻略项目，与暴雪娱乐（Blizzard Entertainment）无任何隶属、认可或赞助关系。",
     },
@@ -291,6 +292,7 @@ const zh = {
       title: "商业披露",
       body: [
         "本站目前未启用广告与联盟营销。",
+        "本站接受读者自愿打赏（Buy Me a Coffee），打赏不影响任何内容立场。",
         "如未来引入广告位或联盟链接，相关链接将被明确标识，并在本页披露商业关系。",
       ],
     },

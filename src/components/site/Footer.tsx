@@ -26,6 +26,14 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
               {link.label}
             </Link>
           ))}
+          <a
+            href="https://buymeacoffee.com/jwstecho"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm font-medium text-[#f0bc4a] hover:text-[#ffd76e]"
+          >
+            ☕ {dict.common.footer.support}
+          </a>
         </nav>
         <p className="mt-4 max-w-3xl text-xs leading-relaxed text-[#75869c]">
           {dict.common.footer.independent}

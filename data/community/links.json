@@ -89,5 +89,18 @@
       "en": "English WoW database"
     },
     "region": "global"
+  },
+  {
+    "slug": "buymeacoffee",
+    "name": {
+      "zh": "请我喝咖啡 ☕",
+      "en": "Buy me a coffee ☕"
+    },
+    "url": "https://buymeacoffee.com/jwstecho",
+    "description": {
+      "zh": "觉得本站有用？请作者喝杯咖啡支持更新",
+      "en": "Find this site useful? Support it with a coffee"
+    },
+    "region": "global"
   }
 ]
