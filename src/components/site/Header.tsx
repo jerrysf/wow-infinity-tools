@@ -14,9 +14,12 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
     { href: "/guides", label: dict.common.nav.guides },
   ];
   return (
-    <header className="border-b border-zinc-200 dark:border-zinc-800">
+    <header className="sticky top-0 z-40 border-b border-[#2a2012] bg-[#100b06]/95 backdrop-blur">
       <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-2 px-4 py-3">
-        <Link href={localizedPath(locale, "/")} className="text-lg font-bold tracking-tight">
+        <Link
+          href={localizedPath(locale, "/")}
+          className="text-lg font-bold tracking-wide text-amber-300"
+        >
           {site.name}
         </Link>
         <nav className="flex flex-wrap items-center gap-1 sm:gap-3" aria-label="Main">
@@ -24,7 +27,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             <Link
               key={item.href}
               href={localizedPath(locale, item.href)}
-              className="rounded px-2 py-1 text-sm text-zinc-700 hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-white"
+              className="rounded px-2 py-1 text-sm text-zinc-400 hover:bg-[#211809] hover:text-amber-200"
             >
               {item.label}
             </Link>

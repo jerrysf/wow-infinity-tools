@@ -49,14 +49,14 @@ export default async function GuidePage({ params }: PageProps<"/[locale]/guides/
         ]}
       />
       <h1 className="text-2xl font-bold">{pick(guide.title, locale)}</h1>
-      <p className="mt-1 mb-4 text-sm text-zinc-500">
+      <p className="mt-1 mb-4 text-sm text-[#8a7a58]">
         {dict.common.updated}: {guide.updatedAt} · {dict.common.version}: {guide.provenance.gameVersion}
       </p>
       {isDemo && <BuildDemoBanner demo dict={dict} />}
       {guide.sections.map((section, i) => (
         <section key={i} className="mb-6">
           <h2 className="mb-2 text-lg font-semibold">{pick(section.heading, locale)}</h2>
-          <p className="leading-relaxed text-zinc-700 dark:text-zinc-300">{pick(section.body, locale)}</p>
+          <p className="leading-relaxed text-[#cfc3a8]">{pick(section.body, locale)}</p>
         </section>
       ))}
       {builds.length > 0 && (
@@ -67,7 +67,7 @@ export default async function GuidePage({ params }: PageProps<"/[locale]/guides/
               <li key={b.slug}>
                 <Link
                   href={localizedPath(locale, `/builds/${b.slug}`)}
-                  className="text-blue-700 underline dark:text-blue-400"
+                  className="text-amber-300 underline decoration-amber-300/40 underline-offset-2 hover:text-amber-200"
                 >
                   {pick(b.name, locale)}
                 </Link>

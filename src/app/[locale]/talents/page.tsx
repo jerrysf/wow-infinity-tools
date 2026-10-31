@@ -7,6 +7,7 @@ import { localizedPath } from "@/lib/site";
 import { getClasses } from "@/lib/data";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { DemoBadge } from "@/components/site/StatusBadge";
+import { classColor } from "@/lib/class-colors";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/talents">): Promise<Metadata> {
   const { locale } = await params;
@@ -31,26 +32,26 @@ export default async function TalentsIndexPage({ params }: PageProps<"/[locale]/
         ]}
       />
       <h1 className="mb-2 text-2xl font-bold">{dict.talents.title}</h1>
-      <p className="mb-6 max-w-2xl text-zinc-600 dark:text-zinc-400">{dict.talents.description}</p>
+      <p className="mb-6 max-w-2xl text-[#b0a284]">{dict.talents.description}</p>
       <h2 className="mb-3 text-lg font-semibold">{dict.talents.selectClass}</h2>
       <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {classes.map((c) => (
           <li key={c.id}>
             <Link
               href={localizedPath(locale, `/talents/${c.slug}`)}
-              className="block rounded-lg border border-zinc-200 p-4 hover:border-zinc-400 dark:border-zinc-800 dark:hover:border-zinc-600"
+              className="card card-interactive block p-4"
             >
               <div className="flex items-center gap-2">
-                <span className="font-semibold">{pick(c.name, locale)}</span>
+                <span className="font-semibold" style={{ color: classColor(c.id) }}>
+                  {pick(c.name, locale)}
+                </span>
                 {c.demo && <DemoBadge dict={dict} />}
               </div>
               {c.tagline && (
-                <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{pick(c.tagline, locale)}</p>
+                <p className="mt-1 text-sm text-[#b0a284]">{pick(c.tagline, locale)}</p>
               )}
               {!c.hasTalentData && (
-                <p className="mt-2 text-xs font-medium text-amber-700 dark:text-amber-400">
-                  {dict.talents.dataPending}
-                </p>
+                <p className="mt-2 text-xs font-medium text-amber-400">{dict.talents.dataPending}</p>
               )}
             </Link>
           </li>

@@ -1,8 +1,14 @@
 @import "tailwindcss";
 
+/* Dark mode is forced via the .dark class on <html> rather than media query,
+   because the site identity is a dark "game UI" theme. */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #100b06;
+  --foreground: #e8dfd0;
+  --gold: #d8b558;
+  --gold-dim: #c8a050;
 }
 
 @theme inline {
@@ -12,15 +18,75 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family:
+    var(--font-geist-sans),
+    ui-sans-serif,
+    system-ui,
+    "PingFang SC",
+    "Hiragino Sans GB",
+    "Microsoft YaHei",
+    sans-serif;
+}
+
+::selection {
+  background: rgba(216, 181, 88, 0.35);
+}
+
+/* WoW-style gold primary action button. */
+.btn-gold {
+  display: inline-block;
+  border-radius: 0.5rem;
+  padding: 0.55rem 1.1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #2a1e05;
+  background: linear-gradient(180deg, #f0d089, #d9a83e);
+  border: 1px solid #8a6a24;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
+  box-shadow:
+    0 1px 4px rgba(0, 0, 0, 0.5),
+    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+}
+.btn-gold:hover {
+  background: linear-gradient(180deg, #f6dc9b, #e4b652);
+}
+.btn-gold:active {
+  transform: translateY(1px);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/* Muted secondary action button on the dark theme. */
+.btn-ghost {
+  display: inline-block;
+  border-radius: 0.5rem;
+  padding: 0.55rem 1.1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #cfc3a8;
+  background: #1a130a;
+  border: 1px solid #3a2c17;
+}
+.btn-ghost:hover {
+  border-color: #6a5226;
+  color: #f0e6cc;
+  background: #211809;
+}
+
+/* Raised dark panel used for every card on the site. */
+.card {
+  border-radius: 0.5rem;
+  border: 1px solid #2a2012;
+  background: #161009;
+}
+.card-interactive {
+  transition:
+    border-color 0.15s ease,
+    background-color 0.15s ease;
+}
+.card-interactive:hover {
+  border-color: #5a4420;
+  background: #1c1410;
 }

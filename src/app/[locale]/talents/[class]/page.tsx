@@ -11,6 +11,7 @@ import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { ProvenanceBlock } from "@/components/site/ProvenanceBlock";
 import { BuildDemoBanner } from "@/components/builds/BuildsCatalog";
 import { DemoBadge, StatusBadge } from "@/components/site/StatusBadge";
+import { classColor } from "@/lib/class-colors";
 
 export const dynamicParams = false;
 
@@ -58,23 +59,23 @@ export default async function ClassTalentsPage({ params }: PageProps<"/[locale]/
       />
       <div className="mb-2 flex flex-wrap items-center gap-2">
         <h1 className="text-2xl font-bold">
-          {pick(gameClass.name, locale)} - {dict.talents.title}
+          <span style={{ color: classColor(gameClass.id) }}>{pick(gameClass.name, locale)}</span>
+          {" - "}
+          {dict.talents.title}
         </h1>
         {gameClass.demo && <DemoBadge dict={dict} />}
       </div>
       {gameClass.demo && <BuildDemoBanner demo={gameClass.demo} dict={dict} />}
-      <div className="mb-4 max-w-2xl space-y-1 text-sm text-zinc-600 dark:text-zinc-400">
+      <div className="mb-4 max-w-2xl space-y-1 text-sm text-[#b0a284]">
         {gameClass.tagline && <p>{pick(gameClass.tagline, locale)}</p>}
         {(gameClass.strengths || gameClass.drawbacks) && (
           <p>
             {gameClass.strengths && (
-              <span className="font-medium text-emerald-700 dark:text-emerald-400">
-                {pick(gameClass.strengths, locale)}
-              </span>
+              <span className="font-medium text-emerald-400">{pick(gameClass.strengths, locale)}</span>
             )}
             {gameClass.strengths && gameClass.drawbacks && " · "}
             {gameClass.drawbacks && (
-              <span className="text-zinc-500">{pick(gameClass.drawbacks, locale)}</span>
+              <span className="text-[#8a7a58]">{pick(gameClass.drawbacks, locale)}</span>
             )}
           </p>
         )}
@@ -87,9 +88,7 @@ export default async function ClassTalentsPage({ params }: PageProps<"/[locale]/
           <TalentSimulator data={talents} locale={locale} dict={dict} />
         </>
       ) : (
-        <p className="rounded-lg border border-zinc-200 p-4 text-zinc-600 dark:border-zinc-800 dark:text-zinc-400">
-          {dict.talents.dataPending}
-        </p>
+        <p className="card p-4 text-[#b0a284]">{dict.talents.dataPending}</p>
       )}
 
       {(classBuilds.length > 0 || classGuide) && (
@@ -102,14 +101,14 @@ export default async function ClassTalentsPage({ params }: PageProps<"/[locale]/
               <li key={b.slug}>
                 <Link
                   href={localizedPath(locale, `/builds/${b.slug}`)}
-                  className="block rounded-lg border border-zinc-200 p-4 hover:border-zinc-400 dark:border-zinc-800 dark:hover:border-zinc-600"
+                  className="card card-interactive block p-4"
                 >
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="font-semibold">{pick(b.name, locale)}</span>
                     <StatusBadge status={b.provenance.status} dict={dict} />
                   </div>
-                  <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{pick(b.summary, locale)}</p>
-                  <p className="mt-2 text-xs text-zinc-500">
+                  <p className="mt-1 text-sm text-[#b0a284]">{pick(b.summary, locale)}</p>
+                  <p className="mt-2 text-xs text-[#7a6a4a]">
                     {b.playstyle} · {dict.common.level} {b.levelRange.min}-{b.levelRange.max}
                   </p>
                 </Link>
@@ -119,12 +118,10 @@ export default async function ClassTalentsPage({ params }: PageProps<"/[locale]/
               <li>
                 <Link
                   href={localizedPath(locale, `/guides/${classGuide.slug}`)}
-                  className="block rounded-lg border border-zinc-200 p-4 hover:border-zinc-400 dark:border-zinc-800 dark:hover:border-zinc-600"
+                  className="card card-interactive block p-4"
                 >
                   <span className="font-semibold">{pick(classGuide.title, locale)}</span>
-                  <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">
-                    {pick(classGuide.description, locale)}
-                  </p>
+                  <p className="mt-1 text-sm text-[#b0a284]">{pick(classGuide.description, locale)}</p>
                 </Link>
               </li>
             )}

@@ -30,7 +30,7 @@ export default async function LocaleLayout({
   const dict = getDictionary(locale);
 
   return (
-    <html lang={localeLangTags[locale as Locale]} className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
+    <html lang={localeLangTags[locale as Locale]} className={`dark ${geistSans.variable} ${geistMono.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
         <Header locale={locale} dict={dict} />
         <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-6">{children}</main>

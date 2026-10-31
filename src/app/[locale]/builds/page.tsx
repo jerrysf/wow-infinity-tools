@@ -28,7 +28,7 @@ export default async function BuildsPage({ params }: PageProps<"/[locale]/builds
         ]}
       />
       <h1 className="mb-2 text-2xl font-bold">{dict.builds.title}</h1>
-      <p className="mb-6 max-w-2xl text-zinc-600 dark:text-zinc-400">{dict.builds.description}</p>
+      <p className="mb-6 max-w-2xl text-[#b0a284]">{dict.builds.description}</p>
       <BuildsCatalog builds={getBuilds()} classes={getClasses()} locale={locale} dict={dict} />
     </div>
   );

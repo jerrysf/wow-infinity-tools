@@ -100,35 +100,35 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
         <StatusBadge status={build.provenance.status} needsRevalidation={build.provenance.needsRevalidation} dict={dict} />
       </div>
       {isDemo && <BuildDemoBanner demo dict={dict} />}
-      <p className="mb-4 max-w-2xl text-zinc-600 dark:text-zinc-400">{pick(build.summary, locale)}</p>
+      <p className="mb-4 max-w-2xl text-[#b0a284]">{pick(build.summary, locale)}</p>
 
       <dl className="mb-6 grid gap-2 text-sm sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <dt className="font-medium text-zinc-500">{dict.common.class}</dt>
+          <dt className="font-medium text-[#8a7a58]">{dict.common.class}</dt>
           <dd>{gameClass ? pick(gameClass.name, locale) : build.classId}</dd>
         </div>
         <div>
-          <dt className="font-medium text-zinc-500">{dict.common.playstyle}</dt>
+          <dt className="font-medium text-[#8a7a58]">{dict.common.playstyle}</dt>
           <dd>{build.playstyle}</dd>
         </div>
         <div>
-          <dt className="font-medium text-zinc-500">{dict.builds.levelRange}</dt>
+          <dt className="font-medium text-[#8a7a58]">{dict.builds.levelRange}</dt>
           <dd>
             {build.levelRange.min}-{build.levelRange.max}
           </dd>
         </div>
         <div>
-          <dt className="font-medium text-zinc-500">{dict.common.version}</dt>
+          <dt className="font-medium text-[#8a7a58]">{dict.common.version}</dt>
           <dd>{build.gameVersion}</dd>
         </div>
         {build.scenario && (
           <div>
-            <dt className="font-medium text-zinc-500">{dict.builds.scenario}</dt>
+            <dt className="font-medium text-[#8a7a58]">{dict.builds.scenario}</dt>
             <dd>{pick(build.scenario, locale)}</dd>
           </div>
         )}
         <div>
-          <dt className="font-medium text-zinc-500">{dict.common.updated}</dt>
+          <dt className="font-medium text-[#8a7a58]">{dict.common.updated}</dt>
           <dd>{build.updatedAt}</dd>
         </div>
       </dl>
@@ -136,7 +136,7 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
       {simLink && (
         <Link
           href={simLink}
-          className="mb-6 inline-block rounded-lg bg-zinc-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-300"
+          className="btn-gold mb-6"
         >
           {dict.builds.loadInSimulator}
         </Link>
@@ -145,7 +145,7 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
       <div className="grid gap-6 md:grid-cols-2">
         <section>
           <h2 className="mb-2 text-lg font-semibold">{dict.talents.pointsSpent}</h2>
-          <ul className="list-inside list-disc text-sm text-zinc-700 dark:text-zinc-300">
+          <ul className="list-inside list-disc text-sm text-[#cfc3a8]">
             {Object.entries(build.allocation).map(([nodeId, pts]) => (
               <li key={nodeId}>
                 {nodeName(nodeId)} × {pts}
@@ -158,17 +158,17 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
             <h2 className="mb-2 text-lg font-semibold">{dict.builds.levelingOrder}</h2>
             <ol className="space-y-3">
               {build.levelingSteps.map((step) => (
-                <li key={step.levelRange} className="rounded-lg border border-zinc-200 p-3 text-sm dark:border-zinc-800">
+                <li key={step.levelRange} className="card p-3 text-sm">
                   <p className="font-medium">
                     {dict.common.level} {step.levelRange}
                   </p>
-                  <p className="mt-1 text-zinc-600 dark:text-zinc-400">
+                  <p className="mt-1 text-[#b0a284]">
                     {Object.entries(step.spend)
                       .map(([id, pts]) => `${nodeName(id)} × ${pts}`)
                       .join(", ")}
                   </p>
                   {step.note && (
-                    <p className="mt-1 text-xs text-zinc-500">{pick(step.note, locale)}</p>
+                    <p className="mt-1 text-xs text-[#8a7a58]">{pick(step.note, locale)}</p>
                   )}
                 </li>
               ))}
@@ -181,7 +181,7 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
         {build.pros.length > 0 && (
           <section>
             <h2 className="mb-2 text-lg font-semibold">{dict.builds.pros}</h2>
-            <ul className="list-inside list-disc text-sm text-zinc-700 dark:text-zinc-300">
+            <ul className="list-inside list-disc text-sm text-[#cfc3a8]">
               {build.pros.map((p, i) => (
                 <li key={i}>{pick(p, locale)}</li>
               ))}
@@ -191,7 +191,7 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
         {build.cons.length > 0 && (
           <section>
             <h2 className="mb-2 text-lg font-semibold">{dict.builds.cons}</h2>
-            <ul className="list-inside list-disc text-sm text-zinc-700 dark:text-zinc-300">
+            <ul className="list-inside list-disc text-sm text-[#cfc3a8]">
               {build.cons.map((c, i) => (
                 <li key={i}>{pick(c, locale)}</li>
               ))}
@@ -201,7 +201,7 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
         {build.requirements.length > 0 && (
           <section>
             <h2 className="mb-2 text-lg font-semibold">{dict.builds.requirements}</h2>
-            <ul className="list-inside list-disc text-sm text-zinc-700 dark:text-zinc-300">
+            <ul className="list-inside list-disc text-sm text-[#cfc3a8]">
               {build.requirements.map((r, i) => (
                 <li key={i}>{pick(r, locale)}</li>
               ))}
@@ -214,7 +214,7 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
         <p className="mt-6 text-sm">
           <Link
             href={localizedPath(locale, `/guides/${relatedGuide.slug}`)}
-            className="text-blue-700 underline dark:text-blue-400"
+            className="text-amber-300 underline decoration-amber-300/40 underline-offset-2 hover:text-amber-200"
           >
             {dict.builds.guideLink}: {pick(relatedGuide.title, locale)}
           </Link>

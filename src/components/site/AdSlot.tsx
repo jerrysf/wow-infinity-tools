@@ -8,7 +8,7 @@ export function AdSlot({ id }: { id: string }) {
   return (
     <div
       data-ad-slot={id}
-      className="my-6 flex min-h-24 items-center justify-center rounded border border-dashed border-zinc-300 text-xs text-zinc-400 dark:border-zinc-700"
+      className="my-6 flex min-h-24 items-center justify-center rounded border border-dashed border-zinc-300 text-xs text-[#7a6a4a] dark:border-[#3a2c17]"
     >
       Advertisement
     </div>

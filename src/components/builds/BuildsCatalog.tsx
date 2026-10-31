@@ -8,6 +8,7 @@ import type { Dictionary } from "@/i18n/dictionaries/zh-cn";
 import type { Locale } from "@/i18n/config";
 import { localizedPath } from "@/lib/site";
 import { StatusBadge, DemoBadge } from "@/components/site/StatusBadge";
+import { classColor } from "@/lib/class-colors";
 
 type Filters = {
   classId: string;
@@ -80,7 +81,7 @@ export function BuildsCatalog({
   );
 
   const selectCls =
-    "rounded border border-zinc-300 bg-white px-2 py-1.5 text-sm dark:border-zinc-700 dark:bg-zinc-900";
+    "rounded border border-[#3a2c17] bg-[#1a130a] px-2 py-1.5 text-sm text-[#e8dfd0]";
 
   return (
     <div>
@@ -148,13 +149,13 @@ export function BuildsCatalog({
         <button
           type="button"
           onClick={() => setFilters(EMPTY)}
-          className="rounded border border-zinc-300 px-3 py-1.5 text-sm dark:border-zinc-700"
+          className="btn-ghost"
         >
           {dict.common.actions.clearFilters}
         </button>
       </div>
 
-      {visible.length === 0 && <p className="text-zinc-500">{dict.builds.empty}</p>}
+      {visible.length === 0 && <p className="text-[#8a7a58]">{dict.builds.empty}</p>}
       <ul className="grid gap-4 sm:grid-cols-2">
         {visible.map((b) => {
           const c = classById.get(b.classId);
@@ -162,17 +163,19 @@ export function BuildsCatalog({
             <li key={b.slug}>
               <Link
                 href={localizedPath(locale, `/builds/${b.slug}`)}
-                className="block rounded-lg border border-zinc-200 p-4 hover:border-zinc-400 dark:border-zinc-800 dark:hover:border-zinc-600"
+                className="card card-interactive block p-4"
               >
                 <div className="flex flex-wrap items-center gap-2">
                   <h2 className="text-base font-semibold">{pick(b.name, locale)}</h2>
                   <StatusBadge status={b.provenance.status} needsRevalidation={b.provenance.needsRevalidation} dict={dict} />
                 </div>
-                <p className="mt-1 line-clamp-2 text-sm text-zinc-600 dark:text-zinc-400">
+                <p className="mt-1 line-clamp-2 text-sm text-[#b0a284]">
                   {pick(b.summary, locale)}
                 </p>
-                <p className="mt-2 flex flex-wrap gap-x-3 text-xs text-zinc-500">
-                  <span>{c ? pick(c.name, locale) : b.classId}</span>
+                <p className="mt-2 flex flex-wrap gap-x-3 text-xs text-[#7a6a4a]">
+                  <span style={c ? { color: classColor(c.id) } : undefined}>
+                    {c ? pick(c.name, locale) : b.classId}
+                  </span>
                   <span>{b.playstyle}</span>
                   <span>
                     {dict.builds.levelRange}: {b.levelRange.min}-{b.levelRange.max}

@@ -13,23 +13,23 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
     { href: "/disclosure", label: dict.common.footer.disclosure },
   ];
   return (
-    <footer className="mt-16 border-t border-zinc-200 dark:border-zinc-800">
+    <footer className="mt-16 border-t border-[#2a2012]">
       <div className="mx-auto max-w-5xl px-4 py-8">
         <nav className="flex flex-wrap gap-x-6 gap-y-2" aria-label="Footer">
           {links.map((link) => (
             <Link
               key={link.href}
               href={localizedPath(locale, link.href)}
-              className="text-sm text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+              className="text-sm text-[#8a7a58] hover:text-amber-200"
             >
               {link.label}
             </Link>
           ))}
         </nav>
-        <p className="mt-4 max-w-3xl text-xs leading-relaxed text-zinc-500 dark:text-zinc-500">
+        <p className="mt-4 max-w-3xl text-xs leading-relaxed text-[#7a6a4a]">
           {dict.common.footer.independent}
         </p>
-        <p className="mt-2 text-xs text-zinc-400 dark:text-zinc-600">
+        <p className="mt-2 text-xs text-[#6a5c40]">
           {site.name}
         </p>
       </div>

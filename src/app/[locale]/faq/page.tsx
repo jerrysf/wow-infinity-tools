@@ -42,9 +42,9 @@ export default async function FaqPage({ params }: PageProps<"/[locale]/faq">) {
       <h1 className="mb-6 text-2xl font-bold">{dict.faq.title}</h1>
       <dl className="space-y-5">
         {dict.faq.items.map((item, i) => (
-          <div key={i} className="rounded-lg border border-zinc-200 p-4 dark:border-zinc-800">
+          <div key={i} className="card p-4">
             <dt className="font-semibold">{item.q}</dt>
-            <dd className="mt-2 text-sm leading-relaxed text-zinc-600 dark:text-zinc-400">{item.a}</dd>
+            <dd className="mt-2 text-sm leading-relaxed text-[#b0a284]">{item.a}</dd>
           </div>
         ))}
       </dl>

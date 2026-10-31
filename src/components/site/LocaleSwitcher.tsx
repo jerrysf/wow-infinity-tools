@@ -23,8 +23,8 @@ export function LocaleSwitcher({ current }: { current: Locale }) {
             aria-current={active ? "true" : undefined}
             className={`rounded px-2 py-1 ${
               active
-                ? "bg-zinc-800 font-semibold text-white dark:bg-zinc-200 dark:text-zinc-900"
-                : "text-zinc-600 hover:text-zinc-900 dark:text-zinc-400 dark:hover:text-zinc-100"
+                ? "bg-amber-400 font-semibold text-amber-950"
+                : "text-zinc-400 hover:text-amber-200"
             }`}
           >
             {localeNames[locale]}

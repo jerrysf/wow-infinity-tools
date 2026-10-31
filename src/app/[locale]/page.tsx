@@ -7,6 +7,7 @@ import { absoluteUrl, localizedPath, site } from "@/lib/site";
 import { JsonLd } from "@/components/site/JsonLd";
 import { getBuilds, getClasses, getCurrentVersion, getGuides } from "@/lib/data";
 import { StatusBadge, DemoBadge } from "@/components/site/StatusBadge";
+import { classColor } from "@/lib/class-colors";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]">): Promise<Metadata> {
   const { locale } = await params;
@@ -49,39 +50,36 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
   return (
     <div>
       <JsonLd data={jsonLd} />
-      <section className="py-8">
-        <h1 className="max-w-2xl text-3xl font-bold tracking-tight sm:text-4xl">
+      <section
+        className="relative my-2 overflow-hidden rounded-xl border border-[#3a2b14] p-7 sm:p-10"
+        style={{
+          background:
+            "radial-gradient(ellipse at 15% 0%, #2b2418 0%, #17110a 55%, #0f0b06 100%)",
+        }}
+      >
+        <h1 className="max-w-2xl text-3xl font-bold tracking-tight text-[#f4e9d0] sm:text-4xl">
           {dict.home.heroTitle}
         </h1>
-        <p className="mt-3 max-w-2xl text-zinc-600 dark:text-zinc-400">{dict.home.heroSubtitle}</p>
+        <p className="mt-3 max-w-2xl text-[#b0a284]">{dict.home.heroSubtitle}</p>
         <div className="mt-6 flex flex-wrap gap-3">
-          <Link
-            href={localizedPath(locale, "/tools/class-selector")}
-            className="rounded-lg bg-zinc-900 px-5 py-2.5 text-sm font-medium text-white hover:bg-zinc-700 dark:bg-zinc-100 dark:text-zinc-900 dark:hover:bg-zinc-300"
-          >
+          <Link href={localizedPath(locale, "/tools/class-selector")} className="btn-gold">
             {dict.home.ctaSelector}
           </Link>
-          <Link
-            href={localizedPath(locale, "/talents")}
-            className="rounded-lg border border-zinc-300 px-5 py-2.5 text-sm font-medium hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
-          >
+          <Link href={localizedPath(locale, "/talents")} className="btn-ghost">
             {dict.home.ctaTalents}
           </Link>
-          <Link
-            href={localizedPath(locale, "/builds")}
-            className="rounded-lg border border-zinc-300 px-5 py-2.5 text-sm font-medium hover:bg-zinc-100 dark:border-zinc-700 dark:hover:bg-zinc-800"
-          >
+          <Link href={localizedPath(locale, "/builds")} className="btn-ghost">
             {dict.home.ctaBuilds}
           </Link>
         </div>
-        <p className="mt-4 text-xs text-zinc-500">
+        <p className="mt-5 text-xs text-[#7a6a4a]">
           {dict.common.version}: {version.label} · {dict.common.dataStatus}:{" "}
           {dict.common.status[classes[0]?.provenance.status ?? "unverified"]}
         </p>
       </section>
 
-      <section className="mb-8 rounded-lg border border-purple-200 bg-purple-50 p-4 text-sm text-purple-900 dark:border-purple-900 dark:bg-purple-950 dark:text-purple-200">
-        <h2 className="mb-1 font-semibold">{dict.home.dataNotice}</h2>
+      <section className="card mb-8 p-4 text-sm text-[#b0a284]">
+        <h2 className="mb-1 font-semibold text-[#e8dfd0]">{dict.home.dataNotice}</h2>
         <p>{dict.home.dataNoticeBody}</p>
       </section>
 
@@ -92,17 +90,19 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
             <li key={c.id}>
               <Link
                 href={localizedPath(locale, `/talents/${c.slug}`)}
-                className="block rounded-lg border border-zinc-200 p-4 hover:border-zinc-400 dark:border-zinc-800 dark:hover:border-zinc-600"
+                className="card card-interactive block p-4"
               >
                 <div className="flex items-center gap-2">
-                  <span className="font-semibold">{pick(c.name, locale)}</span>
+                  <span className="font-semibold" style={{ color: classColor(c.id) }}>
+                    {pick(c.name, locale)}
+                  </span>
                   {c.demo && <DemoBadge dict={dict} />}
                 </div>
                 {c.tagline && (
-                  <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{pick(c.tagline, locale)}</p>
+                  <p className="mt-1 text-sm text-[#b0a284]">{pick(c.tagline, locale)}</p>
                 )}
                 {!c.hasTalentData && (
-                  <p className="mt-1 text-xs text-zinc-500">{dict.talents.dataPending}</p>
+                  <p className="mt-1 text-xs text-[#7a6a4a]">{dict.talents.dataPending}</p>
                 )}
               </Link>
             </li>
@@ -117,14 +117,14 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
             <li key={b.slug}>
               <Link
                 href={localizedPath(locale, `/builds/${b.slug}`)}
-                className="block rounded-lg border border-zinc-200 p-4 hover:border-zinc-400 dark:border-zinc-800 dark:hover:border-zinc-600"
+                className="card card-interactive block p-4"
               >
                 <div className="flex flex-wrap items-center gap-2">
                   <span className="font-semibold">{pick(b.name, locale)}</span>
                   <StatusBadge status={b.provenance.status} dict={dict} />
                 </div>
-                <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{pick(b.summary, locale)}</p>
-                <p className="mt-2 text-xs text-zinc-500">
+                <p className="mt-1 text-sm text-[#b0a284]">{pick(b.summary, locale)}</p>
+                <p className="mt-2 text-xs text-[#7a6a4a]">
                   {classById.get(b.classId) ? pick(classById.get(b.classId)!.name, locale) : b.classId} ·{" "}
                   {b.playstyle} · {dict.common.version}: {b.gameVersion} · {dict.common.updated}: {b.updatedAt}
                 </p>
@@ -141,10 +141,10 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
             <li key={g.slug}>
               <Link
                 href={localizedPath(locale, `/guides/${g.slug}`)}
-                className="block rounded-lg border border-zinc-200 p-4 hover:border-zinc-400 dark:border-zinc-800 dark:hover:border-zinc-600"
+                className="card card-interactive block p-4"
               >
                 <span className="font-semibold">{pick(g.title, locale)}</span>
-                <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{pick(g.description, locale)}</p>
+                <p className="mt-1 text-sm text-[#b0a284]">{pick(g.description, locale)}</p>
               </Link>
             </li>
           ))}

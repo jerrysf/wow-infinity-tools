@@ -31,21 +31,21 @@ export default async function GuidesPage({ params }: PageProps<"/[locale]/guides
         ]}
       />
       <h1 className="mb-2 text-2xl font-bold">{dict.guides.title}</h1>
-      <p className="mb-6 max-w-2xl text-zinc-600 dark:text-zinc-400">{dict.guides.description}</p>
-      {guides.length === 0 && <p className="text-zinc-500">{dict.guides.empty}</p>}
+      <p className="mb-6 max-w-2xl text-[#b0a284]">{dict.guides.description}</p>
+      {guides.length === 0 && <p className="text-[#8a7a58]">{dict.guides.empty}</p>}
       <ul className="grid gap-4 sm:grid-cols-2">
         {guides.map((g) => (
           <li key={g.slug}>
             <Link
               href={localizedPath(locale, `/guides/${g.slug}`)}
-              className="block rounded-lg border border-zinc-200 p-4 hover:border-zinc-400 dark:border-zinc-800 dark:hover:border-zinc-600"
+              className="block card card-interactive p-4"
             >
               <div className="flex flex-wrap items-center gap-2">
                 <h2 className="text-base font-semibold">{pick(g.title, locale)}</h2>
                 <StatusBadge status={g.provenance.status} dict={dict} />
               </div>
-              <p className="mt-1 text-sm text-zinc-600 dark:text-zinc-400">{pick(g.description, locale)}</p>
-              <p className="mt-2 text-xs text-zinc-500">
+              <p className="mt-1 text-sm text-[#b0a284]">{pick(g.description, locale)}</p>
+              <p className="mt-2 text-xs text-[#8a7a58]">
                 {dict.common.version}: {g.provenance.gameVersion} · {dict.common.updated}: {g.updatedAt}
               </p>
             </Link>
