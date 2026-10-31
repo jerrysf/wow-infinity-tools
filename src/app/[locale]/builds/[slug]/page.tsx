@@ -42,6 +42,7 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/builds/[
     ...meta,
     openGraph: {
       ...meta.openGraph,
+      type: "article",
       images: [{ url: ogImage, width: 1200, height: 630, alt: title }],
     },
     twitter: { ...meta.twitter, images: [ogImage] },

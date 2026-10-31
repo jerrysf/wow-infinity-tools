@@ -2,10 +2,11 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { isLocale } from "@/i18n/config";
 import { getDictionary, pick } from "@/i18n/get-dictionary";
-import { pageMetadata } from "@/lib/seo";
+import { itemListJsonLd, pageMetadata } from "@/lib/seo";
 import { localizedPath } from "@/lib/site";
 import { getGuides } from "@/lib/data";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
+import { JsonLd } from "@/components/site/JsonLd";
 import { StatusBadge } from "@/components/site/StatusBadge";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/guides">): Promise<Metadata> {
@@ -23,6 +24,15 @@ export default async function GuidesPage({ params }: PageProps<"/[locale]/guides
 
   return (
     <div>
+      <JsonLd
+        data={itemListJsonLd(
+          dict.guides.title,
+          guides.map((g) => ({
+            name: pick(g.title, locale),
+            path: localizedPath(locale, `/guides/${g.slug}`),
+          })),
+        )}
+      />
       <Breadcrumbs
         locale={locale}
         items={[

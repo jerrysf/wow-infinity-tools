@@ -20,7 +20,12 @@ export function generateStaticParams() {
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: { default: site.name, template: `%s - ${site.name}` },
-  verification: { google: "62EMnCnGeg0513YYSKuTH85CH-kiT8z2AEKBT0--iyE" },
+  verification: {
+    google: "62EMnCnGeg0513YYSKuTH85CH-kiT8z2AEKBT0--iyE",
+    ...(process.env.BAIDU_SITE_VERIFICATION
+      ? { other: { "baidu-site-verification": process.env.BAIDU_SITE_VERIFICATION } }
+      : {}),
+  },
 };
 
 export default async function LocaleLayout({

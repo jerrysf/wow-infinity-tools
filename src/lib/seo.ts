@@ -58,3 +58,21 @@ export function pageMetadata({ locale, path, title, description, index = true }:
     },
   };
 }
+
+/** ItemList structured data for catalog pages (builds, guides, class index). */
+export function itemListJsonLd(
+  name: string,
+  items: { name: string; path: string }[],
+): Record<string, unknown> {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name,
+    itemListElement: items.map((item, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: item.name,
+      url: absoluteUrl(item.path),
+    })),
+  };
+}

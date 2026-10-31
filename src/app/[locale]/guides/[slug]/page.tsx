@@ -3,8 +3,10 @@ import { notFound } from "next/navigation";
 import { isLocale, locales } from "@/i18n/config";
 import { getDictionary, pick } from "@/i18n/get-dictionary";
 import { pageMetadata } from "@/lib/seo";
+import { absoluteUrl, localizedPath, site } from "@/lib/site";
 import { getBuilds, getBuildDistribution, getClassById, getGuideBySlug, getGuides } from "@/lib/data";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
+import { JsonLd } from "@/components/site/JsonLd";
 import { ProvenanceBlock } from "@/components/site/ProvenanceBlock";
 import { BuildDemoBanner } from "@/components/builds/BuildsCatalog";
 import { BuildCard } from "@/components/builds/BuildCard";
@@ -21,12 +23,13 @@ export async function generateMetadata({ params }: PageProps<"/[locale]/guides/[
   if (!isLocale(locale)) return {};
   const guide = getGuideBySlug(slug);
   if (!guide) return {};
-  return pageMetadata({
+  const meta = pageMetadata({
     locale,
     path: `/guides/${slug}`,
     title: pick(guide.title, locale),
     description: pick(guide.description, locale),
   });
+  return { ...meta, openGraph: { ...meta.openGraph, type: "article" } };
 }
 
 export default async function GuidePage({ params }: PageProps<"/[locale]/guides/[slug]">) {
@@ -38,8 +41,20 @@ export default async function GuidePage({ params }: PageProps<"/[locale]/guides/
   const builds = getBuilds().filter((b) => guide.relatedBuilds.includes(b.slug));
   const isDemo = guide.provenance.status === "unverified";
 
+  const articleLd = {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    headline: pick(guide.title, locale),
+    description: pick(guide.description, locale),
+    dateModified: guide.updatedAt,
+    inLanguage: locale === "zh-cn" ? "zh-CN" : "en-US",
+    author: { "@type": "Organization", name: site.name },
+    mainEntityOfPage: absoluteUrl(localizedPath(locale, `/guides/${slug}`)),
+  };
+
   return (
     <article>
+      <JsonLd data={articleLd} />
       <Breadcrumbs
         locale={locale}
         items={[

@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { isLocale } from "@/i18n/config";
-import { getDictionary } from "@/i18n/get-dictionary";
-import { pageMetadata } from "@/lib/seo";
+import { getDictionary, pick } from "@/i18n/get-dictionary";
+import { itemListJsonLd, pageMetadata } from "@/lib/seo";
+import { localizedPath } from "@/lib/site";
 import { getBuilds, getBuildDistribution, getClasses } from "@/lib/data";
 import { BuildsCatalog } from "@/components/builds/BuildsCatalog";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
+import { JsonLd } from "@/components/site/JsonLd";
 import { AdSlot } from "@/components/site/AdSlot";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/builds">): Promise<Metadata> {
@@ -21,6 +23,15 @@ export default async function BuildsPage({ params }: PageProps<"/[locale]/builds
 
   return (
     <div>
+      <JsonLd
+        data={itemListJsonLd(
+          dict.builds.title,
+          getBuilds().map((b) => ({
+            name: pick(b.name, locale),
+            path: localizedPath(locale, `/builds/${b.slug}`),
+          })),
+        )}
+      />
       <Breadcrumbs
         locale={locale}
         items={[

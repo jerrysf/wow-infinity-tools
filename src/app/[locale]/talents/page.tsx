@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { isLocale } from "@/i18n/config";
-import { getDictionary } from "@/i18n/get-dictionary";
-import { pageMetadata } from "@/lib/seo";
+import { getDictionary, pick } from "@/i18n/get-dictionary";
+import { itemListJsonLd, pageMetadata } from "@/lib/seo";
+import { localizedPath } from "@/lib/site";
 import { getClasses } from "@/lib/data";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { ClassCard } from "@/components/site/ClassCard";
+import { JsonLd } from "@/components/site/JsonLd";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/talents">): Promise<Metadata> {
   const { locale } = await params;
@@ -21,6 +23,15 @@ export default async function TalentsIndexPage({ params }: PageProps<"/[locale]/
 
   return (
     <div>
+      <JsonLd
+        data={itemListJsonLd(
+          dict.talents.title,
+          classes.map((c) => ({
+            name: pick(c.name, locale),
+            path: localizedPath(locale, `/talents/${c.slug}`),
+          })),
+        )}
+      />
       <Breadcrumbs
         locale={locale}
         items={[
