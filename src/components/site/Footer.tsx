@@ -27,10 +27,10 @@ export function Footer({ locale, dict }: { locale: Locale; dict: Dictionary }) {
             </Link>
           ))}
         </nav>
-        <p className="mt-4 max-w-3xl text-xs leading-relaxed text-[#7a6a4a]">
+        <p className="mt-4 max-w-3xl text-xs leading-relaxed text-[#95865c]">
           {dict.common.footer.independent}
         </p>
-        <p className="mt-2 text-xs text-[#6a5c40]">
+        <p className="mt-2 text-xs text-[#92825c]">
           {site.name}
         </p>
       </div>

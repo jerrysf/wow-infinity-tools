@@ -111,7 +111,7 @@ export default async function ClassTalentsPage({ params }: PageProps<"/[locale]/
                     <StatusBadge status={b.provenance.status} dict={dict} />
                   </div>
                   <p className="mt-1 text-sm text-[#b0a284]">{pick(b.summary, locale)}</p>
-                  <p className="mt-2 text-xs text-[#7a6a4a]">
+                  <p className="mt-2 text-xs text-[#95865c]">
                     {b.playstyle} · {dict.common.level} {b.levelRange.min}-{b.levelRange.max}
                   </p>
                 </Link>

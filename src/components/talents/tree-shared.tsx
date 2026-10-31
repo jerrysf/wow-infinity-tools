@@ -26,7 +26,7 @@ export function rankClasses(status: NodeAvailability): string {
   if (status === "maxed") return "text-[#ffd100]";
   if (status === "allocated") return "text-[#1eff00]";
   if (status === "available") return "text-[#9ae89f]";
-  return "text-[#6b7280]";
+  return "text-[#8b93a1]";
 }
 
 /** Elbow connector from a prerequisite tile to its dependent, classic style:

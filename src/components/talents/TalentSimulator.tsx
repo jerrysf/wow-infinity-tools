@@ -149,7 +149,7 @@ function TalentTreePanel({
       className="rounded-md border border-[#2a2f3a] bg-gradient-to-b from-[#151a21] to-[#0d1015] p-2.5"
     >
       <header className="mb-3 flex items-baseline justify-between border-b border-[#2a2f3a] pb-1.5">
-        <h3 className="text-sm font-semibold tracking-wide text-[#e8d9a8]">{pick(tree.name, locale)}</h3>
+        <h2 className="text-sm font-semibold tracking-wide text-[#e8d9a8]">{pick(tree.name, locale)}</h2>
         <span className="flex items-baseline gap-2">
           {spent > 0 && (
             <button
@@ -157,12 +157,12 @@ function TalentTreePanel({
               onClick={() => onResetTree(tree.id)}
               title={dict.talents.resetTree}
               aria-label={`${dict.talents.resetTree}: ${pick(tree.name, locale)}`}
-              className="text-xs text-[#6b7280] hover:text-[#d1d5db]"
+              className="text-xs text-[#8b93a1] hover:text-[#d1d5db]"
             >
               ↺
             </button>
           )}
-          <span className={`text-xs font-semibold ${spent > 0 ? "text-[#ffd100]" : "text-[#6b7280]"}`}>{spent}</span>
+          <span className={`text-xs font-semibold ${spent > 0 ? "text-[#ffd100]" : "text-[#8b93a1]"}`}>{spent}</span>
         </span>
       </header>
       <div className="relative">
@@ -461,7 +461,7 @@ export function TalentSimulator({
             onKeyDown={(e) => e.key === "Enter" && applyImport()}
             placeholder={dict.talents.importPlaceholder}
             aria-label={dict.talents.import}
-            className="min-w-0 flex-1 rounded border border-[#3a4150] bg-[#0b0d10] px-3 py-1.5 font-mono text-sm text-[#d1d5db] placeholder:text-[#6b7280]"
+            className="min-w-0 flex-1 rounded border border-[#3a4150] bg-[#0b0d10] px-3 py-1.5 font-mono text-sm text-[#d1d5db] placeholder:text-[#8b93a1]"
           />
           <button
             type="button"
@@ -473,7 +473,7 @@ export function TalentSimulator({
         </div>
       )}
 
-      <p className="mb-3 text-xs text-[#6b7280]">{dict.talents.hints}</p>
+      <p className="mb-3 text-xs text-[#8b93a1]">{dict.talents.hints}</p>
 
       {overSpent && (
         <p role="alert" className="mb-3 rounded-md border border-red-800 bg-red-950/60 p-3 text-sm text-red-300">

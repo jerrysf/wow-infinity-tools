@@ -119,7 +119,7 @@ export function FollowMode({
         <p className="mb-4 text-sm text-[#8a7a58]">{pick(current.note, locale)}</p>
       )}
       <TalentMap data={data} points={points} locale={locale} dict={dict} />
-      <p className="mt-3 text-xs text-[#6b7280]">{dict.builds.followHint}</p>
+      <p className="mt-3 text-xs text-[#8b93a1]">{dict.builds.followHint}</p>
     </div>
   );
 }

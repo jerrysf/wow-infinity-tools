@@ -192,7 +192,7 @@ export function BuildsCatalog({
                 <p className="mt-1 line-clamp-2 text-sm text-[#b0a284]">
                   {pick(b.summary, locale)}
                 </p>
-                <p className="mt-2 flex flex-wrap gap-x-3 text-xs text-[#7a6a4a]">
+                <p className="mt-2 flex flex-wrap gap-x-3 text-xs text-[#95865c]">
                   {distributions[b.slug] && (
                     <span className="font-mono text-[#d8b558]">[{distributions[b.slug]}]</span>
                   )}

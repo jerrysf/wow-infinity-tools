@@ -103,7 +103,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
             </div>
           ))}
         </dl>
-        <p className="mt-5 text-xs text-[#7a6a4a]">
+        <p className="mt-5 text-xs text-[#95865c]">
           {dict.common.version}: {version.label} · {dict.common.dataStatus}:{" "}
           {dict.common.status[classes[0]?.provenance.status ?? "unverified"]}
         </p>
@@ -133,7 +133,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
                   <p className="mt-1 text-sm text-[#b0a284]">{pick(c.tagline, locale)}</p>
                 )}
                 {!c.hasTalentData && (
-                  <p className="mt-1 text-xs text-[#7a6a4a]">{dict.talents.dataPending}</p>
+                  <p className="mt-1 text-xs text-[#95865c]">{dict.talents.dataPending}</p>
                 )}
               </Link>
             </li>
@@ -164,7 +164,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
                   {v.description && (
                     <p className="mt-1 line-clamp-2 text-xs text-[#b0a284]">{pick(v.description, locale)}</p>
                   )}
-                  <p className="mt-2 text-xs text-[#7a6a4a]">
+                  <p className="mt-2 text-xs text-[#95865c]">
                     {v.channel} · {videoPlatform(v)}
                   </p>
                 </div>
@@ -188,7 +188,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
                   <StatusBadge status={b.provenance.status} dict={dict} />
                 </div>
                 <p className="mt-1 text-sm text-[#b0a284]">{pick(b.summary, locale)}</p>
-                <p className="mt-2 text-xs text-[#7a6a4a]">
+                <p className="mt-2 text-xs text-[#95865c]">
                   {getBuildDistribution(b) && (
                     <span className="font-mono text-[#d8b558]">[{getBuildDistribution(b)}] </span>
                   )}

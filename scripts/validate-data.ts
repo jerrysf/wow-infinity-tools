@@ -224,7 +224,13 @@ function main() {
     const items = Array.isArray(raw) ? raw : [];
     const slugs = items.map((v) => (v as { slug?: string }).slug ?? "");
     checkDuplicates(slugs, rel);
-    if (f === "videos.json") items.forEach((v, i) => parseItem(communityVideoSchema, v, `${rel}[${i}]`));
+    if (f === "videos.json")
+      items.forEach((v, i) => {
+        parseItem(communityVideoSchema, v, `${rel}[${i}]`);
+        const video = communityVideoSchema.safeParse(v);
+        if (video.success && video.data.youtubeId && !fs.existsSync(path.join(process.cwd(), "public/thumbs", `${video.data.youtubeId}.jpg`)))
+          fail(`${rel}[${i}]: missing thumbnail public/thumbs/${video.data.youtubeId}.jpg`);
+      });
     if (f === "links.json") items.forEach((v, i) => parseItem(communityLinkSchema, v, `${rel}[${i}]`));
   }
 

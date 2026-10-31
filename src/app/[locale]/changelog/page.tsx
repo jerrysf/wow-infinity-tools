@@ -59,7 +59,7 @@ export default async function ChangelogPage({ params }: PageProps<"/[locale]/cha
                   current
                 </span>
               )}
-              <span className="text-xs text-[#7a6a4a]">{v.releasedAt}</span>
+              <span className="text-xs text-[#95865c]">{v.releasedAt}</span>
             </li>
           ))}
         </ul>
@@ -74,7 +74,7 @@ export default async function ChangelogPage({ params }: PageProps<"/[locale]/cha
           <h2 className="mb-1 text-lg font-semibold">
             {log.fromVersion} → {log.toVersion}
           </h2>
-          <p className="mb-4 text-xs text-[#7a6a4a]">{log.generatedAt}</p>
+          <p className="mb-4 text-xs text-[#95865c]">{log.generatedAt}</p>
           {log.classes.map((cls) => {
             const gameClass = getClassById(cls.classId);
             return (
@@ -90,7 +90,7 @@ export default async function ChangelogPage({ params }: PageProps<"/[locale]/cha
                         <li key={n.id}>
                           <span className="mr-1 text-emerald-400">+</span>
                           {pick(n.name, locale)}
-                          <span className="ml-1 text-xs text-[#7a6a4a]">({dict.changelog.added})</span>
+                          <span className="ml-1 text-xs text-[#95865c]">({dict.changelog.added})</span>
                         </li>
                       ))}
                       {tree.removed.map((n) => (
@@ -104,7 +104,7 @@ export default async function ChangelogPage({ params }: PageProps<"/[locale]/cha
                         <li key={c.nodeId}>
                           <span className="mr-1 text-amber-300">~</span>
                           {pick(c.name, locale)}
-                          <span className="ml-1 text-xs text-[#7a6a4a]">
+                          <span className="ml-1 text-xs text-[#95865c]">
                             {Object.entries(c.fields).map(([f, v]) => formatField(f, v)).join(" · ")}
                           </span>
                         </li>

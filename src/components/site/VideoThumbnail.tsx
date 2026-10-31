@@ -16,7 +16,7 @@ export function VideoThumbnail({ videoId, alt }: { videoId: string; alt: string 
 
   return (
     <Image
-      src={`https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`}
+      src={`/thumbs/${videoId}.jpg`}
       alt={alt}
       width={480}
       height={270}

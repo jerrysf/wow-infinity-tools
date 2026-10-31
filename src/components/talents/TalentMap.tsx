@@ -30,7 +30,7 @@ function ReadOnlyTree({
     >
       <header className="mb-3 flex items-baseline justify-between border-b border-[#2a2f3a] pb-1.5">
         <h3 className="text-sm font-semibold tracking-wide text-[#e8d9a8]">{pick(tree.name, locale)}</h3>
-        <span className={`text-xs font-semibold ${spent > 0 ? "text-[#ffd100]" : "text-[#6b7280]"}`}>{spent}</span>
+        <span className={`text-xs font-semibold ${spent > 0 ? "text-[#ffd100]" : "text-[#8b93a1]"}`}>{spent}</span>
       </header>
       <div className="relative">
         <PrereqArrows tree={tree} rows={rows} points={points} />

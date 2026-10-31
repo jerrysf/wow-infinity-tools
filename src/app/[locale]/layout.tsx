@@ -51,7 +51,7 @@ export default async function LocaleLayout({
         <Header locale={locale} dict={dict} />
         <main id="main" className="mx-auto w-full max-w-5xl flex-1 px-4 py-6">{children}</main>
         <Footer locale={locale} dict={dict} />
-        <Analytics />
+        {process.env.VERCEL === "1" && <Analytics />}
       </body>
     </html>
   );
