@@ -53,6 +53,16 @@ test.describe("smoke", () => {
     await expect(links).toHaveCount(4);
   });
 
+  test("build page shows x/y/z notation and follow-mode slider", async ({ page }) => {
+    await page.goto("/zh-cn/builds/druid-balance-leveling");
+    await expect(page.locator("h1")).toContainText("平衡");
+    await expect(page.getByText("[11/0/0]")).toBeVisible();
+    const slider = page.locator("#follow-level");
+    await expect(slider).toBeVisible();
+    await slider.fill("12");
+    await expect(page.getByText("当前阶段")).toBeVisible();
+  });
+
   test("no fatal console errors on home", async ({ page }) => {
     const errors: string[] = [];
     page.on("pageerror", (e) => errors.push(e.message));

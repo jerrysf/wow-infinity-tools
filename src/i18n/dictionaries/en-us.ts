@@ -170,6 +170,9 @@ const en: Dictionary = {
     filterDifficulty: "Difficulty",
     guideLink: "View leveling guide",
     talentMap: "Talent allocation",
+    followTitle: "Step-by-step follow along",
+    followStep: "Current stage",
+    followHint: "Drag the level slider to replay the point-by-point allocation order.",
     sameClass: "Other {name} builds",
   },
   guides: {

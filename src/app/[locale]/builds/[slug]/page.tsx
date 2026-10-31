@@ -5,9 +5,10 @@ import { isLocale, locales } from "@/i18n/config";
 import { getDictionary, pick, t } from "@/i18n/get-dictionary";
 import { pageMetadata } from "@/lib/seo";
 import { absoluteUrl, localizedPath } from "@/lib/site";
-import { getBuildBySlug, getBuildDistribution, getBuilds, getClassById, getClassTalents, getGuides } from "@/lib/data";
+import { getBuildBySlug, getBuildDistribution, getBuilds, getClassById, getClassTalents, getGuides, parseStepRange } from "@/lib/data";
 import { findNode } from "@/lib/talents/engine";
 import { TalentMap } from "@/components/talents/TalentMap";
+import { FollowMode } from "@/components/builds/FollowMode";
 import { encodeBuild } from "@/lib/talents/serialize";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { JsonLd } from "@/components/site/JsonLd";
@@ -55,6 +56,10 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
   const talents = getClassTalents(build.classId);
   const relatedGuide = getGuides().find((g) => g.relatedBuilds.includes(build.slug));
   const sameClassBuilds = getBuilds().filter((b) => b.classId === build.classId && b.slug !== build.slug);
+  const followSteps = build.levelingSteps.flatMap((s) => {
+    const range = parseStepRange(s.levelRange);
+    return range ? [{ ...range, spend: s.spend, note: s.note }] : [];
+  });
   const isDemo = gameClass?.demo || talents?.demo || build.provenance.status === "unverified";
 
   const simLink = talents
@@ -148,7 +153,19 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
         </Link>
       )}
 
-      {talents ? (
+      {talents && followSteps.length > 0 ? (
+        <section className="mb-6">
+          <h2 className="mb-2 text-lg font-semibold">{dict.builds.followTitle}</h2>
+          <FollowMode
+            data={talents}
+            steps={followSteps}
+            min={build.levelRange.min}
+            max={build.levelRange.max}
+            locale={locale}
+            dict={dict}
+          />
+        </section>
+      ) : talents ? (
         <section className="mb-6">
           <h2 className="mb-2 text-lg font-semibold">{dict.builds.talentMap}</h2>
           <TalentMap data={talents} points={build.allocation} locale={locale} dict={dict} />

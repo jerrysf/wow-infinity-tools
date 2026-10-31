@@ -167,6 +167,9 @@ const zh = {
     filterDifficulty: "难度",
     guideLink: "查看加点指南",
     talentMap: "天赋分配图",
+    followTitle: "逐级加点演示",
+    followStep: "当前阶段",
+    followHint: "拖动等级滑杆，按升级顺序逐步查看加点过程。",
     sameClass: "{name}的其他方案",
   },
   guides: {

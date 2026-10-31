@@ -95,6 +95,13 @@ export const getBuildDistribution = (build: Build): string | null => {
   return talents ? treeDistribution(build.allocation, talents) : null;
 };
 
+/** Tolerant parser for free-form step ranges like "10–14 " or "20". */
+export function parseStepRange(text: string): { min: number; max: number } | null {
+  const nums = text.match(/\d+/g)?.map(Number) ?? [];
+  if (nums.length === 0) return null;
+  return { min: nums[0], max: nums[1] ?? nums[0] };
+}
+
 export const getGuides = cache((): Guide[] => {
   return readDirJson("guides").map(({ file, json }) =>
     parseOrThrow(guideSchema, json, file),
