@@ -12,6 +12,7 @@
     "test:e2e": "playwright test",
     "gen:og": "node scripts/gen-og.mjs",
     "validate:data": "tsx scripts/validate-data.ts",
+    "diff:talents": "tsx scripts/diff-talents.ts",
     "verify": "pnpm validate:data && pnpm typecheck && pnpm lint && pnpm test && pnpm build"
   },
   "dependencies": {

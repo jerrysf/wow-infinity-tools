@@ -222,3 +222,33 @@ export const communityLinkSchema = z.object({
   region: z.enum(["global", "cn"]).optional(),
 });
 export type CommunityLink = z.infer<typeof communityLinkSchema>;
+
+/** Structured output of scripts/diff-talents.ts: talent changes between two
+ *  game versions, per class and per tree. */
+export const nodeChangeSchema = z.object({
+  nodeId: z.string(),
+  name: localizedTextSchema,
+  fields: z.record(z.string(), z.unknown()),
+});
+export type NodeChange = z.infer<typeof nodeChangeSchema>;
+
+export const changelogSchema = z.object({
+  fromVersion: z.string().min(1),
+  toVersion: z.string().min(1),
+  generatedAt: z.string().min(1),
+  classes: z.array(
+    z.object({
+      classId: z.string().min(1),
+      trees: z.array(
+        z.object({
+          treeId: z.string().min(1),
+          treeName: localizedTextSchema,
+          added: z.array(talentNodeSchema),
+          removed: z.array(talentNodeSchema),
+          changed: z.array(nodeChangeSchema),
+        }),
+      ),
+    }),
+  ),
+});
+export type Changelog = z.infer<typeof changelogSchema>;

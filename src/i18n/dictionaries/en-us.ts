@@ -18,6 +18,7 @@ const en: Dictionary = {
       disclaimer: "Disclaimer",
       disclosure: "Disclosure",
       faq: "FAQ",
+      changelog: "Changelog",
       independent:
         "This site is an independent fan-made tool and guide project. It is not affiliated with, endorsed by, or sponsored by Blizzard Entertainment.",
     },
@@ -181,6 +182,28 @@ const en: Dictionary = {
     empty: "No guides yet.",
     relatedBuilds: "Related builds",
     toc: "On this page",
+  },
+  changelog: {
+    title: "Changelog",
+    description:
+      "Talent data changes for World of Warcraft: Forever — new, removed and adjusted talents organized by class and tree.",
+    empty:
+      "Showing the first data version. Talent changes will appear here after a new version is imported.",
+    versionsTitle: "Data versions",
+    added: "New talents",
+    removed: "Removed talents",
+    changed: "Changed talents",
+    fields: {
+      maxPoints: "max points",
+      row: "position",
+      col: "column",
+      requiresPointsInTree: "tree point requirement",
+      minLevel: "level requirement",
+      requires: "prerequisites",
+      exclusiveWith: "exclusivity",
+      name: "name",
+      description: "description",
+    },
     levelSteps: "Level-by-level",
   },
   faq: {

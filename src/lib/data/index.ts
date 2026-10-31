@@ -4,6 +4,7 @@ import path from "node:path";
 import { treeDistribution } from "@/lib/talents/engine";
 import {
   buildSchema,
+  changelogSchema,
   classSchema,
   classTalentsSchema,
   communityLinkSchema,
@@ -12,6 +13,7 @@ import {
   guideSchema,
   selectorConfigSchema,
   type Build,
+  type Changelog,
   type ClassTalents,
   type CommunityLink,
   type CommunityVideo,
@@ -126,6 +128,12 @@ function readJsonArray<T>(schema: { parse: (v: unknown) => T }, file: string): T
 
 export const getCommunityVideos = cache((): CommunityVideo[] => {
   return readJsonArray(communityVideoSchema, "community/videos.json");
+});
+
+export const getChangelogs = cache((): Changelog[] => {
+  return readDirJson("changelog").map(({ file, json }) =>
+    parseOrThrow(changelogSchema, json, file),
+  );
 });
 
 export const getCommunityLinks = cache((): CommunityLink[] => {

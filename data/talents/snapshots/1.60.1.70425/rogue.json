@@ -1,0 +1,1043 @@
+{
+  "classId": "rogue",
+  "gameVersion": "1.60.1.70425",
+  "rules": {
+    "firstTalentLevel": 10,
+    "maxLevel": 60,
+    "pointsPerLevel": 1,
+    "maxPoints": 51
+  },
+  "demo": false,
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com talent data extracted from WoW: Forever beta client",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425; talent data may still change before the Nov 5 launch. Cross-checked against Blizzard class deep-dive posts."
+  },
+  "trees": [
+    {
+      "id": "assassination",
+      "name": {
+        "zh": "奇袭",
+        "en": "Assassination"
+      },
+      "nodes": [
+        {
+          "id": "assassination-00",
+          "name": {
+            "zh": "强化凿击",
+            "en": "Improved Gouge"
+          },
+          "description": {
+            "zh": "使你的凿击技能持续时间延长1.5秒。",
+            "en": "Increases the duration of your Gouge ability by 1.5 sec."
+          },
+          "icon": "ability_gouge.jpg",
+          "maxPoints": 3,
+          "row": 0,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "assassination-01",
+          "name": {
+            "zh": "冷酷攻击",
+            "en": "Remorseless Attacks"
+          },
+          "description": {
+            "zh": "击杀一个能为你提供经验值或荣誉值的敌人后，使你的下一次邪恶攻击、背刺、伏击、毁伤或鬼魅攻击的爆击几率提高40%。持续20秒。",
+            "en": "After killing a non-trivial enemy, gives you a 40% increased critical strike chance on your next Sinister Strike, Backstab, Ambush, Mutilate, or Ghostly Strike. Lasts 20 sec."
+          },
+          "icon": "ability_fiegndead.jpg",
+          "maxPoints": 2,
+          "row": 0,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "assassination-02",
+          "name": {
+            "zh": "恶意",
+            "en": "Malice"
+          },
+          "description": {
+            "zh": "使你所有攻击和毒药的爆击几率提高5%。",
+            "en": "Increases your critical strike chance with all attacks and Poisons by 5%."
+          },
+          "icon": "ability_racial_bloodrage.jpg",
+          "maxPoints": 5,
+          "row": 0,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "assassination-03",
+          "name": {
+            "zh": "无情",
+            "en": "Ruthlessness"
+          },
+          "description": {
+            "zh": "使你的终结技有60%的几率为目标增加一个连击点数。",
+            "en": "Gives your finishing moves a 60% chance to add a Combo Point to your target."
+          },
+          "icon": "ability_druid_disembowel.jpg",
+          "maxPoints": 3,
+          "row": 1,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "assassination-04",
+          "name": {
+            "zh": "密谋",
+            "en": "Murder"
+          },
+          "description": {
+            "zh": "对人型和巨人目标造成的所有伤害提高4%。",
+            "en": "Increases all damage dealt by 4% against Humanoid and Giant targets."
+          },
+          "icon": "spell_shadow_deathscream.jpg",
+          "maxPoints": 2,
+          "row": 1,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "assassination-05",
+          "name": {
+            "zh": "强化切割",
+            "en": "Improved Slice and Dice"
+          },
+          "description": {
+            "zh": "使你的切割技能的效果持续时间延长45%。",
+            "en": "Increases the duration of your Slice and Dice ability by 45%."
+          },
+          "icon": "ability_rogue_slicedice.jpg",
+          "maxPoints": 3,
+          "row": 1,
+          "col": 3,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "assassination-06",
+          "name": {
+            "zh": "无情打击",
+            "en": "Relentless Strikes"
+          },
+          "description": {
+            "zh": "你的终结技每消耗一个连击点数都有20%的几率恢复25点能量。",
+            "en": "Your finishing moves have a 20% chance per Combo Point to restore 25 Energy."
+          },
+          "icon": "ability_warrior_decisivestrike.jpg",
+          "maxPoints": 1,
+          "row": 2,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "assassination-07",
+          "name": {
+            "zh": "强化破甲",
+            "en": "Improved Expose Armor"
+          },
+          "description": {
+            "zh": "使你的破甲消耗的能量值降低10点，并在以5个连击点数施放时返还2个连击点。",
+            "en": "Reduces the Energy cost of your Expose Armor ability by 10, and refunds 2 Combo Points when cast with 5 Combo Points."
+          },
+          "icon": "ability_warrior_riposte.jpg",
+          "maxPoints": 2,
+          "row": 2,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "assassination-08",
+          "name": {
+            "zh": "致命偷袭",
+            "en": "Lethality"
+          },
+          "description": {
+            "zh": "使你的邪恶攻击、凿击、背刺、毁伤、鬼魅攻击和出血技能的爆击伤害加成提高20%。",
+            "en": "Increases the critical strike damage bonus of your Sinister Strike, Gouge, Backstab, Mutilate, Ghostly Strike, and Hemorrhage abilities by 20%."
+          },
+          "icon": "ability_criticalstrike.jpg",
+          "maxPoints": 5,
+          "row": 2,
+          "col": 2,
+          "requires": [
+            {
+              "nodeId": "assassination-02",
+              "points": 5
+            }
+          ],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "assassination-09",
+          "name": {
+            "zh": "恶性毒药",
+            "en": "Vile Poisons"
+          },
+          "description": {
+            "zh": "使你的毒素所造成的伤害提高20%，并使你的毒药抵抗驱散效果的几率提高40%。",
+            "en": "Increases the damage dealt by your poisons by 20% and gives your poisons an additional 40% chance to resist dispel effects."
+          },
+          "icon": "ability_rogue_feigndeath.jpg",
+          "maxPoints": 5,
+          "row": 3,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "assassination-10",
+          "name": {
+            "zh": "冷血",
+            "en": "Cold Blood"
+          },
+          "description": {
+            "zh": "激活后，使你的下一次邪恶攻击、背刺、伏击、刺骨或毁伤的爆击几率提高100%。",
+            "en": "When activated, increases the critical strike chance of your next Sinister Strike, Backstab, Ambush, Eviscerate, or Mutilate by 100%."
+          },
+          "icon": "spell_ice_lament.jpg",
+          "maxPoints": 1,
+          "row": 3,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "assassination-11",
+          "name": {
+            "zh": "强化毒药",
+            "en": "Improved Poisons"
+          },
+          "description": {
+            "zh": "使你对目标施加毒药的几率提高10%，并使毒药生效时有50%的几率不消耗使用次数。",
+            "en": "Increases the chance to apply Poisons to your target by 10%, and gives Poison applications a 50% chance to not consume a charge."
+          },
+          "icon": "ability_poisons.jpg",
+          "maxPoints": 5,
+          "row": 3,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "assassination-12",
+          "name": {
+            "zh": "精力",
+            "en": "Vigor"
+          },
+          "description": {
+            "zh": "使你的能量值上限提高10点。",
+            "en": "Increases your maximum Energy by 10."
+          },
+          "icon": "spell_nature_earthbindtotem.jpg",
+          "maxPoints": 2,
+          "row": 4,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "assassination-13",
+          "name": {
+            "zh": "毁伤",
+            "en": "Mutilate"
+          },
+          "description": {
+            "zh": "立即使用双手武器攻击，造成75%的武器伤害，每把武器额外造成17.25点伤害。对中毒目标造成的伤害提高20%。奖励2个连击点数。",
+            "en": "Instantly attacks with both weapons for 75% weapon damage plus an additional 17.25 with each weapon. Damage increased by 20% against Poisoned targets. Awards 2 Combo Points."
+          },
+          "icon": "ability_rogue_deadlybrew.jpg",
+          "maxPoints": 1,
+          "row": 4,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "assassination-14",
+          "name": {
+            "zh": "强化肾击",
+            "en": "Improved Kidney Shot"
+          },
+          "description": {
+            "zh": "被你的肾击昏迷的敌人，受到你的毒药和攻击的伤害提高10%。",
+            "en": "Enemies Stunned by your Kidney Shot ability take 10% increased damage from your poisons and attacks."
+          },
+          "icon": "ability_rogue_kidneyshot.jpg",
+          "maxPoints": 2,
+          "row": 4,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "assassination-15",
+          "name": {
+            "zh": "封印命运",
+            "en": "Seal Fate"
+          },
+          "description": {
+            "zh": "可增加连击点数的技能造成爆击时，有100%的几率额外增加一个连击点数。",
+            "en": "Your critical strikes from abilities that add Combo Points have a 100% chance to add an additional Combo Point."
+          },
+          "icon": "spell_shadow_chilltouch.jpg",
+          "maxPoints": 5,
+          "row": 5,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 25,
+          "exclusiveWith": []
+        },
+        {
+          "id": "assassination-16",
+          "name": {
+            "zh": "毒针",
+            "en": "Venom"
+          },
+          "description": {
+            "zh": "终结技，使你的毒药造成的伤害提高30%，毒药施加几率提高10%。连击点数越多，持续时间越长：\n1点：9秒\n2点：12秒\n3点：15秒\n4点：18秒\n5点：21秒",
+            "en": "Finishing move that increases the damage of your Poisons by 30% and your chance to apply Poisons by 10%. Lasts longer per combo point:\n1 point : 9 sec\n2 points: 12 sec\n3 points: 15 sec\n4 points: 18 sec\n5 points: 21 sec"
+          },
+          "icon": "inv_sword_31.jpg",
+          "maxPoints": 1,
+          "row": 6,
+          "col": 1,
+          "requires": [
+            {
+              "nodeId": "assassination-13",
+              "points": 1
+            }
+          ],
+          "requiresPointsInTree": 30,
+          "exclusiveWith": []
+        }
+      ]
+    },
+    {
+      "id": "combat",
+      "name": {
+        "zh": "战斗",
+        "en": "Combat"
+      },
+      "nodes": [
+        {
+          "id": "combat-00",
+          "name": {
+            "zh": "强化刺骨",
+            "en": "Improved Eviscerate"
+          },
+          "description": {
+            "zh": "使你的刺骨技能所造成的伤害提高20%。",
+            "en": "Increases the damage done by your Eviscerate ability by 20%."
+          },
+          "icon": "ability_rogue_eviscerate.jpg",
+          "maxPoints": 3,
+          "row": 0,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "combat-01",
+          "name": {
+            "zh": "强化邪恶攻击",
+            "en": "Improved Sinister Strike"
+          },
+          "description": {
+            "zh": "使你的邪恶攻击技能所消耗的能量值减少5点。",
+            "en": "Reduces the Energy cost of your Sinister Strike ability by 5."
+          },
+          "icon": "spell_shadow_ritualofsacrifice.jpg",
+          "maxPoints": 2,
+          "row": 0,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "combat-02",
+          "name": {
+            "zh": "闪电反射",
+            "en": "Lightning Reflexes"
+          },
+          "description": {
+            "zh": "使你的躲闪几率提高5%。",
+            "en": "Increases your Dodge chance by 5%."
+          },
+          "icon": "spell_nature_invisibilty.jpg",
+          "maxPoints": 5,
+          "row": 0,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "combat-03",
+          "name": {
+            "zh": "穿刺之伤",
+            "en": "Puncturing Wounds"
+          },
+          "description": {
+            "zh": "使你的背刺爆击几率提高30%、毁伤爆击几率提高15%，并使背刺有45%的几率额外增加一个连击点数。",
+            "en": "Increases the critical strike chance of your Backstab by 30% and your Mutilate by 15%, and gives Backstab a 45% chance to add an additional Combo Point."
+          },
+          "icon": "ability_backstab.jpg",
+          "maxPoints": 3,
+          "row": 1,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "combat-04",
+          "name": {
+            "zh": "偏斜",
+            "en": "Deflection"
+          },
+          "description": {
+            "zh": "使你的招架几率提高6%。",
+            "en": "Increases your Parry chance by 6%."
+          },
+          "icon": "ability_parry.jpg",
+          "maxPoints": 3,
+          "row": 1,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "combat-05",
+          "name": {
+            "zh": "精确",
+            "en": "Precision"
+          },
+          "description": {
+            "zh": "使你击中目标的几率提高3%。",
+            "en": "Improves your chance to hit by 3%."
+          },
+          "icon": "ability_marksmanship.jpg",
+          "maxPoints": 3,
+          "row": 1,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "combat-06",
+          "name": {
+            "zh": "耐久",
+            "en": "Endurance"
+          },
+          "description": {
+            "zh": "使你的疾跑和闪避技能冷却时间缩短60%。",
+            "en": "Reduces the cooldown of your Sprint and Evasion abilities by 60%."
+          },
+          "icon": "spell_shadow_shadowward.jpg",
+          "maxPoints": 2,
+          "row": 2,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "combat-07",
+          "name": {
+            "zh": "还击",
+            "en": "Riposte"
+          },
+          "description": {
+            "zh": "在招架了敌人的攻击之后可以使用的技能，对目标造成150%的武器伤害，并使其被缴械，持续直到取消。",
+            "en": "A strike that becomes active after parrying an opponent's attack. This attack deals 150% weapon damage and disarms the target for until cancelled."
+          },
+          "icon": "ability_warrior_challange.jpg",
+          "maxPoints": 1,
+          "row": 2,
+          "col": 1,
+          "requires": [
+            {
+              "nodeId": "combat-04",
+              "points": 3
+            }
+          ],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "combat-08",
+          "name": {
+            "zh": "强化疾跑",
+            "en": "Improved Sprint"
+          },
+          "description": {
+            "zh": "使你在启动疾跑技能时有100%的几率移除所有移动限制效果。",
+            "en": "Gives a 100% chance to remove all movement impairing effects when you activate your Sprint ability."
+          },
+          "icon": "ability_rogue_sprint.jpg",
+          "maxPoints": 2,
+          "row": 2,
+          "col": 3,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "combat-09",
+          "name": {
+            "zh": "强化脚踢",
+            "en": "Improved Kick"
+          },
+          "description": {
+            "zh": "使你的脚踢技能有100%的几率令目标沉默2秒。",
+            "en": "Gives your Kick ability a 100% chance to Silence the target for 2 sec."
+          },
+          "icon": "ability_kick.jpg",
+          "maxPoints": 2,
+          "row": 3,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "combat-10",
+          "name": {
+            "zh": "完美处刑",
+            "en": "Flawless Execution"
+          },
+          "description": {
+            "zh": "使你的刺骨消耗的能量值降低10点。",
+            "en": "Reduces the Energy cost of your Eviscerate ability by 10."
+          },
+          "icon": "inv_sword_35.jpg",
+          "maxPoints": 1,
+          "row": 3,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "combat-11",
+          "name": {
+            "zh": "双武器专精",
+            "en": "Dual Wield Specialization"
+          },
+          "description": {
+            "zh": "使你的副手武器造成的伤害提高25%。",
+            "en": "Increases the damage done by your off-hand weapon by 25%."
+          },
+          "icon": "ability_dualwield.jpg",
+          "maxPoints": 5,
+          "row": 3,
+          "col": 2,
+          "requires": [
+            {
+              "nodeId": "combat-05",
+              "points": 3
+            }
+          ],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "combat-12",
+          "name": {
+            "zh": "剑刃乱舞",
+            "en": "Blade Flurry"
+          },
+          "description": {
+            "zh": "使你的近战攻击速度提高20%，并使你的近战攻击命中附近的一个额外对手。持续15秒。",
+            "en": "Increases your melee attack speed by 20% and your melee attacks strike an additional nearby opponent. Lasts 15 sec."
+          },
+          "icon": "ability_warrior_punishingblow.jpg",
+          "maxPoints": 1,
+          "row": 4,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "combat-13",
+          "name": {
+            "zh": "劈斩",
+            "en": "Hack and Slash"
+          },
+          "description": {
+            "zh": "使你的近战武器攻击根据武器类型获得不同增益。\n\n斧/剑：你的成功近战攻击有5%的几率对目标触发一次额外攻击。\n\n匕首/拳套：使你的爆击几率提高5%。\n\n锤：你的攻击无视\n目标15%的护甲值。",
+            "en": "Gives your melee weapon attacks a benefit depending on the weapon.\n\nAxe/Sword: Your successful melee attacks have a 5% chance to trigger an extra attack on the target.\n\nDagger/Fist: Increases your critical strike chance by 5%.\n\nMace: Your attacks ignore 15% of your target's armor."
+          },
+          "icon": "inv_sword_27.jpg",
+          "maxPoints": 5,
+          "row": 4,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "combat-14",
+          "name": {
+            "zh": "武器专家",
+            "en": "Weapon Expertise"
+          },
+          "description": {
+            "zh": "使你的攻击被躲闪或招架的几率降低2%。",
+            "en": "Reduces the chance for your attacks to be Dodged or Parried by 2%."
+          },
+          "icon": "spell_holy_blessingofstrength.jpg",
+          "maxPoints": 2,
+          "row": 5,
+          "col": 1,
+          "requires": [
+            {
+              "nodeId": "combat-12",
+              "points": 1
+            }
+          ],
+          "requiresPointsInTree": 25,
+          "exclusiveWith": []
+        },
+        {
+          "id": "combat-15",
+          "name": {
+            "zh": "侵略",
+            "en": "Aggression"
+          },
+          "description": {
+            "zh": "使你的影袭、背刺和刺骨技能的伤害提高6%。",
+            "en": "Increases the damage of your Sinister Strike, Backstab, and Eviscerate abilities by 6%."
+          },
+          "icon": "ability_racial_avatar.jpg",
+          "maxPoints": 3,
+          "row": 5,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 25,
+          "exclusiveWith": []
+        },
+        {
+          "id": "combat-16",
+          "name": {
+            "zh": "冲动",
+            "en": "Adrenaline Rush"
+          },
+          "description": {
+            "zh": "使你的能量值回复速度提高100%，持续15秒。",
+            "en": "Increases your Energy regeneration rate by 100% for 15 sec."
+          },
+          "icon": "spell_shadow_shadowworddominate.jpg",
+          "maxPoints": 1,
+          "row": 6,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 30,
+          "exclusiveWith": []
+        }
+      ]
+    },
+    {
+      "id": "subtlety",
+      "name": {
+        "zh": "敏锐",
+        "en": "Subtlety"
+      },
+      "nodes": [
+        {
+          "id": "subtlety-00",
+          "name": {
+            "zh": "伪装",
+            "en": "Camouflage"
+          },
+          "description": {
+            "zh": "使你潜行时的移动速度惩罚降低15%，并使潜行的冷却时间缩短6秒。",
+            "en": "Reduces your speed penalty from your Stealth ability by 15% and reduces its cooldown by 6 sec."
+          },
+          "icon": "ability_stealth.jpg",
+          "maxPoints": 5,
+          "row": 0,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "subtlety-01",
+          "name": {
+            "zh": "欺诈高手",
+            "en": "Master of Deception"
+          },
+          "description": {
+            "zh": "当你在潜行状态下时，降低敌人侦测到你的几率，等同于你的等级提高了3级。",
+            "en": "Reduces the chance enemies have to detect you while in Stealth mode as if you were 3 levels higher."
+          },
+          "icon": "spell_shadow_charm.jpg",
+          "maxPoints": 3,
+          "row": 0,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "subtlety-02",
+          "name": {
+            "zh": "伺机而动",
+            "en": "Opportunity"
+          },
+          "description": {
+            "zh": "使你的背刺、绞喉、伏击和毁伤技能造成的伤害提高10%。",
+            "en": "Increases the damage dealt by your Backstab, Garrote, Ambush, and Mutilate abilities by 10%."
+          },
+          "icon": "ability_warrior_warcry.jpg",
+          "maxPoints": 2,
+          "row": 0,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "subtlety-03",
+          "name": {
+            "zh": "调整",
+            "en": "Setup"
+          },
+          "description": {
+            "zh": "使你在躲闪攻击或完全抵抗法术后有100%的几率为目标增加一个连击点数。",
+            "en": "Gives you a 100% chance to add a Combo Point to your target after Dodging one of their attacks or fully resisting one of their spells."
+          },
+          "icon": "spell_nature_mirrorimage.jpg",
+          "maxPoints": 3,
+          "row": 1,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "subtlety-04",
+          "name": {
+            "zh": "飘忽不定",
+            "en": "Elusiveness"
+          },
+          "description": {
+            "zh": "使你的消失和致盲技能的冷却时间缩短90秒。",
+            "en": "Reduces the cooldown of your Vanish and Blind abilities by 90 sec."
+          },
+          "icon": "spell_magic_lesserinvisibilty.jpg",
+          "maxPoints": 2,
+          "row": 1,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "subtlety-05",
+          "name": {
+            "zh": "邪恶计谋",
+            "en": "Dirty Tricks"
+          },
+          "description": {
+            "zh": "使你的闷棍和致盲技能消耗的能量值减少50%。",
+            "en": "Reduces the Energy cost of your Sap and Blind abilities by 50%."
+          },
+          "icon": "ability_sap.jpg",
+          "maxPoints": 2,
+          "row": 1,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "subtlety-06",
+          "name": {
+            "zh": "强化伏击",
+            "en": "Improved Ambush"
+          },
+          "description": {
+            "zh": "使你的伏击技能造成爆击的几率提高45%。",
+            "en": "Increases the critical strike chance of your Ambush ability by 45%."
+          },
+          "icon": "ability_rogue_ambush.jpg",
+          "maxPoints": 3,
+          "row": 1,
+          "col": 3,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "subtlety-07",
+          "name": {
+            "zh": "先发制人",
+            "en": "Initiative"
+          },
+          "description": {
+            "zh": "使你有100%的几率在使用伏击、绞喉或偷袭技能后获得1个额外的连击点数。",
+            "en": "Gives you a 100% chance to add an additional combo point to your target when using your Ambush, Garrote, or Cheap Shot ability."
+          },
+          "icon": "spell_shadow_fumble.jpg",
+          "maxPoints": 3,
+          "row": 2,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "subtlety-08",
+          "name": {
+            "zh": "鬼魅攻击",
+            "en": "Ghostly Strike"
+          },
+          "description": {
+            "zh": "打击敌人，造成125%（主手装备匕首时为180%）武器伤害，并使你的躲闪几率提高15%，持续7秒。奖励1个连击点。",
+            "en": "A strike that deals 125% (180% if a Dagger is equipped in your Main Hand) weapon damage and increases your chance to dodge by 15% for 7 sec. Awards 1 combo point."
+          },
+          "icon": "spell_shadow_curse.jpg",
+          "maxPoints": 1,
+          "row": 2,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "subtlety-09",
+          "name": {
+            "zh": "强化扰乱",
+            "en": "Improved Distract"
+          },
+          "description": {
+            "zh": "使你的扰乱技能的作用范围增加5码，并进一步降低被扰乱敌人的潜行侦测能力，使其相当于降低了2个等级。",
+            "en": "Increases the radius of your Distract ability by 5 yds, and further reduces the Stealth detection of distracted enemies as though they were an additional 2 levels lower."
+          },
+          "icon": "ability_rogue_distract.jpg",
+          "maxPoints": 2,
+          "row": 2,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "subtlety-10",
+          "name": {
+            "zh": "察觉",
+            "en": "Heightened Senses"
+          },
+          "description": {
+            "zh": "使你的潜行侦测相当于提高3级，并使你被法术和远程攻击命中的几率降低4%。",
+            "en": "Increases your Stealth detection as if you were 3 levels higher and reduces your chance to be hit by spells and ranged attacks by 4%."
+          },
+          "icon": "ability_ambush.jpg",
+          "maxPoints": 2,
+          "row": 3,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "subtlety-11",
+          "name": {
+            "zh": "预谋",
+            "en": "Premeditation"
+          },
+          "description": {
+            "zh": "为目标增加2个连击点数。你必须在20秒内使用或叠加这些连击点数，否则它们将会消失。",
+            "en": "Adds 2 Combo Points to your target. You must add to or use those combo points within 20 sec or the combo points are lost."
+          },
+          "icon": "spell_shadow_possession.jpg",
+          "maxPoints": 1,
+          "row": 3,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "subtlety-12",
+          "name": {
+            "zh": "锯齿利刃",
+            "en": "Serrated Blades"
+          },
+          "description": {
+            "zh": "使你的攻击忽略目标9%的护甲，并使你的割裂技能造成的伤害提高30%。",
+            "en": "Causes your attacks to ignore 9% of your target's Armor and increases the damage dealt by your Rupture ability by 30%."
+          },
+          "icon": "inv_sword_17.jpg",
+          "maxPoints": 3,
+          "row": 3,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "subtlety-13",
+          "name": {
+            "zh": "卑鄙",
+            "en": "Dirty Deeds"
+          },
+          "description": {
+            "zh": "使你的偷袭和绞喉消耗的能量值降低20点，且绞喉不再要求你位于目标身后。",
+            "en": "Reduces the Energy cost of your Cheap Shot and Garrote abilities by 20, and your Garrote ability no longer requires you to be behind your target."
+          },
+          "icon": "spell_shadow_summonsuccubus.jpg",
+          "maxPoints": 2,
+          "row": 4,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "subtlety-14",
+          "name": {
+            "zh": "伺机待发",
+            "en": "Preparation"
+          },
+          "description": {
+            "zh": "激活之后，这项技能立刻令你的其它潜行者技能的冷却时间结束。",
+            "en": "When activated, this ability immediately finishes the cooldown on your other Rogue abilities."
+          },
+          "icon": "spell_shadow_antishadow.jpg",
+          "maxPoints": 1,
+          "row": 4,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "subtlety-15",
+          "name": {
+            "zh": "出血",
+            "en": "Hemorrhage"
+          },
+          "description": {
+            "zh": "发动瞬发打击，造成100%武器伤害（装备匕首时为145%），并使目标受到来自游荡者的割裂伤害提高15%，持续15秒。奖励1个X连击点数。",
+            "en": "An instant strike that deals 100% weapon damage (145% if a Dagger is equipped) and causes the target to take 15% increased Rupture damage from the Rogue. Lasts 15 sec. Awards 1 Combo Point."
+          },
+          "icon": "spell_shadow_lifedrain.jpg",
+          "maxPoints": 1,
+          "row": 4,
+          "col": 2,
+          "requires": [
+            {
+              "nodeId": "subtlety-12",
+              "points": 3
+            }
+          ],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "subtlety-16",
+          "name": {
+            "zh": "寂灭",
+            "en": "Quietus"
+          },
+          "description": {
+            "zh": "你的邪恶攻击、鬼魅攻击和出血对生命值低于35%的目标造成的伤害提高10%。",
+            "en": "Your Sinister Strike, Ghostly Strike, and Hemorrhage abilities cause 10% more damage against targets below 35% health."
+          },
+          "icon": "ability_rogue_garrote.jpg",
+          "maxPoints": 5,
+          "row": 5,
+          "col": 0,
+          "requires": [
+            {
+              "nodeId": "subtlety-13",
+              "points": 2
+            }
+          ],
+          "requiresPointsInTree": 25,
+          "exclusiveWith": []
+        },
+        {
+          "id": "subtlety-17",
+          "name": {
+            "zh": "割喉",
+            "en": "Cutthroat"
+          },
+          "description": {
+            "zh": "你的背刺有15%的几率使你在10秒内的下一个伏击不需要潜行。",
+            "en": "Your Backstab has a 15% chance to cause your next Ambush within 10 sec to not require Stealth."
+          },
+          "icon": "classicon_rogue.jpg",
+          "maxPoints": 5,
+          "row": 5,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 25,
+          "exclusiveWith": []
+        },
+        {
+          "id": "subtlety-18",
+          "name": {
+            "zh": "千刀万剐",
+            "en": "Thousand Cuts"
+          },
+          "description": {
+            "zh": "你的割裂造成周期性伤害时，使你在10秒内的下一个出血或背刺的能量消耗降低3点，最多叠加5次。",
+            "en": "When your Rupture ability deals periodic damage, the Energy cost of your next Hemorrhage or Backstab ability within 10 sec is reduced by 3, stacking up to 5 times."
+          },
+          "icon": "ability_rogue_rupture.jpg",
+          "maxPoints": 1,
+          "row": 6,
+          "col": 1,
+          "requires": [
+            {
+              "nodeId": "subtlety-14",
+              "points": 1
+            }
+          ],
+          "requiresPointsInTree": 30,
+          "exclusiveWith": []
+        }
+      ]
+    }
+  ]
+}

@@ -9,6 +9,7 @@ import {
   buildSchema,
   classSchema,
   classTalentsSchema,
+  changelogSchema,
   communityLinkSchema,
   communityVideoSchema,
   gameVersionSchema,
@@ -225,6 +226,11 @@ function main() {
     checkDuplicates(slugs, rel);
     if (f === "videos.json") items.forEach((v, i) => parseItem(communityVideoSchema, v, `${rel}[${i}]`));
     if (f === "links.json") items.forEach((v, i) => parseItem(communityLinkSchema, v, `${rel}[${i}]`));
+  }
+
+  for (const f of dirFiles("changelog")) {
+    const raw = readJson(`changelog/${f}`);
+    parseItem(changelogSchema, raw, `changelog/${f}`);
   }
 
   const selector = parse(selectorConfigSchema, "selector/questions.json");

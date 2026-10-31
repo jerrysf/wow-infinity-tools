@@ -16,6 +16,7 @@ const zh = {
       disclaimer: "免责声明",
       disclosure: "商业披露",
       faq: "常见问题",
+      changelog: "更新日志",
       independent:
         "本站为独立玩家工具与攻略项目，与暴雪娱乐（Blizzard Entertainment）无任何隶属、认可或赞助关系。",
     },
@@ -178,6 +179,28 @@ const zh = {
     empty: "暂无攻略。",
     relatedBuilds: "相关方案",
     toc: "本页目录",
+  },
+  changelog: {
+    title: "更新日志",
+    description:
+      "《魔兽世界：无限》天赋数据的版本变更记录：新增、移除与调整的天赋明细，按职业与系别整理。",
+    empty:
+      "当前为首个数据版本。新版本数据导入后，这里会展示天赋变更明细。",
+    versionsTitle: "数据版本",
+    added: "新增天赋",
+    removed: "移除天赋",
+    changed: "调整天赋",
+    fields: {
+      maxPoints: "点数上限",
+      row: "位置",
+      col: "列",
+      requiresPointsInTree: "树内点数要求",
+      minLevel: "等级要求",
+      requires: "前置条件",
+      exclusiveWith: "互斥",
+      name: "名称",
+      description: "描述",
+    },
     levelSteps: "分等级加点",
   },
   faq: {

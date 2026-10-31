@@ -11,6 +11,8 @@ data/                    # 结构化游戏数据（JSON，Git 可 diff 审查）
   game/versions.json     #   游戏版本清单（isCurrent 标记当前版本）
   classes/<class>.json   #   职业定义（名称/职责/偏好标签/provenance）
   talents/<class>.json   #   每职业的天赋树、节点与规则
+  talents/snapshots/     #   历史版本天赋快照（供 diff 对比）
+  changelog/*.json       #   版本间天赋变更（diff:talents 生成）
   builds/<slug>.json     #   推荐方案（含分等级加点顺序）
   guides/<slug>.json     #   攻略文章（分节正文，双语字段）
   selector/questions.json#   职业选择器题库与权重
@@ -50,6 +52,7 @@ pnpm typecheck       # tsc --noEmit
 pnpm lint            # eslint
 pnpm test            # vitest 单元测试（引擎/序列化/推荐/i18n）
 pnpm validate:data   # 校验 data/ 全部数据
+pnpm diff:talents    # 对比快照与当前天赋，生成 changelog（见 runbook）
 pnpm test:e2e        # Playwright（默认对生产构建运行；E2E_DEV=1 改用 dev server）
 pnpm verify          # validate:data + typecheck + lint + test + build
 ```
@@ -113,12 +116,16 @@ pnpm validate:data
 - 方案：`data/builds/<slug>.json` 按 `buildSchema` 填写。`allocation` 会由校验脚本用引擎逐点回放验证；`levelingSteps` 驱动攻略页的分等级展示。详情页自动生成“在模拟器中载入”链接。
 - 攻略：`data/guides/<slug>.json` 按 `guideSchema` 填写，`relatedBuilds` 关联方案 slug，`classId` 可选。
 
-### 更新游戏版本
+### 更新游戏版本（开服 / 补丁日 runbook）
 
-1. 在 `data/game/versions.json` 添加新版本并把 `isCurrent` 移过去。
-2. 不要静默覆盖旧方案：把受影响数据的 `provenance.status` 改为 `"outdated"` 或置 `"needsRevalidation": true`，页面会显示“需要重新验证”。
-3. 验证完成后更新 `lastVerifiedAt` 与 `status`。
-4. 分享链接带 `gv`（游戏版本）字段：版本不一致时模拟器会提示“版本不匹配”而不是静默加载错误方案。
+1. **先快照基线**：`cp data/talents/*.json data/talents/snapshots/<旧版本号>/`（已提交的快照不要改）。
+2. 抓取并导入新数据（见上节），覆盖 `data/talents/*.json`，更新脚本中的 `GAME_VERSION`/`importedAt`/`source`。
+3. 在 `data/game/versions.json` 添加新版本并把 `isCurrent` 移过去。
+4. **生成变更日志**：`pnpm diff:talents <旧版本号> <新版本号>` —— 对比快照与当前数据，有变更时写入 `data/changelog/<旧>-to-<新>.json`，`/changelog` 页面自动展示；无变更时不会生成文件。
+5. 不要静默覆盖旧方案：把受影响数据的 `provenance.status` 改为 `"outdated"` 或置 `"needsRevalidation": true`，页面会显示“需要重新验证”。方案 allocation 若因天赋变更失效，`pnpm validate:data` 会用引擎回放报错。
+6. `pnpm verify` 全绿后部署；数据变化后重跑 `pnpm gen:og` 重新生成 OG 图。
+7. 验证完成后更新 `lastVerifiedAt` 与 `status`。
+8. 分享链接带 `gv`（游戏版本）字段：版本不一致时模拟器会提示“版本不匹配”而不是静默加载错误方案。
 
 ## 国际化
 
@@ -152,7 +159,7 @@ pnpm validate:data
 ## 已知限制
 
 - 当前天赋与方案数据整理自 wowhandbook.com 发布的 Beta 客户端 1.60.1.70425 数据（status: `reviewed`，`needsRevalidation: true`）；正式版本上线后必须重新验证，不得标为 `tested` 直到在游戏内实测。
-- 模拟器暂不支持逐步撤销（有重置与单点返还）；天赋布局为固定列网格（数据内 `row/col` 控制），连线箭头未实现。
+- 模拟器暂不支持逐步撤销（有重置与单点返还）；天赋布局为固定列网格（数据内 `row/col` 控制）。
 - 攻略为结构化 JSON（无 MDX）；联系页邮箱尚未公布。
 - 无数据库：分享完全依赖 URL 编码（上限 2000 字符，结构经 Zod 校验）。
 - 移动 e2e 使用 Pixel 7（Chromium）；如需 Safari/WebKit 覆盖需额外安装 `playwright install webkit`。

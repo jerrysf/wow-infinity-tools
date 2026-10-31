@@ -1,0 +1,1035 @@
+{
+  "classId": "druid",
+  "gameVersion": "1.60.1.70425",
+  "rules": {
+    "firstTalentLevel": 10,
+    "maxLevel": 60,
+    "pointsPerLevel": 1,
+    "maxPoints": 51
+  },
+  "demo": false,
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com talent data extracted from WoW: Forever beta client",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425; talent data may still change before the Nov 5 launch. Cross-checked against Blizzard class deep-dive posts."
+  },
+  "trees": [
+    {
+      "id": "balance",
+      "name": {
+        "zh": "平衡",
+        "en": "Balance"
+      },
+      "nodes": [
+        {
+          "id": "balance-00",
+          "name": {
+            "zh": "强化愤怒",
+            "en": "Improved Wrath"
+          },
+          "description": {
+            "zh": "使你的愤怒法术的施法时间缩短0.5秒，法力值消耗降低50%。",
+            "en": "Reduces the cast time of your Wrath spell by 0.5 sec and its Mana cost by 50%."
+          },
+          "icon": "spell_nature_abolishmagic.jpg",
+          "maxPoints": 5,
+          "row": 0,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "balance-01",
+          "name": {
+            "zh": "起源",
+            "en": "Genesis"
+          },
+          "description": {
+            "zh": "使你的法术和技能造成的周期性伤害和治疗量提高5%。",
+            "en": "Increases the periodic damage and healing done by your spells and abilities by 5%."
+          },
+          "icon": "spell_arcane_arcane03.jpg",
+          "maxPoints": 5,
+          "row": 0,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "balance-02",
+          "name": {
+            "zh": "月光",
+            "en": "Moonglow"
+          },
+          "description": {
+            "zh": "使你的伤害法术的法力值消耗降低25%。",
+            "en": "Reduces the Mana cost of your damaging spells by 25%."
+          },
+          "icon": "spell_nature_sentinal.jpg",
+          "maxPoints": 3,
+          "row": 1,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "balance-03",
+          "name": {
+            "zh": "强化月火术",
+            "en": "Improved Moonfire"
+          },
+          "description": {
+            "zh": "使你的月火术的伤害和爆击几率提高10%。",
+            "en": "Increases the damage and critical strike chance of your Moonfire spell by 10%."
+          },
+          "icon": "spell_nature_starfall.jpg",
+          "maxPoints": 2,
+          "row": 1,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "balance-04",
+          "name": {
+            "zh": "自然的威严",
+            "en": "Nature's Majesty"
+          },
+          "description": {
+            "zh": "使你的法术和近战攻击的爆击几率提高4%。",
+            "en": "Increases your critical strike chance with spells and melee attacks by 4%."
+          },
+          "icon": "inv_staff_01.jpg",
+          "maxPoints": 2,
+          "row": 1,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "balance-05",
+          "name": {
+            "zh": "自然延伸",
+            "en": "Nature's Reach"
+          },
+          "description": {
+            "zh": "使你的进攻性平衡法术射程提高20%，命中几率提高4%。",
+            "en": "Increases the range of your offensive Balance spells by 20% and improves your chance to hit by 4%."
+          },
+          "icon": "spell_nature_naturetouchgrow.jpg",
+          "maxPoints": 2,
+          "row": 1,
+          "col": 3,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "balance-06",
+          "name": {
+            "zh": "强化纠缠根须",
+            "en": "Improved Entangling Roots"
+          },
+          "description": {
+            "zh": "使你的纠缠根须造成的伤害提高75%，且受其影响的目标可额外承受最多75%的伤害而不会打断该效果。",
+            "en": "Increases the damage done by your Entangling Roots spell by 75%, and its victims can take up to 75% more damage without interrupting the effect."
+          },
+          "icon": "spell_nature_stranglevines.jpg",
+          "maxPoints": 3,
+          "row": 2,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "balance-07",
+          "name": {
+            "zh": "自然的壮美",
+            "en": "Nature's Splendor"
+          },
+          "description": {
+            "zh": "使你的月火术和回春术的持续时间延长3秒，愈合的持续时间延长6秒，虫群的持续时间延长2秒。",
+            "en": "Increases the duration of your Moonfire and Rejuvenation spells by 3 sec, your Regrowth spell by 6 sec, and your Insect Swarm spell by 2 sec."
+          },
+          "icon": "spell_nature_natureresistancetotem.jpg",
+          "maxPoints": 1,
+          "row": 2,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "balance-08",
+          "name": {
+            "zh": "虫群",
+            "en": "Insect Swarm"
+          },
+          "description": {
+            "zh": "虫群围攻敌方目标，使其攻击命中几率降低2%，并在12秒内造成48点自然伤害。",
+            "en": "The enemy target is swarmed by insects, decreasing their chance to hit with attacks by 2% and causing 48 Nature damage over 12 sec."
+          },
+          "icon": "spell_nature_insectswarm.jpg",
+          "maxPoints": 1,
+          "row": 3,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "balance-09",
+          "name": {
+            "zh": "复仇",
+            "en": "Vengeance"
+          },
+          "description": {
+            "zh": "使你的奥术和自然法术的爆击伤害加成提高100%。",
+            "en": "Increases the critical strike damage bonus of your Arcane and Nature spells by 100%."
+          },
+          "icon": "spell_nature_purge.jpg",
+          "maxPoints": 5,
+          "row": 3,
+          "col": 1,
+          "requires": [
+            {
+              "nodeId": "balance-03",
+              "points": 2
+            }
+          ],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "balance-10",
+          "name": {
+            "zh": "强化星火术",
+            "en": "Improved Starfire"
+          },
+          "description": {
+            "zh": "使你的星火术的施法时间缩短0.5秒，并有15%的几率使目标昏迷3秒。",
+            "en": "Reduces the cast time of Starfire by 0.5 sec and Starfire has a 15% chance to stun its target for 3 sec."
+          },
+          "icon": "spell_arcane_starfire.jpg",
+          "maxPoints": 5,
+          "row": 3,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "balance-11",
+          "name": {
+            "zh": "繁茂",
+            "en": "Overgrowth"
+          },
+          "description": {
+            "zh": "使你同时可被纠缠根须影响的目标数量上限提高2个。",
+            "en": "Increases the maximum number of targets you may have affected by Entangling Roots by 2."
+          },
+          "icon": "inv_misc_herb_15.jpg",
+          "maxPoints": 2,
+          "row": 4,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "balance-12",
+          "name": {
+            "zh": "自然之赐",
+            "en": "Nature's Grace"
+          },
+          "description": {
+            "zh": "你的所有非周期性法术爆击都会使你获得自然的赐福，使施法速度提高并公共冷却时间缩短10%，持续3秒。",
+            "en": "All non-periodic spell criticals grace you with a blessing of nature, increasing your spellcasting speed and reducing your global cooldown by 10% for 3 sec."
+          },
+          "icon": "spell_nature_naturesblessing.jpg",
+          "maxPoints": 1,
+          "row": 4,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "balance-13",
+          "name": {
+            "zh": "日月之蚀",
+            "en": "Eclipse"
+          },
+          "description": {
+            "zh": "你的愤怒使接下来2次星火术的施法时间缩短0.50秒。最多储存4层。持续15秒。",
+            "en": "Your Wrath spell reduces the cast time of your next 2 Starfire spells by 0.50 sec. Stores up to 4 charges. Lasts 15 sec."
+          },
+          "icon": "ability_druid_eclipse.jpg",
+          "maxPoints": 3,
+          "row": 4,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "balance-14",
+          "name": {
+            "zh": "月怒",
+            "en": "Moonfury"
+          },
+          "description": {
+            "zh": "使你的奥术和自然法术造成的伤害提高10%。",
+            "en": "Increases the damage done by your Arcane and Nature spells by 10%."
+          },
+          "icon": "spell_nature_moonglow.jpg",
+          "maxPoints": 5,
+          "row": 5,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 25,
+          "exclusiveWith": []
+        },
+        {
+          "id": "balance-15",
+          "name": {
+            "zh": "枭兽形态",
+            "en": "Moonkin Form"
+          },
+          "description": {
+            "zh": "使德鲁伊变为枭兽形态。在此形态下，物品提供的护甲值提高360%，清晰预兆的触发几率提高100%，45码范围内所有小队成员的致命一击几率提高3%，与兽群领袖效果不叠加。枭兽形态下无法施放治疗法术。变形可以解除施法者身上的变形术和移动限制效果。",
+            "en": "Shapeshift into Moonkin Form, increasing Omen of Clarity's chance to trigger by 100%, Armor contribution from items by 360%, and all party or raid members within 45 yards have their spell Critical Strike chance increased by 3%. Also protects the caster from Polymorph effects and prevents the use of healing spells.\n\nThe act of shapeshifting frees the caster of Polymorph and Movement Impairing effects."
+          },
+          "icon": "spell_nature_forceofnature.jpg",
+          "maxPoints": 1,
+          "row": 6,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 30,
+          "exclusiveWith": []
+        }
+      ]
+    },
+    {
+      "id": "feral-combat",
+      "name": {
+        "zh": "野性战斗",
+        "en": "Feral Combat"
+      },
+      "nodes": [
+        {
+          "id": "feral-combat-00",
+          "name": {
+            "zh": "凶暴",
+            "en": "Ferocity"
+          },
+          "description": {
+            "zh": "使你的槌击、原始撕咬、挥击、爪击和扫击的怒气或能量消耗降低5点。",
+            "en": "Reduces the cost of your Maul, Primal Bite, Swipe, Claw, and Rake abilities by 5 Rage or Energy."
+          },
+          "icon": "ability_hunter_pet_hyena.jpg",
+          "maxPoints": 5,
+          "row": 0,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "feral-combat-01",
+          "name": {
+            "zh": "野性之心",
+            "en": "Heart of the Wild"
+          },
+          "description": {
+            "zh": "使你的智力提高10%。此外，在熊形态或巨熊形态下，耐力提高20%；在猎豹形态下，力量提高10%。",
+            "en": "Increases your Intellect by 10%. In addition, while in Bear Form or Dire Bear Form your Stamina is increased by 20% and while in Cat Form your Strength is increased by 10%."
+          },
+          "icon": "spell_holy_blessingofagility.jpg",
+          "maxPoints": 5,
+          "row": 0,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "feral-combat-02",
+          "name": {
+            "zh": "豹之迅捷",
+            "en": "Feral Swiftness"
+          },
+          "description": {
+            "zh": "使你在猎豹形态下的移动速度提高30%，躲闪几率提高4%。",
+            "en": "Increases your movement speed while in Cat Form by 30%, and increases your chance to Dodge by 4%."
+          },
+          "icon": "spell_nature_spiritwolf.jpg",
+          "maxPoints": 2,
+          "row": 1,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "feral-combat-03",
+          "name": {
+            "zh": "野性本能",
+            "en": "Feral Instinct"
+          },
+          "description": {
+            "zh": "使你的挥击造成的伤害提高30%，并在潜行时使敌人侦测到你的几率降低，效果相当于你高出3级。",
+            "en": "Increases damage done by your Swipe ability by 30% and reduces the chance enemies have to detect you while Prowling as if you were 3 levels higher."
+          },
+          "icon": "ability_ambush.jpg",
+          "maxPoints": 3,
+          "row": 1,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "feral-combat-04",
+          "name": {
+            "zh": "野蛮冲撞",
+            "en": "Brutal Impact"
+          },
+          "description": {
+            "zh": "使你的重击和突袭的昏迷持续时间延长1秒，并使重击的冷却时间缩短30秒。",
+            "en": "Increases the stun duration of your Bash and Pounce abilities by 1 sec and reduces the cooldown of Bash by 30 sec."
+          },
+          "icon": "ability_druid_bash.jpg",
+          "maxPoints": 2,
+          "row": 1,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "feral-combat-05",
+          "name": {
+            "zh": "厚皮",
+            "en": "Thick Hide"
+          },
+          "description": {
+            "zh": "处于熊形态、猎豹形态、巨熊形态或枭兽形态时，你每级获得3点额外基础护甲；防御技能超过你等级五倍后，每一点还会提供2.00点基础护甲。该数值可进一步受到这些形态的倍率加成。",
+            "en": "While in Bear Form, Cat Form, Dire Bear Form, or Moonkin Form, you gain 3 additional base Armor per level and another 2.00 base Armor for each point of defense skill beyond five times your level. This amount can be further increased by multipliers from those forms."
+          },
+          "icon": "inv_misc_pelt_bear_03.jpg",
+          "maxPoints": 3,
+          "row": 1,
+          "col": 3,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "feral-combat-06",
+          "name": {
+            "zh": "撕碎攻击",
+            "en": "Shredding Attacks"
+          },
+          "description": {
+            "zh": "使你的撕碎消耗的能量值降低18点，割伤消耗的怒气降低3点。",
+            "en": "Reduces the Energy cost of your Shred ability by 18 and reduces the Rage cost of your Lacerate ability by 3."
+          },
+          "icon": "spell_shadow_vampiricaura.jpg",
+          "maxPoints": 3,
+          "row": 2,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "feral-combat-07",
+          "name": {
+            "zh": "野蛮暴怒",
+            "en": "Savage Fury"
+          },
+          "description": {
+            "zh": "使你的爪击、扫击、撕碎、槌击和横扫技能造成的伤害提高10%。",
+            "en": "Increases the damage caused by your Claw, Rake, Shred, Maul, and Swipe abilities by 10%."
+          },
+          "icon": "ability_druid_ravage.jpg",
+          "maxPoints": 2,
+          "row": 2,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "feral-combat-08",
+          "name": {
+            "zh": "野性冲锋",
+            "en": "Feral Charge"
+          },
+          "description": {
+            "zh": "需要熊形态或巨熊形态\n向敌人冲锋，使其无法移动，并打断其正在施放的任何法术，持续4秒。\n\n跃至敌人身后。",
+            "en": "Requires Bear Form, Dire Bear Form\nCharge an enemy, immobilizing them and interrupting any spell they are casting for 4 sec.\n\nLeap behind an enemy."
+          },
+          "icon": "ability_hunter_pet_bear.jpg",
+          "maxPoints": 1,
+          "row": 2,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "feral-combat-09",
+          "name": {
+            "zh": "锋利兽爪",
+            "en": "Sharpened Claws"
+          },
+          "description": {
+            "zh": "使你在熊形态、巨熊形态或猎豹形态下的爆击几率提高6%。",
+            "en": "Increases your critical strike chance while in Bear Form, Dire Bear Form, or Cat Form by 6%."
+          },
+          "icon": "inv_misc_monsterclaw_04.jpg",
+          "maxPoints": 2,
+          "row": 2,
+          "col": 3,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "feral-combat-10",
+          "name": {
+            "zh": "变换之力",
+            "en": "Shifting Power"
+          },
+          "description": {
+            "zh": "立即将基础法力值转化为40点能量的55%。变换之力的消耗会被降低变形消耗的效果所降低。",
+            "en": "Instantly convert 55% of your base Mana into 40 Energy. Shifting Power's cost is reduced by effects that reduce the cost of Shapeshifting."
+          },
+          "icon": "spell_druid_displacement.jpg",
+          "maxPoints": 1,
+          "row": 3,
+          "col": 0,
+          "requires": [
+            {
+              "nodeId": "feral-combat-06",
+              "points": 3
+            }
+          ],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "feral-combat-11",
+          "name": {
+            "zh": "原始撕咬",
+            "en": "Primal Bite"
+          },
+          "description": {
+            "zh": "撕咬目标，造成100%的普通伤害并额外造成26点伤害，同时产生大量威胁值。",
+            "en": "Bite the target, dealing 100% normal damage plus 26 and generating a high amount of threat."
+          },
+          "icon": "ability_racial_cannibalize.jpg",
+          "maxPoints": 1,
+          "row": 3,
+          "col": 1,
+          "requires": [
+            {
+              "nodeId": "feral-combat-07",
+              "points": 2
+            }
+          ],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "feral-combat-12",
+          "name": {
+            "zh": "猛兽攻击",
+            "en": "Predatory Strikes"
+          },
+          "description": {
+            "zh": "使你在猎豹形态、熊形态和巨熊形态下的近战攻击强度提高，数值相当于你等级的150%。",
+            "en": "Increases your melee Attack Power in Cat Form, Bear Form, and Dire Bear Form by 150% of your level."
+          },
+          "icon": "ability_hunter_pet_cat.jpg",
+          "maxPoints": 3,
+          "row": 3,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "feral-combat-13",
+          "name": {
+            "zh": "血之狂暴",
+            "en": "Blood Frenzy"
+          },
+          "description": {
+            "zh": "使你在熊形态或巨熊形态下造成爆击时，有100%的几率额外获得5点怒气。此外，你的猎豹形态下可产生连击点数的技能的非周期性爆击有100%的几率额外增加一个连击点数。",
+            "en": "Gives you a 100% chance to gain an additional 5 Rage any time you get a critical strike while in Bear Form or Dire Bear Form. In addition, your non-periodic critical strikes from Cat Form abilities that generate Combo Points have a 100% chance to add an additional Combo Point."
+          },
+          "icon": "ability_ghoulfrenzy.jpg",
+          "maxPoints": 2,
+          "row": 3,
+          "col": 3,
+          "requires": [
+            {
+              "nodeId": "feral-combat-09",
+              "points": 2
+            }
+          ],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "feral-combat-14",
+          "name": {
+            "zh": "强化变换之力",
+            "en": "Improved Shifting Power"
+          },
+          "description": {
+            "zh": "使你的变换之力的冷却时间缩短8秒。",
+            "en": "Reduces the cooldown of your Shifting Power spell by 8 sec."
+          },
+          "icon": "ability_hunter_aspectmastery.jpg",
+          "maxPoints": 2,
+          "row": 4,
+          "col": 0,
+          "requires": [
+            {
+              "nodeId": "feral-combat-10",
+              "points": 1
+            }
+          ],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "feral-combat-15",
+          "name": {
+            "zh": "兽群领袖",
+            "en": "Leader of the Pack"
+          },
+          "description": {
+            "zh": "处于猎豹、熊或巨熊形态时，兽群领袖使45码内所有小队成员的爆击几率提高3%。不可与枭兽光环共存。",
+            "en": "While in Cat Form, Bear Form, or Dire Bear Form, the Leader of the Pack increases the melee and ranged Critical Strike chance of all party or raid members within 45 yards by 3%."
+          },
+          "icon": "spell_nature_unyeildingstamina.jpg",
+          "maxPoints": 1,
+          "row": 4,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "feral-combat-16",
+          "name": {
+            "zh": "自然本能",
+            "en": "Natural Instinct"
+          },
+          "description": {
+            "zh": "使你的近战技能的爆击伤害加成提高20%，并使你的法术治疗效果提高，数值相当于你智力的25%。",
+            "en": "Increases the critical strike damage bonus of your melee abilities by 20% and increases your spell healing by 25% of your Intellect."
+          },
+          "icon": "ability_druid_predatoryinstincts.jpg",
+          "maxPoints": 2,
+          "row": 4,
+          "col": 3,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "feral-combat-17",
+          "name": {
+            "zh": "自然反射",
+            "en": "Natural Reaction"
+          },
+          "description": {
+            "zh": "使你的躲闪几率提高5%，并且每次躲闪有100%的几率获得5点怒气。",
+            "en": "Increases your dodge chance by 5%, and gives you a 100% chance to gain 5 Rage each time you dodge."
+          },
+          "icon": "ability_bullrush.jpg",
+          "maxPoints": 5,
+          "row": 5,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 25,
+          "exclusiveWith": []
+        },
+        {
+          "id": "feral-combat-18",
+          "name": {
+            "zh": "狂乱撕扯",
+            "en": "Rend and Tear"
+          },
+          "description": {
+            "zh": "使你的近战技能对流血目标造成的伤害提高10%。",
+            "en": "Increases damage done by your melee abilities on Bleeding targets by 10%."
+          },
+          "icon": "ability_druid_primalagression.jpg",
+          "maxPoints": 5,
+          "row": 5,
+          "col": 2,
+          "requires": [
+            {
+              "nodeId": "feral-combat-12",
+              "points": 3
+            }
+          ],
+          "requiresPointsInTree": 25,
+          "exclusiveWith": []
+        },
+        {
+          "id": "feral-combat-19",
+          "name": {
+            "zh": "狂暴",
+            "en": "Berserk"
+          },
+          "description": {
+            "zh": "需要猎豹形态、熊形态或巨熊形态\n使你的原始撕咬最多打击3个目标，取消其冷却时间，并使你的连击点生成技能的爆击几率提高100%。持续期间解除并免疫恐惧效果。持续15秒。",
+            "en": "Requires Cat Form, Bear Form, Dire Bear Form\nCauses your Primal Bite ability to strike up to 3 targets, removes its cooldown, and increases the critical strike chance of your Combo Point-generating abilities by 100%. Clears and grants immunity to Fear effects for the duration. Lasts 15 sec."
+          },
+          "icon": "ability_druid_berserk.jpg",
+          "maxPoints": 1,
+          "row": 6,
+          "col": 1,
+          "requires": [
+            {
+              "nodeId": "feral-combat-15",
+              "points": 1
+            }
+          ],
+          "requiresPointsInTree": 30,
+          "exclusiveWith": []
+        }
+      ]
+    },
+    {
+      "id": "restoration",
+      "name": {
+        "zh": "恢复",
+        "en": "Restoration"
+      },
+      "nodes": [
+        {
+          "id": "restoration-00",
+          "name": {
+            "zh": "自然集中",
+            "en": "Nature's Focus"
+          },
+          "description": {
+            "zh": "使你在施放奥术和自然法术时有70%的几率不会因受到伤害而被打断。",
+            "en": "Gives you a 70% chance to avoid interruption caused by damage while casting Arcane and Nature spells."
+          },
+          "icon": "spell_nature_healingwavegreater.jpg",
+          "maxPoints": 5,
+          "row": 0,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "restoration-01",
+          "name": {
+            "zh": "激怒",
+            "en": "Furor"
+          },
+          "description": {
+            "zh": "变身为熊形态或巨熊形态时，你有100%的几率获得10点怒气。变身为猎豹形态时，恢复你上次处于猎豹形态时所拥有能量的100%，外加你在猎豹形态之外每秒10点能量，最多100点能量。\n\n处于熊形态和巨熊形态时会失去这部分能量，并暂停其恢复。",
+            "en": "Gives you a 100% chance to gain 10 Rage when shapeshifting into Bear Form or Dire Bear Form. Shapeshifting into Cat Form restores 100% of the Energy you had when last in Cat Form, plus 10 Energy per second spent outside Bear Form or Dire Bear Form, up to 100 Energy."
+          },
+          "icon": "spell_holy_blessingofstamina.jpg",
+          "maxPoints": 5,
+          "row": 0,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "restoration-02",
+          "name": {
+            "zh": "自然主义",
+            "en": "Naturalist"
+          },
+          "description": {
+            "zh": "使你的治疗之触的施法时间缩短0.5秒，并使你造成的所有伤害提高5%。",
+            "en": "Reduces the cast time of your Healing Touch spell by 0.5 sec and increases all damage you deal by 5%."
+          },
+          "icon": "spell_nature_healingtouch.jpg",
+          "maxPoints": 5,
+          "row": 1,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "restoration-03",
+          "name": {
+            "zh": "微妙",
+            "en": "Subtlety"
+          },
+          "description": {
+            "zh": "使你的自然和奥术法术产生的威胁降低30%。",
+            "en": "Reduces the threat generated by your Nature and Arcane spells by 30%."
+          },
+          "icon": "ability_eyeoftheowl.jpg",
+          "maxPoints": 3,
+          "row": 1,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "restoration-04",
+          "name": {
+            "zh": "自然变形",
+            "en": "Natural Shapeshifter"
+          },
+          "description": {
+            "zh": "使你的所有变形法术所消耗的法力值降低30%。",
+            "en": "Reduces the mana cost of all shapeshifting by 30%."
+          },
+          "icon": "spell_nature_wispsplode.jpg",
+          "maxPoints": 3,
+          "row": 1,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "restoration-05",
+          "name": {
+            "zh": "反射",
+            "en": "Reflection"
+          },
+          "description": {
+            "zh": "使你在施法时仍保持50%的法力回复速度。",
+            "en": "Allows 50% of your Mana regeneration to continue while casting."
+          },
+          "icon": "spell_frost_windwalkon.jpg",
+          "maxPoints": 3,
+          "row": 2,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "restoration-06",
+          "name": {
+            "zh": "自然赐福",
+            "en": "Gift of Nature"
+          },
+          "description": {
+            "zh": "使你的所有治疗法术效果提高10%。",
+            "en": "Increases the effect of all your healing spells by 10%."
+          },
+          "icon": "spell_nature_protectionformnature.jpg",
+          "maxPoints": 5,
+          "row": 2,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "restoration-07",
+          "name": {
+            "zh": "大地母亲的恩赐",
+            "en": "Gift of the Earthmother"
+          },
+          "description": {
+            "zh": "使你的回春术、迅捷治愈和野性成长的公共冷却时间缩短0.5秒。",
+            "en": "Reduces the global cooldown by 0.5 seconds on your Rejuvenation, Swiftmend, and Wild Growth spells."
+          },
+          "icon": "spell_nature_spiritarmor.jpg",
+          "maxPoints": 1,
+          "row": 2,
+          "col": 3,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "restoration-08",
+          "name": {
+            "zh": "宁静之魂",
+            "en": "Tranquil Spirit"
+          },
+          "description": {
+            "zh": "使你的治疗之触和宁静所消耗的法力值减少10%。",
+            "en": "Reduces the mana cost of your Healing Touch and Tranquility spells by 10%."
+          },
+          "icon": "spell_holy_elunesgrace.jpg",
+          "maxPoints": 5,
+          "row": 3,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "restoration-09",
+          "name": {
+            "zh": "强化回春术",
+            "en": "Improved Rejuvenation"
+          },
+          "description": {
+            "zh": "使你的回春术的效果提高15%。",
+            "en": "Increases the effect of your Rejuvenation spell by 15%."
+          },
+          "icon": "spell_nature_rejuvenation.jpg",
+          "maxPoints": 3,
+          "row": 3,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "restoration-10",
+          "name": {
+            "zh": "迅捷治愈",
+            "en": "Swiftmend"
+          },
+          "description": {
+            "zh": "立即为一个带有回春术或愈合效果的目标恢复生命值，数值等于其中一个法术完整持续时间的周期性治疗效果。",
+            "en": "Instantly heals a target with an active Rejuvenation or Regrowth effect for an amount equal to the full duration of the periodic effect of one of those spells."
+          },
+          "icon": "inv_relics_idolofrejuvenation.jpg",
+          "maxPoints": 1,
+          "row": 3,
+          "col": 3,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "restoration-11",
+          "name": {
+            "zh": "自然迅捷",
+            "en": "Nature's Swiftness"
+          },
+          "description": {
+            "zh": "激活之后，你的下一个自然法术会成为瞬发法术。",
+            "en": "When activated, your next Nature spell becomes an instant cast spell."
+          },
+          "icon": "spell_nature_ravenform.jpg",
+          "maxPoints": 1,
+          "row": 4,
+          "col": 0,
+          "requires": [
+            {
+              "nodeId": "restoration-02",
+              "points": 5
+            }
+          ],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "restoration-12",
+          "name": {
+            "zh": "生命之魂",
+            "en": "Living Spirit"
+          },
+          "description": {
+            "zh": "使你的精神提高15%。",
+            "en": "Increases your Spirit by 15%."
+          },
+          "icon": "spell_nature_giftofthewaterspirit.jpg",
+          "maxPoints": 3,
+          "row": 4,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "restoration-13",
+          "name": {
+            "zh": "强化宁静",
+            "en": "Improved Tranquility"
+          },
+          "description": {
+            "zh": "使你的宁静产生的威胁值降低100%，冷却时间缩短60%。",
+            "en": "Reduces threat caused by Tranquility by 100% and its cooldown by 60%."
+          },
+          "icon": "spell_nature_tranquility.jpg",
+          "maxPoints": 2,
+          "row": 4,
+          "col": 3,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "restoration-14",
+          "name": {
+            "zh": "强化愈合",
+            "en": "Improved Regrowth"
+          },
+          "description": {
+            "zh": "使你的愈合法术产生极效治疗效果的几率提高50%。",
+            "en": "Increases the critical effect chance of your Regrowth spell by 50%."
+          },
+          "icon": "spell_nature_resistnature.jpg",
+          "maxPoints": 5,
+          "row": 5,
+          "col": 2,
+          "requires": [
+            {
+              "nodeId": "restoration-09",
+              "points": 3
+            }
+          ],
+          "requiresPointsInTree": 25,
+          "exclusiveWith": []
+        },
+        {
+          "id": "restoration-15",
+          "name": {
+            "zh": "野性成长",
+            "en": "Wild Growth"
+          },
+          "description": {
+            "zh": "在7秒内为目标及其43.5码内的小队成员恢复336点生命值。治疗效果起初较快，随着野性成长接近结束而变慢。",
+            "en": "Heals the target and their party for 336 over 7 sec. Party members must be within 43.5 yards of target. The amount healed is applied quickly at first, and slows down as Wild Growth reaches its full duration."
+          },
+          "icon": "ability_druid_flourish.jpg",
+          "maxPoints": 1,
+          "row": 6,
+          "col": 1,
+          "requires": [
+            {
+              "nodeId": "restoration-12",
+              "points": 3
+            }
+          ],
+          "requiresPointsInTree": 30,
+          "exclusiveWith": []
+        }
+      ]
+    }
+  ]
+}

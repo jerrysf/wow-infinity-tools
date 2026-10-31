@@ -1,0 +1,984 @@
+{
+  "classId": "paladin",
+  "gameVersion": "1.60.1.70425",
+  "rules": {
+    "firstTalentLevel": 10,
+    "maxLevel": 60,
+    "pointsPerLevel": 1,
+    "maxPoints": 51
+  },
+  "demo": false,
+  "provenance": {
+    "status": "reviewed",
+    "gameVersion": "1.60.1.70425",
+    "source": "wowhandbook.com talent data extracted from WoW: Forever beta client",
+    "sourceUrl": "https://wowhandbook.com/talents/",
+    "importedAt": "2026-10-25",
+    "needsRevalidation": true,
+    "notes": "Beta build 1.60.1.70425; talent data may still change before the Nov 5 launch. Cross-checked against Blizzard class deep-dive posts."
+  },
+  "trees": [
+    {
+      "id": "holy",
+      "name": {
+        "zh": "神圣",
+        "en": "Holy"
+      },
+      "nodes": [
+        {
+          "id": "holy-00",
+          "name": {
+            "zh": "神圣之力",
+            "en": "Divine Strength"
+          },
+          "description": {
+            "zh": "使你的力量提高10%。",
+            "en": "Increases your Strength by 10%."
+          },
+          "icon": "ability_golemthunderclap.jpg",
+          "maxPoints": 5,
+          "row": 0,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "holy-01",
+          "name": {
+            "zh": "神圣智慧",
+            "en": "Divine Intellect"
+          },
+          "description": {
+            "zh": "使你的智力值上限提高10%。",
+            "en": "Increases your total Intellect by 10%."
+          },
+          "icon": "spell_nature_sleep.jpg",
+          "maxPoints": 5,
+          "row": 0,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "holy-02",
+          "name": {
+            "zh": "治疗之光",
+            "en": "Healing Light"
+          },
+          "description": {
+            "zh": "使你的圣光术、圣光闪现和神圣震击的治疗量提高12%。",
+            "en": "Increases the amount healed by your Holy Light, Flash of Light, and Holy Shock spells by 12%."
+          },
+          "icon": "spell_holy_holybolt.jpg",
+          "maxPoints": 3,
+          "row": 1,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "holy-03",
+          "name": {
+            "zh": "精神集中",
+            "en": "Spiritual Focus"
+          },
+          "description": {
+            "zh": "使你的圣光闪现、圣光术和圣光守望有70%的几率在受到伤害时不损失施法时间。",
+            "en": "Gives your Flash of Light, Holy Light, and Light's Vigil spells a 70% chance to not lose casting time when you take damage."
+          },
+          "icon": "spell_arcane_blink.jpg",
+          "maxPoints": 2,
+          "row": 1,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "holy-04",
+          "name": {
+            "zh": "强化圣印",
+            "en": "Improved Seals"
+          },
+          "description": {
+            "zh": "使你的圣印和审判造成的伤害提高15%。",
+            "en": "Increases the damage done by your Seals and Judgements by 15%."
+          },
+          "icon": "ability_thunderbolt.jpg",
+          "maxPoints": 3,
+          "row": 1,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "holy-05",
+          "name": {
+            "zh": "不灭信仰",
+            "en": "Unyielding Faith"
+          },
+          "description": {
+            "zh": "使你受到的恐惧和迷惑效果的持续时间缩短30%。",
+            "en": "Reduces the duration of Fear and Disorient effects on you by 30%."
+          },
+          "icon": "spell_holy_unyieldingfaith.jpg",
+          "maxPoints": 2,
+          "row": 1,
+          "col": 3,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "holy-06",
+          "name": {
+            "zh": "真理之音",
+            "en": "Voice of Truth"
+          },
+          "description": {
+            "zh": "使你免疫沉默和中断效果。持续6秒。",
+            "en": "Grants you immunity to Silence and Interrupt effects for 6 sec."
+          },
+          "icon": "inv_misc_horn_03.jpg",
+          "maxPoints": 1,
+          "row": 2,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "holy-07",
+          "name": {
+            "zh": "敬畏",
+            "en": "Reverence"
+          },
+          "description": {
+            "zh": "使你在施法时仍保持30%的法力值恢复速度。",
+            "en": "Allows 30% of your Mana regeneration to continue while casting."
+          },
+          "icon": "spell_holy_divineillumination.jpg",
+          "maxPoints": 3,
+          "row": 2,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "holy-08",
+          "name": {
+            "zh": "净化之力",
+            "en": "Purifying Power"
+          },
+          "description": {
+            "zh": "使你的清洁术和纯净术法力消耗降低20%，并使驱邪术和神圣愤怒的冷却时间缩短33%。",
+            "en": "Reduces the mana cost of your Cleanse and Purify spells by 20% and reduces the cooldown of your Exorcism and Holy Wrath spells by 33%."
+          },
+          "icon": "spell_holy_purifyingpower.jpg",
+          "maxPoints": 2,
+          "row": 2,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "holy-09",
+          "name": {
+            "zh": "圣光灌注",
+            "en": "Infusion of Light"
+          },
+          "description": {
+            "zh": "你的神圣震击和圣光闪现造成爆击时，使你在15秒内下一次圣光术的施法时间缩短1.0秒。",
+            "en": "Your Holy Shock and Flash of Light critical hits reduce the cast time of your next Holy Light cast within 15 sec by 1.0 sec."
+          },
+          "icon": "ability_paladin_infusionoflight.jpg",
+          "maxPoints": 2,
+          "row": 3,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "holy-10",
+          "name": {
+            "zh": "启发",
+            "en": "Illumination"
+          },
+          "description": {
+            "zh": "在你的圣光闪现、圣光术、圣光守夜或神圣震击治疗法术造成爆击效果后，你有100%的几率回复相当于该法术基础消耗50%的法力值。",
+            "en": "After getting a critical effect from your Flash of Light, Holy Light, Light's Vigil, or Holy Shock heal spell you have a 100% chance to gain Mana equal to 50% of the base cost of the spell."
+          },
+          "icon": "spell_holy_greaterheal.jpg",
+          "maxPoints": 5,
+          "row": 3,
+          "col": 1,
+          "requires": [
+            {
+              "nodeId": "holy-07",
+              "points": 3
+            }
+          ],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "holy-11",
+          "name": {
+            "zh": "神恩术",
+            "en": "Divine Favor"
+          },
+          "description": {
+            "zh": "激活之后，使你的下一个圣光闪现、圣光术或神圣震击有100%的几率造成极效治疗效果。",
+            "en": "When activated, gives your next Flash of Light, Holy Light, or Holy Shock spell a 100% critical effect chance."
+          },
+          "icon": "spell_holy_heal.jpg",
+          "maxPoints": 1,
+          "row": 3,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "holy-12",
+          "name": {
+            "zh": "神圣精准",
+            "en": "Divine Precision"
+          },
+          "description": {
+            "zh": "使你的神圣法术命中几率提高18%。",
+            "en": "Improves your chance to hit with Holy spells by 18%."
+          },
+          "icon": "spell_holy_healingfocus.jpg",
+          "maxPoints": 3,
+          "row": 4,
+          "col": 0,
+          "requires": [
+            {
+              "nodeId": "holy-13",
+              "points": 1
+            }
+          ],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "holy-13",
+          "name": {
+            "zh": "神圣震击",
+            "en": "Holy Shock"
+          },
+          "description": {
+            "zh": "以神圣能量冲击目标，对一个敌人造成129点神圣伤害，或者为一个友方目标恢复110点生命值。",
+            "en": "Blasts the target with Holy energy, causing 129 Holy damage to an enemy, or 110 healing to an ally."
+          },
+          "icon": "spell_holy_searinglight.jpg",
+          "maxPoints": 1,
+          "row": 4,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "holy-14",
+          "name": {
+            "zh": "奉献之地",
+            "en": "Consecrated Ground"
+          },
+          "description": {
+            "zh": "使你的神圣法术对最先进入你的奉献的4个敌人造成的伤害提高10%。",
+            "en": "Gives your Holy spells 10% increased damage against the first 4 enemies that enter your Consecration."
+          },
+          "icon": "spell_holy_innerfire.jpg",
+          "maxPoints": 2,
+          "row": 4,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "holy-15",
+          "name": {
+            "zh": "神圣强化",
+            "en": "Holy Power"
+          },
+          "description": {
+            "zh": "使你的神圣震击和神圣打击的爆击几率提高15%，其他所有法术的爆击几率提高5%。",
+            "en": "Increases the critical strike chance of your Holy Shock and Holy Strike spells by 15%, and all other spells by 5%."
+          },
+          "icon": "spell_holy_power.jpg",
+          "maxPoints": 5,
+          "row": 5,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 25,
+          "exclusiveWith": []
+        },
+        {
+          "id": "holy-16",
+          "name": {
+            "zh": "圣光守望",
+            "en": "Light's Vigil"
+          },
+          "description": {
+            "zh": "对目标施加圣光守望，持续30秒。你对其施放的下一个神圣震击不触发冷却，并使敌方目标受到175点神圣伤害，同时返还圣光守望75%的法力值消耗；友方目标则使其队伍成员受到325点治疗。每个队伍中只能同时存在一个圣光守望。",
+            "en": "Applies Light's Vigil to the target for 30 sec. Your next Holy Shock cast on them triggers no cooldown and causes enemy targets to suffer 175 Holy damage and refund 75% of Light's Vigil's Mana cost, or allied targets to heal their party for 325. You may only have one Light's Vigil active per party."
+          },
+          "icon": "ability_paladin_judgementofthepure.jpg",
+          "maxPoints": 1,
+          "row": 6,
+          "col": 1,
+          "requires": [
+            {
+              "nodeId": "holy-13",
+              "points": 1
+            }
+          ],
+          "requiresPointsInTree": 30,
+          "exclusiveWith": []
+        }
+      ]
+    },
+    {
+      "id": "protection",
+      "name": {
+        "zh": "防护",
+        "en": "Protection"
+      },
+      "nodes": [
+        {
+          "id": "protection-00",
+          "name": {
+            "zh": "坚韧",
+            "en": "Toughness"
+          },
+          "description": {
+            "zh": "使你因装备而获得的护甲值提高10%。",
+            "en": "Increases your armor value from items by 10%."
+          },
+          "icon": "spell_holy_devotion.jpg",
+          "maxPoints": 5,
+          "row": 0,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "protection-01",
+          "name": {
+            "zh": "盾牌壁垒",
+            "en": "Redoubt"
+          },
+          "description": {
+            "zh": "对你造成伤害的近战攻击有10%的几率使你的格挡几率提高20%。持续10秒或格挡5次。",
+            "en": "Damaging melee attacks against you have a 10% chance to increase your chance to block by 20%. Lasts 10 sec or 5 blocks."
+          },
+          "icon": "ability_defend.jpg",
+          "maxPoints": 5,
+          "row": 0,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "protection-02",
+          "name": {
+            "zh": "精确",
+            "en": "Precision"
+          },
+          "description": {
+            "zh": "使你击中目标的几率提高3%。",
+            "en": "Improves your chance to hit by 3%."
+          },
+          "icon": "ability_rogue_ambush.jpg",
+          "maxPoints": 3,
+          "row": 1,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "protection-03",
+          "name": {
+            "zh": "守护者的宠爱",
+            "en": "Guardian's Favor"
+          },
+          "description": {
+            "zh": "使你的保护祝福冷却时间缩短2分钟，并使自由祝福持续时间延长6秒。",
+            "en": "Reduces the cooldown of your Blessing of Protection by 2 min and increases the duration of your Blessing of Freedom by 6 sec."
+          },
+          "icon": "spell_holy_sealofprotection.jpg",
+          "maxPoints": 2,
+          "row": 1,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "protection-04",
+          "name": {
+            "zh": "预知",
+            "en": "Anticipation"
+          },
+          "description": {
+            "zh": "使你的防御技能提高20点。",
+            "en": "Increases your Defense Skill by 20."
+          },
+          "icon": "spell_magic_lesserinvisibilty.jpg",
+          "maxPoints": 5,
+          "row": 1,
+          "col": 3,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "protection-05",
+          "name": {
+            "zh": "强化愤怒圣印",
+            "en": "Improved Seal of Fury"
+          },
+          "description": {
+            "zh": "当愤怒圣印的护盾被完全吸收时，恢复60点法力值，攻击者每比你高一级，恢复量提高15%，最多提高45%。",
+            "en": "When Seal of Fury's shield is fully absorbed, restore 60 Mana, increased by 15% per level the attacker is above you, up to 45%."
+          },
+          "icon": "spell_holy_righteousnessaura.jpg",
+          "maxPoints": 1,
+          "row": 2,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "protection-06",
+          "name": {
+            "zh": "强化正义之怒",
+            "en": "Improved Righteous Fury"
+          },
+          "description": {
+            "zh": "当正义之怒处于激活状态时，你所承受的一切伤害降低6%。",
+            "en": "While Righteous Fury is active, all damage taken is reduced by 6%."
+          },
+          "icon": "spell_holy_sealoffury.jpg",
+          "maxPoints": 3,
+          "row": 2,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "protection-07",
+          "name": {
+            "zh": "盾牌专精",
+            "en": "Shield Specialization"
+          },
+          "description": {
+            "zh": "使你的盾牌吸收的伤害提高30%，并使你的格挡有100%的几率恢复最大法力值的4%。每3秒最多触发一次。",
+            "en": "Increases the amount of damage absorbed by your shield by 30%, and gives your blocks a 100% chance to restore 4% of your maximum Mana. May only occur once every 3 sec."
+          },
+          "icon": "inv_shield_06.jpg",
+          "maxPoints": 3,
+          "row": 2,
+          "col": 2,
+          "requires": [
+            {
+              "nodeId": "protection-01",
+              "points": 5
+            }
+          ],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "protection-08",
+          "name": {
+            "zh": "神圣职责",
+            "en": "Sacred Duty"
+          },
+          "description": {
+            "zh": "使你的耐力总值提高4%，并使圣盾术、圣佑术和圣殿骑士壁垒的冷却时间缩短60秒。",
+            "en": "Increases your total Stamina by 4% and reduces the cooldown of your Divine Shield, Divine Protection, and Templar's Bulwark spells by 60 sec."
+          },
+          "icon": "spell_holy_divineintervention.jpg",
+          "maxPoints": 2,
+          "row": 2,
+          "col": 3,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "protection-09",
+          "name": {
+            "zh": "迅捷审判",
+            "en": "Swift Judgement"
+          },
+          "description": {
+            "zh": "结束审判的剩余冷却时间，并使你下一次审判消耗的法力值降低100%。",
+            "en": "Finishes the remaining cooldown on your Judgement ability and reduces the Mana cost of your next Judgement by 100%."
+          },
+          "icon": "ability_paladin_judgementred.jpg",
+          "maxPoints": 1,
+          "row": 3,
+          "col": 0,
+          "requires": [
+            {
+              "nodeId": "protection-05",
+              "points": 1
+            }
+          ],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "protection-10",
+          "name": {
+            "zh": "单手武器专精",
+            "en": "One-Handed Weapon Specialization"
+          },
+          "description": {
+            "zh": "使你的单手近战武器所能造成的伤害提高10%。",
+            "en": "Increases the damage you deal with one-handed melee weapons by 10%."
+          },
+          "icon": "inv_sword_20.jpg",
+          "maxPoints": 3,
+          "row": 3,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "protection-11",
+          "name": {
+            "zh": "强化制裁之锤",
+            "en": "Improved Hammer of Justice"
+          },
+          "description": {
+            "zh": "使你的制裁之锤的冷却时间减少15秒。",
+            "en": "Decreases the cooldown of your Hammer of Justice spell by 15 sec."
+          },
+          "icon": "spell_holy_sealofmight.jpg",
+          "maxPoints": 3,
+          "row": 3,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "protection-12",
+          "name": {
+            "zh": "圣殿骑士壁垒",
+            "en": "Templar's Bulwark"
+          },
+          "description": {
+            "zh": "激活后，获得相当于你最大生命值100%的吸收护盾，持续8秒。施加自律，持续1分钟。自律效果激活时无法施放。",
+            "en": "When activated, this ability grants you an absorb shield equal to 100% of your maximum health for 8 sec. Applies Forbearance for 1 min. Cannot be cast while Forbearance is active."
+          },
+          "icon": "ability_paladin_shieldofthetemplar.jpg",
+          "maxPoints": 1,
+          "row": 4,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "protection-13",
+          "name": {
+            "zh": "清算",
+            "en": "Reckoning"
+          },
+          "description": {
+            "zh": "格挡一次近战攻击后，你有40%的几率获得一次额外攻击；受到非周期性致命一击后，你有100%的几率获得一次额外攻击。每1.5秒最多触发一次。",
+            "en": "Gives you a 40% chance after Blocking and a 100% chance after receiving a non-periodic critical strike to gain an extra attack. Stores up to 4 extra attacks. Cannot occur from Blocks more than once every 1.5 sec."
+          },
+          "icon": "spell_holy_blessingofstrength.jpg",
+          "maxPoints": 5,
+          "row": 4,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "protection-14",
+          "name": {
+            "zh": "钢铁信条",
+            "en": "Iron Creed"
+          },
+          "description": {
+            "zh": "使你的神圣打击产生的威胁值提高25%。在正义之怒激活时，神圣打击还会使你受到的伤害降低10%，持续6秒。",
+            "en": "Increases the threat generated by your Holy Strike ability by 25%. While Righteous Fury is active, Holy Strike also reduces your damage taken by 10% for 6 sec."
+          },
+          "icon": "spell_holy_improvedresistanceauras.jpg",
+          "maxPoints": 5,
+          "row": 5,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 25,
+          "exclusiveWith": []
+        },
+        {
+          "id": "protection-15",
+          "name": {
+            "zh": "神圣之盾",
+            "en": "Holy Shield"
+          },
+          "description": {
+            "zh": "使你的格挡几率提高30%，持续10秒。在此期间每次成功格挡都会对攻击者造成110点神圣伤害。神圣之盾造成的伤害额外产生20%的威胁值。每次格挡消耗一层充能。共4层。",
+            "en": "Increases chance to block by 30% for 10 sec, and deals 110 Holy damage for each attack blocked while active. Damage caused by Holy Shield causes 20% additional threat. Each block expends a charge. 4 charges."
+          },
+          "icon": "spell_holy_blessingofprotection.jpg",
+          "maxPoints": 1,
+          "row": 6,
+          "col": 1,
+          "requires": [
+            {
+              "nodeId": "protection-12",
+              "points": 1
+            }
+          ],
+          "requiresPointsInTree": 30,
+          "exclusiveWith": []
+        }
+      ]
+    },
+    {
+      "id": "retribution",
+      "name": {
+        "zh": "惩戒",
+        "en": "Retribution"
+      },
+      "nodes": [
+        {
+          "id": "retribution-00",
+          "name": {
+            "zh": "偏斜",
+            "en": "Deflection"
+          },
+          "description": {
+            "zh": "使你的招架几率提高5%。",
+            "en": "Increases your Parry chance by 5%."
+          },
+          "icon": "ability_parry.jpg",
+          "maxPoints": 5,
+          "row": 0,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "retribution-01",
+          "name": {
+            "zh": "祈福",
+            "en": "Benediction"
+          },
+          "description": {
+            "zh": "使你所有瞬发法术和技能所消耗的法力值降低10%。",
+            "en": "Reduces the Mana cost of all instant cast spells and abilities by 10%."
+          },
+          "icon": "spell_frost_windwalkon.jpg",
+          "maxPoints": 5,
+          "row": 0,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 0,
+          "exclusiveWith": []
+        },
+        {
+          "id": "retribution-02",
+          "name": {
+            "zh": "强化审判",
+            "en": "Improved Judgement"
+          },
+          "description": {
+            "zh": "使你的审判技能冷却时间缩短2秒。",
+            "en": "Decreases the cooldown of your Judgement ability by 2 sec."
+          },
+          "icon": "spell_holy_righteousfury.jpg",
+          "maxPoints": 2,
+          "row": 1,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "retribution-03",
+          "name": {
+            "zh": "神圣导能",
+            "en": "Holy Conduit"
+          },
+          "description": {
+            "zh": "使你的奉献、神圣愤怒、驱邪术和愤怒之锤法力消耗降低40%。",
+            "en": "Reduces the mana cost of your Consecration, Holy Wrath, Exorcism, and Hammer of Wrath spells by 40%."
+          },
+          "icon": "spell_holy_devineaegis.jpg",
+          "maxPoints": 2,
+          "row": 1,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "retribution-04",
+          "name": {
+            "zh": "定罪",
+            "en": "Conviction"
+          },
+          "description": {
+            "zh": "使你的近战攻击造成爆击的几率提高5%。",
+            "en": "Improves your chance to get a critical strike with melee attacks by 5%."
+          },
+          "icon": "spell_holy_retributionaura.jpg",
+          "maxPoints": 5,
+          "row": 1,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 5,
+          "exclusiveWith": []
+        },
+        {
+          "id": "retribution-05",
+          "name": {
+            "zh": "辩护",
+            "en": "Vindication"
+          },
+          "description": {
+            "zh": "使你的伤害性近战攻击有几率令目标的攻击强度降低204点，并使你的攻击强度提高3%，持续30秒。",
+            "en": "Gives your damaging melee attacks a chance to reduce the target's Attack Power by 204, and increase your Attack Power by 3% for 30 sec."
+          },
+          "icon": "spell_holy_vindication.jpg",
+          "maxPoints": 3,
+          "row": 2,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "retribution-06",
+          "name": {
+            "zh": "神圣审判",
+            "en": "Sanctified Judgement"
+          },
+          "description": {
+            "zh": "使你的审判有100%几率返还被审判圣印法力消耗的60%。",
+            "en": "Gives your Judgement ability a 100% chance to return 60% of the Mana cost of the judged seal."
+          },
+          "icon": "ability_paladin_judgementblue.jpg",
+          "maxPoints": 3,
+          "row": 2,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "retribution-07",
+          "name": {
+            "zh": "命令圣印",
+            "en": "Seal of Command"
+          },
+          "description": {
+            "zh": "使圣骑士在攻击时有一定几率对目标造成与攻击伤害的70%等量的神圣伤害。圣骑士在同一时间内只能激活一种圣印。持续30秒。\n\n释放这种圣印的能量将对目标造成审判效果，对其立刻造成67.5点神圣伤害，若目标昏迷或瘫痪则造成135点神圣伤害。",
+            "en": "Gives the Paladin a chance to deal additional Holy damage equal to 70% of normal weapon damage. Only one Seal can be active on the Paladin at any one time. Lasts 30 sec.\n\nUnleashing this Seal's energy will judge an enemy, instantly causing 67.5 Holy damage, 135 if the target is stunned or incapacitated."
+          },
+          "icon": "ability_warrior_innerrage.jpg",
+          "maxPoints": 1,
+          "row": 2,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "retribution-08",
+          "name": {
+            "zh": "正义追击",
+            "en": "Pursuit of Justice"
+          },
+          "description": {
+            "zh": "使你的移动速度和坐骑移动速度提高15%。这个效果不与其它同类效果叠加。",
+            "en": "Increases movement speed and mounted movement speed by 15%. This does not stack with other movement speed increasing effects."
+          },
+          "icon": "spell_holy_persuitofjustice.jpg",
+          "maxPoints": 2,
+          "row": 2,
+          "col": 3,
+          "requires": [],
+          "requiresPointsInTree": 10,
+          "exclusiveWith": []
+        },
+        {
+          "id": "retribution-09",
+          "name": {
+            "zh": "以眼还眼",
+            "en": "Eye for an Eye"
+          },
+          "description": {
+            "zh": "所有对你造成的爆击也会对攻击者造成相当于你所受伤害10%的伤害。以眼还眼造成的伤害不会超过圣骑士总生命值的50%。",
+            "en": "All critical strikes against you cause 10% of the damage taken to the attacker as well. The damage caused by Eye for an Eye will not exceed 50% of the Paladin's total health."
+          },
+          "icon": "spell_holy_eyeforaneye.jpg",
+          "maxPoints": 2,
+          "row": 3,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "retribution-10",
+          "name": {
+            "zh": "神圣仲裁者",
+            "en": "Sacred Arbiter"
+          },
+          "description": {
+            "zh": "使你的神圣打击造成的伤害提高20%，并刷新目标身上的所有审判效果。",
+            "en": "Increases the damage of your Holy Strike ability by 20% and causes it to refresh all Judgement effects on the target."
+          },
+          "icon": "inv_sword_08.jpg",
+          "maxPoints": 1,
+          "row": 3,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 15,
+          "exclusiveWith": []
+        },
+        {
+          "id": "retribution-11",
+          "name": {
+            "zh": "双手武器专精",
+            "en": "Two-Handed Weapon Specialization"
+          },
+          "description": {
+            "zh": "使你的双手近战武器造成的伤害提高6%。",
+            "en": "Increases the damage you deal with two-handed melee weapons by 6%."
+          },
+          "icon": "inv_hammer_04.jpg",
+          "maxPoints": 3,
+          "row": 4,
+          "col": 0,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "retribution-12",
+          "name": {
+            "zh": "复仇",
+            "en": "Vengeance"
+          },
+          "description": {
+            "zh": "非周期性伤害造成爆击后，你造成的物理和神圣伤害提高3%，持续30秒。最多叠加3次。",
+            "en": "Increases your Physical and Holy damage dealt by 3% for 30 sec after landing a non-periodic critical strike. Stacks up to 3 times."
+          },
+          "icon": "ability_racial_avatar.jpg",
+          "maxPoints": 3,
+          "row": 4,
+          "col": 1,
+          "requires": [
+            {
+              "nodeId": "retribution-06",
+              "points": 3
+            }
+          ],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "retribution-13",
+          "name": {
+            "zh": "忏悔",
+            "en": "Repentance"
+          },
+          "description": {
+            "zh": "使敌方目标进入冥想状态，最多瘫痪6秒。造成任何伤害都会唤醒目标。只对人型生物有效。",
+            "en": "Puts the enemy target in a state of meditation, incapacitating them for up to 6 sec. Any damage caused will awaken the target. Only works against Humanoids."
+          },
+          "icon": "spell_holy_prayerofhealing.jpg",
+          "maxPoints": 1,
+          "row": 4,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 20,
+          "exclusiveWith": []
+        },
+        {
+          "id": "retribution-14",
+          "name": {
+            "zh": "光芒勇士",
+            "en": "Champion of the Light"
+          },
+          "description": {
+            "zh": "使你的法术伤害和治疗效果最多提高相当于你智力30%的数值。",
+            "en": "Increases your spell damage by up to 30% of your Intellect."
+          },
+          "icon": "ability_paladin_enlightenedjudgements.jpg",
+          "maxPoints": 3,
+          "row": 5,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 25,
+          "exclusiveWith": []
+        },
+        {
+          "id": "retribution-15",
+          "name": {
+            "zh": "律法之器",
+            "en": "Instrument of Law"
+          },
+          "description": {
+            "zh": "使你的愤怒之锤施法时间缩短1.0秒，并在正义之怒未激活时，你产生的所有威胁值降低20%。",
+            "en": "Reduces the cast time of your Hammer of Wrath by 1.0 sec, and reduces all threat you generate by 20% while Righteous Fury is not active."
+          },
+          "icon": "spell_holy_divinepurpose.jpg",
+          "maxPoints": 2,
+          "row": 5,
+          "col": 2,
+          "requires": [],
+          "requiresPointsInTree": 25,
+          "exclusiveWith": []
+        },
+        {
+          "id": "retribution-16",
+          "name": {
+            "zh": "圣光扭转",
+            "en": "Twist of Light"
+          },
+          "description": {
+            "zh": "使你的圣印法术的法力值消耗降低20%。当你用另一个圣印替换命令圣印、正义圣印、愤怒圣印或公正圣印时，你会获得该圣印的回响。你的下一次近战攻击会触发被替换圣印的效果，并消耗该回响。",
+            "en": "Reduces the Mana cost of your Seal spells by 20%, and when you replace your Seal of Command, Seal of Righteousness, Seal of Fury, or Seal of Justice with a different Seal, you gain an Echo of that Seal. Your next melee attack applies the replaced Seal's effects, consuming the Echo."
+          },
+          "icon": "spell_holy_blessedresillience.jpg",
+          "maxPoints": 1,
+          "row": 6,
+          "col": 1,
+          "requires": [],
+          "requiresPointsInTree": 30,
+          "exclusiveWith": []
+        }
+      ]
+    }
+  ]
+}

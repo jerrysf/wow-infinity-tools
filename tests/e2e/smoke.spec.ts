@@ -63,6 +63,12 @@ test.describe("smoke", () => {
     await expect(page.getByText("当前阶段")).toBeVisible();
   });
 
+  test("changelog page lists data versions", async ({ page }) => {
+    await page.goto("/zh-cn/changelog");
+    await expect(page.locator("h1")).toContainText("更新日志");
+    await expect(page.getByText("1.60.1.70425").first()).toBeVisible();
+  });
+
   test("no fatal console errors on home", async ({ page }) => {
     const errors: string[] = [];
     page.on("pageerror", (e) => errors.push(e.message));
