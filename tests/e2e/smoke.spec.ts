@@ -37,6 +37,22 @@ test.describe("smoke", () => {
     await expect(page.locator("h1")).toContainText("页面不存在");
   });
 
+  test("home shows video cards linking to video platforms", async ({ page }) => {
+    await page.goto("/zh-cn");
+    const section = page.locator("section", { hasText: "官方与社区视频" });
+    const links = section.locator('a[href*="bilibili.com"], a[href*="youtube.com"]');
+    await expect(links).toHaveCount(5);
+    await expect(links.first()).toHaveAttribute("target", "_blank");
+    await expect(links.first()).toHaveAttribute("rel", /noopener/);
+  });
+
+  test("en-us home video cards link to YouTube", async ({ page }) => {
+    await page.goto("/en-us");
+    const section = page.locator("section", { hasText: "Official & community videos" });
+    const links = section.locator('a[href*="youtube.com"]');
+    await expect(links).toHaveCount(4);
+  });
+
   test("no fatal console errors on home", async ({ page }) => {
     const errors: string[] = [];
     page.on("pageerror", (e) => errors.push(e.message));

@@ -1,0 +1,51 @@
+[
+  {
+    "slug": "official-cn",
+    "name": "魔兽世界官网",
+    "url": "https://wow.blizzard.cn/forever/",
+    "description": { "zh": "《无限》国服官方页面", "en": "Official CN site" },
+    "region": "cn"
+  },
+  {
+    "slug": "official-en",
+    "name": "World of Warcraft",
+    "url": "https://worldofwarcraft.blizzard.com",
+    "description": { "zh": "暴雪官方英文站", "en": "Official English site" },
+    "region": "global"
+  },
+  {
+    "slug": "nga",
+    "name": "NGA 玩家社区",
+    "url": "https://bbs.nga.cn",
+    "description": { "zh": "国内最大的魔兽玩家社区", "en": "Largest Chinese WoW community" },
+    "region": "cn"
+  },
+  {
+    "slug": "tieba",
+    "name": "魔兽世界吧",
+    "url": "https://tieba.baidu.com/f?kw=魔兽世界",
+    "description": { "zh": "百度贴吧魔兽社区", "en": "WoW community on Baidu Tieba" },
+    "region": "cn"
+  },
+  {
+    "slug": "bilibili-search",
+    "name": "B站视频",
+    "url": "https://search.bilibili.com/all?keyword=魔兽世界无限",
+    "description": { "zh": "《无限》相关视频与攻略", "en": "Forever videos on Bilibili" },
+    "region": "cn"
+  },
+  {
+    "slug": "reddit-classic",
+    "name": "r/classicwow",
+    "url": "https://www.reddit.com/r/classicwow/",
+    "description": { "zh": "Reddit 经典魔兽社区", "en": "Classic WoW community on Reddit" },
+    "region": "global"
+  },
+  {
+    "slug": "wowhead",
+    "name": "Wowhead",
+    "url": "https://www.wowhead.com",
+    "description": { "zh": "英文资料数据库", "en": "English WoW database" },
+    "region": "global"
+  }
+]

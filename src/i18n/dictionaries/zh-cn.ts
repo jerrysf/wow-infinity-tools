@@ -73,6 +73,8 @@ const zh = {
     featuredBuilds: "热门方案",
     guidesTitle: "新手攻略",
     classesTitle: "按职业浏览",
+    videosTitle: "官方与社区视频",
+    communityTitle: "社群与资源",
     dataNotice: "版本与数据状态",
     dataNoticeBody:
       "当前天赋数据整理自 Beta 版本 1.60.1.70425 的公开资料，来源与审核状态标注在各页面顶部。正式版本上线后内容可能需要重新验证。",

@@ -5,9 +5,10 @@ import { getDictionary, pick } from "@/i18n/get-dictionary";
 import { pageMetadata } from "@/lib/seo";
 import { absoluteUrl, localizedPath, site } from "@/lib/site";
 import { JsonLd } from "@/components/site/JsonLd";
-import { getBuilds, getClasses, getCurrentVersion, getGuides } from "@/lib/data";
+import { getBuilds, getClasses, getCommunityLinks, getCommunityVideos, getCurrentVersion, getGuides } from "@/lib/data";
 import { StatusBadge, DemoBadge } from "@/components/site/StatusBadge";
 import { classColor } from "@/lib/class-colors";
+import { VideoThumbnail } from "@/components/site/VideoThumbnail";
 import { AdSlot } from "@/components/site/AdSlot";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]">): Promise<Metadata> {
@@ -26,6 +27,19 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
   const guides = getGuides().slice(0, 4);
   const version = getCurrentVersion();
   const classById = new Map(classes.map((c) => [c.id, c]));
+  const videos = getCommunityVideos();
+  const communityLinks = getCommunityLinks();
+
+  const videoUrl = (v: (typeof videos)[number]) =>
+    locale === "zh-cn"
+      ? v.bilibiliBv
+        ? `https://www.bilibili.com/video/${v.bilibiliBv}/`
+        : `https://www.youtube.com/watch?v=${v.youtubeId}`
+      : v.youtubeId
+        ? `https://www.youtube.com/watch?v=${v.youtubeId}`
+        : `https://www.bilibili.com/video/${v.bilibiliBv}/`;
+  const videoPlatform = (v: (typeof videos)[number]) =>
+    (locale === "zh-cn" ? v.bilibiliBv : v.youtubeId) ? (locale === "zh-cn" ? "哔哩哔哩" : "YouTube") : locale === "zh-cn" ? "YouTube" : "哔哩哔哩";
 
   const jsonLd = [
     {
@@ -112,6 +126,39 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       </section>
 
       <section className="mb-10">
+        <h2 className="mb-4 text-xl font-semibold">{dict.home.videosTitle}</h2>
+        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {videos.map((v) => (
+            <li key={v.slug}>
+              <a
+                href={videoUrl(v)}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="card card-interactive block overflow-hidden"
+              >
+                {v.youtubeId ? (
+                  <VideoThumbnail videoId={v.youtubeId} alt={pick(v.title, locale)} />
+                ) : (
+                  <div className="flex aspect-video w-full items-center justify-center bg-gradient-to-br from-[#2b2418] to-[#14100a] text-4xl text-[#8a6a28]">
+                    ▶
+                  </div>
+                )}
+                <div className="p-3">
+                  <h3 className="text-sm font-semibold leading-snug">{pick(v.title, locale)}</h3>
+                  {v.description && (
+                    <p className="mt-1 line-clamp-2 text-xs text-[#b0a284]">{pick(v.description, locale)}</p>
+                  )}
+                  <p className="mt-2 text-xs text-[#7a6a4a]">
+                    {v.channel} · {videoPlatform(v)}
+                  </p>
+                </div>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+
+      <section className="mb-10">
         <h2 className="mb-4 text-xl font-semibold">{dict.home.featuredBuilds}</h2>
         <ul className="grid gap-3 sm:grid-cols-2">
           {builds.map((b) => (
@@ -151,6 +198,25 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
           ))}
         </ul>
       </section>
+      <section className="mb-10">
+        <h2 className="mb-4 text-xl font-semibold">{dict.home.communityTitle}</h2>
+        <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+          {communityLinks.map((link) => (
+            <li key={link.slug}>
+              <a
+                href={link.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="card card-interactive block p-4"
+              >
+                <span className="font-semibold text-amber-300">{link.name}</span>
+                <p className="mt-1 text-sm text-[#b0a284]">{pick(link.description, locale)}</p>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       <AdSlot id="home-bottom" />
     </div>
   );

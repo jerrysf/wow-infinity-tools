@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "new-horizons-cinematic",
+    "title": {
+      "zh": "发布动画《新地平线》",
+      "en": "New Horizons | Cinematic Trailer"
+    },
+    "description": {
+      "zh": "矮人猎人重新上路：达拉然、海加尔山与新种族天裔首次亮相。",
+      "en": "The reveal cinematic: Dalaran, Mount Hyjal and the new Skyborne race."
+    },
+    "channel": "World of Warcraft",
+    "publishedAt": "2026-09-12",
+    "youtubeId": "xXaXYxcbA6A"
+  },
+  {
+    "slug": "gameplay-trailer",
+    "title": {
+      "zh": "官方实机宣传片",
+      "en": "Gameplay Trailer"
+    },
+    "description": {
+      "zh": "实机画面：重塑后的区域、战斗与界面。",
+      "en": "Actual footage of the reworked zones, combat and UI."
+    },
+    "channel": "World of Warcraft",
+    "publishedAt": "2026-09-12",
+    "youtubeId": "uQuKE0KDgiM"
+  },
+  {
+    "slug": "warpath-amv",
+    "title": {
+      "zh": "上线宣传 MV《征战之路》",
+      "en": "WARPATH | AMV Launch Trailer"
+    },
+    "description": {
+      "zh": "联盟与部落山谷集结，Brunch Studio 制作的 2D 战歌动画。",
+      "en": "The 2D animated launch anthem by Brunch Studio."
+    },
+    "channel": "World of Warcraft",
+    "publishedAt": "2026-10-28",
+    "youtubeId": "NPbTAXZL_2A"
+  },
+  {
+    "slug": "evolving-timeless-world",
+    "title": {
+      "zh": "BlizzCon 深度讲解：进化一个永恒世界",
+      "en": "Evolving a Timeless World | BlizzCon 2026"
+    },
+    "description": {
+      "zh": "美术团队讲解如何让经典艾泽拉斯“既熟悉又新鲜”。",
+      "en": "The art team on making classic Azeroth feel familiar yet fresh."
+    },
+    "channel": "World of Warcraft",
+    "publishedAt": "2026-09-13",
+    "youtubeId": "bsg2HmvLT-A"
+  },
+  {
+    "slug": "cn-content-preview",
+    "title": {
+      "zh": "国服《无限》内容预览",
+      "en": "CN Content Preview"
+    },
+    "description": {
+      "zh": "官方国服内容预览：新种族天裔与 Beta 测试信息。",
+      "en": "Official CN preview covering the Skyborne race and beta details."
+    },
+    "channel": "魔兽世界",
+    "publishedAt": "2026-09-13",
+    "bilibiliBv": "BV1HoYd67EJq"
+  }
+]

@@ -75,6 +75,8 @@ const en: Dictionary = {
     featuredBuilds: "Featured builds",
     guidesTitle: "Starter guides",
     classesTitle: "Browse by class",
+    videosTitle: "Official & community videos",
+    communityTitle: "Community & resources",
     dataNotice: "Version & data status",
     dataNoticeBody:
       "Talent data is compiled from public material for beta build 1.60.1.70425; source and review status are shown at the top of each page. Content may need re-verification after the game launches.",

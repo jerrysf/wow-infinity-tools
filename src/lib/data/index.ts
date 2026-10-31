@@ -5,11 +5,15 @@ import {
   buildSchema,
   classSchema,
   classTalentsSchema,
+  communityLinkSchema,
+  communityVideoSchema,
   gameVersionSchema,
   guideSchema,
   selectorConfigSchema,
   type Build,
   type ClassTalents,
+  type CommunityLink,
+  type CommunityVideo,
   type GameClass,
   type GameVersion,
   type Guide,
@@ -95,4 +99,20 @@ export const getGuideBySlug = cache((slug: string): Guide | undefined => {
 
 export const getSelectorConfig = cache((): SelectorConfig => {
   return parseOrThrow(selectorConfigSchema, readJson("selector/questions.json"), "selector/questions.json");
+});
+
+function readJsonArray<T>(schema: { parse: (v: unknown) => T }, file: string): T[] {
+  return parseOrThrow(
+    { parse: (v: unknown) => (v as unknown[]).map((e) => schema.parse(e)) },
+    readJson(file),
+    file,
+  );
+}
+
+export const getCommunityVideos = cache((): CommunityVideo[] => {
+  return readJsonArray(communityVideoSchema, "community/videos.json");
+});
+
+export const getCommunityLinks = cache((): CommunityLink[] => {
+  return readJsonArray(communityLinkSchema, "community/links.json");
 });

@@ -196,3 +196,29 @@ export const selectorConfigSchema = z.object({
   resultCount: z.number().int().min(1).max(5).default(3),
 });
 export type SelectorConfig = z.infer<typeof selectorConfigSchema>;
+
+/** Curated community/official video surfaced on the home page. */
+export const communityVideoSchema = z
+  .object({
+    slug: z.string().min(1),
+    title: localizedTextSchema,
+    description: localizedTextSchema.optional(),
+    channel: z.string().min(1),
+    publishedAt: z.string().optional(),
+    youtubeId: z.string().optional(),
+    bilibiliBv: z.string().optional(),
+  })
+  .refine((v) => v.youtubeId || v.bilibiliBv, {
+    message: "video needs youtubeId or bilibiliBv",
+  });
+export type CommunityVideo = z.infer<typeof communityVideoSchema>;
+
+/** External community resource linked from the home page. */
+export const communityLinkSchema = z.object({
+  slug: z.string().min(1),
+  name: z.string().min(1),
+  url: z.url(),
+  description: localizedTextSchema,
+  region: z.enum(["global", "cn"]).optional(),
+});
+export type CommunityLink = z.infer<typeof communityLinkSchema>;

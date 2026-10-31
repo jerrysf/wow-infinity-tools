@@ -9,6 +9,8 @@ import {
   buildSchema,
   classSchema,
   classTalentsSchema,
+  communityLinkSchema,
+  communityVideoSchema,
   gameVersionSchema,
   guideSchema,
   selectorConfigSchema,
@@ -54,6 +56,20 @@ function parse<T>(schema: z.ZodType<T>, rel: string): T | null {
       fail(`${rel}: ${(err as Error).message}`);
     }
     return null;
+  }
+}
+
+function parseItem<T>(schema: z.ZodType<T>, value: unknown, where: string) {
+  try {
+    schema.parse(value);
+  } catch (err) {
+    if (err instanceof z.ZodError) {
+      for (const issue of err.issues) {
+        fail(`${where}: ${issue.path.join(".") || "(root)"} - ${issue.message}`);
+      }
+    } else {
+      fail(`${where}: ${(err as Error).message}`);
+    }
   }
 }
 
@@ -199,6 +215,16 @@ function main() {
     if (g.classId && !classes.some((c) => c.id === g.classId)) {
       fail(`guides/${g.slug}.json: unknown classId "${g.classId}"`);
     }
+  }
+
+  for (const f of dirFiles("community")) {
+    const rel = `community/${f}`;
+    const raw = readJson(rel);
+    const items = Array.isArray(raw) ? raw : [];
+    const slugs = items.map((v) => (v as { slug?: string }).slug ?? "");
+    checkDuplicates(slugs, rel);
+    if (f === "videos.json") items.forEach((v, i) => parseItem(communityVideoSchema, v, `${rel}[${i}]`));
+    if (f === "links.json") items.forEach((v, i) => parseItem(communityLinkSchema, v, `${rel}[${i}]`));
   }
 
   const selector = parse(selectorConfigSchema, "selector/questions.json");
