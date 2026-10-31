@@ -142,6 +142,7 @@ function TalentTreePanel({
 }) {
   const rows = useMemo(() => Math.max(...tree.nodes.map((n) => n.row)) + 1, [tree]);
   const spent = treePointsSpent(build, data, tree.id);
+  const [hoveredId, setHoveredId] = useState<string | null>(null);
   return (
     <section
       aria-label={`${pick(tree.name, locale)} ${spent}`}
@@ -173,21 +174,47 @@ function TalentTreePanel({
               if (!node) return <div key={`${row}-${col}`} className="aspect-square" />;
               const status = nodeAvailability(build, data, node.id);
               const allocated = build.points[node.id] ?? 0;
+              const reqs = requirementText(node, data, build, locale, dict);
               return (
-                <div key={node.id} className="mb-5" style={{ gridRow: row + 1, gridColumn: col + 1 }}>
-                  <TalentTile
-                    node={node}
-                    status={status}
-                    allocated={allocated}
-                    selected={selectedId === node.id}
-                    locale={locale}
-                    dict={dict}
-                    onAllocate={() => {
-                      onSelect(node.id);
-                      onAllocate(node.id);
-                    }}
-                    onRefund={() => onRefund(node.id)}
-                  />
+                <div key={node.id} className="relative mb-5" style={{ gridRow: row + 1, gridColumn: col + 1 }}>
+                  <div
+                    onMouseEnter={() => setHoveredId(node.id)}
+                    onMouseLeave={() => setHoveredId((id) => (id === node.id ? null : id))}
+                  >
+                    <TalentTile
+                      node={node}
+                      status={status}
+                      allocated={allocated}
+                      selected={selectedId === node.id}
+                      locale={locale}
+                      dict={dict}
+                      onAllocate={() => {
+                        onSelect(node.id);
+                        onAllocate(node.id);
+                      }}
+                      onRefund={() => onRefund(node.id)}
+                    />
+                  </div>
+                  {/* In-game style hover tooltip, pointer devices only */}
+                  {hoveredId === node.id && selectedId !== node.id && (
+                    <div
+                      role="tooltip"
+                      className={`pointer-events-none absolute top-0 z-50 hidden w-60 rounded-md border border-[#8a6d1f] bg-[#0b0d10]/95 p-2.5 shadow-xl lg:block ${
+                        col >= 2 ? "right-full mr-2" : "left-full ml-2"
+                      }`}
+                    >
+                      <p className="font-semibold text-[#e8d9a8]">
+                        {pick(node.name, locale)}
+                        <span className="ml-1 font-normal text-[#8b93a1]">
+                          {t(dict.talents.rank, { current: allocated, max: node.maxPoints })}
+                        </span>
+                      </p>
+                      <p className="mt-1 text-xs leading-relaxed text-[#b6bcc8]">{pick(node.description, locale)}</p>
+                      {reqs.length > 0 && (
+                        <p className="mt-1 text-xs text-amber-300">{reqs.join("; ")}</p>
+                      )}
+                    </div>
+                  )}
                 </div>
               );
             }),

@@ -48,6 +48,7 @@ const zh = {
       filter: "筛选",
       clearFilters: "清除筛选",
       apply: "应用",
+      search: "搜索",
       all: "全部",
     },
     version: "游戏版本",
@@ -171,6 +172,9 @@ const zh = {
     followTitle: "逐级加点演示",
     followStep: "当前阶段",
     followHint: "拖动等级滑杆，按升级顺序逐步查看加点过程。",
+    followPlay: "播放",
+    followPause: "暂停",
+    searchPlaceholder: "搜索方案…",
     sameClass: "{name}的其他方案",
   },
   guides: {

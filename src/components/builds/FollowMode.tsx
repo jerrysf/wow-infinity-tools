@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { ClassTalents, LocalizedText } from "@/lib/data/schema";
 import { findNode } from "@/lib/talents/engine";
 import { pick } from "@/i18n/get-dictionary";
@@ -33,6 +33,22 @@ export function FollowMode({
   dict: Dictionary;
 }) {
   const [level, setLevel] = useState(max);
+  const [playing, setPlaying] = useState(false);
+
+  // Autoplay: advance one level every ~900ms, stop at max.
+  useEffect(() => {
+    if (!playing || level >= max) return;
+    const timer = setTimeout(() => {
+      if (level + 1 >= max) setPlaying(false);
+      setLevel(Math.min(level + 1, max));
+    }, 900);
+    return () => clearTimeout(timer);
+  }, [playing, level, max]);
+
+  function togglePlay() {
+    setLevel((l) => (l >= max ? min : l));
+    setPlaying((p) => !p);
+  }
 
   const current = useMemo(
     () =>
@@ -71,10 +87,21 @@ export function FollowMode({
             min={min}
             max={max}
             value={level}
-            onChange={(e) => setLevel(Number(e.target.value))}
+            onChange={(e) => {
+            setLevel(Number(e.target.value));
+            setPlaying(false);
+          }}
             className="w-48 align-middle accent-[#ffd100]"
           />
         </div>
+        <button
+          type="button"
+          onClick={togglePlay}
+          aria-label={playing ? dict.builds.followPause : dict.builds.followPlay}
+          className="rounded border border-[#8a6d1f] bg-[#2a2210] px-3 py-1.5 text-sm font-medium text-[#ffd100] hover:bg-[#3a2f14]"
+        >
+          {playing ? "⏸ " + dict.builds.followPause : "▶ " + dict.builds.followPlay}
+        </button>
         {current && (
           <p className="text-sm text-[#b0a284]">
             {dict.builds.followStep}:{" "}

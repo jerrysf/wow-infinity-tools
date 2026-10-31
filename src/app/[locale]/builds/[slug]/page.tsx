@@ -16,6 +16,7 @@ import { ProvenanceBlock } from "@/components/site/ProvenanceBlock";
 import { StatusBadge } from "@/components/site/StatusBadge";
 import { AdSlot } from "@/components/site/AdSlot";
 import { BuildDemoBanner } from "@/components/builds/BuildsCatalog";
+import { CopyLinkButton } from "@/components/site/CopyLinkButton";
 
 export const dynamicParams = false;
 
@@ -144,14 +145,17 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
         </div>
       </dl>
 
-      {simLink && (
-        <Link
-          href={simLink}
-          className="btn-gold mb-6"
-        >
-          {dict.builds.loadInSimulator}
-        </Link>
-      )}
+      <div className="mb-6 flex flex-wrap gap-3">
+        {simLink && (
+          <Link
+            href={simLink}
+            className="btn-gold"
+          >
+            {dict.builds.loadInSimulator}
+          </Link>
+        )}
+        <CopyLinkButton dict={dict} />
+      </div>
 
       {talents && followSteps.length > 0 ? (
         <section className="mb-6">

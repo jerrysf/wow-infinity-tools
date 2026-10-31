@@ -50,6 +50,7 @@ export default async function GuidePage({ params }: PageProps<"/[locale]/guides/
         ]}
       />
       <h1 className="text-2xl font-bold">{pick(guide.title, locale)}</h1>
+      <p className="mt-2 mb-4 max-w-2xl text-[#b0a284]">{pick(guide.description, locale)}</p>
       <p className="mt-1 mb-4 text-sm text-[#8a7a58]">
         {dict.common.updated}: {guide.updatedAt} · {dict.common.version}: {guide.provenance.gameVersion}
       </p>

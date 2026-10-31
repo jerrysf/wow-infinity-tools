@@ -11,13 +11,14 @@ import { StatusBadge, DemoBadge } from "@/components/site/StatusBadge";
 import { classColor } from "@/lib/class-colors";
 
 type Filters = {
+  q: string;
   classId: string;
   playstyle: string;
   status: string;
   difficulty: string;
 };
 
-const EMPTY: Filters = { classId: "", playstyle: "", status: "", difficulty: "" };
+const EMPTY: Filters = { q: "", classId: "", playstyle: "", status: "", difficulty: "" };
 
 export function BuildsCatalog({
   builds,
@@ -43,6 +44,7 @@ export function BuildsCatalog({
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     setFilters({
+      q: params.get("q") ?? "",
       classId: params.get("class") ?? "",
       playstyle: params.get("playstyle") ?? "",
       status: params.get("status") ?? "",
@@ -56,6 +58,7 @@ export function BuildsCatalog({
     if (!ready) return;
     const params = new URLSearchParams(window.location.search);
     for (const [key, param] of [
+      ["q", "q"],
       ["classId", "class"],
       ["playstyle", "playstyle"],
       ["status", "status"],
@@ -74,8 +77,13 @@ export function BuildsCatalog({
     [builds],
   );
 
+  const query = filters.q.trim().toLowerCase();
   const visible = builds.filter(
     (b) =>
+      (!query ||
+        pick(b.name, locale).toLowerCase().includes(query) ||
+        pick(b.summary, locale).toLowerCase().includes(query) ||
+        b.slug.includes(query)) &&
       (!filters.classId || b.classId === filters.classId) &&
       (!filters.playstyle || b.playstyle === filters.playstyle) &&
       (!filters.status || b.provenance.status === filters.status) &&
@@ -88,6 +96,16 @@ export function BuildsCatalog({
   return (
     <div>
       <div className="mb-4 flex flex-wrap items-end gap-3" role="group" aria-label={dict.common.actions.filter}>
+        <label className="flex flex-col gap-1 text-xs font-medium">
+          {dict.common.actions.search}
+          <input
+            type="search"
+            value={filters.q}
+            onChange={(e) => setFilters({ ...filters, q: e.target.value })}
+            placeholder={dict.builds.searchPlaceholder}
+            className={`${selectCls} w-44`}
+          />
+        </label>
         <label className="flex flex-col gap-1 text-xs font-medium">
           {dict.builds.filterClass}
           <select

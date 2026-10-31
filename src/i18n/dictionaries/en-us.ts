@@ -50,6 +50,7 @@ const en: Dictionary = {
       filter: "Filter",
       clearFilters: "Clear filters",
       apply: "Apply",
+      search: "Search",
       all: "All",
     },
     version: "Game version",
@@ -174,6 +175,9 @@ const en: Dictionary = {
     followTitle: "Step-by-step follow along",
     followStep: "Current stage",
     followHint: "Drag the level slider to replay the point-by-point allocation order.",
+    followPlay: "Play",
+    followPause: "Pause",
+    searchPlaceholder: "Search builds…",
     sameClass: "Other {name} builds",
   },
   guides: {
