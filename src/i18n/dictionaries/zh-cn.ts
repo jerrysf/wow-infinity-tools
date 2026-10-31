@@ -21,6 +21,7 @@ const zh = {
         "本站为独立玩家工具与攻略项目，与暴雪娱乐（Blizzard Entertainment）无任何隶属、认可或赞助关系。",
     },
     language: "语言",
+    localeNames: { "zh-cn": "简体中文", "en-us": "English" },
     status: {
       unverified: "未验证",
       reviewed: "已审核",

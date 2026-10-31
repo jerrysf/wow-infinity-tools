@@ -1,51 +1,93 @@
 [
   {
     "slug": "official-cn",
-    "name": "魔兽世界官网",
+    "name": {
+      "zh": "魔兽世界官网",
+      "en": "WoW CN official site"
+    },
     "url": "https://wow.blizzard.cn/forever/",
-    "description": { "zh": "《无限》国服官方页面", "en": "Official CN site" },
+    "description": {
+      "zh": "《无限》国服官方页面",
+      "en": "Official CN site"
+    },
     "region": "cn"
   },
   {
     "slug": "official-en",
-    "name": "World of Warcraft",
+    "name": {
+      "zh": "World of Warcraft",
+      "en": "World of Warcraft"
+    },
     "url": "https://worldofwarcraft.blizzard.com",
-    "description": { "zh": "暴雪官方英文站", "en": "Official English site" },
+    "description": {
+      "zh": "暴雪官方英文站",
+      "en": "Official English site"
+    },
     "region": "global"
   },
   {
     "slug": "nga",
-    "name": "NGA 玩家社区",
+    "name": {
+      "zh": "NGA 玩家社区",
+      "en": "NGA community"
+    },
     "url": "https://bbs.nga.cn",
-    "description": { "zh": "国内最大的魔兽玩家社区", "en": "Largest Chinese WoW community" },
+    "description": {
+      "zh": "国内最大的魔兽玩家社区",
+      "en": "Largest Chinese WoW community"
+    },
     "region": "cn"
   },
   {
     "slug": "tieba",
-    "name": "魔兽世界吧",
+    "name": {
+      "zh": "魔兽世界吧",
+      "en": "WoW Tieba"
+    },
     "url": "https://tieba.baidu.com/f?kw=魔兽世界",
-    "description": { "zh": "百度贴吧魔兽社区", "en": "WoW community on Baidu Tieba" },
+    "description": {
+      "zh": "百度贴吧魔兽社区",
+      "en": "WoW community on Baidu Tieba"
+    },
     "region": "cn"
   },
   {
     "slug": "bilibili-search",
-    "name": "B站视频",
+    "name": {
+      "zh": "B站视频",
+      "en": "Bilibili search"
+    },
     "url": "https://search.bilibili.com/all?keyword=魔兽世界无限",
-    "description": { "zh": "《无限》相关视频与攻略", "en": "Forever videos on Bilibili" },
+    "description": {
+      "zh": "《无限》相关视频与攻略",
+      "en": "Forever videos on Bilibili"
+    },
     "region": "cn"
   },
   {
     "slug": "reddit-classic",
-    "name": "r/classicwow",
+    "name": {
+      "zh": "r/classicwow",
+      "en": "r/classicwow"
+    },
     "url": "https://www.reddit.com/r/classicwow/",
-    "description": { "zh": "Reddit 经典魔兽社区", "en": "Classic WoW community on Reddit" },
+    "description": {
+      "zh": "Reddit 经典魔兽社区",
+      "en": "Classic WoW community on Reddit"
+    },
     "region": "global"
   },
   {
     "slug": "wowhead",
-    "name": "Wowhead",
+    "name": {
+      "zh": "Wowhead",
+      "en": "Wowhead"
+    },
     "url": "https://www.wowhead.com",
-    "description": { "zh": "英文资料数据库", "en": "English WoW database" },
+    "description": {
+      "zh": "英文资料数据库",
+      "en": "English WoW database"
+    },
     "region": "global"
   }
 ]

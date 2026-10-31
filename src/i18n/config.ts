@@ -9,11 +9,6 @@ export const localeLangTags: Record<Locale, string> = {
   "en-us": "en-US",
 };
 
-export const localeNames: Record<Locale, string> = {
-  "zh-cn": "简体中文",
-  "en-us": "English",
-};
-
 export function isLocale(value: string): value is Locale {
   return (locales as readonly string[]).includes(value);
 }

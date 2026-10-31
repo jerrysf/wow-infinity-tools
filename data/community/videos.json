@@ -9,7 +9,10 @@
       "zh": "矮人猎人重新上路：达拉然、海加尔山与新种族天裔首次亮相。",
       "en": "The reveal cinematic: Dalaran, Mount Hyjal and the new Skyborne race."
     },
-    "channel": "World of Warcraft",
+    "channel": {
+      "zh": "World of Warcraft",
+      "en": "World of Warcraft"
+    },
     "publishedAt": "2026-09-12",
     "youtubeId": "xXaXYxcbA6A"
   },
@@ -23,7 +26,10 @@
       "zh": "实机画面：重塑后的区域、战斗与界面。",
       "en": "Actual footage of the reworked zones, combat and UI."
     },
-    "channel": "World of Warcraft",
+    "channel": {
+      "zh": "World of Warcraft",
+      "en": "World of Warcraft"
+    },
     "publishedAt": "2026-09-12",
     "youtubeId": "uQuKE0KDgiM"
   },
@@ -37,7 +43,10 @@
       "zh": "联盟与部落山谷集结，Brunch Studio 制作的 2D 战歌动画。",
       "en": "The 2D animated launch anthem by Brunch Studio."
     },
-    "channel": "World of Warcraft",
+    "channel": {
+      "zh": "World of Warcraft",
+      "en": "World of Warcraft"
+    },
     "publishedAt": "2026-10-28",
     "youtubeId": "NPbTAXZL_2A"
   },
@@ -51,7 +60,10 @@
       "zh": "美术团队讲解如何让经典艾泽拉斯“既熟悉又新鲜”。",
       "en": "The art team on making classic Azeroth feel familiar yet fresh."
     },
-    "channel": "World of Warcraft",
+    "channel": {
+      "zh": "World of Warcraft",
+      "en": "World of Warcraft"
+    },
     "publishedAt": "2026-09-13",
     "youtubeId": "bsg2HmvLT-A"
   },
@@ -65,7 +77,10 @@
       "zh": "官方国服内容预览：新种族天裔与 Beta 测试信息。",
       "en": "Official CN preview covering the Skyborne race and beta details."
     },
-    "channel": "魔兽世界",
+    "channel": {
+      "zh": "魔兽世界",
+      "en": "WoW (CN official)"
+    },
     "publishedAt": "2026-09-13",
     "bilibiliBv": "BV1HoYd67EJq"
   }

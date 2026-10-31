@@ -203,7 +203,7 @@ export const communityVideoSchema = z
     slug: z.string().min(1),
     title: localizedTextSchema,
     description: localizedTextSchema.optional(),
-    channel: z.string().min(1),
+    channel: localizedTextSchema,
     publishedAt: z.string().optional(),
     youtubeId: z.string().optional(),
     bilibiliBv: z.string().optional(),
@@ -216,7 +216,7 @@ export type CommunityVideo = z.infer<typeof communityVideoSchema>;
 /** External community resource linked from the home page. */
 export const communityLinkSchema = z.object({
   slug: z.string().min(1),
-  name: z.string().min(1),
+  name: localizedTextSchema,
   url: z.url(),
   description: localizedTextSchema,
   region: z.enum(["global", "cn"]).optional(),

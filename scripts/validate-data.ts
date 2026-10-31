@@ -38,6 +38,7 @@ function warn(msg: string) {
 function readJson(rel: string): unknown {
   const data: unknown = JSON.parse(fs.readFileSync(path.join(DATA_DIR, rel), "utf8"));
   checkEntities(data, rel);
+  checkLocalized(data, rel);
   return data;
 }
 
@@ -77,6 +78,7 @@ function parseItem<T>(schema: z.ZodType<T>, value: unknown, where: string) {
 }
 
 const ENTITY_RE = /&(?:#[0-9]+|[a-zA-Z]+);/;
+const CJK_RE = /[一-鿿]/;
 
 function checkEntities(value: unknown, where: string) {
   if (typeof value === "string") {
@@ -89,6 +91,21 @@ function checkEntities(value: unknown, where: string) {
   }
   if (value && typeof value === "object") {
     for (const v of Object.values(value)) checkEntities(v, where);
+  }
+}
+
+function checkLocalized(value: unknown, where: string) {
+  if (Array.isArray(value)) {
+    for (const v of value) checkLocalized(v, where);
+    return;
+  }
+  if (value && typeof value === "object") {
+    const rec = value as Record<string, unknown>;
+    if (typeof rec.en === "string" && typeof rec.zh === "string") {
+      if (CJK_RE.test(rec.en)) fail(`${where}: en field contains Chinese: "${rec.en.slice(0, 40)}"`);
+      if (rec.en.trim() === "") fail(`${where}: en field is empty (falls back to Chinese)`);
+    }
+    for (const v of Object.values(rec)) checkLocalized(v, where);
   }
 }
 

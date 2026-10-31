@@ -40,8 +40,10 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       : v.youtubeId
         ? `https://www.youtube.com/watch?v=${v.youtubeId}`
         : `https://www.bilibili.com/video/${v.bilibiliBv}/`;
-  const videoPlatform = (v: (typeof videos)[number]) =>
-    (locale === "zh-cn" ? v.bilibiliBv : v.youtubeId) ? (locale === "zh-cn" ? "哔哩哔哩" : "YouTube") : locale === "zh-cn" ? "YouTube" : "哔哩哔哩";
+  const videoPlatform = (v: (typeof videos)[number]) => {
+    const usesBilibili = locale === "zh-cn" ? Boolean(v.bilibiliBv) : !v.youtubeId;
+    return usesBilibili ? (locale === "zh-cn" ? "哔哩哔哩" : "Bilibili") : "YouTube";
+  };
 
   const jsonLd = [
     {
@@ -159,7 +161,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
                     <p className="mt-1 line-clamp-2 text-xs text-[#9aa8bc]">{pick(v.description, locale)}</p>
                   )}
                   <p className="mt-2 text-xs text-[#75869c]">
-                    {v.channel} · {videoPlatform(v)}
+                    {pick(v.channel, locale)} · {videoPlatform(v)}
                   </p>
                 </div>
               </a>
@@ -222,7 +224,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
                 rel="noopener noreferrer"
                 className="card card-interactive block p-4"
               >
-                <span className="font-semibold text-amber-300">{link.name}</span>
+                <span className="font-semibold text-amber-300">{pick(link.name, locale)}</span>
                 <p className="mt-1 text-sm text-[#9aa8bc]">{pick(link.description, locale)}</p>
               </a>
             </li>

@@ -23,6 +23,7 @@ const en: Dictionary = {
         "This site is an independent fan-made tool and guide project. It is not affiliated with, endorsed by, or sponsored by Blizzard Entertainment.",
     },
     language: "Language",
+    localeNames: { "zh-cn": "Chinese", "en-us": "English" },
     status: {
       unverified: "Unverified",
       reviewed: "Reviewed",

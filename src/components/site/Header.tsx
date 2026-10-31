@@ -26,7 +26,7 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
         </Link>
         <div className="order-2 sm:order-3">
           <Suspense fallback={null}>
-            <LocaleSwitcher current={locale} />
+            <LocaleSwitcher current={locale} dict={dict} />
           </Suspense>
         </div>
         <nav
