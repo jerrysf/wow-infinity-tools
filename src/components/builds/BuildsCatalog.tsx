@@ -1,14 +1,12 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
-import Link from "next/link";
 import type { Build, GameClass } from "@/lib/data/schema";
 import { pick } from "@/i18n/get-dictionary";
 import type { Dictionary } from "@/i18n/dictionaries/zh-cn";
 import type { Locale } from "@/i18n/config";
-import { localizedPath } from "@/lib/site";
-import { StatusBadge, DemoBadge } from "@/components/site/StatusBadge";
-import { classColor } from "@/lib/class-colors";
+import { DemoBadge } from "@/components/site/StatusBadge";
+import { BuildCard } from "./BuildCard";
 
 type Filters = {
   q: string;
@@ -177,43 +175,17 @@ export function BuildsCatalog({
 
       {visible.length === 0 && <p className="text-[#7d8fa5]">{dict.builds.empty}</p>}
       <ul className="grid gap-4 sm:grid-cols-2">
-        {visible.map((b) => {
-          const c = classById.get(b.classId);
-          return (
-            <li key={b.slug}>
-              <Link
-                href={localizedPath(locale, `/builds/${b.slug}`)}
-                className="card card-interactive block p-4"
-              >
-                <div className="flex flex-wrap items-center gap-2">
-                  <h2 className="text-base font-semibold">{pick(b.name, locale)}</h2>
-                  <StatusBadge status={b.provenance.status} needsRevalidation={b.provenance.needsRevalidation} dict={dict} />
-                </div>
-                <p className="mt-1 line-clamp-2 text-sm text-[#9aa8bc]">
-                  {pick(b.summary, locale)}
-                </p>
-                <p className="mt-2 flex flex-wrap gap-x-3 text-xs text-[#75869c]">
-                  {distributions[b.slug] && (
-                    <span className="font-mono text-[#f0bc4a]">[{distributions[b.slug]}]</span>
-                  )}
-                  <span style={c ? { color: classColor(c.id) } : undefined}>
-                    {c ? pick(c.name, locale) : b.classId}
-                  </span>
-                  <span>{b.playstyle}</span>
-                  <span>
-                    {dict.builds.levelRange}: {b.levelRange.min}-{b.levelRange.max}
-                  </span>
-                  <span>
-                    {dict.common.version}: {b.gameVersion}
-                  </span>
-                  <span>
-                    {dict.common.updated}: {b.updatedAt}
-                  </span>
-                </p>
-              </Link>
-            </li>
-          );
-        })}
+        {visible.map((b) => (
+          <li key={b.slug}>
+            <BuildCard
+              build={b}
+              gameClass={classById.get(b.classId)}
+              distribution={distributions[b.slug]}
+              locale={locale}
+              dict={dict}
+            />
+          </li>
+        ))}
       </ul>
     </div>
   );
@@ -222,7 +194,7 @@ export function BuildsCatalog({
 export function BuildDemoBanner({ demo, dict }: { demo: boolean; dict: Dictionary }) {
   if (!demo) return null;
   return (
-    <p className="mb-4 flex items-center gap-2 rounded-lg border border-purple-200 bg-purple-50 p-3 text-sm text-purple-900 dark:border-purple-900 dark:bg-purple-950 dark:text-purple-200">
+    <p className="mb-4 flex items-center gap-2 rounded-lg border border-purple-400/30 bg-purple-500/10 p-3 text-sm text-purple-300">
       <DemoBadge dict={dict} /> {dict.common.demoNoticeLong}
     </p>
   );

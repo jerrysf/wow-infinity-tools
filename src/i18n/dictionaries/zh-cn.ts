@@ -192,6 +192,7 @@ const zh = {
     empty:
       "当前为首个数据版本。新版本数据导入后，这里会展示天赋变更明细。",
     versionsTitle: "数据版本",
+    current: "当前版本",
     added: "新增天赋",
     removed: "移除天赋",
     changed: "调整天赋",

@@ -76,7 +76,7 @@ export function FollowMode({
 
   return (
     <div>
-      <div className="mb-4 flex flex-wrap items-center gap-x-6 gap-y-2 rounded-md border border-[#263446] bg-[#12161d] p-3">
+      <div className="mb-4 flex flex-wrap items-center gap-x-6 gap-y-2 rounded-md border border-[#263446] bg-[#101824] p-3">
         <div className="text-sm">
           <label htmlFor="follow-level" className="mr-2 font-medium text-[#f0e5c0]">
             {dict.talents.level}: {level}

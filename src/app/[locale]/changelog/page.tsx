@@ -49,14 +49,14 @@ export default async function ChangelogPage({ params }: PageProps<"/[locale]/cha
       <p className="mb-6 max-w-2xl text-[#9aa8bc]">{dict.changelog.description}</p>
 
       <section className="mb-8">
-        <h2 className="mb-3 text-lg font-semibold">{dict.changelog.versionsTitle}</h2>
+        <h2 className="mb-3 section-title text-lg font-semibold">{dict.changelog.versionsTitle}</h2>
         <ul className="space-y-2">
           {versions.map((v) => (
             <li key={v.id} className="card flex flex-wrap items-center gap-x-3 p-3 text-sm">
               <span className="font-mono font-semibold text-[#f0bc4a]">{v.label}</span>
               {v.isCurrent && (
                 <span className="rounded border border-[#b08428] bg-[#16202e] px-1.5 py-0.5 text-xs text-[#ffd100]">
-                  current
+                  {dict.changelog.current}
                 </span>
               )}
               <span className="text-xs text-[#75869c]">{v.releasedAt}</span>
@@ -71,7 +71,7 @@ export default async function ChangelogPage({ params }: PageProps<"/[locale]/cha
 
       {changelogs.map((log) => (
         <section key={`${log.fromVersion}-${log.toVersion}`} className="mb-8">
-          <h2 className="mb-1 text-lg font-semibold">
+          <h2 className="mb-1 section-title text-lg font-semibold">
             {log.fromVersion} → {log.toVersion}
           </h2>
           <p className="mb-4 text-xs text-[#75869c]">{log.generatedAt}</p>

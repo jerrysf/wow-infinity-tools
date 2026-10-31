@@ -113,7 +113,7 @@ export function QuizFlow({
     return (
       <div>
         <p className="card mb-4 p-3 text-sm text-[#9aa8bc]">{dict.selector.resultsDisclaimer}</p>
-        <h2 className="mb-4 text-xl font-semibold">{dict.selector.results}</h2>
+        <h2 className="mb-4 section-title text-xl font-semibold">{dict.selector.results}</h2>
         {results.length === 0 && <p>{dict.selector.noResults}</p>}
         <ol className="space-y-4">
           {results.map((rec) => {
@@ -207,7 +207,7 @@ export function QuizFlow({
           />
         </div>
       </div>
-      <h2 className="mb-4 text-xl font-semibold">{pick(question.text, locale)}</h2>
+      <h2 className="mb-4 section-title text-xl font-semibold">{pick(question.text, locale)}</h2>
       <div className="grid gap-2">
         {question.options.map((option) => (
           <button

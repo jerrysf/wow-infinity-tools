@@ -6,8 +6,8 @@ import { pageMetadata } from "@/lib/seo";
 import { absoluteUrl, localizedPath, site } from "@/lib/site";
 import { JsonLd } from "@/components/site/JsonLd";
 import { getBuilds, getClasses, getBuildDistribution, getClassTalents, getCommunityLinks, getCommunityVideos, getCurrentVersion, getGuides } from "@/lib/data";
-import { StatusBadge, DemoBadge } from "@/components/site/StatusBadge";
-import { classColor } from "@/lib/class-colors";
+import { StatusBadge } from "@/components/site/StatusBadge";
+import { ClassCard } from "@/components/site/ClassCard";
 import { VideoThumbnail } from "@/components/site/VideoThumbnail";
 import { AdSlot } from "@/components/site/AdSlot";
 
@@ -116,39 +116,18 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       </section>
 
       <section className="mb-10">
-        <h2 className="mb-4 text-xl font-semibold">{dict.home.classesTitle}</h2>
+        <h2 className="mb-4 section-title text-xl font-semibold">{dict.home.classesTitle}</h2>
         <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {classes.map((c) => (
             <li key={c.id}>
-              <Link
-                href={localizedPath(locale, `/talents/${c.slug}`)}
-                className="card card-interactive relative block overflow-hidden p-4"
-              >
-                <span
-                  aria-hidden
-                  className="absolute inset-x-0 top-0 h-1"
-                  style={{ background: `linear-gradient(90deg, ${classColor(c.id)}, transparent 85%)` }}
-                />
-                <div className="mt-0.5 flex items-center gap-2">
-                  <span className="text-base font-bold" style={{ color: classColor(c.id) }}>
-                    {pick(c.name, locale)}
-                  </span>
-                  {c.demo && <DemoBadge dict={dict} />}
-                </div>
-                {c.tagline && (
-                  <p className="mt-1 text-sm text-[#9aa8bc]">{pick(c.tagline, locale)}</p>
-                )}
-                {!c.hasTalentData && (
-                  <p className="mt-1 text-xs text-[#75869c]">{dict.talents.dataPending}</p>
-                )}
-              </Link>
+              <ClassCard gameClass={c} locale={locale} dict={dict} />
             </li>
           ))}
         </ul>
       </section>
 
       <section className="mb-10">
-        <h2 className="mb-4 text-xl font-semibold">{dict.home.videosTitle}</h2>
+        <h2 className="mb-4 section-title text-xl font-semibold">{dict.home.videosTitle}</h2>
         <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {videos.map((v) => (
             <li key={v.slug}>
@@ -190,7 +169,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       </section>
 
       <section className="mb-10">
-        <h2 className="mb-4 text-xl font-semibold">{dict.home.featuredBuilds}</h2>
+        <h2 className="mb-4 section-title text-xl font-semibold">{dict.home.featuredBuilds}</h2>
         <ul className="grid gap-3 sm:grid-cols-2">
           {builds.map((b) => (
             <li key={b.slug}>
@@ -217,7 +196,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
       </section>
 
       <section className="mb-10">
-        <h2 className="mb-4 text-xl font-semibold">{dict.home.guidesTitle}</h2>
+        <h2 className="mb-4 section-title text-xl font-semibold">{dict.home.guidesTitle}</h2>
         <ul className="grid gap-3 sm:grid-cols-2">
           {guides.map((g) => (
             <li key={g.slug}>
@@ -233,7 +212,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
         </ul>
       </section>
       <section className="mb-10">
-        <h2 className="mb-4 text-xl font-semibold">{dict.home.communityTitle}</h2>
+        <h2 className="mb-4 section-title text-xl font-semibold">{dict.home.communityTitle}</h2>
         <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {communityLinks.map((link) => (
             <li key={link.slug}>

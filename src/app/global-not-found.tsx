@@ -10,12 +10,20 @@ export const metadata: Metadata = {
 
 export default function GlobalNotFound() {
   return (
-    <html lang="zh-CN">
+    <html lang="zh-CN" className="dark">
       <body>
-        <main style={{ padding: "4rem 1rem", textAlign: "center", fontFamily: "sans-serif" }}>
-          <h1>404 - Page Not Found / 页面不存在</h1>
-          <p>
-            <Link href="/zh-cn">返回首页</Link> · <Link href="/en-us">Back to home</Link>
+        <main className="flex min-h-screen flex-col items-center justify-center px-4 text-center">
+          <p className="eyebrow">Infinity Compendium</p>
+          <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-white">
+            404 - Page Not Found / 页面不存在
+          </h1>
+          <p className="mt-4 flex gap-4">
+            <Link href="/zh-cn" className="btn-gold">
+              返回首页
+            </Link>
+            <Link href="/en-us" className="btn-ghost">
+              Back to home
+            </Link>
           </p>
         </main>
       </body>

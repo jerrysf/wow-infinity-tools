@@ -1,13 +1,10 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 import { isLocale } from "@/i18n/config";
-import { getDictionary, pick } from "@/i18n/get-dictionary";
+import { getDictionary } from "@/i18n/get-dictionary";
 import { pageMetadata } from "@/lib/seo";
-import { localizedPath } from "@/lib/site";
 import { getClasses } from "@/lib/data";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
-import { DemoBadge } from "@/components/site/StatusBadge";
-import { classColor } from "@/lib/class-colors";
+import { ClassCard } from "@/components/site/ClassCard";
 
 export async function generateMetadata({ params }: PageProps<"/[locale]/talents">): Promise<Metadata> {
   const { locale } = await params;
@@ -33,27 +30,11 @@ export default async function TalentsIndexPage({ params }: PageProps<"/[locale]/
       />
       <h1 className="mb-2 text-2xl font-bold">{dict.talents.title}</h1>
       <p className="mb-6 max-w-2xl text-[#9aa8bc]">{dict.talents.description}</p>
-      <h2 className="mb-3 text-lg font-semibold">{dict.talents.selectClass}</h2>
+      <h2 className="mb-3 section-title text-lg font-semibold">{dict.talents.selectClass}</h2>
       <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {classes.map((c) => (
           <li key={c.id}>
-            <Link
-              href={localizedPath(locale, `/talents/${c.slug}`)}
-              className="card card-interactive block p-4"
-            >
-              <div className="flex items-center gap-2">
-                <span className="font-semibold" style={{ color: classColor(c.id) }}>
-                  {pick(c.name, locale)}
-                </span>
-                {c.demo && <DemoBadge dict={dict} />}
-              </div>
-              {c.tagline && (
-                <p className="mt-1 text-sm text-[#9aa8bc]">{pick(c.tagline, locale)}</p>
-              )}
-              {!c.hasTalentData && (
-                <p className="mt-2 text-xs font-medium text-amber-400">{dict.talents.dataPending}</p>
-              )}
-            </Link>
+            <ClassCard gameClass={c} locale={locale} dict={dict} />
           </li>
         ))}
       </ul>

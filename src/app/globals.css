@@ -142,6 +142,30 @@ body {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
 }
 
+/* Horizontally scrollable strip without a visible scrollbar. */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Section heading with a gold accent bar. */
+.section-title {
+  position: relative;
+  padding-left: 0.7rem;
+}
+.section-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.2em;
+  bottom: 0.2em;
+  width: 3px;
+  border-radius: 2px;
+  background: linear-gradient(180deg, #ffd76e, #c99632);
+}
+
 /* Small uppercase eyebrow label above section headings. */
 .eyebrow {
   font-size: 0.6875rem;

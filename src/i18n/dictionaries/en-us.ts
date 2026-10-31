@@ -195,6 +195,7 @@ const en: Dictionary = {
     empty:
       "Showing the first data version. Talent changes will appear here after a new version is imported.",
     versionsTitle: "Data versions",
+    current: "current",
     added: "New talents",
     removed: "Removed talents",
     changed: "Changed talents",

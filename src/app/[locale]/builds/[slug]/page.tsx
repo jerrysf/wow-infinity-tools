@@ -17,6 +17,7 @@ import { StatusBadge } from "@/components/site/StatusBadge";
 import { AdSlot } from "@/components/site/AdSlot";
 import { BuildDemoBanner } from "@/components/builds/BuildsCatalog";
 import { CopyLinkButton } from "@/components/site/CopyLinkButton";
+import { BuildCard } from "@/components/builds/BuildCard";
 
 export const dynamicParams = false;
 
@@ -159,7 +160,7 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
 
       {talents && followSteps.length > 0 ? (
         <section className="mb-6">
-          <h2 className="mb-2 text-lg font-semibold">{dict.builds.followTitle}</h2>
+          <h2 className="mb-2 section-title text-lg font-semibold">{dict.builds.followTitle}</h2>
           <FollowMode
             data={talents}
             steps={followSteps}
@@ -171,12 +172,12 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
         </section>
       ) : talents ? (
         <section className="mb-6">
-          <h2 className="mb-2 text-lg font-semibold">{dict.builds.talentMap}</h2>
+          <h2 className="mb-2 section-title text-lg font-semibold">{dict.builds.talentMap}</h2>
           <TalentMap data={talents} points={build.allocation} locale={locale} dict={dict} />
         </section>
       ) : (
         <section className="mb-6">
-          <h2 className="mb-2 text-lg font-semibold">{dict.talents.pointsSpent}</h2>
+          <h2 className="mb-2 section-title text-lg font-semibold">{dict.talents.pointsSpent}</h2>
           <ul className="list-inside list-disc text-sm text-[#b9c6d6]">
             {Object.entries(build.allocation).map(([nodeId, pts]) => (
               <li key={nodeId}>
@@ -190,7 +191,7 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
       <div className="grid gap-6 md:grid-cols-2">
         {build.levelingSteps.length > 0 && (
           <section>
-            <h2 className="mb-2 text-lg font-semibold">{dict.builds.levelingOrder}</h2>
+            <h2 className="mb-2 section-title text-lg font-semibold">{dict.builds.levelingOrder}</h2>
             <ol className="space-y-3">
               {build.levelingSteps.map((step) => (
                 <li key={step.levelRange} className="card p-3 text-sm">
@@ -215,7 +216,7 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
       <div className="mt-6 grid gap-6 md:grid-cols-3">
         {build.pros.length > 0 && (
           <section>
-            <h2 className="mb-2 text-lg font-semibold">{dict.builds.pros}</h2>
+            <h2 className="mb-2 section-title text-lg font-semibold">{dict.builds.pros}</h2>
             <ul className="list-inside list-disc text-sm text-[#b9c6d6]">
               {build.pros.map((p, i) => (
                 <li key={i}>{pick(p, locale)}</li>
@@ -225,7 +226,7 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
         )}
         {build.cons.length > 0 && (
           <section>
-            <h2 className="mb-2 text-lg font-semibold">{dict.builds.cons}</h2>
+            <h2 className="mb-2 section-title text-lg font-semibold">{dict.builds.cons}</h2>
             <ul className="list-inside list-disc text-sm text-[#b9c6d6]">
               {build.cons.map((c, i) => (
                 <li key={i}>{pick(c, locale)}</li>
@@ -235,7 +236,7 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
         )}
         {build.requirements.length > 0 && (
           <section>
-            <h2 className="mb-2 text-lg font-semibold">{dict.builds.requirements}</h2>
+            <h2 className="mb-2 section-title text-lg font-semibold">{dict.builds.requirements}</h2>
             <ul className="list-inside list-disc text-sm text-[#b9c6d6]">
               {build.requirements.map((r, i) => (
                 <li key={i}>{pick(r, locale)}</li>
@@ -258,25 +259,19 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
 
       {sameClassBuilds.length > 0 && (
         <section className="mt-8">
-          <h2 className="mb-3 text-xl font-semibold">
+          <h2 className="mb-3 section-title text-xl font-semibold">
             {t(dict.builds.sameClass, { name: gameClass ? pick(gameClass.name, locale) : build.classId })}
           </h2>
           <ul className="grid gap-3 sm:grid-cols-2">
             {sameClassBuilds.map((b) => (
               <li key={b.slug}>
-                <Link
-                  href={localizedPath(locale, `/builds/${b.slug}`)}
-                  className="card card-interactive block p-4"
-                >
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="font-semibold">{pick(b.name, locale)}</span>
-                    {getBuildDistribution(b) && (
-                      <span className="font-mono text-xs text-[#f0bc4a]">[{getBuildDistribution(b)}]</span>
-                    )}
-                    <StatusBadge status={b.provenance.status} dict={dict} />
-                  </div>
-                  <p className="mt-1 line-clamp-2 text-sm text-[#9aa8bc]">{pick(b.summary, locale)}</p>
-                </Link>
+                <BuildCard
+                  build={b}
+                  gameClass={gameClass}
+                  distribution={getBuildDistribution(b)}
+                  locale={locale}
+                  dict={dict}
+                />
               </li>
             ))}
           </ul>

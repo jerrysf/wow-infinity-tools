@@ -1,14 +1,13 @@
-import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { isLocale, locales } from "@/i18n/config";
 import { getDictionary, pick } from "@/i18n/get-dictionary";
 import { pageMetadata } from "@/lib/seo";
-import { localizedPath } from "@/lib/site";
-import { getBuilds, getGuideBySlug, getGuides } from "@/lib/data";
+import { getBuilds, getBuildDistribution, getClassById, getGuideBySlug, getGuides } from "@/lib/data";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { ProvenanceBlock } from "@/components/site/ProvenanceBlock";
 import { BuildDemoBanner } from "@/components/builds/BuildsCatalog";
+import { BuildCard } from "@/components/builds/BuildCard";
 import { AdSlot } from "@/components/site/AdSlot";
 
 export const dynamicParams = false;
@@ -74,22 +73,23 @@ export default async function GuidePage({ params }: PageProps<"/[locale]/guides/
       )}
       {guide.sections.map((section, i) => (
         <section key={i} id={`s-${i}`} className="mb-6 scroll-mt-20">
-          <h2 className="mb-2 text-lg font-semibold">{pick(section.heading, locale)}</h2>
+          <h2 className="mb-2 section-title text-lg font-semibold">{pick(section.heading, locale)}</h2>
           <p className="leading-relaxed text-[#b9c6d6]">{pick(section.body, locale)}</p>
         </section>
       ))}
       {builds.length > 0 && (
         <section className="mb-6">
-          <h2 className="mb-2 text-lg font-semibold">{dict.guides.relatedBuilds}</h2>
-          <ul className="list-inside list-disc text-sm">
+          <h2 className="mb-3 section-title text-lg font-semibold">{dict.guides.relatedBuilds}</h2>
+          <ul className="grid gap-3 sm:grid-cols-2">
             {builds.map((b) => (
               <li key={b.slug}>
-                <Link
-                  href={localizedPath(locale, `/builds/${b.slug}`)}
-                  className="text-amber-300 underline decoration-amber-300/40 underline-offset-2 hover:text-amber-200"
-                >
-                  {pick(b.name, locale)}
-                </Link>
+                <BuildCard
+                  build={b}
+                  gameClass={getClassById(b.classId)}
+                  distribution={getBuildDistribution(b)}
+                  locale={locale}
+                  dict={dict}
+                />
               </li>
             ))}
           </ul>

@@ -36,7 +36,9 @@ function warn(msg: string) {
 }
 
 function readJson(rel: string): unknown {
-  return JSON.parse(fs.readFileSync(path.join(DATA_DIR, rel), "utf8"));
+  const data: unknown = JSON.parse(fs.readFileSync(path.join(DATA_DIR, rel), "utf8"));
+  checkEntities(data, rel);
+  return data;
 }
 
 function dirFiles(dir: string): string[] {
@@ -71,6 +73,22 @@ function parseItem<T>(schema: z.ZodType<T>, value: unknown, where: string) {
     } else {
       fail(`${where}: ${(err as Error).message}`);
     }
+  }
+}
+
+const ENTITY_RE = /&(?:#[0-9]+|[a-zA-Z]+);/;
+
+function checkEntities(value: unknown, where: string) {
+  if (typeof value === "string") {
+    if (ENTITY_RE.test(value)) fail(`${where}: unescaped HTML entity in "${value.slice(0, 60)}"`);
+    return;
+  }
+  if (Array.isArray(value)) {
+    for (const v of value) checkEntities(v, where);
+    return;
+  }
+  if (value && typeof value === "object") {
+    for (const v of Object.values(value)) checkEntities(v, where);
   }
 }
 

@@ -10,8 +10,9 @@ import { TalentSimulator } from "@/components/talents/TalentSimulator";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { ProvenanceBlock } from "@/components/site/ProvenanceBlock";
 import { BuildDemoBanner } from "@/components/builds/BuildsCatalog";
-import { DemoBadge, StatusBadge } from "@/components/site/StatusBadge";
+import { DemoBadge } from "@/components/site/StatusBadge";
 import { classColor } from "@/lib/class-colors";
+import { BuildCard } from "@/components/builds/BuildCard";
 
 export const dynamicParams = false;
 
@@ -93,28 +94,19 @@ export default async function ClassTalentsPage({ params }: PageProps<"/[locale]/
 
       {(classBuilds.length > 0 || classGuide) && (
         <section className="mt-10">
-          <h2 className="mb-3 text-xl font-semibold">
+          <h2 className="mb-3 section-title text-xl font-semibold">
             {pick(gameClass.name, locale)} · {dict.builds.title}
           </h2>
           <ul className="grid gap-3 sm:grid-cols-2">
             {classBuilds.map((b) => (
               <li key={b.slug}>
-                <Link
-                  href={localizedPath(locale, `/builds/${b.slug}`)}
-                  className="card card-interactive block p-4"
-                >
-                  <div className="flex flex-wrap items-center gap-2">
-                    <span className="font-semibold">{pick(b.name, locale)}</span>
-                    {getBuildDistribution(b) && (
-                      <span className="font-mono text-xs text-[#f0bc4a]">[{getBuildDistribution(b)}]</span>
-                    )}
-                    <StatusBadge status={b.provenance.status} dict={dict} />
-                  </div>
-                  <p className="mt-1 text-sm text-[#9aa8bc]">{pick(b.summary, locale)}</p>
-                  <p className="mt-2 text-xs text-[#75869c]">
-                    {b.playstyle} · {dict.common.level} {b.levelRange.min}-{b.levelRange.max}
-                  </p>
-                </Link>
+                <BuildCard
+                  build={b}
+                  gameClass={gameClass}
+                  distribution={getBuildDistribution(b)}
+                  locale={locale}
+                  dict={dict}
+                />
               </li>
             ))}
             {classGuide && (

@@ -23,7 +23,7 @@ export function NavLinks({
             key={item.href}
             href={href}
             aria-current={active ? "page" : undefined}
-            className={`rounded-md px-2.5 py-1.5 text-sm font-medium transition-colors ${
+            className={`shrink-0 whitespace-nowrap rounded-md px-2.5 py-1.5 text-sm font-medium transition-colors ${
               active
                 ? "bg-[#1c2940] text-[#f0bc4a]"
                 : "text-slate-300 hover:bg-[#16202e] hover:text-slate-100"

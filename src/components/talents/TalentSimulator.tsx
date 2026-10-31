@@ -387,9 +387,9 @@ export function TalentSimulator({
   const mobileTree = data.trees.find((tr) => tr.id === activeTree) ?? data.trees[0];
 
   return (
-    <div className="rounded-lg border border-[#263446] bg-[#0b0d12] p-3 text-[#dde4ee] sm:p-4">
+    <div className="rounded-lg border border-[#263446] bg-[#0a0f16] p-3 text-[#dde4ee] sm:p-4">
       {/* Status bar */}
-      <div className="mb-4 flex flex-wrap items-center gap-x-6 gap-y-2 rounded-md border border-[#263446] bg-[#12161d] p-3">
+      <div className="mb-4 flex flex-wrap items-center gap-x-6 gap-y-2 rounded-md border border-[#263446] bg-[#101824] p-3">
         <div className="text-sm">
           <label htmlFor="sim-level" className="mr-2 font-medium text-[#f0e5c0]">
             {dict.talents.level}: {build.level}
@@ -416,7 +416,7 @@ export function TalentSimulator({
           <button
             type="button"
             onClick={() => { setBuild(resetBuild(build)); setError(null); }}
-            className="rounded border border-[#3a4150] px-3 py-1.5 text-sm text-[#dde4ee] hover:bg-[#1c222c]"
+            className="rounded border border-[#33415c] px-3 py-1.5 text-sm text-[#dde4ee] hover:bg-[#1a2433]"
           >
             {dict.talents.reset}
           </button>
@@ -430,14 +430,14 @@ export function TalentSimulator({
           <button
             type="button"
             onClick={copySummary}
-            className="rounded border border-[#3a4150] px-3 py-1.5 text-sm text-[#dde4ee] hover:bg-[#1c222c]"
+            className="rounded border border-[#33415c] px-3 py-1.5 text-sm text-[#dde4ee] hover:bg-[#1a2433]"
           >
             {dict.common.actions.copySummary}
           </button>
           <button
             type="button"
             onClick={copyCode}
-            className="rounded border border-[#3a4150] px-3 py-1.5 text-sm text-[#dde4ee] hover:bg-[#1c222c]"
+            className="rounded border border-[#33415c] px-3 py-1.5 text-sm text-[#dde4ee] hover:bg-[#1a2433]"
           >
             {dict.talents.copyCode}
           </button>
@@ -445,7 +445,7 @@ export function TalentSimulator({
             type="button"
             onClick={() => setShowImport((v) => !v)}
             aria-expanded={showImport}
-            className="rounded border border-[#3a4150] px-3 py-1.5 text-sm text-[#dde4ee] hover:bg-[#1c222c]"
+            className="rounded border border-[#33415c] px-3 py-1.5 text-sm text-[#dde4ee] hover:bg-[#1a2433]"
           >
             {dict.talents.import}
           </button>
@@ -453,7 +453,7 @@ export function TalentSimulator({
       </div>
 
       {showImport && (
-        <div className="mb-4 flex flex-wrap items-center gap-2 rounded-md border border-[#263446] bg-[#12161d] p-3">
+        <div className="mb-4 flex flex-wrap items-center gap-2 rounded-md border border-[#263446] bg-[#101824] p-3">
           <input
             type="text"
             value={importText}
@@ -461,7 +461,7 @@ export function TalentSimulator({
             onKeyDown={(e) => e.key === "Enter" && applyImport()}
             placeholder={dict.talents.importPlaceholder}
             aria-label={dict.talents.import}
-            className="min-w-0 flex-1 rounded border border-[#3a4150] bg-[#0a0f16] px-3 py-1.5 font-mono text-sm text-[#dde4ee] placeholder:text-[#8b93a1]"
+            className="min-w-0 flex-1 rounded border border-[#33415c] bg-[#0a0f16] px-3 py-1.5 font-mono text-sm text-[#dde4ee] placeholder:text-[#8b93a1]"
           />
           <button
             type="button"
@@ -550,11 +550,11 @@ export function TalentSimulator({
 
       {/* Selected node detail panel (tooltip equivalent, mobile friendly) */}
       {selected && (
-        <div className="mt-4 rounded-md border border-[#b08428]/50 bg-[#15181f] p-3">
+        <div className="mt-4 rounded-md border border-[#b08428]/50 bg-[#141c28] p-3">
           <div className="flex flex-wrap items-center gap-3">
             {selected.node.icon && (
               // eslint-disable-next-line @next/next/no-img-element
-              <img src={`/icons/${selected.node.icon}`} alt="" width={40} height={40} className="h-10 w-10 rounded border border-[#3a4150]" />
+              <img src={`/icons/${selected.node.icon}`} alt="" width={40} height={40} className="h-10 w-10 rounded border border-[#33415c]" />
             )}
             <div className="min-w-0 flex-1">
               <p className="font-semibold text-[#f0e5c0]">
@@ -578,7 +578,7 @@ export function TalentSimulator({
                 onClick={() => onRefund(selected.node.id)}
                 aria-label={`Refund ${pick(selected.node.name, locale)}`}
                 disabled={(build.points[selected.node.id] ?? 0) === 0}
-                className="rounded border border-[#3a4150] px-3 py-1.5 text-sm text-[#dde4ee] hover:bg-[#1c222c] disabled:opacity-40"
+                className="rounded border border-[#33415c] px-3 py-1.5 text-sm text-[#dde4ee] hover:bg-[#1a2433] disabled:opacity-40"
               >
                 −1
               </button>

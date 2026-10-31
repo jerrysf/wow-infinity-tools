@@ -6,7 +6,7 @@
   },
   "summary": {
     "zh": "深入恢复拿到野性成长、迅捷治愈与更强的持续治疗，再从平衡系拿起源和自然的壮美延长它们。",
-    "en": "Deep Restoration for Wild Growth, Swiftmend, and stronger heal-over-time spells, with Genesis and Nature&#39;s Splendor from Balance to extend them."
+    "en": "Deep Restoration for Wild Growth, Swiftmend, and stronger heal-over-time spells, with Genesis and Nature's Splendor from Balance to extend them."
   },
   "classId": "druid",
   "playstyle": "raid",
@@ -27,7 +27,7 @@
     },
     {
       "zh": "自然的壮美让回春术持续时间延长 3 秒、愈合延长 6 秒，每次施放覆盖更长的战斗。",
-      "en": "Nature&#39;s Splendor adds 3 seconds to Rejuvenation and 6 seconds to Regrowth, so each cast covers more of the fight."
+      "en": "Nature's Splendor adds 3 seconds to Rejuvenation and 6 seconds to Regrowth, so each cast covers more of the fight."
     },
     {
       "zh": "反射让施法时保留一半法力恢复；生命之魂提高 15% 精神。",
@@ -35,11 +35,11 @@
     },
     {
       "zh": "迅捷治愈、自然迅捷与野性成长提供瞬发的急救手段和全队持续治疗。",
-      "en": "Swiftmend, Nature&#39;s Swiftness, and Wild Growth give you an instant emergency heal and a party-wide heal over time."
+      "en": "Swiftmend, Nature's Swiftness, and Wild Growth give you an instant emergency heal and a party-wide heal over time."
     },
     {
       "zh": "月光只对伤害法术有效，这 3 点是为了解锁自然的壮美。不需要自然的壮美时，可把这 4 点改投强化宁静、微妙与激怒。",
-      "en": "Moonglow only helps damage spells; its three points are there to reach Nature&#39;s Splendor. If you skip Splendor, spend those four points on Improved Tranquility, Subtlety, and Furor."
+      "en": "Moonglow only helps damage spells; its three points are there to reach Nature's Splendor. If you skip Splendor, spend those four points on Improved Tranquility, Subtlety, and Furor."
     }
   ],
   "cons": [],
