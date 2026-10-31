@@ -42,8 +42,14 @@ export default async function LocaleLayout({
             crossOrigin="anonymous"
           />
         )}
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-2 focus:z-50 focus:rounded focus:bg-[#d8b558] focus:px-3 focus:py-1.5 focus:text-sm focus:font-semibold focus:text-[#100b06]"
+        >
+          {dict.common.skipToContent}
+        </a>
         <Header locale={locale} dict={dict} />
-        <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-6">{children}</main>
+        <main id="main" className="mx-auto w-full max-w-5xl flex-1 px-4 py-6">{children}</main>
         <Footer locale={locale} dict={dict} />
         <Analytics />
       </body>

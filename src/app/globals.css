@@ -35,6 +35,41 @@ body {
   background: rgba(216, 181, 88, 0.35);
 }
 
+:focus-visible {
+  outline: 2px solid #d8b558;
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Ink-friendly print output: drop chrome/interactive furniture, let content
+   print dark-on-light. */
+@media print {
+  header,
+  footer,
+  nav,
+  aside,
+  video {
+    display: none !important;
+  }
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+  a {
+    color: #000 !important;
+    text-decoration: underline;
+  }
+}
+
 /* WoW-style gold primary action button. */
 .btn-gold {
   display: inline-block;

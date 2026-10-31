@@ -2,11 +2,12 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { isLocale, locales } from "@/i18n/config";
-import { getDictionary, pick } from "@/i18n/get-dictionary";
+import { getDictionary, pick, t } from "@/i18n/get-dictionary";
 import { pageMetadata } from "@/lib/seo";
 import { absoluteUrl, localizedPath } from "@/lib/site";
 import { getBuildBySlug, getBuilds, getClassById, getClassTalents, getGuides } from "@/lib/data";
 import { findNode } from "@/lib/talents/engine";
+import { TalentMap } from "@/components/talents/TalentMap";
 import { encodeBuild } from "@/lib/talents/serialize";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { JsonLd } from "@/components/site/JsonLd";
@@ -53,6 +54,7 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
   const gameClass = getClassById(build.classId);
   const talents = getClassTalents(build.classId);
   const relatedGuide = getGuides().find((g) => g.relatedBuilds.includes(build.slug));
+  const sameClassBuilds = getBuilds().filter((b) => b.classId === build.classId && b.slug !== build.slug);
   const isDemo = gameClass?.demo || talents?.demo || build.provenance.status === "unverified";
 
   const simLink = talents
@@ -143,8 +145,13 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
         </Link>
       )}
 
-      <div className="grid gap-6 md:grid-cols-2">
-        <section>
+      {talents ? (
+        <section className="mb-6">
+          <h2 className="mb-2 text-lg font-semibold">{dict.builds.talentMap}</h2>
+          <TalentMap data={talents} points={build.allocation} locale={locale} dict={dict} />
+        </section>
+      ) : (
+        <section className="mb-6">
           <h2 className="mb-2 text-lg font-semibold">{dict.talents.pointsSpent}</h2>
           <ul className="list-inside list-disc text-sm text-[#cfc3a8]">
             {Object.entries(build.allocation).map(([nodeId, pts]) => (
@@ -154,6 +161,9 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
             ))}
           </ul>
         </section>
+      )}
+
+      <div className="grid gap-6 md:grid-cols-2">
         {build.levelingSteps.length > 0 && (
           <section>
             <h2 className="mb-2 text-lg font-semibold">{dict.builds.levelingOrder}</h2>
@@ -220,6 +230,30 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
             {dict.builds.guideLink}: {pick(relatedGuide.title, locale)}
           </Link>
         </p>
+      )}
+
+      {sameClassBuilds.length > 0 && (
+        <section className="mt-8">
+          <h2 className="mb-3 text-xl font-semibold">
+            {t(dict.builds.sameClass, { name: gameClass ? pick(gameClass.name, locale) : build.classId })}
+          </h2>
+          <ul className="grid gap-3 sm:grid-cols-2">
+            {sameClassBuilds.map((b) => (
+              <li key={b.slug}>
+                <Link
+                  href={localizedPath(locale, `/builds/${b.slug}`)}
+                  className="card card-interactive block p-4"
+                >
+                  <div className="flex flex-wrap items-center gap-2">
+                    <span className="font-semibold">{pick(b.name, locale)}</span>
+                    <StatusBadge status={b.provenance.status} dict={dict} />
+                  </div>
+                  <p className="mt-1 line-clamp-2 text-sm text-[#b0a284]">{pick(b.summary, locale)}</p>
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
       )}
 
       <div className="mt-6">

@@ -1,11 +1,13 @@
 const zh = {
   common: {
     home: "首页",
+    skipToContent: "跳到主要内容",
     nav: {
       classSelector: "职业选择器",
       talents: "天赋模拟器",
       builds: "方案目录",
       guides: "攻略",
+      faq: "常见问题",
     },
     footer: {
       about: "关于本站",
@@ -69,6 +71,10 @@ const zh = {
     ctaSelector: "测测适合你的职业",
     ctaTalents: "进入天赋模拟器",
     ctaBuilds: "抄一套推荐方案",
+    statsClasses: "职业",
+    statsTrees: "天赋树",
+    statsBuilds: "套方案",
+    statsGuides: "篇攻略",
     toolsTitle: "玩家工具",
     featuredBuilds: "热门方案",
     guidesTitle: "新手攻略",
@@ -119,6 +125,7 @@ const zh = {
     requiresPoints: "需要在此天赋树中投入 {points} 点",
     requiresLevel: "需要等级 {level}",
     exclusive: "互斥",
+    hints: "左键加点 · 右键或 Shift+点击退点",
     maxRank: "已满",
     rank: "{current}/{max}",
     errors: {
@@ -151,6 +158,8 @@ const zh = {
     filterStatus: "验证状态",
     filterDifficulty: "难度",
     guideLink: "查看加点指南",
+    talentMap: "天赋分配图",
+    sameClass: "{name}的其他方案",
   },
   guides: {
     title: "攻略",

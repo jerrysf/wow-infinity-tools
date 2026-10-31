@@ -3,11 +3,13 @@ import type { Dictionary } from "./zh-cn";
 const en: Dictionary = {
   common: {
     home: "Home",
+    skipToContent: "Skip to main content",
     nav: {
       classSelector: "Class Selector",
       talents: "Talent Calculator",
       builds: "Builds",
       guides: "Guides",
+      faq: "FAQ",
     },
     footer: {
       about: "About",
@@ -71,6 +73,10 @@ const en: Dictionary = {
     ctaSelector: "Find your class in 5 questions",
     ctaTalents: "Open the talent calculator",
     ctaBuilds: "Browse ready builds",
+    statsClasses: "Classes",
+    statsTrees: "Talent trees",
+    statsBuilds: "Builds",
+    statsGuides: "Guides",
     toolsTitle: "Player tools",
     featuredBuilds: "Featured builds",
     guidesTitle: "Starter guides",
@@ -122,6 +128,7 @@ const en: Dictionary = {
     requiresPoints: "Requires {points} points in this tree",
     requiresLevel: "Requires level {level}",
     exclusive: "Exclusive",
+    hints: "Click to add a point · right-click or Shift+click to refund",
     maxRank: "Maxed",
     rank: "{current}/{max}",
     errors: {
@@ -154,6 +161,8 @@ const en: Dictionary = {
     filterStatus: "Status",
     filterDifficulty: "Difficulty",
     guideLink: "View leveling guide",
+    talentMap: "Talent allocation",
+    sameClass: "Other {name} builds",
   },
   guides: {
     title: "Guides",

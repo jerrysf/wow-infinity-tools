@@ -5,7 +5,7 @@ import { getDictionary, pick } from "@/i18n/get-dictionary";
 import { pageMetadata } from "@/lib/seo";
 import { absoluteUrl, localizedPath, site } from "@/lib/site";
 import { JsonLd } from "@/components/site/JsonLd";
-import { getBuilds, getClasses, getCommunityLinks, getCommunityVideos, getCurrentVersion, getGuides } from "@/lib/data";
+import { getBuilds, getClasses, getClassTalents, getCommunityLinks, getCommunityVideos, getCurrentVersion, getGuides } from "@/lib/data";
 import { StatusBadge, DemoBadge } from "@/components/site/StatusBadge";
 import { classColor } from "@/lib/class-colors";
 import { VideoThumbnail } from "@/components/site/VideoThumbnail";
@@ -23,8 +23,10 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
   if (!isLocale(locale)) return null;
   const dict = getDictionary(locale);
   const classes = getClasses();
-  const builds = getBuilds().slice(0, 4);
-  const guides = getGuides().slice(0, 4);
+  const allBuilds = getBuilds();
+  const allGuides = getGuides();
+  const builds = allBuilds.slice(0, 4);
+  const guides = allGuides.slice(0, 4);
   const version = getCurrentVersion();
   const classById = new Map(classes.map((c) => [c.id, c]));
   const videos = getCommunityVideos();
@@ -87,6 +89,20 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
             {dict.home.ctaBuilds}
           </Link>
         </div>
+        <dl className="mt-7 flex flex-wrap gap-x-8 gap-y-3 border-t border-[#3a2b14]/70 pt-5">
+          {[
+            [classes.length, dict.home.statsClasses],
+            [classes.reduce((n, c) => n + (getClassTalents(c.id)?.trees.length ?? 0), 0), dict.home.statsTrees],
+            [allBuilds.length, dict.home.statsBuilds],
+            [allGuides.length, dict.home.statsGuides],
+          ].map(([num, label]) => (
+            <div key={String(label)}>
+              <dt className="sr-only">{label}</dt>
+              <dd className="text-2xl font-bold text-[#d8b558]">{num}</dd>
+              <dd className="text-xs text-[#8a7a58]">{label}</dd>
+            </div>
+          ))}
+        </dl>
         <p className="mt-5 text-xs text-[#7a6a4a]">
           {dict.common.version}: {version.label} · {dict.common.dataStatus}:{" "}
           {dict.common.status[classes[0]?.provenance.status ?? "unverified"]}
