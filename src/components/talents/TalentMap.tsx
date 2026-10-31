@@ -26,10 +26,10 @@ function ReadOnlyTree({
   return (
     <section
       aria-label={`${pick(tree.name, locale)} ${spent}`}
-      className="rounded-md border border-[#2a2f3a] bg-gradient-to-b from-[#151a21] to-[#0d1015] p-2.5"
+      className="rounded-md border border-[#263446] bg-gradient-to-b from-[#16202c] to-[#0b1017] p-2.5"
     >
-      <header className="mb-3 flex items-baseline justify-between border-b border-[#2a2f3a] pb-1.5">
-        <h3 className="text-sm font-semibold tracking-wide text-[#e8d9a8]">{pick(tree.name, locale)}</h3>
+      <header className="mb-3 flex items-baseline justify-between border-b border-[#263446] pb-1.5">
+        <h3 className="text-sm font-semibold tracking-wide text-[#f0e5c0]">{pick(tree.name, locale)}</h3>
         <span className={`text-xs font-semibold ${spent > 0 ? "text-[#ffd100]" : "text-[#8b93a1]"}`}>{spent}</span>
       </header>
       <div className="relative">
@@ -45,7 +45,7 @@ function ReadOnlyTree({
                 <div key={node.id} className="mb-5" style={{ gridRow: row + 1, gridColumn: col + 1 }}>
                   <div
                     title={`${pick(node.name, locale)} ${t(dict.talents.rank, { current: allocated, max: node.maxPoints })}`}
-                    className={`relative aspect-square w-full max-w-11 rounded border-2 bg-[#0b0d10] ${tileClasses(status)}`}
+                    className={`relative aspect-square w-full max-w-11 rounded border-2 bg-[#0a0f16] ${tileClasses(status)}`}
                   >
                     {node.icon ? (
                       // eslint-disable-next-line @next/next/no-img-element

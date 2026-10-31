@@ -15,7 +15,7 @@ export function ProvenanceBlock({
   locale?: Locale;
 }) {
   return (
-    <dl className="card flex flex-wrap gap-x-6 gap-y-2 p-3 text-xs text-[#8a7a58]">
+    <dl className="card flex flex-wrap gap-x-6 gap-y-2 p-3 text-xs text-[#7d8fa5]">
       <div>
         <dt className="inline font-medium">{dict.common.dataStatus}: </dt>
         <dd className="inline">

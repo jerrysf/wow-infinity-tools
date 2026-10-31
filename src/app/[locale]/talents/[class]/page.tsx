@@ -66,7 +66,7 @@ export default async function ClassTalentsPage({ params }: PageProps<"/[locale]/
         {gameClass.demo && <DemoBadge dict={dict} />}
       </div>
       {gameClass.demo && <BuildDemoBanner demo={gameClass.demo} dict={dict} />}
-      <div className="mb-4 max-w-2xl space-y-1 text-sm text-[#b0a284]">
+      <div className="mb-4 max-w-2xl space-y-1 text-sm text-[#9aa8bc]">
         {gameClass.tagline && <p>{pick(gameClass.tagline, locale)}</p>}
         {(gameClass.strengths || gameClass.drawbacks) && (
           <p>
@@ -75,7 +75,7 @@ export default async function ClassTalentsPage({ params }: PageProps<"/[locale]/
             )}
             {gameClass.strengths && gameClass.drawbacks && " · "}
             {gameClass.drawbacks && (
-              <span className="text-[#8a7a58]">{pick(gameClass.drawbacks, locale)}</span>
+              <span className="text-[#7d8fa5]">{pick(gameClass.drawbacks, locale)}</span>
             )}
           </p>
         )}
@@ -88,7 +88,7 @@ export default async function ClassTalentsPage({ params }: PageProps<"/[locale]/
           <TalentSimulator data={talents} locale={locale} dict={dict} />
         </>
       ) : (
-        <p className="card p-4 text-[#b0a284]">{dict.talents.dataPending}</p>
+        <p className="card p-4 text-[#9aa8bc]">{dict.talents.dataPending}</p>
       )}
 
       {(classBuilds.length > 0 || classGuide) && (
@@ -106,12 +106,12 @@ export default async function ClassTalentsPage({ params }: PageProps<"/[locale]/
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="font-semibold">{pick(b.name, locale)}</span>
                     {getBuildDistribution(b) && (
-                      <span className="font-mono text-xs text-[#d8b558]">[{getBuildDistribution(b)}]</span>
+                      <span className="font-mono text-xs text-[#f0bc4a]">[{getBuildDistribution(b)}]</span>
                     )}
                     <StatusBadge status={b.provenance.status} dict={dict} />
                   </div>
-                  <p className="mt-1 text-sm text-[#b0a284]">{pick(b.summary, locale)}</p>
-                  <p className="mt-2 text-xs text-[#95865c]">
+                  <p className="mt-1 text-sm text-[#9aa8bc]">{pick(b.summary, locale)}</p>
+                  <p className="mt-2 text-xs text-[#75869c]">
                     {b.playstyle} · {dict.common.level} {b.levelRange.min}-{b.levelRange.max}
                   </p>
                 </Link>
@@ -124,7 +124,7 @@ export default async function ClassTalentsPage({ params }: PageProps<"/[locale]/
                   className="card card-interactive block p-4"
                 >
                   <span className="font-semibold">{pick(classGuide.title, locale)}</span>
-                  <p className="mt-1 text-sm text-[#b0a284]">{pick(classGuide.description, locale)}</p>
+                  <p className="mt-1 text-sm text-[#9aa8bc]">{pick(classGuide.description, locale)}</p>
                 </Link>
               </li>
             )}

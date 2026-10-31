@@ -112,7 +112,7 @@ export function QuizFlow({
   if (showResults) {
     return (
       <div>
-        <p className="card mb-4 p-3 text-sm text-[#b0a284]">{dict.selector.resultsDisclaimer}</p>
+        <p className="card mb-4 p-3 text-sm text-[#9aa8bc]">{dict.selector.resultsDisclaimer}</p>
         <h2 className="mb-4 text-xl font-semibold">{dict.selector.results}</h2>
         {results.length === 0 && <p>{dict.selector.noResults}</p>}
         <ol className="space-y-4">
@@ -137,12 +137,12 @@ export function QuizFlow({
                   {c.demo && <DemoBadge dict={dict} />}
                 </div>
                 {c.tagline && (
-                  <p className="mt-1 text-sm text-[#b0a284]">{pick(c.tagline, locale)}</p>
+                  <p className="mt-1 text-sm text-[#9aa8bc]">{pick(c.tagline, locale)}</p>
                 )}
                 <div className="mt-3 grid gap-3 text-sm sm:grid-cols-2">
                   <div>
                     <h4 className="font-medium">{dict.selector.whyThis}</h4>
-                    <ul className="mt-1 list-inside list-disc text-[#b0a284]">
+                    <ul className="mt-1 list-inside list-disc text-[#9aa8bc]">
                       {reasons.map((r, i) => (
                         <li key={i}>{r}</li>
                       ))}
@@ -152,13 +152,13 @@ export function QuizFlow({
                     {c.strengths && (
                       <>
                         <h4 className="font-medium">{dict.selector.goodFor}</h4>
-                        <p className="mt-1 text-[#b0a284]">{pick(c.strengths, locale)}</p>
+                        <p className="mt-1 text-[#9aa8bc]">{pick(c.strengths, locale)}</p>
                       </>
                     )}
                     {c.drawbacks && (
                       <>
                         <h4 className="mt-2 font-medium">{dict.selector.drawbacks}</h4>
-                        <p className="mt-1 text-[#b0a284]">{pick(c.drawbacks, locale)}</p>
+                        <p className="mt-1 text-[#9aa8bc]">{pick(c.drawbacks, locale)}</p>
                       </>
                     )}
                   </div>
@@ -197,10 +197,10 @@ export function QuizFlow({
   return (
     <div className="max-w-2xl">
       <div className="mb-4">
-        <p className="mb-2 text-sm text-[#8a7a58]">
+        <p className="mb-2 text-sm text-[#7d8fa5]">
           {t(dict.selector.questionOf, { current: step + 1, total })}
         </p>
-        <div className="h-1.5 overflow-hidden rounded-full bg-[#241b0e]">
+        <div className="h-1.5 overflow-hidden rounded-full bg-[#141c28]">
           <div
             className="h-full rounded-full bg-gradient-to-r from-amber-500 to-amber-300 transition-all"
             style={{ width: `${((step + 1) / total) * 100}%` }}
@@ -214,7 +214,7 @@ export function QuizFlow({
             key={option.id}
             type="button"
             onClick={() => choose(option.id)}
-            className="card card-interactive px-4 py-3 text-left text-sm font-medium hover:border-[#8a6a28] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400"
+            className="card card-interactive px-4 py-3 text-left text-sm font-medium hover:border-[#c99632] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-amber-400"
           >
             {pick(option.text, locale)}
           </button>

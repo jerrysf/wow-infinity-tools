@@ -44,7 +44,7 @@ export default async function FaqPage({ params }: PageProps<"/[locale]/faq">) {
         {dict.faq.items.map((item, i) => (
           <div key={i} className="card p-4">
             <dt className="font-semibold">{item.q}</dt>
-            <dd className="mt-2 text-sm leading-relaxed text-[#b0a284]">{item.a}</dd>
+            <dd className="mt-2 text-sm leading-relaxed text-[#9aa8bc]">{item.a}</dd>
           </div>
         ))}
       </dl>

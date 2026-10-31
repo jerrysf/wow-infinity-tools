@@ -50,14 +50,14 @@ export default async function GuidePage({ params }: PageProps<"/[locale]/guides/
         ]}
       />
       <h1 className="text-2xl font-bold">{pick(guide.title, locale)}</h1>
-      <p className="mt-2 mb-4 max-w-2xl text-[#b0a284]">{pick(guide.description, locale)}</p>
-      <p className="mt-1 mb-4 text-sm text-[#8a7a58]">
+      <p className="mt-2 mb-4 max-w-2xl text-[#9aa8bc]">{pick(guide.description, locale)}</p>
+      <p className="mt-1 mb-4 text-sm text-[#7d8fa5]">
         {dict.common.updated}: {guide.updatedAt} · {dict.common.version}: {guide.provenance.gameVersion}
       </p>
       {isDemo && <BuildDemoBanner demo dict={dict} />}
       {guide.sections.length > 1 && (
         <nav aria-label={dict.guides.toc} className="card mb-6 p-4">
-          <h2 className="mb-2 text-sm font-semibold text-[#8a7a58]">{dict.guides.toc}</h2>
+          <h2 className="mb-2 text-sm font-semibold text-[#7d8fa5]">{dict.guides.toc}</h2>
           <ol className="list-inside list-decimal space-y-1 text-sm">
             {guide.sections.map((section, i) => (
               <li key={i}>
@@ -75,7 +75,7 @@ export default async function GuidePage({ params }: PageProps<"/[locale]/guides/
       {guide.sections.map((section, i) => (
         <section key={i} id={`s-${i}`} className="mb-6 scroll-mt-20">
           <h2 className="mb-2 text-lg font-semibold">{pick(section.heading, locale)}</h2>
-          <p className="leading-relaxed text-[#cfc3a8]">{pick(section.body, locale)}</p>
+          <p className="leading-relaxed text-[#b9c6d6]">{pick(section.body, locale)}</p>
         </section>
       ))}
       {builds.length > 0 && (

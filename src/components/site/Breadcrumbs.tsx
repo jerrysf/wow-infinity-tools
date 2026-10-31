@@ -20,7 +20,7 @@ export function Breadcrumbs({ locale, items }: { locale: Locale; items: Crumb[] 
     })),
   };
   return (
-    <nav aria-label="Breadcrumb" className="mb-4 text-sm text-[#8a7a58]">
+    <nav aria-label="Breadcrumb" className="mb-4 text-sm text-[#7d8fa5]">
       <JsonLd data={jsonLd} />
       <ol className="flex flex-wrap items-center gap-1">
         {items.map((item, i) => (
@@ -34,7 +34,7 @@ export function Breadcrumbs({ locale, items }: { locale: Locale; items: Crumb[] 
                 {item.label}
               </Link>
             ) : (
-              <span aria-current="page" className="text-[#cfc3a8]">
+              <span aria-current="page" className="text-[#b9c6d6]">
                 {item.label}
               </span>
             )}

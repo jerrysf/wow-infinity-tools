@@ -46,27 +46,27 @@ export default async function ChangelogPage({ params }: PageProps<"/[locale]/cha
         ]}
       />
       <h1 className="mb-2 text-2xl font-bold">{dict.changelog.title}</h1>
-      <p className="mb-6 max-w-2xl text-[#b0a284]">{dict.changelog.description}</p>
+      <p className="mb-6 max-w-2xl text-[#9aa8bc]">{dict.changelog.description}</p>
 
       <section className="mb-8">
         <h2 className="mb-3 text-lg font-semibold">{dict.changelog.versionsTitle}</h2>
         <ul className="space-y-2">
           {versions.map((v) => (
             <li key={v.id} className="card flex flex-wrap items-center gap-x-3 p-3 text-sm">
-              <span className="font-mono font-semibold text-[#d8b558]">{v.label}</span>
+              <span className="font-mono font-semibold text-[#f0bc4a]">{v.label}</span>
               {v.isCurrent && (
-                <span className="rounded border border-[#8a6d1f] bg-[#2a2210] px-1.5 py-0.5 text-xs text-[#ffd100]">
+                <span className="rounded border border-[#b08428] bg-[#16202e] px-1.5 py-0.5 text-xs text-[#ffd100]">
                   current
                 </span>
               )}
-              <span className="text-xs text-[#95865c]">{v.releasedAt}</span>
+              <span className="text-xs text-[#75869c]">{v.releasedAt}</span>
             </li>
           ))}
         </ul>
       </section>
 
       {changelogs.length === 0 && (
-        <p className="card p-4 text-sm text-[#b0a284]">{dict.changelog.empty}</p>
+        <p className="card p-4 text-sm text-[#9aa8bc]">{dict.changelog.empty}</p>
       )}
 
       {changelogs.map((log) => (
@@ -74,7 +74,7 @@ export default async function ChangelogPage({ params }: PageProps<"/[locale]/cha
           <h2 className="mb-1 text-lg font-semibold">
             {log.fromVersion} → {log.toVersion}
           </h2>
-          <p className="mb-4 text-xs text-[#95865c]">{log.generatedAt}</p>
+          <p className="mb-4 text-xs text-[#75869c]">{log.generatedAt}</p>
           {log.classes.map((cls) => {
             const gameClass = getClassById(cls.classId);
             return (
@@ -84,17 +84,17 @@ export default async function ChangelogPage({ params }: PageProps<"/[locale]/cha
                 </h3>
                 {cls.trees.map((tree) => (
                   <div key={tree.treeId} className="mb-3 last:mb-0">
-                    <h4 className="mb-1 text-sm font-medium text-[#e8d9a8]">{pick(tree.treeName, locale)}</h4>
-                    <ul className="space-y-1 text-sm text-[#cfc3a8]">
+                    <h4 className="mb-1 text-sm font-medium text-[#f0e5c0]">{pick(tree.treeName, locale)}</h4>
+                    <ul className="space-y-1 text-sm text-[#b9c6d6]">
                       {tree.added.map((n) => (
                         <li key={n.id}>
                           <span className="mr-1 text-emerald-400">+</span>
                           {pick(n.name, locale)}
-                          <span className="ml-1 text-xs text-[#95865c]">({dict.changelog.added})</span>
+                          <span className="ml-1 text-xs text-[#75869c]">({dict.changelog.added})</span>
                         </li>
                       ))}
                       {tree.removed.map((n) => (
-                        <li key={n.id} className="text-[#8a7a58] line-through">
+                        <li key={n.id} className="text-[#7d8fa5] line-through">
                           <span className="mr-1 text-red-400">−</span>
                           {pick(n.name, locale)}
                           <span className="ml-1 text-xs">({dict.changelog.removed})</span>
@@ -104,7 +104,7 @@ export default async function ChangelogPage({ params }: PageProps<"/[locale]/cha
                         <li key={c.nodeId}>
                           <span className="mr-1 text-amber-300">~</span>
                           {pick(c.name, locale)}
-                          <span className="ml-1 text-xs text-[#95865c]">
+                          <span className="ml-1 text-xs text-[#75869c]">
                             {Object.entries(c.fields).map(([f, v]) => formatField(f, v)).join(" · ")}
                           </span>
                         </li>

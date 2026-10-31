@@ -32,7 +32,7 @@ export default async function TalentsIndexPage({ params }: PageProps<"/[locale]/
         ]}
       />
       <h1 className="mb-2 text-2xl font-bold">{dict.talents.title}</h1>
-      <p className="mb-6 max-w-2xl text-[#b0a284]">{dict.talents.description}</p>
+      <p className="mb-6 max-w-2xl text-[#9aa8bc]">{dict.talents.description}</p>
       <h2 className="mb-3 text-lg font-semibold">{dict.talents.selectClass}</h2>
       <ul className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {classes.map((c) => (
@@ -48,7 +48,7 @@ export default async function TalentsIndexPage({ params }: PageProps<"/[locale]/
                 {c.demo && <DemoBadge dict={dict} />}
               </div>
               {c.tagline && (
-                <p className="mt-1 text-sm text-[#b0a284]">{pick(c.tagline, locale)}</p>
+                <p className="mt-1 text-sm text-[#9aa8bc]">{pick(c.tagline, locale)}</p>
               )}
               {!c.hasTalentData && (
                 <p className="mt-2 text-xs font-medium text-amber-400">{dict.talents.dataPending}</p>

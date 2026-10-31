@@ -26,7 +26,7 @@ export function InfoPage({
       />
       <h1 className="mb-4 text-2xl font-bold">{page.title}</h1>
       {page.body.map((paragraph, i) => (
-        <p key={i} className="mb-3 leading-relaxed text-[#cfc3a8]">
+        <p key={i} className="mb-3 leading-relaxed text-[#b9c6d6]">
           {paragraph}
         </p>
       ))}

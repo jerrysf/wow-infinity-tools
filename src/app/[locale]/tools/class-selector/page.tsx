@@ -30,7 +30,7 @@ export default async function ClassSelectorPage({ params }: PageProps<"/[locale]
         ]}
       />
       <h1 className="text-2xl font-bold">{dict.selector.heading}</h1>
-      <p className="mt-2 mb-6 max-w-2xl text-[#b0a284]">{dict.selector.intro}</p>
+      <p className="mt-2 mb-6 max-w-2xl text-[#9aa8bc]">{dict.selector.intro}</p>
       <QuizFlow config={config} classes={classes} locale={locale} dict={dict} />
     </div>
   );

@@ -60,15 +60,15 @@ const name = (l, obj) => (l.id === "zh-cn" ? obj.zh : obj.en);
 const frame = (inner) => `<!doctype html><html><body style="margin:0">
 <div style="width:1200px;height:630px;display:flex;flex-direction:column;justify-content:space-between;
   padding:64px 72px;box-sizing:border-box;font-family:'PingFang SC','Hiragino Sans GB','Microsoft YaHei',sans-serif;
-  background:radial-gradient(ellipse at 20% 0%,#2b2418 0%,#14100a 55%,#0a0806 100%);color:#f4e9d0;position:relative;overflow:hidden">
+  background:radial-gradient(ellipse at 20% 0%,#1a2433 0%,#0c1219 55%,#070a0f 100%);color:#f0f4fa;position:relative;overflow:hidden">
   <div style="position:absolute;inset:18px;border:2px solid rgba(200,160,80,.45);border-radius:6px;pointer-events:none"></div>
   ${inner}
 </div></body></html>`;
 
 const topBar = (badge) => `
   <div style="display:flex;align-items:center;justify-content:space-between">
-    <div style="font-size:26px;letter-spacing:6px;color:#c8a050;font-weight:700">INFINITY COMPENDIUM</div>
-    <div style="font-size:20px;color:#8a7a58;border:1px solid #5a4a28;border-radius:999px;padding:8px 20px">${badge}</div>
+    <div style="font-size:26px;letter-spacing:6px;color:#f0bc4a;font-weight:700">INFINITY COMPENDIUM</div>
+    <div style="font-size:20px;color:#7d8fa5;border:1px solid #3d5273;border-radius:999px;padding:8px 20px">${badge}</div>
   </div>`;
 
 const iconRow = (icons) => `
@@ -76,19 +76,19 @@ const iconRow = (icons) => `
     ${icons
       .map(
         (src) =>
-          `<img src="${src}" style="width:56px;height:56px;border-radius:6px;border:2px solid #6a5830;box-shadow:0 2px 8px rgba(0,0,0,.5)"/>`,
+          `<img src="${src}" style="width:56px;height:56px;border-radius:6px;border:2px solid #4a5d7e;box-shadow:0 2px 8px rgba(0,0,0,.5)"/>`,
       )
       .join("")}
-    <div style="margin-left:auto;font-size:18px;color:#6a5c40">wow-infinity-tools.vercel.app</div>
+    <div style="margin-left:auto;font-size:18px;color:#75869c">wow-infinity-tools.vercel.app</div>
   </div>`;
 
 const siteHtml = (l) =>
   frame(`
   ${topBar(l.badge)}
   <div>
-    <div style="font-size:24px;letter-spacing:3px;color:#c8a050;margin-bottom:20px">${l.eyebrow}</div>
+    <div style="font-size:24px;letter-spacing:3px;color:#f0bc4a;margin-bottom:20px">${l.eyebrow}</div>
     <div style="font-size:64px;font-weight:800;line-height:1.2;text-shadow:0 2px 12px rgba(0,0,0,.6)">${l.title}</div>
-    <div style="font-size:28px;color:#b0a284;margin-top:22px">${l.sub}</div>
+    <div style="font-size:28px;color:#9aa8bc;margin-top:22px">${l.sub}</div>
   </div>
   ${iconRow(siteIcons)}`);
 
@@ -121,11 +121,11 @@ const buildHtml = (l, build) => {
     .map(
       (t) => `
       <div style="display:flex;align-items:center;gap:18px;margin-top:14px">
-        <div style="width:180px;font-size:24px;color:#b0a284">${t.name}</div>
-        <div style="flex:1;height:22px;background:#241d10;border:1px solid #4a3c20;border-radius:4px;overflow:hidden">
-          <div style="width:${Math.round((t.pts / maxPts) * 100)}%;height:100%;background:linear-gradient(90deg,#8a6a28,#d8b558)"></div>
+        <div style="width:180px;font-size:24px;color:#9aa8bc">${t.name}</div>
+        <div style="flex:1;height:22px;background:#1a2433;border:1px solid #3d5273;border-radius:4px;overflow:hidden">
+          <div style="width:${Math.round((t.pts / maxPts) * 100)}%;height:100%;background:linear-gradient(90deg,#c99632,#f0bc4a)"></div>
         </div>
-        <div style="width:110px;font-size:24px;color:#f4e9d0;text-align:right">${t.pts} ${l.points}</div>
+        <div style="width:110px;font-size:24px;color:#f0f4fa;text-align:right">${t.pts} ${l.points}</div>
       </div>`,
     )
     .join("");
@@ -133,7 +133,7 @@ const buildHtml = (l, build) => {
   return frame(`
   ${topBar(`${l.gameVersion} ${build.gameVersion}`)}
   <div>
-    <div style="font-size:26px;color:#c8a050;margin-bottom:14px">
+    <div style="font-size:26px;color:#f0bc4a;margin-bottom:14px">
       ${gameClass ? name(l, gameClass.name) : build.classId} · ${l.level} ${build.levelRange.min}-${build.levelRange.max} · ${totalPts} ${l.points}
     </div>
     <div style="font-size:60px;font-weight:800;line-height:1.2;text-shadow:0 2px 12px rgba(0,0,0,.6)">${name(l, build.name)}</div>

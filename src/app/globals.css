@@ -5,10 +5,10 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --background: #100b06;
-  --foreground: #e8dfd0;
-  --gold: #d8b558;
-  --gold-dim: #c8a050;
+  --background: #0a0e14;
+  --foreground: #e6edf5;
+  --gold: #f0bc4a;
+  --gold-dim: #c99632;
 }
 
 @theme inline {
@@ -32,11 +32,11 @@ body {
 }
 
 ::selection {
-  background: rgba(216, 181, 88, 0.35);
+  background: rgba(240, 188, 74, 0.35);
 }
 
 :focus-visible {
-  outline: 2px solid #d8b558;
+  outline: 2px solid #f0bc4a;
   outline-offset: 2px;
 }
 
@@ -70,58 +70,83 @@ body {
   }
 }
 
-/* WoW-style gold primary action button. */
+/* Vivid gold primary CTA. */
 .btn-gold {
   display: inline-block;
-  border-radius: 0.5rem;
-  padding: 0.55rem 1.1rem;
+  border-radius: 0.625rem;
+  padding: 0.6rem 1.25rem;
   font-size: 0.875rem;
-  font-weight: 600;
-  color: #2a1e05;
-  background: linear-gradient(180deg, #f0d089, #d9a83e);
-  border: 1px solid #8a6a24;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  color: #1a1204;
+  background: linear-gradient(180deg, #ffd76e, #eba92f);
+  border: 1px solid #b07f1f;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.3);
   box-shadow:
-    0 1px 4px rgba(0, 0, 0, 0.5),
-    inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    0 4px 14px rgba(240, 188, 74, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  transition:
+    box-shadow 0.15s ease,
+    transform 0.1s ease,
+    background 0.15s ease;
 }
 .btn-gold:hover {
-  background: linear-gradient(180deg, #f6dc9b, #e4b652);
+  background: linear-gradient(180deg, #ffe08c, #f5b93f);
+  box-shadow:
+    0 6px 20px rgba(240, 188, 74, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.45);
 }
 .btn-gold:active {
   transform: translateY(1px);
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
-/* Muted secondary action button on the dark theme. */
+/* Secondary action button on the dark theme. */
 .btn-ghost {
   display: inline-block;
-  border-radius: 0.5rem;
-  padding: 0.55rem 1.1rem;
+  border-radius: 0.625rem;
+  padding: 0.6rem 1.25rem;
   font-size: 0.875rem;
-  font-weight: 500;
-  color: #cfc3a8;
-  background: #1a130a;
-  border: 1px solid #3a2c17;
+  font-weight: 600;
+  color: #b9c6d6;
+  background: #131a26;
+  border: 1px solid #28344a;
+  transition:
+    border-color 0.15s ease,
+    color 0.15s ease,
+    background 0.15s ease;
 }
 .btn-ghost:hover {
-  border-color: #6a5226;
-  color: #f0e6cc;
-  background: #211809;
+  border-color: #3d5273;
+  color: #e6edf5;
+  background: #182233;
 }
 
 /* Raised dark panel used for every card on the site. */
 .card {
-  border-radius: 0.5rem;
-  border: 1px solid #2a2012;
-  background: #161009;
+  border-radius: 0.75rem;
+  border: 1px solid #1c2635;
+  background: #0f1620;
 }
 .card-interactive {
   transition:
     border-color 0.15s ease,
-    background-color 0.15s ease;
+    background-color 0.15s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
 .card-interactive:hover {
-  border-color: #5a4420;
-  background: #1c1410;
+  border-color: #3d5273;
+  background: #131b2a;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+}
+
+/* Small uppercase eyebrow label above section headings. */
+.eyebrow {
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #f0bc4a;
 }

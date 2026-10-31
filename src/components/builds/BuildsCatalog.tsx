@@ -91,7 +91,7 @@ export function BuildsCatalog({
   );
 
   const selectCls =
-    "rounded border border-[#3a2c17] bg-[#1a130a] px-2 py-1.5 text-sm text-[#e8dfd0]";
+    "rounded border border-[#28344a] bg-[#131a26] px-2 py-1.5 text-sm text-[#e6edf5]";
 
   return (
     <div>
@@ -175,7 +175,7 @@ export function BuildsCatalog({
         </button>
       </div>
 
-      {visible.length === 0 && <p className="text-[#8a7a58]">{dict.builds.empty}</p>}
+      {visible.length === 0 && <p className="text-[#7d8fa5]">{dict.builds.empty}</p>}
       <ul className="grid gap-4 sm:grid-cols-2">
         {visible.map((b) => {
           const c = classById.get(b.classId);
@@ -189,12 +189,12 @@ export function BuildsCatalog({
                   <h2 className="text-base font-semibold">{pick(b.name, locale)}</h2>
                   <StatusBadge status={b.provenance.status} needsRevalidation={b.provenance.needsRevalidation} dict={dict} />
                 </div>
-                <p className="mt-1 line-clamp-2 text-sm text-[#b0a284]">
+                <p className="mt-1 line-clamp-2 text-sm text-[#9aa8bc]">
                   {pick(b.summary, locale)}
                 </p>
-                <p className="mt-2 flex flex-wrap gap-x-3 text-xs text-[#95865c]">
+                <p className="mt-2 flex flex-wrap gap-x-3 text-xs text-[#75869c]">
                   {distributions[b.slug] && (
-                    <span className="font-mono text-[#d8b558]">[{distributions[b.slug]}]</span>
+                    <span className="font-mono text-[#f0bc4a]">[{distributions[b.slug]}]</span>
                   )}
                   <span style={c ? { color: classColor(c.id) } : undefined}>
                     {c ? pick(c.name, locale) : b.classId}

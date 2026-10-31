@@ -12,5 +12,5 @@ export const CLASS_COLORS: Record<string, string> = {
 };
 
 export function classColor(id: string): string {
-  return CLASS_COLORS[id] ?? "#e8dfd0";
+  return CLASS_COLORS[id] ?? "#e6edf5";
 }

@@ -107,40 +107,40 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
       <div className="mb-2 flex flex-wrap items-center gap-2">
         <h1 className="text-2xl font-bold">{pick(build.name, locale)}</h1>
         {getBuildDistribution(build) && (
-          <span className="font-mono text-lg font-semibold text-[#d8b558]">[{getBuildDistribution(build)}]</span>
+          <span className="font-mono text-lg font-semibold text-[#f0bc4a]">[{getBuildDistribution(build)}]</span>
         )}
         <StatusBadge status={build.provenance.status} needsRevalidation={build.provenance.needsRevalidation} dict={dict} />
       </div>
       {isDemo && <BuildDemoBanner demo dict={dict} />}
-      <p className="mb-4 max-w-2xl text-[#b0a284]">{pick(build.summary, locale)}</p>
+      <p className="mb-4 max-w-2xl text-[#9aa8bc]">{pick(build.summary, locale)}</p>
 
       <dl className="mb-6 grid gap-2 text-sm sm:grid-cols-2 lg:grid-cols-4">
         <div>
-          <dt className="font-medium text-[#8a7a58]">{dict.common.class}</dt>
+          <dt className="font-medium text-[#7d8fa5]">{dict.common.class}</dt>
           <dd>{gameClass ? pick(gameClass.name, locale) : build.classId}</dd>
         </div>
         <div>
-          <dt className="font-medium text-[#8a7a58]">{dict.common.playstyle}</dt>
+          <dt className="font-medium text-[#7d8fa5]">{dict.common.playstyle}</dt>
           <dd>{build.playstyle}</dd>
         </div>
         <div>
-          <dt className="font-medium text-[#8a7a58]">{dict.builds.levelRange}</dt>
+          <dt className="font-medium text-[#7d8fa5]">{dict.builds.levelRange}</dt>
           <dd>
             {build.levelRange.min}-{build.levelRange.max}
           </dd>
         </div>
         <div>
-          <dt className="font-medium text-[#8a7a58]">{dict.common.version}</dt>
+          <dt className="font-medium text-[#7d8fa5]">{dict.common.version}</dt>
           <dd>{build.gameVersion}</dd>
         </div>
         {build.scenario && (
           <div>
-            <dt className="font-medium text-[#8a7a58]">{dict.builds.scenario}</dt>
+            <dt className="font-medium text-[#7d8fa5]">{dict.builds.scenario}</dt>
             <dd>{pick(build.scenario, locale)}</dd>
           </div>
         )}
         <div>
-          <dt className="font-medium text-[#8a7a58]">{dict.common.updated}</dt>
+          <dt className="font-medium text-[#7d8fa5]">{dict.common.updated}</dt>
           <dd>{build.updatedAt}</dd>
         </div>
       </dl>
@@ -177,7 +177,7 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
       ) : (
         <section className="mb-6">
           <h2 className="mb-2 text-lg font-semibold">{dict.talents.pointsSpent}</h2>
-          <ul className="list-inside list-disc text-sm text-[#cfc3a8]">
+          <ul className="list-inside list-disc text-sm text-[#b9c6d6]">
             {Object.entries(build.allocation).map(([nodeId, pts]) => (
               <li key={nodeId}>
                 {nodeName(nodeId)} × {pts}
@@ -197,13 +197,13 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
                   <p className="font-medium">
                     {dict.common.level} {step.levelRange}
                   </p>
-                  <p className="mt-1 text-[#b0a284]">
+                  <p className="mt-1 text-[#9aa8bc]">
                     {Object.entries(step.spend)
                       .map(([id, pts]) => `${nodeName(id)} × ${pts}`)
                       .join(", ")}
                   </p>
                   {step.note && (
-                    <p className="mt-1 text-xs text-[#8a7a58]">{pick(step.note, locale)}</p>
+                    <p className="mt-1 text-xs text-[#7d8fa5]">{pick(step.note, locale)}</p>
                   )}
                 </li>
               ))}
@@ -216,7 +216,7 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
         {build.pros.length > 0 && (
           <section>
             <h2 className="mb-2 text-lg font-semibold">{dict.builds.pros}</h2>
-            <ul className="list-inside list-disc text-sm text-[#cfc3a8]">
+            <ul className="list-inside list-disc text-sm text-[#b9c6d6]">
               {build.pros.map((p, i) => (
                 <li key={i}>{pick(p, locale)}</li>
               ))}
@@ -226,7 +226,7 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
         {build.cons.length > 0 && (
           <section>
             <h2 className="mb-2 text-lg font-semibold">{dict.builds.cons}</h2>
-            <ul className="list-inside list-disc text-sm text-[#cfc3a8]">
+            <ul className="list-inside list-disc text-sm text-[#b9c6d6]">
               {build.cons.map((c, i) => (
                 <li key={i}>{pick(c, locale)}</li>
               ))}
@@ -236,7 +236,7 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
         {build.requirements.length > 0 && (
           <section>
             <h2 className="mb-2 text-lg font-semibold">{dict.builds.requirements}</h2>
-            <ul className="list-inside list-disc text-sm text-[#cfc3a8]">
+            <ul className="list-inside list-disc text-sm text-[#b9c6d6]">
               {build.requirements.map((r, i) => (
                 <li key={i}>{pick(r, locale)}</li>
               ))}
@@ -271,11 +271,11 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="font-semibold">{pick(b.name, locale)}</span>
                     {getBuildDistribution(b) && (
-                      <span className="font-mono text-xs text-[#d8b558]">[{getBuildDistribution(b)}]</span>
+                      <span className="font-mono text-xs text-[#f0bc4a]">[{getBuildDistribution(b)}]</span>
                     )}
                     <StatusBadge status={b.provenance.status} dict={dict} />
                   </div>
-                  <p className="mt-1 line-clamp-2 text-sm text-[#b0a284]">{pick(b.summary, locale)}</p>
+                  <p className="mt-1 line-clamp-2 text-sm text-[#9aa8bc]">{pick(b.summary, locale)}</p>
                 </Link>
               </li>
             ))}

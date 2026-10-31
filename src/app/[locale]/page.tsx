@@ -68,16 +68,17 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
     <div>
       <JsonLd data={jsonLd} />
       <section
-        className="relative my-2 overflow-hidden rounded-xl border border-[#3a2b14] p-7 sm:p-10"
+        className="relative my-2 overflow-hidden rounded-2xl border border-[#26334a] px-7 py-10 sm:px-10 sm:py-12"
         style={{
           background:
-            "radial-gradient(ellipse at 15% 0%, #2b2418 0%, #17110a 55%, #0f0b06 100%)",
+            "radial-gradient(ellipse at 20% -20%, rgba(240,188,74,0.14), transparent 55%), radial-gradient(ellipse at 85% 115%, rgba(59,90,160,0.2), transparent 55%), linear-gradient(180deg, #0f1826 0%, #0a0e14 100%)",
         }}
       >
-        <h1 className="max-w-2xl text-3xl font-bold tracking-tight text-[#f4e9d0] sm:text-4xl">
+        <p className="eyebrow">{dict.home.heroEyebrow}</p>
+        <h1 className="mt-2 max-w-2xl text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
           {dict.home.heroTitle}
         </h1>
-        <p className="mt-3 max-w-2xl text-[#b0a284]">{dict.home.heroSubtitle}</p>
+        <p className="mt-3 max-w-2xl text-base leading-relaxed text-[#9aa8bc]">{dict.home.heroSubtitle}</p>
         <div className="mt-6 flex flex-wrap gap-3">
           <Link href={localizedPath(locale, "/tools/class-selector")} className="btn-gold">
             {dict.home.ctaSelector}
@@ -89,7 +90,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
             {dict.home.ctaBuilds}
           </Link>
         </div>
-        <dl className="mt-7 flex flex-wrap gap-x-8 gap-y-3 border-t border-[#3a2b14]/70 pt-5">
+        <dl className="mt-7 flex flex-wrap gap-x-8 gap-y-3 border-t border-[#26334a]/70 pt-5">
           {[
             [classes.length, dict.home.statsClasses],
             [classes.reduce((n, c) => n + (getClassTalents(c.id)?.trees.length ?? 0), 0), dict.home.statsTrees],
@@ -98,19 +99,19 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
           ].map(([num, label]) => (
             <div key={String(label)}>
               <dt className="sr-only">{label}</dt>
-              <dd className="text-2xl font-bold text-[#d8b558]">{num}</dd>
-              <dd className="text-xs text-[#8a7a58]">{label}</dd>
+              <dd className="text-3xl font-extrabold text-[#f0bc4a]">{num}</dd>
+              <dd className="text-xs text-[#7d8fa5]">{label}</dd>
             </div>
           ))}
         </dl>
-        <p className="mt-5 text-xs text-[#95865c]">
+        <p className="mt-5 text-xs text-[#75869c]">
           {dict.common.version}: {version.label} · {dict.common.dataStatus}:{" "}
           {dict.common.status[classes[0]?.provenance.status ?? "unverified"]}
         </p>
       </section>
 
-      <section className="card mb-8 p-4 text-sm text-[#b0a284]">
-        <h2 className="mb-1 font-semibold text-[#e8dfd0]">{dict.home.dataNotice}</h2>
+      <section className="card mb-8 p-4 text-sm text-[#9aa8bc]">
+        <h2 className="mb-1 font-semibold text-[#e6edf5]">{dict.home.dataNotice}</h2>
         <p>{dict.home.dataNoticeBody}</p>
       </section>
 
@@ -121,19 +122,24 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
             <li key={c.id}>
               <Link
                 href={localizedPath(locale, `/talents/${c.slug}`)}
-                className="card card-interactive block p-4"
+                className="card card-interactive relative block overflow-hidden p-4"
               >
-                <div className="flex items-center gap-2">
-                  <span className="font-semibold" style={{ color: classColor(c.id) }}>
+                <span
+                  aria-hidden
+                  className="absolute inset-x-0 top-0 h-1"
+                  style={{ background: `linear-gradient(90deg, ${classColor(c.id)}, transparent 85%)` }}
+                />
+                <div className="mt-0.5 flex items-center gap-2">
+                  <span className="text-base font-bold" style={{ color: classColor(c.id) }}>
                     {pick(c.name, locale)}
                   </span>
                   {c.demo && <DemoBadge dict={dict} />}
                 </div>
                 {c.tagline && (
-                  <p className="mt-1 text-sm text-[#b0a284]">{pick(c.tagline, locale)}</p>
+                  <p className="mt-1 text-sm text-[#9aa8bc]">{pick(c.tagline, locale)}</p>
                 )}
                 {!c.hasTalentData && (
-                  <p className="mt-1 text-xs text-[#95865c]">{dict.talents.dataPending}</p>
+                  <p className="mt-1 text-xs text-[#75869c]">{dict.talents.dataPending}</p>
                 )}
               </Link>
             </li>
@@ -152,19 +158,28 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
                 rel="noopener noreferrer"
                 className="card card-interactive block overflow-hidden"
               >
-                {v.youtubeId ? (
-                  <VideoThumbnail videoId={v.youtubeId} alt={pick(v.title, locale)} />
-                ) : (
-                  <div className="flex aspect-video w-full items-center justify-center bg-gradient-to-br from-[#2b2418] to-[#14100a] text-4xl text-[#8a6a28]">
-                    ▶
-                  </div>
-                )}
+                <div className="relative">
+                  {v.youtubeId ? (
+                    <VideoThumbnail videoId={v.youtubeId} alt={pick(v.title, locale)} />
+                  ) : (
+                    <div className="flex aspect-video w-full items-center justify-center bg-gradient-to-br from-[#1a2433] to-[#0c1219] text-4xl text-[#c99632]">
+                      ▶
+                    </div>
+                  )}
+                  <span
+                    aria-hidden
+                    className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"
+                  />
+                  <span className="absolute bottom-2 right-2 rounded bg-black/70 px-1.5 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white">
+                    {videoPlatform(v)}
+                  </span>
+                </div>
                 <div className="p-3">
                   <h3 className="text-sm font-semibold leading-snug">{pick(v.title, locale)}</h3>
                   {v.description && (
-                    <p className="mt-1 line-clamp-2 text-xs text-[#b0a284]">{pick(v.description, locale)}</p>
+                    <p className="mt-1 line-clamp-2 text-xs text-[#9aa8bc]">{pick(v.description, locale)}</p>
                   )}
-                  <p className="mt-2 text-xs text-[#95865c]">
+                  <p className="mt-2 text-xs text-[#75869c]">
                     {v.channel} · {videoPlatform(v)}
                   </p>
                 </div>
@@ -187,10 +202,10 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
                   <span className="font-semibold">{pick(b.name, locale)}</span>
                   <StatusBadge status={b.provenance.status} dict={dict} />
                 </div>
-                <p className="mt-1 text-sm text-[#b0a284]">{pick(b.summary, locale)}</p>
-                <p className="mt-2 text-xs text-[#95865c]">
+                <p className="mt-1 text-sm text-[#9aa8bc]">{pick(b.summary, locale)}</p>
+                <p className="mt-2 text-xs text-[#75869c]">
                   {getBuildDistribution(b) && (
-                    <span className="font-mono text-[#d8b558]">[{getBuildDistribution(b)}] </span>
+                    <span className="font-mono text-[#f0bc4a]">[{getBuildDistribution(b)}] </span>
                   )}
                   {classById.get(b.classId) ? pick(classById.get(b.classId)!.name, locale) : b.classId} ·{" "}
                   {b.playstyle} · {dict.common.version}: {b.gameVersion} · {dict.common.updated}: {b.updatedAt}
@@ -211,7 +226,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
                 className="card card-interactive block p-4"
               >
                 <span className="font-semibold">{pick(g.title, locale)}</span>
-                <p className="mt-1 text-sm text-[#b0a284]">{pick(g.description, locale)}</p>
+                <p className="mt-1 text-sm text-[#9aa8bc]">{pick(g.description, locale)}</p>
               </Link>
             </li>
           ))}
@@ -229,7 +244,7 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
                 className="card card-interactive block p-4"
               >
                 <span className="font-semibold text-amber-300">{link.name}</span>
-                <p className="mt-1 text-sm text-[#b0a284]">{pick(link.description, locale)}</p>
+                <p className="mt-1 text-sm text-[#9aa8bc]">{pick(link.description, locale)}</p>
               </a>
             </li>
           ))}

@@ -21,10 +21,10 @@ export function LocaleSwitcher({ current }: { current: Locale }) {
             key={locale}
             href={href}
             aria-current={active ? "true" : undefined}
-            className={`rounded px-2 py-1 ${
+            className={`rounded-md px-2 py-1 text-xs font-semibold transition-colors ${
               active
-                ? "bg-amber-400 font-semibold text-amber-950"
-                : "text-zinc-400 hover:text-amber-200"
+                ? "bg-[#f0bc4a] text-[#1a1204]"
+                : "text-slate-300 hover:text-slate-100"
             }`}
           >
             {localeNames[locale]}

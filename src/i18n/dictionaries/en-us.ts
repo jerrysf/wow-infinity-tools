@@ -70,6 +70,7 @@ const en: Dictionary = {
     title: "Infinity Compendium - WoW: Forever Talent Calculator & Builds",
     description:
       "Plan your WoW: Forever build before launch: interactive talent calculator for all 9 classes, level-by-level builds, shareable links, and a class-picker quiz. Versioned data with sources.",
+    heroEyebrow: "WoW: Forever community talent toolkit",
     heroTitle: "Theorycraft your build before launch day",
     heroSubtitle:
       "WoW: Forever goes live November 5. All 9 classes with complete talent trees - a game-accurate calculator, level-by-level builds and shareable links. Know your spec before day one.",

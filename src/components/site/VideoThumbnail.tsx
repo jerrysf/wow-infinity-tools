@@ -8,7 +8,7 @@ export function VideoThumbnail({ videoId, alt }: { videoId: string; alt: string 
 
   if (failed) {
     return (
-      <div className="flex aspect-video w-full items-center justify-center bg-gradient-to-br from-[#2b2418] to-[#14100a] text-4xl text-[#8a6a28]">
+      <div className="flex aspect-video w-full items-center justify-center bg-gradient-to-br from-[#1a2433] to-[#0c1219] text-4xl text-[#c99632]">
         ▶
       </div>
     );

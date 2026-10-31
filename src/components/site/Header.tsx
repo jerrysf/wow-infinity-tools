@@ -16,13 +16,13 @@ export function Header({ locale, dict }: { locale: Locale; dict: Dictionary }) {
     { href: "/faq", label: dict.common.nav.faq },
   ];
   return (
-    <header className="sticky top-0 z-40 border-b border-[#2a2012] bg-[#100b06]/95 backdrop-blur">
+    <header className="sticky top-0 z-40 border-b border-[#1c2635] bg-[#0a0e14]/95 backdrop-blur">
       <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-2 px-4 py-3">
         <Link
           href={localizedPath(locale, "/")}
-          className="text-lg font-bold tracking-wide text-amber-300"
+          className="text-lg font-extrabold tracking-tight text-white"
         >
-          {site.name}
+          <span className="text-[#f0bc4a]">∞</span> {site.name}
         </Link>
         <nav className="flex flex-wrap items-center gap-1 sm:gap-3" aria-label="Main">
           <NavLinks locale={locale} items={navItems} />

@@ -8,7 +8,7 @@ export default function LocaleNotFound() {
   return (
     <div className="py-16 text-center">
       <h1 className="text-2xl font-bold">{dict.notFound.title}</h1>
-      <p className="mt-2 text-[#b0a284]">{dict.notFound.description}</p>
+      <p className="mt-2 text-[#9aa8bc]">{dict.notFound.description}</p>
       <Link
         href={localizedPath(defaultLocale, "/")}
         className="btn-gold mt-6"

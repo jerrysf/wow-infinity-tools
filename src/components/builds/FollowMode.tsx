@@ -76,9 +76,9 @@ export function FollowMode({
 
   return (
     <div>
-      <div className="mb-4 flex flex-wrap items-center gap-x-6 gap-y-2 rounded-md border border-[#2a2f3a] bg-[#12161d] p-3">
+      <div className="mb-4 flex flex-wrap items-center gap-x-6 gap-y-2 rounded-md border border-[#263446] bg-[#12161d] p-3">
         <div className="text-sm">
-          <label htmlFor="follow-level" className="mr-2 font-medium text-[#e8d9a8]">
+          <label htmlFor="follow-level" className="mr-2 font-medium text-[#f0e5c0]">
             {dict.talents.level}: {level}
           </label>
           <input
@@ -98,14 +98,14 @@ export function FollowMode({
           type="button"
           onClick={togglePlay}
           aria-label={playing ? dict.builds.followPause : dict.builds.followPlay}
-          className="rounded border border-[#8a6d1f] bg-[#2a2210] px-3 py-1.5 text-sm font-medium text-[#ffd100] hover:bg-[#3a2f14]"
+          className="rounded border border-[#b08428] bg-[#16202e] px-3 py-1.5 text-sm font-medium text-[#ffd100] hover:bg-[#22304a]"
         >
           {playing ? "⏸ " + dict.builds.followPause : "▶ " + dict.builds.followPlay}
         </button>
         {current && (
-          <p className="text-sm text-[#b0a284]">
+          <p className="text-sm text-[#9aa8bc]">
             {dict.builds.followStep}:{" "}
-            <span className="font-medium text-[#e8d9a8]">
+            <span className="font-medium text-[#f0e5c0]">
               {dict.common.level} {current.min}-{current.max}
             </span>
             {" · "}
@@ -116,7 +116,7 @@ export function FollowMode({
         )}
       </div>
       {current?.note && (
-        <p className="mb-4 text-sm text-[#8a7a58]">{pick(current.note, locale)}</p>
+        <p className="mb-4 text-sm text-[#7d8fa5]">{pick(current.note, locale)}</p>
       )}
       <TalentMap data={data} points={points} locale={locale} dict={dict} />
       <p className="mt-3 text-xs text-[#8b93a1]">{dict.builds.followHint}</p>
