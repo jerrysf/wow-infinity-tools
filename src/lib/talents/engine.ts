@@ -65,6 +65,13 @@ export function treePointsSpent(state: BuildState, data: ClassTalents, treeId: s
   return tree.nodes.reduce((sum, n) => sum + (state.points[n.id] ?? 0), 0);
 }
 
+/** Classic community notation for an allocation, e.g. "11/0/0". */
+export function treeDistribution(points: Record<string, number>, data: ClassTalents): string {
+  return data.trees
+    .map((tree) => tree.nodes.reduce((sum, n) => sum + (points[n.id] ?? 0), 0))
+    .join("/");
+}
+
 function requiresMet(state: BuildState, node: TalentNode): boolean {
   return node.requires.every((req) => {
     const found = state.points[req.nodeId] ?? 0;

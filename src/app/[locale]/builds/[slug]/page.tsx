@@ -5,7 +5,7 @@ import { isLocale, locales } from "@/i18n/config";
 import { getDictionary, pick, t } from "@/i18n/get-dictionary";
 import { pageMetadata } from "@/lib/seo";
 import { absoluteUrl, localizedPath } from "@/lib/site";
-import { getBuildBySlug, getBuilds, getClassById, getClassTalents, getGuides } from "@/lib/data";
+import { getBuildBySlug, getBuildDistribution, getBuilds, getClassById, getClassTalents, getGuides } from "@/lib/data";
 import { findNode } from "@/lib/talents/engine";
 import { TalentMap } from "@/components/talents/TalentMap";
 import { encodeBuild } from "@/lib/talents/serialize";
@@ -100,6 +100,9 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
       />
       <div className="mb-2 flex flex-wrap items-center gap-2">
         <h1 className="text-2xl font-bold">{pick(build.name, locale)}</h1>
+        {getBuildDistribution(build) && (
+          <span className="font-mono text-lg font-semibold text-[#d8b558]">[{getBuildDistribution(build)}]</span>
+        )}
         <StatusBadge status={build.provenance.status} needsRevalidation={build.provenance.needsRevalidation} dict={dict} />
       </div>
       {isDemo && <BuildDemoBanner demo dict={dict} />}
@@ -246,6 +249,9 @@ export default async function BuildPage({ params }: PageProps<"/[locale]/builds/
                 >
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="font-semibold">{pick(b.name, locale)}</span>
+                    {getBuildDistribution(b) && (
+                      <span className="font-mono text-xs text-[#d8b558]">[{getBuildDistribution(b)}]</span>
+                    )}
                     <StatusBadge status={b.provenance.status} dict={dict} />
                   </div>
                   <p className="mt-1 line-clamp-2 text-sm text-[#b0a284]">{pick(b.summary, locale)}</p>

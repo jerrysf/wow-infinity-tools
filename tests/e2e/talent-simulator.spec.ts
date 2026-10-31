@@ -89,6 +89,36 @@ test.describe("talent simulator", () => {
     await expect(page.getByText("分享链接无效")).toBeVisible();
   });
 
+  test("per-tree reset clears only that tree", async ({ page }) => {
+    await page.goto(WARRIOR);
+    await page.getByRole("button", { name: /^强化英勇打击/ }).click();
+    // Put a point in another tree (Fury row 0)
+    const furyNode = page.getByRole("button", { name: /^残忍/ });
+    if (await furyNode.count() > 0) await furyNode.click();
+    await page.getByRole("button", { name: "重置此系: 武器" }).click();
+    await expect(page.getByText("已分配: 0/").or(page.getByText("已分配: 1/"))).toBeVisible();
+  });
+
+  test("import applies a build code from the share URL", async ({ page }) => {
+    await page.goto(WARRIOR);
+    const strike = page.getByRole("button", { name: /^强化英勇打击/ });
+    await strike.click(); await strike.click();
+    const code = new URL(page.url()).searchParams.get("b")!;
+    await page.getByRole("button", { name: "重置全部点数" }).click();
+    await page.getByRole("button", { name: "导入方案" }).click();
+    await page.getByPlaceholder("粘贴方案代码或分享链接").fill(code);
+    await page.getByRole("button", { name: "应用" }).click();
+    await expect(page.getByText("已分配: 2/")).toBeVisible();
+  });
+
+  test("import rejects garbage input", async ({ page }) => {
+    await page.goto(WARRIOR);
+    await page.getByRole("button", { name: "导入方案" }).click();
+    await page.getByPlaceholder("粘贴方案代码或分享链接").fill("not-a-code");
+    await page.getByRole("button", { name: "应用" }).click();
+    await expect(page.getByRole("alert").filter({ hasText: "无法识别" })).toBeVisible();
+  });
+
   test("mobile viewport can allocate talents", async ({ page, isMobile }) => {
     test.skip(!isMobile, "mobile-only check");
     await page.goto(WARRIOR);

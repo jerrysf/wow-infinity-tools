@@ -5,7 +5,7 @@ import { getDictionary, pick } from "@/i18n/get-dictionary";
 import { pageMetadata } from "@/lib/seo";
 import { absoluteUrl, localizedPath, site } from "@/lib/site";
 import { JsonLd } from "@/components/site/JsonLd";
-import { getBuilds, getClasses, getClassTalents, getCommunityLinks, getCommunityVideos, getCurrentVersion, getGuides } from "@/lib/data";
+import { getBuilds, getClasses, getBuildDistribution, getClassTalents, getCommunityLinks, getCommunityVideos, getCurrentVersion, getGuides } from "@/lib/data";
 import { StatusBadge, DemoBadge } from "@/components/site/StatusBadge";
 import { classColor } from "@/lib/class-colors";
 import { VideoThumbnail } from "@/components/site/VideoThumbnail";
@@ -189,6 +189,9 @@ export default async function HomePage({ params }: PageProps<"/[locale]">) {
                 </div>
                 <p className="mt-1 text-sm text-[#b0a284]">{pick(b.summary, locale)}</p>
                 <p className="mt-2 text-xs text-[#7a6a4a]">
+                  {getBuildDistribution(b) && (
+                    <span className="font-mono text-[#d8b558]">[{getBuildDistribution(b)}] </span>
+                  )}
                   {classById.get(b.classId) ? pick(classById.get(b.classId)!.name, locale) : b.classId} ·{" "}
                   {b.playstyle} · {dict.common.version}: {b.gameVersion} · {dict.common.updated}: {b.updatedAt}
                 </p>

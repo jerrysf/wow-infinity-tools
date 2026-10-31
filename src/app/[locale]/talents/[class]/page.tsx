@@ -5,7 +5,7 @@ import { isLocale, locales } from "@/i18n/config";
 import { getDictionary, pick } from "@/i18n/get-dictionary";
 import { pageMetadata } from "@/lib/seo";
 import { localizedPath } from "@/lib/site";
-import { getBuilds, getClassBySlug, getClassTalents, getClasses, getGameVersions, getGuides } from "@/lib/data";
+import { getBuilds, getBuildDistribution, getClassBySlug, getClassTalents, getClasses, getGameVersions, getGuides } from "@/lib/data";
 import { TalentSimulator } from "@/components/talents/TalentSimulator";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { ProvenanceBlock } from "@/components/site/ProvenanceBlock";
@@ -105,6 +105,9 @@ export default async function ClassTalentsPage({ params }: PageProps<"/[locale]/
                 >
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="font-semibold">{pick(b.name, locale)}</span>
+                    {getBuildDistribution(b) && (
+                      <span className="font-mono text-xs text-[#d8b558]">[{getBuildDistribution(b)}]</span>
+                    )}
                     <StatusBadge status={b.provenance.status} dict={dict} />
                   </div>
                   <p className="mt-1 text-sm text-[#b0a284]">{pick(b.summary, locale)}</p>

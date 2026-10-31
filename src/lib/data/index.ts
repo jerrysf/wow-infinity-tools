@@ -1,6 +1,7 @@
 import { cache } from "react";
 import fs from "node:fs";
 import path from "node:path";
+import { treeDistribution } from "@/lib/talents/engine";
 import {
   buildSchema,
   classSchema,
@@ -86,6 +87,13 @@ export const getBuilds = cache((): Build[] => {
 export const getBuildBySlug = cache((slug: string): Build | undefined => {
   return getBuilds().find((b) => b.slug === slug);
 });
+
+/** Classic "x/y/z" distribution notation for a build, or null when the
+ *  class talent data needed to compute it is unavailable. */
+export const getBuildDistribution = (build: Build): string | null => {
+  const talents = getClassTalents(build.classId);
+  return talents ? treeDistribution(build.allocation, talents) : null;
+};
 
 export const getGuides = cache((): Guide[] => {
   return readDirJson("guides").map(({ file, json }) =>

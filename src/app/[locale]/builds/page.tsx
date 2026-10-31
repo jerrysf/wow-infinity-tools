@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { isLocale } from "@/i18n/config";
 import { getDictionary } from "@/i18n/get-dictionary";
 import { pageMetadata } from "@/lib/seo";
-import { getBuilds, getClasses } from "@/lib/data";
+import { getBuilds, getBuildDistribution, getClasses } from "@/lib/data";
 import { BuildsCatalog } from "@/components/builds/BuildsCatalog";
 import { Breadcrumbs } from "@/components/site/Breadcrumbs";
 import { AdSlot } from "@/components/site/AdSlot";
@@ -30,7 +30,13 @@ export default async function BuildsPage({ params }: PageProps<"/[locale]/builds
       />
       <h1 className="mb-2 text-2xl font-bold">{dict.builds.title}</h1>
       <p className="mb-6 max-w-2xl text-[#b0a284]">{dict.builds.description}</p>
-      <BuildsCatalog builds={getBuilds()} classes={getClasses()} locale={locale} dict={dict} />
+      <BuildsCatalog
+        builds={getBuilds()}
+        classes={getClasses()}
+        distributions={Object.fromEntries(getBuilds().map((b) => [b.slug, getBuildDistribution(b)]))}
+        locale={locale}
+        dict={dict}
+      />
       <AdSlot id="builds-bottom" />
     </div>
   );

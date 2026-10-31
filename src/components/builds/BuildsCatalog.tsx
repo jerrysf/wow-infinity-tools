@@ -22,11 +22,13 @@ const EMPTY: Filters = { classId: "", playstyle: "", status: "", difficulty: "" 
 export function BuildsCatalog({
   builds,
   classes,
+  distributions,
   locale,
   dict,
 }: {
   builds: Build[];
   classes: GameClass[];
+  distributions: Record<string, string | null>;
   locale: Locale;
   dict: Dictionary;
 }) {
@@ -173,6 +175,9 @@ export function BuildsCatalog({
                   {pick(b.summary, locale)}
                 </p>
                 <p className="mt-2 flex flex-wrap gap-x-3 text-xs text-[#7a6a4a]">
+                  {distributions[b.slug] && (
+                    <span className="font-mono text-[#d8b558]">[{distributions[b.slug]}]</span>
+                  )}
                   <span style={c ? { color: classColor(c.id) } : undefined}>
                     {c ? pick(c.name, locale) : b.classId}
                   </span>

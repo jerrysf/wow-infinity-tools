@@ -125,6 +125,7 @@ function TalentTreePanel({
   onSelect,
   onAllocate,
   onRefund,
+  onResetTree,
   locale,
   dict,
 }: {
@@ -135,6 +136,7 @@ function TalentTreePanel({
   onSelect: (id: string) => void;
   onAllocate: (id: string) => void;
   onRefund: (id: string) => void;
+  onResetTree: (treeId: string) => void;
   locale: Locale;
   dict: Dictionary;
 }) {
@@ -147,7 +149,20 @@ function TalentTreePanel({
     >
       <header className="mb-3 flex items-baseline justify-between border-b border-[#2a2f3a] pb-1.5">
         <h3 className="text-sm font-semibold tracking-wide text-[#e8d9a8]">{pick(tree.name, locale)}</h3>
-        <span className={`text-xs font-semibold ${spent > 0 ? "text-[#ffd100]" : "text-[#6b7280]"}`}>{spent}</span>
+        <span className="flex items-baseline gap-2">
+          {spent > 0 && (
+            <button
+              type="button"
+              onClick={() => onResetTree(tree.id)}
+              title={dict.talents.resetTree}
+              aria-label={`${dict.talents.resetTree}: ${pick(tree.name, locale)}`}
+              className="text-xs text-[#6b7280] hover:text-[#d1d5db]"
+            >
+              ↺
+            </button>
+          )}
+          <span className={`text-xs font-semibold ${spent > 0 ? "text-[#ffd100]" : "text-[#6b7280]"}`}>{spent}</span>
+        </span>
       </header>
       <div className="relative">
         <PrereqArrows tree={tree} rows={rows} points={build.points} />
@@ -200,6 +215,27 @@ export function TalentSimulator({
   const [notice, setNotice] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [hydrated, setHydrated] = useState(false);
+  const [showImport, setShowImport] = useState(false);
+  const [importText, setImportText] = useState("");
+
+  /** Apply an encoded build string. Accepts a raw code or a full share URL. */
+  function loadEncoded(raw: string): "ok" | "mismatch" | "invalid" {
+    const code = raw.includes("b=")
+      ? new URLSearchParams(raw.slice(raw.indexOf("?") + 1)).get("b") ?? raw
+      : raw.trim();
+    const decoded = decodeBuild(code);
+    if (!decoded || decoded.state.classId !== data.classId) return "invalid";
+    const violations = validateBuild(decoded.state, data);
+    if (decoded.gameVersion !== data.gameVersion) {
+      setBuild(violations.length === 0 ? decoded.state : emptyBuild(data.classId, decoded.state.level));
+      return "mismatch";
+    }
+    if (violations.length === 0) {
+      setBuild(decoded.state);
+      return "ok";
+    }
+    return "invalid";
+  }
 
   // Restore build from ?b= share param once on mount. Hydration from the URL;
   // cannot run during SSR, so the set-state-in-effect rule is disabled here.
@@ -207,21 +243,8 @@ export function TalentSimulator({
   useEffect(() => {
     const raw = new URLSearchParams(window.location.search).get("b");
     if (raw) {
-      const decoded = decodeBuild(raw);
-      if (!decoded || decoded.state.classId !== data.classId) {
-        setNotice(dict.talents.invalidLink);
-      } else if (decoded.gameVersion !== data.gameVersion) {
-        const violations = validateBuild(decoded.state, data);
-        setBuild(violations.length === 0 ? decoded.state : emptyBuild(data.classId, decoded.state.level));
-        setNotice(dict.talents.versionMismatch);
-      } else {
-        const violations = validateBuild(decoded.state, data);
-        if (violations.length === 0) {
-          setBuild(decoded.state);
-        } else {
-          setNotice(dict.talents.invalidLink);
-        }
-      }
+      const outcome = loadEncoded(raw);
+      setNotice(outcome === "mismatch" ? dict.talents.versionMismatch : outcome === "invalid" ? dict.talents.invalidLink : null);
     }
     setHydrated(true);
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -269,6 +292,21 @@ export function TalentSimulator({
     }
   }
 
+  function onResetTree(treeId: string) {
+    setError(null);
+    setNotice(null);
+    const tree = data.trees.find((tr) => tr.id === treeId);
+    if (!tree) return;
+    const points = { ...build.points };
+    for (const node of tree.nodes) delete points[node.id];
+    const next = { ...build, points };
+    if (validateBuild(next, data).length === 0) {
+      setBuild(next);
+    } else {
+      setError(dict.talents.errors["would-invalidate"]);
+    }
+  }
+
   function onLevelChange(level: number) {
     setError(null);
     const next = { ...build, level };
@@ -302,6 +340,21 @@ export function TalentSimulator({
       }),
       dict.talents.summaryCopied,
     );
+  }
+
+  function copyCode() {
+    copyText(encodeBuild(build, data.gameVersion), dict.talents.codeCopied);
+  }
+
+  function applyImport() {
+    const outcome = loadEncoded(importText);
+    setError(null);
+    if (outcome === "invalid") setError(dict.talents.importInvalid);
+    else setNotice(outcome === "mismatch" ? dict.talents.versionMismatch : dict.talents.importDone);
+    if (outcome !== "invalid") {
+      setShowImport(false);
+      setImportText("");
+    }
   }
 
   const mobileTree = data.trees.find((tr) => tr.id === activeTree) ?? data.trees[0];
@@ -354,8 +407,44 @@ export function TalentSimulator({
           >
             {dict.common.actions.copySummary}
           </button>
+          <button
+            type="button"
+            onClick={copyCode}
+            className="rounded border border-[#3a4150] px-3 py-1.5 text-sm text-[#d1d5db] hover:bg-[#1c222c]"
+          >
+            {dict.talents.copyCode}
+          </button>
+          <button
+            type="button"
+            onClick={() => setShowImport((v) => !v)}
+            aria-expanded={showImport}
+            className="rounded border border-[#3a4150] px-3 py-1.5 text-sm text-[#d1d5db] hover:bg-[#1c222c]"
+          >
+            {dict.talents.import}
+          </button>
         </div>
       </div>
+
+      {showImport && (
+        <div className="mb-4 flex flex-wrap items-center gap-2 rounded-md border border-[#2a2f3a] bg-[#12161d] p-3">
+          <input
+            type="text"
+            value={importText}
+            onChange={(e) => setImportText(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && applyImport()}
+            placeholder={dict.talents.importPlaceholder}
+            aria-label={dict.talents.import}
+            className="min-w-0 flex-1 rounded border border-[#3a4150] bg-[#0b0d10] px-3 py-1.5 font-mono text-sm text-[#d1d5db] placeholder:text-[#6b7280]"
+          />
+          <button
+            type="button"
+            onClick={applyImport}
+            className="rounded border border-[#8a6d1f] bg-[#2a2210] px-3 py-1.5 text-sm font-medium text-[#ffd100] hover:bg-[#3a2f14]"
+          >
+            {dict.common.actions.apply}
+          </button>
+        </div>
+      )}
 
       <p className="mb-3 text-xs text-[#6b7280]">{dict.talents.hints}</p>
 
@@ -409,6 +498,7 @@ export function TalentSimulator({
             onSelect={setSelectedId}
             onAllocate={onAllocate}
             onRefund={onRefund}
+            onResetTree={onResetTree}
             locale={locale}
             dict={dict}
           />
@@ -423,6 +513,7 @@ export function TalentSimulator({
               onSelect={setSelectedId}
               onAllocate={onAllocate}
               onRefund={onRefund}
+              onResetTree={onResetTree}
               locale={locale}
               dict={dict}
             />

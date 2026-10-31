@@ -10,6 +10,7 @@ import {
   pointsSpent,
   refund,
   resetBuild,
+  treeDistribution,
   treePointsSpent,
   validateBuild,
 } from "./engine";
@@ -192,6 +193,14 @@ describe("validateBuild", () => {
   it("rejects mismatched class", () => {
     const s = { classId: "other", level: 30, points: {} };
     expect(validateBuild(s, fixture).length).toBeGreaterThan(0);
+  });
+});
+
+describe("treeDistribution", () => {
+  it("renders classic x/y/z notation per tree order", () => {
+    expect(treeDistribution({ a1: 3, a2: 1, b1: 2 }, fixture)).toBe("4/2");
+    expect(treeDistribution({}, fixture)).toBe("0/0");
+    expect(treeDistribution({ ghost: 9, b1: 1 }, fixture)).toBe("0/1");
   });
 });
 

@@ -54,8 +54,25 @@ export default async function GuidePage({ params }: PageProps<"/[locale]/guides/
         {dict.common.updated}: {guide.updatedAt} · {dict.common.version}: {guide.provenance.gameVersion}
       </p>
       {isDemo && <BuildDemoBanner demo dict={dict} />}
+      {guide.sections.length > 1 && (
+        <nav aria-label={dict.guides.toc} className="card mb-6 p-4">
+          <h2 className="mb-2 text-sm font-semibold text-[#8a7a58]">{dict.guides.toc}</h2>
+          <ol className="list-inside list-decimal space-y-1 text-sm">
+            {guide.sections.map((section, i) => (
+              <li key={i}>
+                <a
+                  href={`#s-${i}`}
+                  className="text-amber-300 underline decoration-amber-300/40 underline-offset-2 hover:text-amber-200"
+                >
+                  {pick(section.heading, locale)}
+                </a>
+              </li>
+            ))}
+          </ol>
+        </nav>
+      )}
       {guide.sections.map((section, i) => (
-        <section key={i} className="mb-6">
+        <section key={i} id={`s-${i}`} className="mb-6 scroll-mt-20">
           <h2 className="mb-2 text-lg font-semibold">{pick(section.heading, locale)}</h2>
           <p className="leading-relaxed text-[#cfc3a8]">{pick(section.body, locale)}</p>
         </section>
